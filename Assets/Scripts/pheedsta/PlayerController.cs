@@ -10,10 +10,14 @@ public class PlayerController : MonoBehaviour {
     // Serialized Fields
     //:::::::::::::::::::::::::::::://
     
+    [Header("Movement")]
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private float strafeSpeed = 10f;
     [SerializeField] private float turnSpeed = 100f;
     [SerializeField] private float aimSpeed = 50f;
+    
+    [Header("Jumping")]
+    [SerializeField] private float jumpVelocity = 5f;
     
     //:::::::::::::::::::::::::::::://
     // Components
@@ -32,6 +36,8 @@ public class PlayerController : MonoBehaviour {
     //:::::::::::::::::::::::::::::://
     // Local Fields
     //:::::::::::::::::::::::::::::://
+
+    private bool _jumpPerformed;
     
     private Vector3 _cameraRotation = Vector3.zero;
     private Vector3 _playerVelocity = Vector3.zero;
@@ -39,6 +45,10 @@ public class PlayerController : MonoBehaviour {
     //:::::::::::::::::::::::::::::://
     // Unity Callbacks
     //:::::::::::::::::::::::::::::://
+
+    private void OnEnable() {
+        InputManager.OnJump += InputManager_OnJump;
+    }
 
     private void Start() {
         // get Transforms
@@ -63,11 +73,20 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void Update() {
+        // get grounded state once before move calls
+        var isGrounded = _characterController.isGrounded;
+        
+        // process player inputs
         Look();
         Rotate();
         Move();
+        Jump(isGrounded);
     }
-    
+
+    private void OnDisable() {
+        InputManager.OnJump -= InputManager_OnJump;
+    }
+
     //:::::::::::::::::::::::::::::://
     // Movement & Rotation
     //:::::::::::::::::::::::::::::://
@@ -95,11 +114,35 @@ public class PlayerController : MonoBehaviour {
         
         // move player (X and Z axis)
         _characterController.Move(forward + strafe);
+    }
+
+    private void Jump(bool isGrounded) {
+        if (isGrounded) {
+            // player is grounded
+            if (_jumpPerformed) {
+                // jump button pressed; set velocity to maximum
+                _playerVelocity.y = jumpVelocity;
+            } else if (_playerVelocity.y < 0f) {
+                // player is falling; reset velocity to zero
+                _playerVelocity.y = 0f;
+            }
+        }
         
-        // add gravity to player model
-        _playerVelocity.y = _characterController.isGrounded ? 0f : _playerVelocity.y + Constant.Value.Gravity * Time.deltaTime;
+        // factor in gravity to jump velocity (we need to always do this so isGrounded works correctly)
+        _playerVelocity.y += Constant.Value.Gravity * Time.deltaTime;
 
         // move player (Y axis)
         _characterController.Move(_playerVelocity * Time.deltaTime);
+        
+        // reset jump flag
+        _jumpPerformed = false;
+    }
+    
+    //:::::::::::::::::::::::::::::://
+    // InputManager Events
+    //:::::::::::::::::::::::::::::://
+
+    private void InputManager_OnJump() {
+        _jumpPerformed = true;
     }
 }

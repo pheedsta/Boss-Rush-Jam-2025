@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c0323cdc-65bc-4b30-b3bb-f1969ff69110" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Boss-Rush-Jam-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Boss-Rush-Jam-2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input/InputSystem_Actions.inputactions" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input/InputSystem_Actions.inputactions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/pheedsta/Test Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pheedsta/Test Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/pheedsta/InputManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/pheedsta/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +102,7 @@
       <workItem from="1735426835874" duration="2144000" />
       <workItem from="1735431363111" duration="7172000" />
       <workItem from="1735438582400" duration="680000" />
+      <workItem from="1735442381755" duration="3566000" />
     </task>
     <servers />
   </component>

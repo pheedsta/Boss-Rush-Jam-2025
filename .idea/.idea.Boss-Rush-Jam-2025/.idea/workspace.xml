@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/pheedsta/Test Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pheedsta/Test Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/pheedsta/InputManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/pheedsta/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +102,7 @@
       <workItem from="1735431363111" duration="7172000" />
       <workItem from="1735438582400" duration="680000" />
       <workItem from="1735442381755" duration="3566000" />
+      <workItem from="1735767102200" duration="2106000" />
     </task>
     <servers />
   </component>

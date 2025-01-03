@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void Update() {
-        // get grounded state once before move calls
+        // get grounded state once before any move calls
         var isGrounded = _characterController.isGrounded;
         
         // process player inputs
@@ -110,6 +110,7 @@ public class PlayerController : MonoBehaviour {
         if (!_isMoving) return;
         
         // calculate forward and strafe vectors
+        // NB: Transform.TransformDirection is used to convert direction from local space to world space
         var forward = _moveDelta.y * moveSpeed * Time.deltaTime * _bodyTransform.TransformDirection(Vector3.forward);
         var strafe = _moveDelta.x * strafeSpeed * Time.deltaTime * _bodyTransform.TransformDirection(Vector3.right);
         

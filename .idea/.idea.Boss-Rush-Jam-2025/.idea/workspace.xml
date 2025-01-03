@@ -7,7 +7,6 @@
     <list default="true" id="c0323cdc-65bc-4b30-b3bb-f1969ff69110" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Boss-Rush-Jam-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Boss-Rush-Jam-2025/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/pheedsta/Test Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pheedsta/Test Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/pheedsta/InputManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/pheedsta/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,6 +102,7 @@
       <workItem from="1735438582400" duration="680000" />
       <workItem from="1735442381755" duration="3566000" />
       <workItem from="1735767102200" duration="2106000" />
+      <workItem from="1735771693635" duration="966000" />
     </task>
     <servers />
   </component>

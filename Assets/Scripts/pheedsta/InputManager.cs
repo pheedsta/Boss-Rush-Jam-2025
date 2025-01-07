@@ -35,6 +35,7 @@ public class InputManager : MonoBehaviour {
     //------------------------------//
     
     public static event ButtonEvent OnJump = delegate { };
+    public static event ButtonEvent OnSprint = delegate { };
 
     //:::::::::::::::::::::::::::::://
     // Static Fields
@@ -77,6 +78,10 @@ public class InputManager : MonoBehaviour {
         // subscribe (JUMP)
         _playerActions.Jump.performed += PlayerActions_Jump_Performed;
         _playerActions.Jump.canceled += PlayerActions_Jump_Canceled;
+        
+        // subscribe (SPRINT)
+        _playerActions.Sprint.performed += PlayerActions_Sprint_Performed;
+        _playerActions.Sprint.canceled += PlayerActions_Sprint_Canceled;
 
         // enable inputs
         _playerActions.Enable();
@@ -99,6 +104,10 @@ public class InputManager : MonoBehaviour {
         // unsubscribe (JUMP)
         _playerActions.Jump.performed -= PlayerActions_Jump_Performed;
         _playerActions.Jump.canceled -= PlayerActions_Jump_Canceled;
+        
+        // unsubscribe (SPRINT)
+        _playerActions.Sprint.performed -= PlayerActions_Sprint_Performed;
+        _playerActions.Sprint.canceled -= PlayerActions_Sprint_Canceled;
     }
     
     //:::::::::::::::::::::::::::::://
@@ -109,21 +118,62 @@ public class InputManager : MonoBehaviour {
         // initialise input actions
         _playerActions = new InputActions().Player;
     }
+    
+    //:::::::::::::::::::::::::::::://
+    // Keyboard Input
+    //:::::::::::::::::::::::::::::://
+
+    private static Vector2 DigitiseKeyboardInput(Vector2 input) {
+        // initialise field
+        var digitisedInput = Vector2.zero;
+        
+        // digitise X value
+        digitisedInput.x = input.x switch {
+            < 0f => -1f,
+            > 0f => 1f,
+            _ => 0f
+        };
+        
+        // digitise Y value
+        digitisedInput.y = input.y switch {
+            < 0f => -1f,
+            > 0f => 1f,
+            _ => 0f
+        };
+
+        // return newly digitised vector
+        return digitisedInput;
+    }
 
     //:::::::::::::::::::::::::::::://
     // PlayerAction Move Events
     //:::::::::::::::::::::::::::::://
 
     private static void PlayerActions_Move_Started(InputAction.CallbackContext callbackContext) {
-        OnMove.Invoke(ActionPhase.Started, callbackContext.ReadValue<Vector2>());
+        // get input and digitise it if it was a keyboard
+        var input = callbackContext.ReadValue<Vector2>();
+        if (callbackContext.control.device == Keyboard.current) input = DigitiseKeyboardInput(input);
+        
+        // invoke event
+        OnMove.Invoke(ActionPhase.Started, input);
     }
 
     private static void PlayerActions_Move_Performed(InputAction.CallbackContext callbackContext) {
-        OnMove.Invoke(ActionPhase.Performed, callbackContext.ReadValue<Vector2>());
+        // get input and digitise it if it was a keyboard
+        var input = callbackContext.ReadValue<Vector2>();
+        if (callbackContext.control.device == Keyboard.current) input = DigitiseKeyboardInput(input);
+        
+        // invoke event
+        OnMove.Invoke(ActionPhase.Performed, input);
     }
 
     private static void PlayerActions_Move_Canceled(InputAction.CallbackContext callbackContext) {
-        OnMove.Invoke(ActionPhase.Canceled, callbackContext.ReadValue<Vector2>());
+        // get input and digitise it if it was a keyboard
+        var input = callbackContext.ReadValue<Vector2>();
+        if (callbackContext.control.device == Keyboard.current) input = DigitiseKeyboardInput(input);
+        
+        // invoke event
+        OnMove.Invoke(ActionPhase.Canceled, input);
     }
 
     //:::::::::::::::::::::::::::::://
@@ -152,5 +202,17 @@ public class InputManager : MonoBehaviour {
 
     private static void PlayerActions_Jump_Canceled(InputAction.CallbackContext callbackContext) {
         OnJump.Invoke(ActionPhase.Canceled);
+    }
+
+    //:::::::::::::::::::::::::::::://
+    // PlayerAction Sprint Events
+    //:::::::::::::::::::::::::::::://
+
+    private static void PlayerActions_Sprint_Performed(InputAction.CallbackContext callbackContext) {
+        OnSprint.Invoke(ActionPhase.Performed);
+    }
+
+    private static void PlayerActions_Sprint_Canceled(InputAction.CallbackContext callbackContext) {
+        OnSprint.Invoke(ActionPhase.Canceled);
     }
 }

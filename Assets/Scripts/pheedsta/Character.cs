@@ -7,10 +7,26 @@ using UnityEngine;
 public class Character : MonoBehaviour {
     
     //:::::::::::::::::::::::::::::://
-    // Properties
+    // Serialized Fields
     //:::::::::::::::::::::::::::::://
     
-    protected bool IsGrounded => _characterController && _characterController.isGrounded;
+    [Header("Physics")]
+    [Tooltip("The character uses its own gravity value (default is -9.81f)")]
+    [SerializeField] protected float gravity = -9.81f;
+    
+    [Header("Ground")]
+    [Tooltip("Increase this value for rough ground (should always be greater than skin width)")]
+    [Range(0.1f, 1f)]
+    [SerializeField] private float groundedOffset = 0.1f;
+    [Tooltip("What layers the character uses as ground")]
+    [SerializeField] private LayerMask groundLayers;
+    
+    //:::::::::::::::::::::::::::::://
+    // Properties
+    //:::::::::::::::::::::::::::::://
+
+    private bool IsGrounded => _groundCollider;
+    protected CharacterController Controller => GetCharacterController();
     
     //:::::::::::::::::::::::::::::://
     // Components
@@ -28,60 +44,86 @@ public class Character : MonoBehaviour {
     // Readonly Fields
     //:::::::::::::::::::::::::::::://
     
-    private readonly RaycastHit[] _raycastHits = new RaycastHit[1];
+    private readonly Collider[] _colliders = new Collider[1];
+    
+    //:::::::::::::::::::::::::::::://
+    // Gizmo Fields
+    //:::::::::::::::::::::::::::::://
+    
+    private readonly Color _gizmoGroundedColor = new (0.0f, 1.0f, 0.0f, 0.35f);
+    private readonly Color _gizmoUngroundedColor = new (1.0f, 0.0f, 0.0f, 0.35f);
     
     //:::::::::::::::::::::::::::::://
     // Local Fields
     //:::::::::::::::::::::::::::::://
-
-    private int _platformLayerMask;
+    
+    private float _rotation;
     private float _jumpVelocity;
     private Vector3 _motion;
-    private Vector3 _gravity;
-    private Component _floorComponent;
+    private Vector3 _verticalVelocity;
+    private Collider _groundCollider;
     
     //:::::::::::::::::::::::::::::://
     // Unity Callbacks
     //:::::::::::::::::::::::::::::://
 
     protected virtual void Awake() {
-        // get Components
-        _characterController = GetComponent<CharacterController>();
-        //++++++++++++++++++++++++++++++++++++++++//
-        Debug.Assert(_characterController, "CharacterController Component is missing");
-        //++++++++++++++++++++++++++++++++++++++++//
-        
         // get managers
         _void = Void.Instance;
         //++++++++++++++++++++++++++++++++++++++++//
         Debug.Assert(_void, "Void is missing");
         //++++++++++++++++++++++++++++++++++++++++//
-
-        // get 'Platform' layer mask
-        _platformLayerMask = LayerMask.GetMask("Platform");
     }
 
     protected virtual void Update() {
-        // reset motion and jump values
-        _motion = Vector3.zero;
-        _jumpVelocity = 0f;
-    }
-
-    protected virtual void LateUpdate() {
-        // attempt to get ground object underneath the character
-        var ground = GetGround();
+        // get the current ground collider (if any)
+        GetGroundCollider();
         
         // add platform movement / rotation to the motion
-        AddPlatformMovement(ground);
-        AddPlatformRotation(ground);
+        AddPlatformMovement();
+        AddPlatformRotation();
         
         // add other influencing factors to the motion
         AddVoidVacuum();
         AddGravity();
         
-        // move character controller using motion and gravity
-        // NB: gravity is the only vector multiplied by delta time
-        _characterController.Move(_motion + _gravity * Time.deltaTime);
+        // move and rotate the character
+        Move();
+        Rotate();
+    }
+    
+    //:::::::::::::::::::::::::::::://
+    // Gizmo Callbacks
+    //:::::::::::::::::::::::::::::://
+
+    private void OnDrawGizmosSelected() {
+        // update gizmo color depending on grounded status
+        Gizmos.color = IsGrounded ? _gizmoGroundedColor : _gizmoUngroundedColor;
+        
+        // calculate the sphere position (should be the same as Physics.OverlapSphereNonAlloc in GetGroundCollider)
+        var position = transform.position;
+        position.y += Controller.radius - groundedOffset;
+        
+        // draw gizmo sphere
+        Gizmos.DrawSphere(position, Controller.radius);
+    }
+    
+    //:::::::::::::::::::::::::::::://
+    // Getters
+    //:::::::::::::::::::::::::::::://
+
+    private CharacterController GetCharacterController() {
+        // if a character controller has already been set, we're done
+        if (_characterController) return _characterController;
+        
+        // get character controller component
+        _characterController = GetComponent<CharacterController>();
+        //++++++++++++++++++++++++++++++++++++++++//
+        Debug.Assert(_characterController, "CharacterController Component is missing");
+        //++++++++++++++++++++++++++++++++++++++++//
+        
+        // return character controlller
+        return _characterController;
     }
 
     //:::::::::::::::::::::::::::::://
@@ -93,43 +135,83 @@ public class Character : MonoBehaviour {
         _motion.x += motion.x;
         _motion.z += motion.z;
     }
+
+    protected void AddJump(float jumpVelocity) {
+        // increment jump velocity (only if value passed is positive)
+        if (0f < jumpVelocity) _jumpVelocity += jumpVelocity;
+    }
+
+    protected void AddRotation(float angle) {
+        _rotation += angle;
+    }
     
     //:::::::::::::::::::::::::::::://
     // Proximity Methods
     //:::::::::::::::::::::::::::::://
 
-    private Component GetGround() {
-        // if character isn't grounded we're done
-        if (!IsGrounded) return null;
+    private void GetGroundCollider() {
+        // get the character position and add offset to y
+        var position = transform.position;
+        position.y += Controller.radius - groundedOffset;
         
-        // get the character controller bounds and ray length
-        var bounds = _characterController.bounds;
-        var maxDistance = bounds.extents.y + _characterController.skinWidth * 2f; // add skin width twice to allow for minor variations
+        // starting find the first ground object (if any) and ignore trigger colliders
+        var count = Physics.OverlapSphereNonAlloc(position, Controller.radius, _colliders, groundLayers, QueryTriggerInteraction.Ignore);
         
-        // raycast down to ground (just below character controller)
-        var count = Physics.RaycastNonAlloc(bounds.center, Vector3.down, _raycastHits, maxDistance, _platformLayerMask);
+        // update ground collider
+        _groundCollider = 0 < count ? _colliders[0] : null;
+    }
+    
+    //:::::::::::::::::::::::::::::://
+    // Moving & Rotating
+    //:::::::::::::::::::::::::::::://
+
+    private void Move() {
+        // move character controller using motion and gravity
+        // NB: gravity is the only vector multiplied by delta time
+        Controller.Move(_motion + _verticalVelocity * Time.deltaTime);
         
-        // return the parent of the first collider from ColliderRegistry (if any) 
-        return count == 0 ? null : ColliderRegistry.GetColliderParent(_raycastHits[0].collider);
+        // reset motion field
+        _motion = Vector3.zero;
+    }
+
+    private void Rotate() {
+        // rotate character controller
+        transform.Rotate(transform.up, _rotation);
+        
+        // reset rotation field
+        _rotation = 0f;
     }
     
     //:::::::::::::::::::::::::::::://
     // Influencing Forces
     //:::::::::::::::::::::::::::::://
 
-    private void AddPlatformMovement(Component ground) {
-        if (ground && ground is MovingPlatform movingPlatform) AddMotion(movingPlatform.Motion);
+    private void AddPlatformMovement() {
+        // if there is currently no ground collider; we're done
+        if (!_groundCollider) return;
+        
+        // attempt to get the collider parent from the collider registry
+        var colliderParent = ColliderRegistry.GetColliderParent(_groundCollider);
+        
+        // if the collider parent is a MovingPlatform, add motion
+        if (colliderParent && colliderParent is MovingPlatform movingPlatform) AddMotion(movingPlatform.Motion);
     }
     
-    private void AddPlatformRotation(Component ground) {
-        // if RotatingPlatform wasn't passed we're done
-        if (!ground || ground is not RotatingPlatform rotatingPlatform) return;
+    private void AddPlatformRotation() {
+        // if there is currently no ground collider; we're done
+        if (!_groundCollider) return;
+        
+        // attempt to get the collider parent from the collider registry
+        var colliderParent = ColliderRegistry.GetColliderParent(_groundCollider);
+        
+        // if RotatingPlatform wasn't a parent of the collider we're done
+        if (!colliderParent || colliderParent is not RotatingPlatform rotatingPlatform) return;
         
         // calculate how far the platform will rotate this frame
         var rotationAngle = rotatingPlatform.RotationSpeed * Time.deltaTime;
         
-        // rotate character
-        transform.Rotate(transform.up, rotationAngle);
+        // rotate character same as platform
+        AddRotation(rotationAngle);
         
         // calculate vectors
         // see https://stackoverflow.com/questions/79332117/how-do-i-calculate-a-vector-on-the-edge-of-a-circle-in-unity-for-a-charactercont
@@ -166,34 +248,15 @@ public class Character : MonoBehaviour {
         AddMotion(forceMagnitude * Time.deltaTime * direction);
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
     private void AddGravity() {
-        if (0f < _jumpVelocity) {
-            // character is jumping, update gravity with jump velocity
-            _gravity.y = _jumpVelocity;
-        } else if (IsGrounded) {
-            // character is grounded, reset gravity velocity
-            _gravity.y = 0f;
-        }
+        // if character is grounded AND their not jumping, set vertical velocity to jump velocity (this will be zero if jump action not set)
+        // we need to check y value because player may still be 'grounded' after the first frame of a jump
+        if (IsGrounded && _verticalVelocity.y <= 0f) _verticalVelocity.y = _jumpVelocity;
         
-        // add gravity (downwards)
-        _gravity.y += Constant.Value.Gravity * Time.deltaTime;
-    }
-
-    protected void AddJump(float jumpVelocity) {
-        // increment jump velocity (only if value passed is positive)
-        if (0f < jumpVelocity) _jumpVelocity += jumpVelocity;
+        // reset jump field to default
+        _jumpVelocity = 0f;
+        
+        // factor in gravity
+        _verticalVelocity.y += gravity * Time.deltaTime;
     }
 }

@@ -60,8 +60,8 @@ public class ColliderRegistry : MonoBehaviour {
     //------------------------------//
 
     public static Component GetColliderParent(Collider childCollider) {
-        // if instance hasn't been instantiated we're done
-        if (!_instance) return null;
+        // if instance hasn't been instantiated OR no collider is passed, we're done
+        if (!_instance || !childCollider) return null;
         
         // attempt to find collider parent in registry
         foreach (var keyValuePair in _instance._registry) {

@@ -17,8 +17,7 @@ public class Void : MonoBehaviour {
     // Properties
     //------------------------------//
 
-    public bool IsActivated { get; private set; } = true;
-    
+    public bool IsActivated => isActivated;
     public float MaximumForce => maximumForce;
     public float MinimumDistance => minimumDistance;
     public float MaximumDistance => maximumDistance;
@@ -28,6 +27,7 @@ public class Void : MonoBehaviour {
     //:::::::::::::::::::::::::::::://
 
     [Header("Force")] 
+    [SerializeField] private bool isActivated = true;
     [SerializeField] private float maximumForce = 12f;
     [SerializeField] private float minimumDistance = 2f;
     [SerializeField] private float maximumDistance = 50f;

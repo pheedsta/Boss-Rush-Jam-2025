@@ -26,7 +26,7 @@ public class Character : MonoBehaviour {
     //:::::::::::::::::::::::::::::://
 
     private bool IsGrounded => _groundCollider;
-    protected CharacterController Controller => GetCharacterController();
+    private CharacterController Controller => GetCharacterController();
     
     //:::::::::::::::::::::::::::::://
     // Components
@@ -122,7 +122,7 @@ public class Character : MonoBehaviour {
         Debug.Assert(_characterController, "CharacterController Component is missing");
         //++++++++++++++++++++++++++++++++++++++++//
         
-        // return character controlller
+        // return character controller
         return _characterController;
     }
 
@@ -249,7 +249,7 @@ public class Character : MonoBehaviour {
     }
     
     private void AddGravity() {
-        // if character is grounded AND their not jumping, set vertical velocity to jump velocity (this will be zero if jump action not set)
+        // if character is grounded AND they're not jumping, set vertical velocity to jump velocity (this will be zero if jump action not set)
         // we need to check y value because player may still be 'grounded' after the first frame of a jump
         if (IsGrounded && _verticalVelocity.y <= 0f) _verticalVelocity.y = _jumpVelocity;
         

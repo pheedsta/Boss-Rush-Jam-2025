@@ -1,5 +1,5 @@
 {
-    "originalSdkFolder": "/Applications/Audiokinetic/Wwise2024.1.1.8691/SDK",
+    "originalSdkFolder": "E:\\Wwise\\Wwise2024.1.1.8691\\SDK",
     "currentVersion": {
         "nickname": "",
         "build": 3311,
@@ -23,6 +23,46 @@
         {
             "id": "DeploymentPlatforms",
             "valueId": "Windows"
+        },
+        {
+            "id": "Packages",
+            "valueId": "Unity"
+        },
+        {
+            "id": "DeploymentPlatforms",
+            "valueId": "Mac"
+        },
+        {
+            "id": "DeploymentPlatforms",
+            "valueId": "Windows"
+        },
+        {
+            "id": "Packages",
+            "valueId": "Unity"
+        },
+        {
+            "id": "DeploymentPlatforms",
+            "valueId": "Mac"
+        },
+        {
+            "id": "DeploymentPlatforms",
+            "valueId": "Windows"
+        },
+        {
+            "id": "Packages",
+            "valueId": "Unity"
+        },
+        {
+            "id": "DeploymentPlatforms",
+            "valueId": "Mac"
+        },
+        {
+            "id": "DeploymentPlatforms",
+            "valueId": "Windows"
+        },
+        {
+            "id": "DeploymentPlatforms",
+            "valueId": "Emscripten"
         }
     ]
 }

@@ -319,6 +319,88 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus
+  - PhysicalPath: Master-Mixer Hierarchy/Master-Mixer-MUSIC.wwu
+    PathAndIcons:
+    - ElementName: Master-Mixer Hierarchy
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Master-Mixer-MUSIC
+      ObjectType: 12
+      guid: 9f7ada5fa93de948bdb7675ee83e3409
+    ParentPath: Master-Mixer Hierarchy/Master-Mixer-MUSIC
+    guid: 9f7ada5fa93de948bdb7675ee83e3409
+    GuidInternal: 
+    m_lastTime: -8584652305190785912
+    List: []
+  - PhysicalPath: Master-Mixer Hierarchy/Master-Mixer-SFX.wwu
+    PathAndIcons:
+    - ElementName: Master-Mixer Hierarchy
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Master-Mixer-SFX
+      ObjectType: 12
+      guid: aeb126c73522e04385086ecab35d8869
+    ParentPath: Master-Mixer Hierarchy/Master-Mixer-SFX
+    guid: aeb126c73522e04385086ecab35d8869
+    GuidInternal: 
+    m_lastTime: -8584652305190784699
+    List:
+    - name: Boss Bus
+      guid: 915f3295d65b6b4e833c86be2db9f2a7
+      id: 2633636108
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Master-Mixer-SFX
+        ObjectType: 12
+        guid: aeb126c73522e04385086ecab35d8869
+      - ElementName: Boss Bus
+        ObjectType: 2
+        guid: 915f3295d65b6b4e833c86be2db9f2a7
+      Path: Master-Mixer Hierarchy/Master-Mixer-SFX/Boss Bus
+    - name: Dialogue Bus
+      guid: 45931568418735479fe3ab507daad3c4
+      id: 3714968413
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Master-Mixer-SFX
+        ObjectType: 12
+        guid: aeb126c73522e04385086ecab35d8869
+      - ElementName: Dialogue Bus
+        ObjectType: 2
+        guid: 45931568418735479fe3ab507daad3c4
+      Path: Master-Mixer Hierarchy/Master-Mixer-SFX/Dialogue Bus
+    - name: Environmental Bus
+      guid: 642546daeca3d545bf1e5c2994014a9b
+      id: 3600197733
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Master-Mixer-SFX
+        ObjectType: 12
+        guid: aeb126c73522e04385086ecab35d8869
+      - ElementName: Environmental Bus
+        ObjectType: 2
+        guid: 642546daeca3d545bf1e5c2994014a9b
+      Path: Master-Mixer Hierarchy/Master-Mixer-SFX/Environmental Bus
+    - name: Player Bus
+      guid: d345961aef60524dacee59cbdc6a1970
+      id: 174537428
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Master-Mixer-SFX
+        ObjectType: 12
+        guid: aeb126c73522e04385086ecab35d8869
+      - ElementName: Player Bus
+        ObjectType: 2
+        guid: d345961aef60524dacee59cbdc6a1970
+      Path: Master-Mixer Hierarchy/Master-Mixer-SFX/Player Bus
   BankWwu:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
     PathAndIcons:
@@ -331,7 +413,7 @@ MonoBehaviour:
     ParentPath: SoundBanks/Default Work Unit
     guid: 31a2ef76e1a40e42aa196c39c75de723
     GuidInternal: 
-    m_lastTime: -8584653239534951131
+    m_lastTime: -8584652305190652946
     List:
     - name: Main
       guid: 178af0441e574b4685bea2ed4f72914e
@@ -385,8 +467,65 @@ MonoBehaviour:
     ParentPath: Events/SFX
     guid: cd8906f9ee8ee2468b6e6f9195ffba84
     GuidInternal: 
-    m_lastTime: -8584653239535597881
+    m_lastTime: -8584652305191190632
     List:
+    - name: Dialogue
+      guid: bed3b14cf5a9e64aac54a68e64e609ac
+      id: 3930136735
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: cd8906f9ee8ee2468b6e6f9195ffba84
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: bed3b14cf5a9e64aac54a68e64e609ac
+      Path: Events/SFX/Dialogue
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Boss_Line_Phase1
+      guid: 29aea0e1456b114b8eb75354352e319d
+      id: 2924361411
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: cd8906f9ee8ee2468b6e6f9195ffba84
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: bed3b14cf5a9e64aac54a68e64e609ac
+      - ElementName: Play_Boss_Line_Phase1
+        ObjectType: 3
+        guid: 29aea0e1456b114b8eb75354352e319d
+      Path: Events/SFX/Dialogue/Play_Boss_Line_Phase1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Boss_Line_Phase3
+      guid: a7adc92ba0c3894c96dd317c60e4a08d
+      id: 2924361409
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: cd8906f9ee8ee2468b6e6f9195ffba84
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: bed3b14cf5a9e64aac54a68e64e609ac
+      - ElementName: Play_Boss_Line_Phase3
+        ObjectType: 3
+        guid: a7adc92ba0c3894c96dd317c60e4a08d
+      Path: Events/SFX/Dialogue/Play_Boss_Line_Phase3
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Test_Sound
       guid: d53718451c138e43af75995d8e2d3a4a
       id: 1936185617

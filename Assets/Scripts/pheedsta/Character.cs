@@ -38,7 +38,7 @@ public class Character : MonoBehaviour {
     // Managers
     //:::::::::::::::::::::::::::::://
 
-    private Void _void;
+    //private Void _void;
     
     //:::::::::::::::::::::::::::::://
     // Readonly Fields
@@ -69,9 +69,9 @@ public class Character : MonoBehaviour {
 
     protected virtual void Awake() {
         // get managers
-        _void = Void.Instance;
+        //_void = Void.Instance;
         //++++++++++++++++++++++++++++++++++++++++//
-        Debug.Assert(_void, "Void is missing");
+        //Debug.Assert(_void, "Void is missing");
         //++++++++++++++++++++++++++++++++++++++++//
     }
 
@@ -225,7 +225,7 @@ public class Character : MonoBehaviour {
 
     private void AddVoidVacuum() {
         // if the void is not active we're done
-        if (!_void.IsActivated) return;
+        /*if (!_void.IsActivated) return;
         
         // get character and void positions
         var characterPosition = transform.position;
@@ -245,7 +245,7 @@ public class Character : MonoBehaviour {
         var direction = (characterPosition - voidPosition).normalized;
         
         // add motion
-        AddMotion(forceMagnitude * Time.deltaTime * direction);
+        AddMotion(forceMagnitude * Time.deltaTime * direction);*/
     }
     
     private void AddGravity() {

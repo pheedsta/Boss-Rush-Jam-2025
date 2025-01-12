@@ -114,15 +114,15 @@ public class Player : Character {
 
     private void Look() {
         // update camera rotation values (clamping to min / max)
-        _cameraRotation.x = Mathf.Clamp(_cameraRotation.x + _lookDelta.y * turnSpeed * Time.deltaTime, minAimDegrees, maxAimDegrees);
+        //_cameraRotation.x = Mathf.Clamp(_cameraRotation.x + _lookDelta.y * turnSpeed * Time.deltaTime, minAimDegrees, maxAimDegrees);
         
         // rotate camera around x axis (up / down)
-        _cameraTransform.localEulerAngles = _cameraRotation;
+        //_cameraTransform.localEulerAngles = _cameraRotation;
     }
 
     private void Rotate() {
         // rotate body around the y axis
-        AddRotation(_lookDelta.x * turnSpeed * Time.deltaTime);
+        //AddRotation(_lookDelta.x * turnSpeed * Time.deltaTime);
     }
 
     private void Move() {

@@ -4,7 +4,14 @@ using UnityEngine;
 // CLASS: Player
 //++++++++++++++++++++++++++++++++++++++++//
 
+[DefaultExecutionOrder(-1)]
 public class Player : Character {
+    
+    //------------------------------//
+    // Static Properties 
+    //------------------------------//
+
+    public static Player Instance;
     
     //:::::::::::::::::::::::::::::://
     // Constants
@@ -67,14 +74,14 @@ public class Player : Character {
 
     protected override void Awake() {
         base.Awake();
-        
-        // get Transforms
-        _bodyTransform = transform.Find("Body");
-        _cameraTransform = transform.Find("Camera Root");
-        //++++++++++++++++++++++++++++++++++++++++//
-        Debug.Assert(_bodyTransform, "'Body' Transform is missing");
-        Debug.Assert(_cameraTransform, "'Camera Root' Transform is missing");
-        //++++++++++++++++++++++++++++++++++++++++//
+
+        // singleton
+        if (Instance) {
+            Destroy(gameObject);
+        } else {
+            Instance = this;
+            Configure();
+        }
     }
 
     private void OnEnable() {
@@ -86,16 +93,17 @@ public class Player : Character {
     }
 
     protected override void Update() {
+        base.Update();
+        
         // process player inputs
         Rotate();
         Move();
         Jump();
-        
-        // NB: always call this last so it can action the movements above on this frame
-        base.Update();
     }
 
-    private void LateUpdate() {
+    protected override void LateUpdate() {
+        base.LateUpdate();
+        
         // process camera inputs
         Look();
     }
@@ -161,6 +169,20 @@ public class Player : Character {
         // calculate jump velocity using desired jump height as basis (DON'T USE Time.deltaTime)
         // NB: this will check if character is grounded
         AddJump(Mathf.Sqrt(jumpHeight * -2f * gravity));
+    }
+    
+    //:::::::::::::::::::::::::::::://
+    // Configuration
+    //:::::::::::::::::::::::::::::://
+
+    private void Configure() {
+        // get Transforms
+        _bodyTransform = transform.Find("Body");
+        _cameraTransform = transform.Find("Camera Root");
+        //++++++++++++++++++++++++++++++++++++++++//
+        Debug.Assert(_bodyTransform, "'Body' Transform is missing");
+        Debug.Assert(_cameraTransform, "'Camera Root' Transform is missing");
+        //++++++++++++++++++++++++++++++++++++++++//
     }
     
     //:::::::::::::::::::::::::::::://

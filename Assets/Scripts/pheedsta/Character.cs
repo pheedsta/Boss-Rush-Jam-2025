@@ -1,10 +1,22 @@
 using UnityEngine;
 
+//------------------------------//
+// Required Components
+//------------------------------//
+
+[RequireComponent(typeof(CharacterController))]
+
 //++++++++++++++++++++++++++++++++++++++++//
 // CLASS: Character
 //++++++++++++++++++++++++++++++++++++++++//
 
 public class Character : MonoBehaviour {
+    
+    //------------------------------//
+    // Properties
+    //------------------------------//
+    
+    public CharacterStateMachine StateMachine { get; private set; }
     
     //:::::::::::::::::::::::::::::://
     // Serialized Fields
@@ -22,11 +34,18 @@ public class Character : MonoBehaviour {
     [SerializeField] private LayerMask groundLayers;
     
     //:::::::::::::::::::::::::::::://
-    // Properties
+    // Protected Properties
+    //:::::::::::::::::::::::::::::://
+    
+    protected bool IsGrounded => GroundCollider;
+    protected Collider GroundCollider { get; private set; }
+    
+    //:::::::::::::::::::::::::::::://
+    // Private Properties
     //:::::::::::::::::::::::::::::://
 
-    private bool IsGrounded => _groundCollider;
-    private CharacterController Controller => GetCharacterController();
+    private float GroundOverlapSphereRadius => _characterController.radius;
+    private Vector3 GroundOverlapSpherePosition => GetGroundOverlapSpherePosition();
     
     //:::::::::::::::::::::::::::::://
     // Components
@@ -35,23 +54,10 @@ public class Character : MonoBehaviour {
     private CharacterController _characterController;
     
     //:::::::::::::::::::::::::::::://
-    // Managers
-    //:::::::::::::::::::::::::::::://
-
-    //private Void _void;
-    
-    //:::::::::::::::::::::::::::::://
     // Readonly Fields
     //:::::::::::::::::::::::::::::://
     
     private readonly Collider[] _colliders = new Collider[1];
-    
-    //:::::::::::::::::::::::::::::://
-    // Gizmo Fields
-    //:::::::::::::::::::::::::::::://
-    
-    private readonly Color _gizmoGroundedColor = new (0.0f, 1.0f, 0.0f, 0.35f);
-    private readonly Color _gizmoUngroundedColor = new (1.0f, 0.0f, 0.0f, 0.35f);
     
     //:::::::::::::::::::::::::::::://
     // Local Fields
@@ -61,35 +67,38 @@ public class Character : MonoBehaviour {
     private float _jumpVelocity;
     private Vector3 _motion;
     private Vector3 _verticalVelocity;
-    private Collider _groundCollider;
     
     //:::::::::::::::::::::::::::::://
     // Unity Callbacks
     //:::::::::::::::::::::::::::::://
 
     protected virtual void Awake() {
-        // get managers
-        //_void = Void.Instance;
-        //++++++++++++++++++++++++++++++++++++++++//
-        //Debug.Assert(_void, "Void is missing");
-        //++++++++++++++++++++++++++++++++++++++++//
+        // get character controller component (this will not be null)
+        _characterController = GetComponent<CharacterController>();
+        
+        // initialise state machine
+        StateMachine = new CharacterStateMachine();
     }
 
     protected virtual void Update() {
-        // get the current ground collider (if any)
-        GetGroundCollider();
-        
+        // call CharacterState update method
+        StateMachine.CurrentCharacterState?.Update();
+    }
+
+    protected virtual void LateUpdate() {
         // add platform movement / rotation to the motion
         AddPlatformMovement();
         AddPlatformRotation();
         
         // add other influencing factors to the motion
-        AddVoidVacuum();
         AddGravity();
         
         // move and rotate the character
         Move();
         Rotate();
+        
+        // reset the ground collider
+        GroundCollider = GetGroundCollider();
     }
     
     //:::::::::::::::::::::::::::::://
@@ -97,33 +106,15 @@ public class Character : MonoBehaviour {
     //:::::::::::::::::::::::::::::://
 
     private void OnDrawGizmosSelected() {
-        // update gizmo color depending on grounded status
-        Gizmos.color = IsGrounded ? _gizmoGroundedColor : _gizmoUngroundedColor;
-        
-        // calculate the sphere position (should be the same as Physics.OverlapSphereNonAlloc in GetGroundCollider)
-        var position = transform.position;
-        position.y += Controller.radius - groundedOffset;
-        
-        // draw gizmo sphere
-        Gizmos.DrawSphere(position, Controller.radius);
-    }
-    
-    //:::::::::::::::::::::::::::::://
-    // Getters
-    //:::::::::::::::::::::::::::::://
-
-    private CharacterController GetCharacterController() {
-        // if a character controller has already been set, we're done
-        if (_characterController) return _characterController;
-        
-        // get character controller component
+        // get character controller (this will never be null)
         _characterController = GetComponent<CharacterController>();
-        //++++++++++++++++++++++++++++++++++++++++//
-        Debug.Assert(_characterController, "CharacterController Component is missing");
-        //++++++++++++++++++++++++++++++++++++++++//
         
-        // return character controller
-        return _characterController;
+        // check grounded state (this requires CharacterController)
+        GroundCollider = GetGroundCollider();
+        
+        // draw sphere gizmo
+        Gizmos.color = IsGrounded ? new Color(0.0f, 1.0f, 0.0f, 0.35f) : new Color(1.0f, 0.0f, 0.0f, 0.35f);
+        Gizmos.DrawSphere(GroundOverlapSpherePosition, GroundOverlapSphereRadius);
     }
 
     //:::::::::::::::::::::::::::::://
@@ -146,19 +137,24 @@ public class Character : MonoBehaviour {
     }
     
     //:::::::::::::::::::::::::::::://
-    // Proximity Methods
+    // Getters
     //:::::::::::::::::::::::::::::://
 
-    private void GetGroundCollider() {
+    private Collider GetGroundCollider() {
+        // find the first ground object (if any) ignoring trigger colliders
+        var count = Physics.OverlapSphereNonAlloc(GroundOverlapSpherePosition, GroundOverlapSphereRadius, _colliders, groundLayers, QueryTriggerInteraction.Ignore);
+        
+        // return ground collider
+        return 0 < count ? _colliders[0] : null;
+    }
+
+    private Vector3 GetGroundOverlapSpherePosition() {
         // get the character position and add offset to y
-        var position = transform.position;
-        position.y += Controller.radius - groundedOffset;
+        var position = _characterController.bounds.center;
+        position.y = _characterController.bounds.min.y + _characterController.radius - groundedOffset;
         
-        // starting find the first ground object (if any) and ignore trigger colliders
-        var count = Physics.OverlapSphereNonAlloc(position, Controller.radius, _colliders, groundLayers, QueryTriggerInteraction.Ignore);
-        
-        // update ground collider
-        _groundCollider = 0 < count ? _colliders[0] : null;
+        // return the calculated position
+        return position;
     }
     
     //:::::::::::::::::::::::::::::://
@@ -168,7 +164,7 @@ public class Character : MonoBehaviour {
     private void Move() {
         // move character controller using motion and gravity
         // NB: gravity is the only vector multiplied by delta time
-        Controller.Move(_motion + _verticalVelocity * Time.deltaTime);
+        _characterController.Move(_motion + _verticalVelocity * Time.deltaTime);
         
         // reset motion field
         _motion = Vector3.zero;
@@ -188,24 +184,27 @@ public class Character : MonoBehaviour {
 
     private void AddPlatformMovement() {
         // if there is currently no ground collider; we're done
-        if (!_groundCollider) return;
+        if (!GroundCollider) return;
         
-        // attempt to get the collider parent from the collider registry
-        var colliderParent = ColliderRegistry.GetColliderParent(_groundCollider);
+        // attempt to get MovingPlatform components linked to this collider
+        var movingPlatforms = ComponentRegistry.ColliderComponents<MovingPlatform>(GroundCollider);
         
-        // if the collider parent is a MovingPlatform, add motion
-        if (colliderParent && colliderParent is MovingPlatform movingPlatform) AddMotion(movingPlatform.Motion);
+        // if MovingPlatforms returned; add motion
+        if (0 < movingPlatforms.Length) AddMotion(movingPlatforms[0].Motion);
     }
     
     private void AddPlatformRotation() {
         // if there is currently no ground collider; we're done
-        if (!_groundCollider) return;
+        if (!GroundCollider) return;
         
-        // attempt to get the collider parent from the collider registry
-        var colliderParent = ColliderRegistry.GetColliderParent(_groundCollider);
+        // attempt to get RotatingPlatform components linked to this collider
+        var rotatingPlatforms = ComponentRegistry.ColliderComponents<RotatingPlatform>(GroundCollider);
         
-        // if RotatingPlatform wasn't a parent of the collider we're done
-        if (!colliderParent || colliderParent is not RotatingPlatform rotatingPlatform) return;
+        // if no rotating platforms returned; we're done
+        if (0 == rotatingPlatforms.Length) return;
+        
+        // get the first platform
+        var rotatingPlatform = rotatingPlatforms[0];
         
         // calculate how far the platform will rotate this frame
         var rotationAngle = rotatingPlatform.RotationSpeed * Time.deltaTime;
@@ -222,31 +221,6 @@ public class Character : MonoBehaviour {
         // move character on platform
         AddMotion(v3 - v2);
     }
-
-    private void AddVoidVacuum() {
-        // if the void is not active we're done
-        /*if (!_void.IsActivated) return;
-        
-        // get character and void positions
-        var characterPosition = transform.position;
-        var voidPosition = _void.transform.position;
-            
-        // calculate the distance between character and void
-        var distance = Vector3.Distance(characterPosition, voidPosition);
-        
-        // if the distance is outside the range we're done (no forces required)
-        if (distance < _void.MinimumDistance || distance > _void.MaximumDistance) return;
-        
-        // calculate the normalized force inversely proportional to distance (as negative value)
-        // this will make the force stronger is we get closer to the void
-        var forceMagnitude = _void.MaximumForce * -(1f - Mathf.InverseLerp(_void.MinimumDistance, _void.MaximumDistance, distance));
-
-        // get the direction vector from the character to the void
-        var direction = (characterPosition - voidPosition).normalized;
-        
-        // add motion
-        AddMotion(forceMagnitude * Time.deltaTime * direction);*/
-    }
     
     private void AddGravity() {
         // if character is grounded AND they're not jumping, set vertical velocity to jump velocity (this will be zero if jump action not set)
@@ -259,4 +233,29 @@ public class Character : MonoBehaviour {
         // factor in gravity
         _verticalVelocity.y += gravity * Time.deltaTime;
     }
+
+    /*private void AddVoidVacuum() {
+        // if the void is not active we're done
+        if (!_void.IsActivated) return;
+
+        // get character and void positions
+        var characterPosition = transform.position;
+        var voidPosition = _void.transform.position;
+
+        // calculate the distance between character and void
+        var distance = Vector3.Distance(characterPosition, voidPosition);
+
+        // if the distance is outside the range we're done (no forces required)
+        if (distance < _void.MinimumDistance || distance > _void.MaximumDistance) return;
+
+        // calculate the normalized force inversely proportional to distance (as negative value)
+        // this will make the force stronger is we get closer to the void
+        var forceMagnitude = _void.MaximumForce * -(1f - Mathf.InverseLerp(_void.MinimumDistance, _void.MaximumDistance, distance));
+
+        // get the direction vector from the character to the void
+        var direction = (characterPosition - voidPosition).normalized;
+
+        // add motion
+        AddMotion(forceMagnitude * Time.deltaTime * direction);
+    }*/
 }

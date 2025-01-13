@@ -6,12 +6,34 @@
   <component name="ChangeListManager">
     <list default="true" id="c0323cdc-65bc-4b30-b3bb-f1969ff69110" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Boss-Rush-Jam-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Boss-Rush-Jam-2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/pheedsta/Test Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pheedsta/Test Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/pheedsta/Sprite.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/pheedsta/Sprite.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/pheedsta/Test 2.5D.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pheedsta/Test 2.5D.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/pheedsta/Character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/ColliderRegistry.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/ColliderRegistry.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/InputManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/InputManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/MovingPlatform.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/MovingPlatform.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/pheedsta/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/DefaultVolumeProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/DefaultVolumeProfile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/RigidBodyPush.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/RigidBodyPush.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/RotatingPlatform.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/RotatingPlatform.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/Void.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/Void.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/pheedsta.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/pheedsta/Shader Graphs_Sprite Shader.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/pheedsta/Shader Graphs_Sprite Shader.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/pheedsta/Sprite Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/pheedsta/Sprite Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/pheedsta/SpriteShadows.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/pheedsta/SpriteShadows.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/pheedsta/pngtree-pixel-art-character-boy-waving-his-hand-png-image_7325575.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/pheedsta/pngtree-pixel-art-character-boy-waving-his-hand-png-image_7325575.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_App/Scene/Terrain.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_App/Scene/Terrain.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +44,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/pheedsta/Constant.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/pheedsta/Follow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/pheedsta/MovingPlatform.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/pheedsta/CharacterState.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -119,6 +139,7 @@
       <workItem from="1736229680355" duration="1095000" />
       <workItem from="1736284338967" duration="1000" />
       <workItem from="1736657135247" duration="2337000" />
+      <workItem from="1736721474641" duration="12124000" />
     </task>
     <servers />
   </component>

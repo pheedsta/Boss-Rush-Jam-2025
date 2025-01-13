@@ -1,16 +1,23 @@
+using Lean.Gui;
 using UnityEngine;
 
-public class UIHub : MonoBehaviour
+namespace _App.Scripts.juandeyby.UI
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class UIHub : MonoBehaviour, IUIPanel
     {
-        
-    }
+        [SerializeField] private LeanWindow leanWindow;
+        [SerializeField] private UIPlayerHealth playerHealth;
+        public UIPlayerHealth PlayerHealth => playerHealth;
+        [SerializeField] private UIPlayerSingleAbility playerSingleAbility;
+        public UIPlayerSingleAbility PlayerSingleAbility => playerSingleAbility;
+        public void Show()
+        {
+            leanWindow.TurnOn();
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void Hide()
+        {
+            leanWindow.TurnOff();
+        }
     }
 }

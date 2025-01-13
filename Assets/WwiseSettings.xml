@@ -11,7 +11,7 @@
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
   <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
   <WwiseInstallationPathMac>/Applications/Audiokinetic/Wwise2024.1.1.8691/Wwise.app</WwiseInstallationPathMac>
-  <WwiseInstallationPathWindows />
+  <WwiseInstallationPathWindows>E:\Wwise\Wwise2024.1.1.8691</WwiseInstallationPathWindows>
   <WwiseProjectPath>../../../WwiseProjects/Boss-Rush-Jam-2025_Wwise/Boss-Rush-Jam-2025_Wwise.wproj</WwiseProjectPath>
   <UseWaapi>true</UseWaapi>
   <WaapiPort>8080</WaapiPort>

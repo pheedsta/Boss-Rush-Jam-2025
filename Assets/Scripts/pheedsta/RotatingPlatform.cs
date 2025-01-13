@@ -23,7 +23,7 @@ public class RotatingPlatform : MonoBehaviour {
     //:::::::::::::::::::::::::::::://
 
     private void OnEnable() {
-        ColliderRegistry.Register(this);
+        ComponentRegistry.Register(this);
     }
 
     private void Update() {
@@ -31,6 +31,6 @@ public class RotatingPlatform : MonoBehaviour {
     }
 
     private void OnDisable() {
-        ColliderRegistry.Deregister(this);
+        ComponentRegistry.Deregister(this);
     }
 }

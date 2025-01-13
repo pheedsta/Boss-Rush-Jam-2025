@@ -17,7 +17,7 @@ public class MovingPlatform : MonoBehaviour {
     //:::::::::::::::::::::::::::::://
 
     private void OnEnable() {
-        ColliderRegistry.Register(this);
+        ComponentRegistry.Register(this);
     }
 
     private void Update() {
@@ -29,6 +29,6 @@ public class MovingPlatform : MonoBehaviour {
     }
 
     private void OnDisable() {
-        ColliderRegistry.Deregister(this);
+        ComponentRegistry.Deregister(this);
     }
 }

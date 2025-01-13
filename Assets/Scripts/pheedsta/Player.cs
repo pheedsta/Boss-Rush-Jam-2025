@@ -1,10 +1,29 @@
 using UnityEngine;
 
+//------------------------------//
+// Required Components
+//------------------------------//
+
+[RequireComponent(typeof(CharacterHealth))]
+
 //++++++++++++++++++++++++++++++++++++++++//
 // CLASS: Player
 //++++++++++++++++++++++++++++++++++++++++//
 
+[DefaultExecutionOrder(-1)]
 public class Player : Character {
+    
+    //------------------------------//
+    // Static Properties 
+    //------------------------------//
+
+    public static Player Instance;
+    
+    //------------------------------//
+    // Properties
+    //------------------------------//
+    
+    public CharacterHealth CharacterHealth { get; private set; }
     
     //:::::::::::::::::::::::::::::://
     // Constants
@@ -67,17 +86,22 @@ public class Player : Character {
 
     protected override void Awake() {
         base.Awake();
-        
-        // get Transforms
-        _bodyTransform = transform.Find("Body");
-        _cameraTransform = transform.Find("Camera Root");
-        //++++++++++++++++++++++++++++++++++++++++//
-        Debug.Assert(_bodyTransform, "'Body' Transform is missing");
-        Debug.Assert(_cameraTransform, "'Camera Root' Transform is missing");
-        //++++++++++++++++++++++++++++++++++++++++//
+
+        // singleton
+        if (Instance) {
+            Destroy(gameObject);
+        } else {
+            Instance = this;
+            Configure();
+        }
     }
 
-    private void OnEnable() {
+    protected override void OnEnable() {
+        base.OnEnable();
+        
+        // register with ComponentRegistry
+        ComponentRegistry.Register(this);
+        
         // subscribe to InputManager events
         InputManager.OnMove += InputManager_OnMove;
         InputManager.OnLook += InputManager_OnLook;
@@ -86,21 +110,27 @@ public class Player : Character {
     }
 
     protected override void Update() {
+        base.Update();
+        
         // process player inputs
         Rotate();
         Move();
         Jump();
-        
-        // NB: always call this last so it can action the movements above on this frame
-        base.Update();
     }
 
-    private void LateUpdate() {
+    protected override void LateUpdate() {
+        base.LateUpdate();
+        
         // process camera inputs
         Look();
     }
 
-    private void OnDisable() {
+    protected override void OnDisable() {
+        base.OnDisable();
+        
+        // deregister from ComponentRegistry
+        ComponentRegistry.Deregister(this);
+        
         // unsubscribe from InputManager events
         InputManager.OnMove -= InputManager_OnMove;
         InputManager.OnLook -= InputManager_OnLook;
@@ -114,15 +144,15 @@ public class Player : Character {
 
     private void Look() {
         // update camera rotation values (clamping to min / max)
-        _cameraRotation.x = Mathf.Clamp(_cameraRotation.x + _lookDelta.y * turnSpeed * Time.deltaTime, minAimDegrees, maxAimDegrees);
+        //_cameraRotation.x = Mathf.Clamp(_cameraRotation.x + _lookDelta.y * turnSpeed * Time.deltaTime, minAimDegrees, maxAimDegrees);
         
         // rotate camera around x axis (up / down)
-        _cameraTransform.localEulerAngles = _cameraRotation;
+        //_cameraTransform.localEulerAngles = _cameraRotation;
     }
 
     private void Rotate() {
         // rotate body around the y axis
-        AddRotation(_lookDelta.x * turnSpeed * Time.deltaTime);
+        //AddRotation(_lookDelta.x * turnSpeed * Time.deltaTime);
     }
 
     private void Move() {
@@ -161,6 +191,23 @@ public class Player : Character {
         // calculate jump velocity using desired jump height as basis (DON'T USE Time.deltaTime)
         // NB: this will check if character is grounded
         AddJump(Mathf.Sqrt(jumpHeight * -2f * gravity));
+    }
+    
+    //:::::::::::::::::::::::::::::://
+    // Configuration
+    //:::::::::::::::::::::::::::::://
+
+    private void Configure() {
+        // get required components (these won't be null)
+        CharacterHealth = GetComponent<CharacterHealth>();
+        
+        // get Transforms
+        _bodyTransform = transform.Find("Body");
+        _cameraTransform = transform.Find("Camera Root");
+        //++++++++++++++++++++++++++++++++++++++++//
+        Debug.Assert(_bodyTransform, "'Body' Transform is missing");
+        Debug.Assert(_cameraTransform, "'Camera Root' Transform is missing");
+        //++++++++++++++++++++++++++++++++++++++++//
     }
     
     //:::::::::::::::::::::::::::::://

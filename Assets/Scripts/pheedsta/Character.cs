@@ -81,7 +81,7 @@ public class Character : MonoBehaviour {
     }
 
     protected virtual void Update() {
-        // call CharacterState update method
+        // call state update method
         StateMachine.CurrentCharacterState?.Update();
     }
 
@@ -100,6 +100,14 @@ public class Character : MonoBehaviour {
         // reset the ground collider
         GroundCollider = GetGroundCollider();
     }
+    
+    //:::::::::::::::::::::::::::::://
+    // Unity Callbacks (unused)
+    //:::::::::::::::::::::::::::::://
+    
+    protected virtual void OnEnable() { }
+    protected virtual void Start() { }
+    protected virtual void OnDisable() { }
     
     //:::::::::::::::::::::::::::::://
     // Gizmo Callbacks

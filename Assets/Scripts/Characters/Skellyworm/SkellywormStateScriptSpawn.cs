@@ -1,24 +1,23 @@
 using UnityEngine;
 
 //++++++++++++++++++++++++++++++++++++++++//
-// CLASS: CharacterStateScriptSkellywormSpawn
+// CLASS: SkellywormStateScriptSpawn
 //++++++++++++++++++++++++++++++++++++++++//
 
 [CreateAssetMenu(fileName = "Skellyworm Spawn State", menuName = "Scriptable Objects/Enemies/Skellyworm Spawn State", order = 0)]
-public class CharacterStateScriptSkellywormSpawn : CharacterStateScript {
+public class SkellywormStateScriptSpawn : SkellywormStateScript {
     
     //:::::::::::::::::::::::::::::://
     // Constants
     //:::::::::::::::::::::::::::::://
 
-    private const float k_MaxSpawnDuration = 1f; // spawn duration in seconds
+    private const float k_AnimationDuration = 1f; // this should be the same as spawn animation duration
     
     //:::::::::::::::::::::::::::::://
     // Local Fields
     //:::::::::::::::::::::::::::::://
 
-    private float _spawnDuration;
-    private SkellywormEnemy _skellywormEnemy;
+    private float _progress;
     
     //-----------------------------//
     // State Methods
@@ -28,20 +27,24 @@ public class CharacterStateScriptSkellywormSpawn : CharacterStateScript {
         base.Enter();
         
         // reset field to defaults
-        _spawnDuration = 0f;
-        _skellywormEnemy = Character as SkellywormEnemy; // this is a bit of a hack...
+        _progress = 0f;
         
         // change to spawn animation
-        _skellywormEnemy!.ChangeAnimationState(0);
+        Skellyworm.SetAnimState(0);
     }
 
     public override void Update() {
         base.Update();
         
-        // increment spawn duration
-        _spawnDuration += Time.deltaTime;
-        
-        // if we have reached maximum spawn duration; change to walk state
-        if (_spawnDuration >= k_MaxSpawnDuration) Character.StateMachine.ChangeState(_skellywormEnemy!.WalkState);
+        // increment progress
+        _progress += Time.deltaTime;
+
+        if (!Skellyworm.IsAlive) {
+            // Skellyworm is dead; change to die state
+            Skellyworm.StateMachine.ChangeState(Skellyworm.DieState);
+        } else if (k_AnimationDuration <= _progress) {
+            // Skellyworm is alive AND we've reached maximum animation duration; change to walk state
+            Skellyworm.StateMachine.ChangeState(Skellyworm.WalkState);
+        }
     }
 }

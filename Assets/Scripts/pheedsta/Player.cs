@@ -84,7 +84,9 @@ public class Player : Character {
         }
     }
 
-    private void OnEnable() {
+    protected override void OnEnable() {
+        base.OnEnable();
+        
         // subscribe to InputManager events
         InputManager.OnMove += InputManager_OnMove;
         InputManager.OnLook += InputManager_OnLook;
@@ -108,7 +110,9 @@ public class Player : Character {
         Look();
     }
 
-    private void OnDisable() {
+    protected override void OnDisable() {
+        base.OnDisable();
+        
         // unsubscribe from InputManager events
         InputManager.OnMove -= InputManager_OnMove;
         InputManager.OnLook -= InputManager_OnLook;

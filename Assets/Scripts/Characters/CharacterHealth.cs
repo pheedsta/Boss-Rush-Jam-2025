@@ -37,10 +37,6 @@ public class CharacterHealth : MonoBehaviour {
     // Damage Methods
     //------------------------------//
 
-    public void ApplyDamage(int damage) {
-        _exactHealth -= Mathf.Abs(damage);
-    }
-
     public void ApplyDamage(float damage) {
         _exactHealth -= Mathf.Abs(damage);
     }

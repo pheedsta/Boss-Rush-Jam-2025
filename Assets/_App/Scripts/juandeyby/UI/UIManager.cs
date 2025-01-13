@@ -6,9 +6,13 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private UIStart startPanel;
+    public UIStart StartPanel => startPanel;
     [SerializeField] private UIPause pausePanel;
+    public UIPause PausePanel => pausePanel;
     [SerializeField] private UIHub hubPanel;
+    public UIHub HubPanel => hubPanel;
     [SerializeField] private UIEnding endingPanel;
+    public UIEnding EndingPanel => endingPanel;
     
     private void OnEnable()
     {

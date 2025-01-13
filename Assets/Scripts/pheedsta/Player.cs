@@ -1,5 +1,11 @@
 using UnityEngine;
 
+//------------------------------//
+// Required Components
+//------------------------------//
+
+[RequireComponent(typeof(CharacterHealth))]
+
 //++++++++++++++++++++++++++++++++++++++++//
 // CLASS: Player
 //++++++++++++++++++++++++++++++++++++++++//
@@ -12,6 +18,12 @@ public class Player : Character {
     //------------------------------//
 
     public static Player Instance;
+    
+    //------------------------------//
+    // Properties
+    //------------------------------//
+    
+    public CharacterHealth CharacterHealth { get; private set; }
     
     //:::::::::::::::::::::::::::::://
     // Constants
@@ -87,6 +99,9 @@ public class Player : Character {
     protected override void OnEnable() {
         base.OnEnable();
         
+        // register with ComponentRegistry
+        ComponentRegistry.Register(this);
+        
         // subscribe to InputManager events
         InputManager.OnMove += InputManager_OnMove;
         InputManager.OnLook += InputManager_OnLook;
@@ -112,6 +127,9 @@ public class Player : Character {
 
     protected override void OnDisable() {
         base.OnDisable();
+        
+        // deregister from ComponentRegistry
+        ComponentRegistry.Deregister(this);
         
         // unsubscribe from InputManager events
         InputManager.OnMove -= InputManager_OnMove;
@@ -180,6 +198,9 @@ public class Player : Character {
     //:::::::::::::::::::::::::::::://
 
     private void Configure() {
+        // get required components (these won't be null)
+        CharacterHealth = GetComponent<CharacterHealth>();
+        
         // get Transforms
         _bodyTransform = transform.Find("Body");
         _cameraTransform = transform.Find("Camera Root");

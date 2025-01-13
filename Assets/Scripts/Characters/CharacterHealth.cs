@@ -12,6 +12,7 @@ public class CharacterHealth : MonoBehaviour {
 
     public bool IsAlive => 0f < _exactHealth;
     public int CurrentHealth => Mathf.CeilToInt(_exactHealth);
+    public float HealthPercentage => _exactHealth / startingHealth;
     
     //:::::::::::::::::::::::::::::://
     // Serialized Fields

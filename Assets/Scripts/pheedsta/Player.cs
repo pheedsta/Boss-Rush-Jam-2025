@@ -1,3 +1,4 @@
+using _App.Scripts.juandeyby;
 using UnityEngine;
 
 //------------------------------//
@@ -111,6 +112,18 @@ public class Player : Character {
 
     protected override void Update() {
         base.Update();
+        
+        
+        
+        
+        // just do this for now
+        if (!_uiManager) _uiManager = UIServiceLocator.Get<UIManager>();
+        _uiManager.HubPanel.PlayerHealth.SetHealth(CharacterHealth.HealthPercentage);
+        
+        
+        
+        
+        
         
         // process player inputs
         Rotate();
@@ -229,4 +242,10 @@ public class Player : Character {
     private void InputManager_OnSprint(InputManager.ActionPhase phase) {
         _sprint = phase == InputManager.ActionPhase.Performed;
     }
+
+
+
+
+
+    private UIManager _uiManager;
 }

@@ -20,6 +20,9 @@ public class UIManager : MonoBehaviour
         UIServiceLocator.Unregister<UIManager>();
     }
  
+    /// <summary>
+    /// Show the start panel
+    /// </summary>
     public void ShowStartPanel()
     {
         startPanel.Show();
@@ -28,6 +31,9 @@ public class UIManager : MonoBehaviour
         endingPanel.Hide();
     }
     
+    /// <summary>
+    /// Show the pause panel
+    /// </summary>
     public void ShowPausePanel()
     {
         startPanel.Hide();
@@ -36,6 +42,9 @@ public class UIManager : MonoBehaviour
         endingPanel.Hide();
     }
     
+    /// <summary>
+    /// Show the hub panel
+    /// </summary>
     public void ShowHubPanel()
     {
         startPanel.Hide();
@@ -44,6 +53,9 @@ public class UIManager : MonoBehaviour
         endingPanel.Hide();
     }
     
+    /// <summary>
+    /// Show the ending panel
+    /// </summary>
     public void ShowEndingPanel()
     {
         startPanel.Hide();

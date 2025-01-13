@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlatformSettingsNameList:
   - Mac
+  - Web
   - Windows
   PlatformSettingsList:
   - {fileID: 11400000, guid: 67e50cad9ee714b79a7156ffbd3b424e, type: 2}
+  - {fileID: 11400000, guid: 8c165bd9d715a32419f58b8588b55519, type: 2}
   - {fileID: 11400000, guid: 6d2be36753a124bbc89bde7e51255184, type: 2}
   InvalidReferencePlatforms: []
   UserSettings:
@@ -24,7 +26,7 @@ MonoBehaviour:
     m_StartupLanguage: English(US)
     m_EngineLogging: 1
     m_IsDecodedBankEnabled: 0
-    m_IsAutoBankEnabled: 1
+    m_IsAutoBankEnabled: 0
     m_DefaultListenerScalingFactor: 1
     m_MaximumNumberOfPositioningPaths: 255
     m_CommandQueueSize: 262144

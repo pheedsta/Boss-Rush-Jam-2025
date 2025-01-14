@@ -4,7 +4,7 @@ using UnityEngine;
 // Required Components
 //------------------------------//
 
-[RequireComponent(typeof(CharacterHealth))]
+[RequireComponent(typeof(Health))]
 
 //++++++++++++++++++++++++++++++//
 // CLASS: Skellyworm
@@ -22,8 +22,8 @@ public class Skellyworm : Character {
     //------------------------------//
     // Properties
     //------------------------------//
-    
-    public bool IsAlive => _characterHealth.IsAlive;
+
+    public bool IsAlive => _health.IsAlive;
     
     //:::::::::::::::::::::::::::::://
     // Serialized Fields
@@ -62,12 +62,18 @@ public class Skellyworm : Character {
     private CharacterState _projectileAttackState;
     
     //:::::::::::::::::::::::::::::://
+    // Properties
+    //:::::::::::::::::::::::::::::://
+    
+    private Player Player => GetPlayer();
+    
+    //:::::::::::::::::::::::::::::://
     // Components
     //:::::::::::::::::::::::::::::://
     
     private Player _player;
+    private Health _health;
     private Animator _animator;
-    private CharacterHealth _characterHealth;
     
     //:::::::::::::::::::::::::::::://
     // Local Fields
@@ -107,7 +113,7 @@ public class Skellyworm : Character {
 
     public void MoveTowardsPlayer() {
         // get the direction vector from the enemy to the player
-        var direction = (_player.transform.position - transform.position).normalized;
+        var direction = (Player.transform.position - transform.position).normalized;
         
         // add motion towards the player
         AddMotion(moveSpeed * Time.deltaTime * direction);
@@ -115,7 +121,7 @@ public class Skellyworm : Character {
 
     public void AttackPlayer() {
         // get the distance to the player
-        var distance = Vector3.Distance(transform.position, _player.transform.position);
+        var distance = Vector3.Distance(transform.position, Player.transform.position);
 
         if (distance <= meleeRange && meleeCooldown <= _lastAttack) {
             // within melee range and melee attack is not on cooldown; change to melee attack state
@@ -140,24 +146,34 @@ public class Skellyworm : Character {
         _animator.SetInteger(_hashAnimState, state);
     }
     
+    // Getters
+
+    private Player GetPlayer() {
+        // if a player has already been found, we're done
+        if (_player) return _player;
+        
+        // get the player instance
+        _player = Player.Instance;
+        //++++++++++++++++++++++++++++++//
+        Debug.Assert(_player, "Player instance is null");
+        //++++++++++++++++++++++++++++++//
+        
+        // return the player instance
+        return _player;
+    }
+    
     //:::::::::::::::::::::::::::::://
     // Configuration
     //:::::::::::::::::::::::::::::://
 
     private void Configure() {
         // get required components (these won't be null)
-        _characterHealth = GetComponent<CharacterHealth>();
+        _health = GetComponent<Health>();
         
         // get components
         _animator = transform.GetComponentInChildren<Animator>();
         //++++++++++++++++++++++++++++++//
         Debug.Assert(_animator, "Animator component is null");
-        //++++++++++++++++++++++++++++++//
-        
-        // get the player instance
-        _player = Player.Instance;
-        //++++++++++++++++++++++++++++++//
-        Debug.Assert(_player, "Player instance is null");
         //++++++++++++++++++++++++++++++//
         
         // initialise public CharacterStates

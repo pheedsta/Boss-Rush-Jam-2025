@@ -46,12 +46,18 @@ public class Player : Character {
     [Header("Moving")]
     [Tooltip("Walk speed of the player in m/s")]
     [SerializeField] private float walkSpeed = 10f;
-    [Tooltip("Dash speed of the player in m/s")]
-    [SerializeField] private float dashSpeed = 20f;
     [Tooltip("How fast the player accelerates")]
     [SerializeField] private float accelerationRate = 10f;
     [Tooltip("How fast the player decelerates")]
     [SerializeField] private float decelerationRate = 10f;
+    
+    [Header("Dashing")]
+    [Tooltip("How far the player dashes in meters")]
+    [SerializeField] private float dashDistance = 10f;
+    [Tooltip("How many seconds the dash takes")]
+    [SerializeField] private float dashDuration = 0.5f;
+    [Tooltip("How many seconds before the player can dash again")]
+    [SerializeField] private float dashCooldown = 2f;
     
     [Header("Aiming")]
     [SerializeField] private float mouseAimSpeed = 5f;
@@ -87,16 +93,21 @@ public class Player : Character {
     // Transforms
     //:::::::::::::::::::::::::::::://
 
-    private Transform _focusPoint;
+    private Transform _aimPoint;
+    private Transform _movePoint;
     
     //:::::::::::::::::::::::::::::://
     // Local Fields
     //:::::::::::::::::::::::::::::://
-
+    
+    private float _dashTimer;
+    private float _dashSpeed;
+    
     private Plane _plane;
     private Vector2 _lookDelta;
     private Vector2 _moveDelta;
     private Vector3 _velocity;
+    
     private InputManager.InputDevice _lookDevice;
     
     //:::::::::::::::::::::::::::::://
@@ -130,14 +141,26 @@ public class Player : Character {
         
         // subscribe to CharacterHealth events
         Health.OnChange += Health_OnChange;
+        
+        // reset transforms to defaults
+        _aimPoint.rotation = Quaternion.identity;
+        _movePoint.rotation = Quaternion.identity;
+        
+        // reset fields to defaults
+        _velocity = Vector3.zero;
+        _dashTimer = dashCooldown; // this allows player to dash immediately
     }
 
     protected override void Update() {
         base.Update();
         
         // process player inputs
-        Move();
         Look();
+        Move();
+        Dash();
+        
+        // increment dash timer
+        _dashTimer += Time.deltaTime;
     }
 
     protected override void OnDisable() {
@@ -155,9 +178,6 @@ public class Player : Character {
         
         // unsubscribe from CharacterHealth events
         Health.OnChange -= Health_OnChange;
-        
-        // reset fields
-        _velocity = Vector3.zero;
     }
     
     //:::::::::::::::::::::::::::::://
@@ -181,9 +201,11 @@ public class Player : Character {
         //++++++++++++++++++++++++++++++//
         
         // get transforms
-        _focusPoint = transform.Find("Focus Point");
+        _aimPoint = transform.Find("Aim Point");
+        _movePoint = transform.Find("Move Point");
         //++++++++++++++++++++++++++++++//
-        Debug.Assert(_focusPoint, "'Focus Point' transform is null");
+        Debug.Assert(_aimPoint, "'Aim Point' transform is null");
+        Debug.Assert(_movePoint, "'Move Point' transform is null");
         //++++++++++++++++++++++++++++++//
         
         // initialise private CharacterStates
@@ -196,6 +218,9 @@ public class Player : Character {
 
         // initialise reference plane for ray casting
         _plane = new Plane(Vector3.up, Vector3.zero);
+        
+        // calculate dash speed once
+        _dashSpeed = dashDistance / dashDuration;
     }
     
     //:::::::::::::::::::::::::::::://
@@ -256,11 +281,11 @@ public class Player : Character {
         if (!_plane.Raycast(ray, out var enter)) return;
         
         // calculate rotation needed to look at mouse point
-        var focusPositionOnPlane = _plane.ClosestPointOnPlane(_focusPoint.position);
-        var rotation = Quaternion.LookRotation(focusPositionOnPlane - ray.GetPoint(enter));
+        var focusPositionOnPlane = _plane.ClosestPointOnPlane(_aimPoint.position);
+        var rotation = Quaternion.LookRotation(ray.GetPoint(enter) - focusPositionOnPlane);
 
         // rotate towards point using mouse aim speed
-        _focusPoint.rotation = Quaternion.Slerp(_focusPoint.rotation, rotation, mouseAimSpeed * Time.deltaTime);
+        _aimPoint.rotation = Quaternion.Slerp(_aimPoint.rotation, rotation, mouseAimSpeed * Time.deltaTime);
     }
 
     private void LookGamepad(Vector2 input) {
@@ -271,17 +296,27 @@ public class Player : Character {
         var direction = new Vector3(input.x, 0f, input.y);
         
         // calculate rotation
-        var rotation = Quaternion.LookRotation(-direction);
+        var rotation = Quaternion.LookRotation(direction);
 
         // rotate towards point using gamepad aim speed
-        _focusPoint.rotation = Quaternion.Slerp(_focusPoint.rotation, rotation, gamepadAimSpeed * Time.deltaTime);
+        _aimPoint.rotation = Quaternion.Slerp(_aimPoint.rotation, rotation, gamepadAimSpeed * Time.deltaTime);
     }
 
     //:::::::::::::::::::::::::::::://
-    // Move
+    // Move & Dash
     //:::::::::::::::::::::::::::::://
     
     private void Move() {
+        if (_moveDelta != Vector2.zero) {
+            // if move delta is not zero; rotate move point to the input direction
+            // this allows player to dash in the direction they were last moving
+            var direction = new Vector3(_moveDelta.x, 0f, _moveDelta.y);
+            _movePoint.rotation = Quaternion.LookRotation(direction);
+        }
+        
+        // if player is dashing we're done
+        if (_dashTimer <= dashDuration) return;
+        
         // calculate deceleration delta for this frame once
         var decelerationDelta = decelerationRate * Time.deltaTime;
         
@@ -313,11 +348,16 @@ public class Player : Character {
             _velocity.z += _moveDelta.y * accelerationRate * Time.deltaTime;
         }
         
-        // cap velocity to walk speed
+        // cap velocity to move speed
         if (_velocity.magnitude > walkSpeed) _velocity = _velocity.normalized * walkSpeed;
         
         // add motion to player
         AddMotion(_velocity * Time.deltaTime);
+    }
+
+    private void Dash() {
+        // if player is dash, dash in the direction they're moving
+        if (_dashTimer <= dashDuration) AddMotion(_dashSpeed * Time.deltaTime * _movePoint.forward);
     }
     
     //:::::::::::::::::::::::::::::://
@@ -334,6 +374,11 @@ public class Player : Character {
     }
     
     private void InputManager_OnDash(InputManager.ActionPhase phase) {
+        // if dash was not performed OR dash is on cooldown, we're done
+        if (phase != InputManager.ActionPhase.Performed || _dashTimer < dashCooldown) return;
+        
+        // reset dash timer
+        _dashTimer = 0f;
     }
     
     private void InputManager_OnAttack(InputManager.ActionPhase phase) {

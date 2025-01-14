@@ -4,15 +4,26 @@ using UnityEngine;
 // CLASS: Health
 //++++++++++++++++++++++++++++++//
 
-public class CharacterHealth : MonoBehaviour {
+public class Health : MonoBehaviour {
+    
+    //------------------------------//
+    // Delegates
+    //------------------------------//
+
+    public delegate void HealthEvent(int health);
+
+    //------------------------------//
+    // Events
+    //------------------------------//
+    
+    public event HealthEvent OnChange = delegate { };
     
     //------------------------------//
     // Properties
     //------------------------------//
 
     public bool IsAlive => 0f < _exactHealth;
-    public int CurrentHealth => Mathf.CeilToInt(_exactHealth);
-    public float HealthPercentage => _exactHealth / startingHealth;
+    public float HealthPercentage => Mathf.Clamp(_exactHealth / startingHealth, 0f, 1f);
     
     //:::::::::::::::::::::::::::::://
     // Serialized Fields
@@ -39,6 +50,13 @@ public class CharacterHealth : MonoBehaviour {
     //------------------------------//
 
     public void ApplyDamage(float damage) {
+        // if damage is zero; we're done
+        if (Mathf.Approximately(damage, 0f)) return;   
+        
+        // update health (with absolute value)
         _exactHealth -= Mathf.Abs(damage);
+        
+        // call OnChange event
+        OnChange.Invoke(Mathf.CeilToInt(_exactHealth));
     }
 }

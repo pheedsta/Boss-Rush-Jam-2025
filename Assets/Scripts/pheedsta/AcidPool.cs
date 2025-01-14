@@ -24,7 +24,7 @@ public class AcidPool : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         // if this is the player entering, start damage coroutine
         var components = ComponentRegistry.ColliderComponents<Player>(other);
-        if (0 < components.Length) StartCoroutine(DamageOverTimeCoroutine(components[0].CharacterHealth));
+        if (0 < components.Length) StartCoroutine(DamageOverTimeCoroutine(components[0].Health));
     }
 
     private void OnTriggerExit(Collider other) {
@@ -37,16 +37,16 @@ public class AcidPool : MonoBehaviour {
     // Coroutines
     //:::::::::::::::::::::::::::::://
 
-    private IEnumerator DamageOverTimeCoroutine(CharacterHealth characterHealth) {
+    private IEnumerator DamageOverTimeCoroutine(Health health) {
         // if a CharacterHealth wasn't passed, we're done
-        if (!characterHealth) yield break;
+        if (!health) yield break;
         
         // initialise field
         var waitForSeconds = new WaitForSeconds(damageInterval);
 
-        while (characterHealth.IsAlive) {
+        while (health.IsAlive) {
             // while the player is still alive; apply damage
-            characterHealth.ApplyDamage(damagePerInterval);
+            health.ApplyDamage(damagePerInterval);
             
             // wait for next interval
             yield return waitForSeconds;

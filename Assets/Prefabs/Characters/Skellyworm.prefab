@@ -51,6 +51,7 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 65
+  identifier: SKELLYWORM
   spawnStateScript: {fileID: 11400000, guid: bfa648311a217499e98db1c1324ebccf, type: 2}
   walkStateScript: {fileID: 11400000, guid: 1a35be5c613d8470282ac29dcde08978, type: 2}
   meleeAttackStateScript: {fileID: 11400000, guid: 6a93d803a3cde41efa1cfe42001eb4f0, type: 2}

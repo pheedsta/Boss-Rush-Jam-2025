@@ -288,13 +288,15 @@ MonoBehaviour:
   specialStateScript: {fileID: 11400000, guid: c9cb85568b7a54ea4a40502e5f86f4e2, type: 2}
   dieStateScript: {fileID: 11400000, guid: 8f99820597cba45fcae192cd212a5036, type: 2}
   walkSpeed: 10
-  accelerationRate: 80
-  decelerationRate: 30
+  accelerationRate: 100
+  decelerationRate: 50
   dashDistance: 8
   dashDuration: 0.1
   dashCooldown: 0.2
   mouseAimSpeed: 5
   gamepadAimSpeed: 3
+  minimumFireShards: 10
+  fireAbilityPrefab: {fileID: 3963202694100395514, guid: b1d2bfb2eeefb4ffca264224aaa0dc1a, type: 3}
 --- !u!114 &8318211803473494212
 MonoBehaviour:
   m_ObjectHideFlags: 0

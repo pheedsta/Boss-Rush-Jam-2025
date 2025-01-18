@@ -6,8 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="c0323cdc-65bc-4b30-b3bb-f1969ff69110" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Boss-Rush-Jam-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Boss-Rush-Jam-2025/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/pheedsta/Skellyworm Acid.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/pheedsta/Skellyworm Acid.mat.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Skellyworm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Skellyworm.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/pheedsta/Test 2.5D.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pheedsta/Test 2.5D.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/Skellyworm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/Skellyworm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/ComponentRegistry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/ComponentRegistry.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/pheedsta/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +130,8 @@
       <workItem from="1736819017635" duration="12987000" />
       <workItem from="1736833213003" duration="148000" />
       <workItem from="1736839408086" duration="2502000" />
+      <workItem from="1736893659560" duration="6694000" />
+      <workItem from="1736900394485" duration="596000" />
     </task>
     <servers />
   </component>

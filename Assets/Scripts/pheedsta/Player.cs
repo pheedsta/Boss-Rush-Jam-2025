@@ -63,6 +63,13 @@ public class Player : Character {
     [SerializeField] private float mouseAimSpeed = 5f;
     [SerializeField] private float gamepadAimSpeed = 3f;
     
+    [Header("Shards")]
+    [Tooltip("How many fire shards to collect to fully charge fire ability")]
+    [SerializeField] private int minimumFireShards = 10;
+    
+    [Header("Prefabs")]
+    [SerializeField] private FireAbility fireAbilityPrefab;
+    
     //:::::::::::::::::::::::::::::://
     // Properties
     //:::::::::::::::::::::::::::::://
@@ -99,6 +106,8 @@ public class Player : Character {
     //:::::::::::::::::::::::::::::://
     // Local Fields
     //:::::::::::::::::::::::::::::://
+
+    private int _fireShardCount;
     
     private float _dashTimer;
     private float _dashSpeed;
@@ -151,6 +160,14 @@ public class Player : Character {
         _dashTimer = dashCooldown; // this allows player to dash immediately
     }
 
+    protected override void Start() {
+        base.Start();
+        
+        // update health and special ability UI
+        UpdateHealthUI();
+        UpdateSpecialAbilityUI();
+    }
+
     protected override void Update() {
         base.Update();
         
@@ -180,6 +197,18 @@ public class Player : Character {
         Health.OnChange -= Health_OnChange;
     }
     
+    //------------------------------//
+    // Shards
+    //------------------------------//
+
+    public void CollectShards(int count) {
+        // increment shard count
+        _fireShardCount += count;
+        
+        // update special ability UI
+        UpdateSpecialAbilityUI();
+    }
+
     //:::::::::::::::::::::::::::::://
     // Configuration
     //:::::::::::::::::::::::::::::://
@@ -257,8 +286,19 @@ public class Player : Character {
     //:::::::::::::::::::::::::::::://
 
     private void Health_OnChange(int health) {
-        // update PlayerHealth bar
+        UpdateHealthUI();
+    }
+    
+    //:::::::::::::::::::::::::::::://
+    // UI Methods
+    //:::::::::::::::::::::::::::::://
+
+    private void UpdateHealthUI() {
         UIManager.HubPanel.PlayerHealth.SetHealth(Health.HealthPercentage);
+    }
+
+    private void UpdateSpecialAbilityUI() {
+        UIManager.HubPanel.PlayerSingleAbility.SetCooldownOverlay(Mathf.Clamp((float)_fireShardCount / (float)minimumFireShards, 0f, 1f));
     }
 
     //:::::::::::::::::::::::::::::://
@@ -385,6 +425,15 @@ public class Player : Character {
     }
     
     private void InputManager_OnSpecial(InputManager.ActionPhase phase) {
+        // if player hasn't collected enough fire shards; we're done
+        if (_fireShardCount < minimumFireShards) return;
+        
+        // player has collected enough fire shards, decrement count and update UI
+        _fireShardCount -= minimumFireShards;
+        UpdateSpecialAbilityUI();
+
+        // if there is a fire ability prefab; instantiate it
+        if (fireAbilityPrefab) _ = ReusablePool.FetchReusable(fireAbilityPrefab, transform.position, _aimPoint.rotation);
     }
     
     //:::::::::::::::::::::::::::::://

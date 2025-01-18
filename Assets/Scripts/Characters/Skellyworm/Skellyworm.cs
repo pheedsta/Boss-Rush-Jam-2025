@@ -10,7 +10,13 @@ using UnityEngine;
 // CLASS: Skellyworm
 //++++++++++++++++++++++++++++++//
 
-public class Skellyworm : Character {
+public class Skellyworm : Character, IReusable {
+    
+    //------------------------------//
+    // IReusable Properties
+    //------------------------------//
+
+    public string Identifier => identifier;
     
     //------------------------------//
     // Character States
@@ -28,6 +34,9 @@ public class Skellyworm : Character {
     //:::::::::::::::::::::::::::::://
     // Serialized Fields
     //:::::::::::::::::::::::::::::://
+    
+    [Header("IReusable")]
+    [SerializeField] private string identifier;
     
     [Header("Character States")]
     [SerializeField] private SkellywormStateScript spawnStateScript;

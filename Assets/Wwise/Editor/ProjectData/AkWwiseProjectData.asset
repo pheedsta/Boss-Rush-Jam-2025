@@ -413,7 +413,7 @@ MonoBehaviour:
     ParentPath: SoundBanks/Default Work Unit
     guid: 31a2ef76e1a40e42aa196c39c75de723
     GuidInternal: 
-    m_lastTime: -8584652305190652946
+    m_lastTime: -8584647135992132108
     List:
     - name: Main
       guid: 178af0441e574b4685bea2ed4f72914e
@@ -467,8 +467,45 @@ MonoBehaviour:
     ParentPath: Events/SFX
     guid: cd8906f9ee8ee2468b6e6f9195ffba84
     GuidInternal: 
-    m_lastTime: -8584652305191190632
+    m_lastTime: -8584647135993031068
     List:
+    - name: Behavior
+      guid: 92f0e86e8ba1914790394e774555fa66
+      id: 2002200035
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: cd8906f9ee8ee2468b6e6f9195ffba84
+      - ElementName: Boss
+        ObjectType: 4
+        guid: d93cbe0a483464488606311f9169d9e7
+      - ElementName: Behavior
+        ObjectType: 4
+        guid: 92f0e86e8ba1914790394e774555fa66
+      Path: Events/SFX/Boss/Behavior
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Boss
+      guid: d93cbe0a483464488606311f9169d9e7
+      id: 1560169506
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: cd8906f9ee8ee2468b6e6f9195ffba84
+      - ElementName: Boss
+        ObjectType: 4
+        guid: d93cbe0a483464488606311f9169d9e7
+      Path: Events/SFX/Boss
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Dialogue
       guid: bed3b14cf5a9e64aac54a68e64e609ac
       id: 3930136735
@@ -483,6 +520,121 @@ MonoBehaviour:
         ObjectType: 4
         guid: bed3b14cf5a9e64aac54a68e64e609ac
       Path: Events/SFX/Dialogue
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: FireSpell_Burn
+      guid: bf61e991121b0746b93c21e3154da67a
+      id: 1695950791
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: cd8906f9ee8ee2468b6e6f9195ffba84
+      - ElementName: Player
+        ObjectType: 4
+        guid: addc77495063be49a6407ac3715a843b
+      - ElementName: Spells
+        ObjectType: 4
+        guid: 2e90167c10b86d4ca619aef727f52c18
+      - ElementName: FireSpell_Burn
+        ObjectType: 3
+        guid: bf61e991121b0746b93c21e3154da67a
+      Path: Events/SFX/Player/Spells/FireSpell_Burn
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: FireSpell_Burn_Stop
+      guid: e18714fe84789a44834fac8798416fe2
+      id: 3367592642
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: cd8906f9ee8ee2468b6e6f9195ffba84
+      - ElementName: Player
+        ObjectType: 4
+        guid: addc77495063be49a6407ac3715a843b
+      - ElementName: Spells
+        ObjectType: 4
+        guid: 2e90167c10b86d4ca619aef727f52c18
+      - ElementName: FireSpell_Burn_Stop
+        ObjectType: 3
+        guid: e18714fe84789a44834fac8798416fe2
+      Path: Events/SFX/Player/Spells/FireSpell_Burn_Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: FireSpell_Fire
+      guid: 5de963ee887d6f4580a867eb4e6c35e3
+      id: 658623236
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: cd8906f9ee8ee2468b6e6f9195ffba84
+      - ElementName: Player
+        ObjectType: 4
+        guid: addc77495063be49a6407ac3715a843b
+      - ElementName: Spells
+        ObjectType: 4
+        guid: 2e90167c10b86d4ca619aef727f52c18
+      - ElementName: FireSpell_Fire
+        ObjectType: 3
+        guid: 5de963ee887d6f4580a867eb4e6c35e3
+      Path: Events/SFX/Player/Spells/FireSpell_Fire
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: FireSpell_FireBurn
+      guid: caab402722fecb45a3de52e11d9ba5d4
+      id: 1631683011
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: cd8906f9ee8ee2468b6e6f9195ffba84
+      - ElementName: Player
+        ObjectType: 4
+        guid: addc77495063be49a6407ac3715a843b
+      - ElementName: Spells
+        ObjectType: 4
+        guid: 2e90167c10b86d4ca619aef727f52c18
+      - ElementName: FireSpell_FireBurn
+        ObjectType: 3
+        guid: caab402722fecb45a3de52e11d9ba5d4
+      Path: Events/SFX/Player/Spells/FireSpell_FireBurn
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: FireSpell_Hit
+      guid: cd2ddb1c6060814eb2d64c52d0f52a7f
+      id: 1054166863
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: cd8906f9ee8ee2468b6e6f9195ffba84
+      - ElementName: Player
+        ObjectType: 4
+        guid: addc77495063be49a6407ac3715a843b
+      - ElementName: Spells
+        ObjectType: 4
+        guid: 2e90167c10b86d4ca619aef727f52c18
+      - ElementName: FireSpell_Hit
+        ObjectType: 3
+        guid: cd2ddb1c6060814eb2d64c52d0f52a7f
+      Path: Events/SFX/Player/Spells/FireSpell_Hit
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -526,6 +678,43 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Player
+      guid: addc77495063be49a6407ac3715a843b
+      id: 1069431850
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: cd8906f9ee8ee2468b6e6f9195ffba84
+      - ElementName: Player
+        ObjectType: 4
+        guid: addc77495063be49a6407ac3715a843b
+      Path: Events/SFX/Player
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Spells
+      guid: 2e90167c10b86d4ca619aef727f52c18
+      id: 4160437992
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: cd8906f9ee8ee2468b6e6f9195ffba84
+      - ElementName: Player
+        ObjectType: 4
+        guid: addc77495063be49a6407ac3715a843b
+      - ElementName: Spells
+        ObjectType: 4
+        guid: 2e90167c10b86d4ca619aef727f52c18
+      Path: Events/SFX/Player/Spells
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Test_Sound
       guid: d53718451c138e43af75995d8e2d3a4a
       id: 1936185617
@@ -540,6 +729,52 @@ MonoBehaviour:
         ObjectType: 3
         guid: d53718451c138e43af75995d8e2d3a4a
       Path: Events/SFX/Test_Sound
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: VortexPull_Boss_Start
+      guid: bef29f69fff0cc4d806b67bd86bf79bb
+      id: 2097991953
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: cd8906f9ee8ee2468b6e6f9195ffba84
+      - ElementName: Boss
+        ObjectType: 4
+        guid: d93cbe0a483464488606311f9169d9e7
+      - ElementName: Behavior
+        ObjectType: 4
+        guid: 92f0e86e8ba1914790394e774555fa66
+      - ElementName: VortexPull_Boss_Start
+        ObjectType: 3
+        guid: bef29f69fff0cc4d806b67bd86bf79bb
+      Path: Events/SFX/Boss/Behavior/VortexPull_Boss_Start
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: VortexPull_Boss_Stop
+      guid: f95417b5d869ab47b3391d6f7579d9b9
+      id: 2733481739
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: cd8906f9ee8ee2468b6e6f9195ffba84
+      - ElementName: Boss
+        ObjectType: 4
+        guid: d93cbe0a483464488606311f9169d9e7
+      - ElementName: Behavior
+        ObjectType: 4
+        guid: 92f0e86e8ba1914790394e774555fa66
+      - ElementName: VortexPull_Boss_Stop
+        ObjectType: 3
+        guid: f95417b5d869ab47b3391d6f7579d9b9
+      Path: Events/SFX/Boss/Behavior/VortexPull_Boss_Stop
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -599,6 +834,46 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584653239534947071
     List: []
+  - PhysicalPath: Triggers/Triggers_Music.wwu
+    PathAndIcons:
+    - ElementName: Triggers
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Triggers_Music
+      ObjectType: 12
+      guid: a4313736a2eb6b4aa84ca3b2ce8b0a6a
+    ParentPath: Triggers/Triggers_Music
+    guid: a4313736a2eb6b4aa84ca3b2ce8b0a6a
+    GuidInternal: 
+    m_lastTime: -8584647135992129126
+    List: []
+  - PhysicalPath: Triggers/Triggers_SFX.wwu
+    PathAndIcons:
+    - ElementName: Triggers
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Triggers_SFX
+      ObjectType: 12
+      guid: ba8d24d06126034aaa9050747884bcf9
+    ParentPath: Triggers/Triggers_SFX
+    guid: ba8d24d06126034aaa9050747884bcf9
+    GuidInternal: 
+    m_lastTime: -8584647135992128264
+    List:
+    - name: Vortex_Pull_End_Apex
+      guid: f1119536e786004db5d7bd1a780b8db0
+      id: 839525934
+      PathAndIcons:
+      - ElementName: Triggers
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Triggers_SFX
+        ObjectType: 12
+        guid: ba8d24d06126034aaa9050747884bcf9
+      - ElementName: Vortex_Pull_End_Apex
+        ObjectType: 14
+        guid: f1119536e786004db5d7bd1a780b8db0
+      Path: Triggers/Triggers_SFX/Vortex_Pull_End_Apex
   ExpandedFileSystemItemIds: 02000000050000000b0000000c000000
   ExpandedWaapiItemIds: 0b0000000c000000
   AutoSyncSelection: 0

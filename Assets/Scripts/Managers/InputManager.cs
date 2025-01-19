@@ -38,6 +38,7 @@ public class InputManager : MonoBehaviour {
     // Static Button Events
     //------------------------------//
     
+    public static event ButtonEvent OnJump = delegate { };
     public static event ButtonEvent OnDash = delegate { };
     public static event ButtonEvent OnAttack = delegate { };
     public static event ButtonEvent OnSpecial = delegate { };
@@ -80,6 +81,10 @@ public class InputManager : MonoBehaviour {
         _playerActions.Look.performed += PlayerActions_Look_Performed;
         _playerActions.Look.canceled += PlayerActions_Look_Canceled;
         
+        // subscribe (JUMP)
+        _playerActions.Jump.performed += PlayerActions_Jump_Performed;
+        _playerActions.Jump.canceled += PlayerActions_Jump_Canceled;
+        
         // subscribe (DASH)
         _playerActions.Dash.performed += PlayerActions_Dash_Performed;
         _playerActions.Dash.canceled += PlayerActions_Dash_Canceled;
@@ -109,6 +114,10 @@ public class InputManager : MonoBehaviour {
         _playerActions.Look.started -= PlayerActions_Look_Started;
         _playerActions.Look.performed -= PlayerActions_Look_Performed;
         _playerActions.Look.canceled -= PlayerActions_Look_Canceled;
+        
+        // subscribe (JUMP)
+        _playerActions.Jump.performed -= PlayerActions_Jump_Performed;
+        _playerActions.Jump.canceled -= PlayerActions_Jump_Canceled;
         
         // subscribe (DASH)
         _playerActions.Dash.performed -= PlayerActions_Dash_Performed;
@@ -171,6 +180,18 @@ public class InputManager : MonoBehaviour {
 
     private static void PlayerActions_Look_Canceled(InputAction.CallbackContext callbackContext) {
         OnLook.Invoke(ActionPhase.Canceled, GetInputDevice(callbackContext), callbackContext.ReadValue<Vector2>());
+    }
+
+    //:::::::::::::::::::::::::::::://
+    // PlayerAction Jump Events
+    //:::::::::::::::::::::::::::::://
+
+    private static void PlayerActions_Jump_Performed(InputAction.CallbackContext callbackContext) {
+        OnJump.Invoke(ActionPhase.Performed);
+    }
+
+    private static void PlayerActions_Jump_Canceled(InputAction.CallbackContext callbackContext) {
+        OnJump.Invoke(ActionPhase.Canceled);
     }
 
     //:::::::::::::::::::::::::::::://

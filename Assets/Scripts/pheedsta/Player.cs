@@ -29,6 +29,7 @@ public class Player : Character {
     // Constants
     //:::::::::::::::::::::::::::::://
 
+    private const float k_SpeedMargin = 0.1f; // a margin to prevent constant speed calculations when player is almost at speed
     private const float k_InputThreshold = 0.01f; // if input is below this threshold; make it zero 
     
     //:::::::::::::::::::::::::::::://
@@ -51,6 +52,16 @@ public class Player : Character {
     [Tooltip("How fast the player decelerates")]
     [SerializeField] private float decelerationRate = 10f;
     
+    [Header("Strafing")]
+    [Tooltip("Strafe speed of the player in m/s")]
+    [SerializeField] private float strafeSpeed = 10f;
+    [Tooltip("How fast the player accelerates")]
+    [SerializeField] private float strafeAccelerationRate = 10f;
+    
+    [Header("Jumping")]
+    [SerializeField] private float jumpVelocity = 5f;
+    [SerializeField] private float jumpHeight = 1.5f;
+    
     [Header("Dashing")]
     [Tooltip("How far the player dashes in meters")]
     [SerializeField] private float dashDistance = 10f;
@@ -58,6 +69,17 @@ public class Player : Character {
     [SerializeField] private float dashDuration = 0.5f;
     [Tooltip("How many seconds before the player can dash again")]
     [SerializeField] private float dashCooldown = 2f;
+    
+    [Header("Turning & Aiming")]
+    [Tooltip("Rotation speed of the player")]
+    [SerializeField] private float turnSpeed = 100f;
+    [SerializeField] private float aimSpeed = 50f;
+    [Range(-10f, -90f)]
+    [Tooltip("How far in degrees the aim camera moves down")]
+    [SerializeField] private float minAimDegrees = -80.0f;
+    [Range(10f, 90f)]
+    [Tooltip("How far in degrees the aim camera moves up")]
+    [SerializeField] private float maxAimDegrees = 80.0f;
     
     [Header("Aiming")]
     [SerializeField] private float mouseAimSpeed = 5f;
@@ -93,7 +115,7 @@ public class Player : Character {
     
     private Camera _camera;
     private Health _health;
-    private Animator _animator;
+    //private Animator _animator;
     private UIManager _uiManager;
     
     //:::::::::::::::::::::::::::::://
@@ -117,7 +139,15 @@ public class Player : Character {
     private Vector2 _moveDelta;
     private Vector3 _velocity;
     
-    private InputManager.InputDevice _lookDevice;
+    
+    private Vector3 _cameraRotation;
+    
+    //private InputManager.InputDevice _lookDevice;
+    
+    private Transform _cameraTransform;
+
+    //private float _cinemachineTargetPitch;
+    //private float _cinemachineTargetYaw;
     
     //:::::::::::::::::::::::::::::://
     // Unity Callbacks
@@ -144,6 +174,7 @@ public class Player : Character {
         // subscribe to InputManager events
         InputManager.OnMove += InputManager_OnMove;
         InputManager.OnLook += InputManager_OnLook;
+        InputManager.OnJump += InputManager_OnJump;
         InputManager.OnDash += InputManager_OnDash;
         InputManager.OnAttack += InputManager_OnAttack;
         InputManager.OnSpecial += InputManager_OnSpecial;
@@ -173,11 +204,20 @@ public class Player : Character {
         
         // process player inputs
         Look();
+        Rotate();
         Move();
         Dash();
         
+        
+        
         // increment dash timer
         _dashTimer += Time.deltaTime;
+    }
+
+    protected override void LateUpdate() {
+        base.LateUpdate();
+
+        //Look();
     }
 
     protected override void OnDisable() {
@@ -224,9 +264,9 @@ public class Player : Character {
         //++++++++++++++++++++++++++++++//
         
         // get components
-        _animator = transform.GetComponentInChildren<Animator>();
+        //_animator = transform.GetComponentInChildren<Animator>();
         //++++++++++++++++++++++++++++++//
-        Debug.Assert(_animator, "Animator component is null");
+        //Debug.Assert(_animator, "Animator component is null");
         //++++++++++++++++++++++++++++++//
         
         // get transforms
@@ -250,6 +290,11 @@ public class Player : Character {
         
         // calculate dash speed once
         _dashSpeed = dashDistance / dashDuration;
+
+
+
+
+        _cameraTransform = transform.Find("Camera Follow");
     }
     
     //:::::::::::::::::::::::::::::://
@@ -306,11 +351,24 @@ public class Player : Character {
     //:::::::::::::::::::::::::::::://
 
     private void Look() {
-        if (_lookDevice == InputManager.InputDevice.Mouse) {
+        /*if (_lookDevice == InputManager.InputDevice.Mouse) {
             LookMouse(_lookDelta);
         } else {
             LookGamepad(_lookDelta);
-        }
+        }*/
+        
+        // update camera rotation values (clamping to min / max)
+        _cameraRotation.x = Mathf.Clamp(_cameraRotation.x + _lookDelta.y * aimSpeed * Time.deltaTime, minAimDegrees, maxAimDegrees);
+        //_cameraRotation.y += _lookDelta.x * turnSpeed * Time.deltaTime;
+    
+        // rotate camera around x axis (up / down)
+        _cameraTransform.localEulerAngles = _cameraRotation;
+    }
+
+    private void Rotate() {
+        AddRotation(_lookDelta.x * turnSpeed * Time.deltaTime);
+        
+        
     }
 
     private void LookMouse(Vector2 input) {
@@ -347,7 +405,7 @@ public class Player : Character {
     //:::::::::::::::::::::::::::::://
     
     private void Move() {
-        if (_moveDelta != Vector2.zero) {
+        /*if (_moveDelta != Vector2.zero) {
             // if move delta is not zero; rotate move point to the input direction
             // this allows player to dash in the direction they were last moving
             var direction = new Vector3(_moveDelta.x, 0f, _moveDelta.y);
@@ -392,7 +450,36 @@ public class Player : Character {
         if (_velocity.magnitude > walkSpeed) _velocity = _velocity.normalized * walkSpeed;
         
         // add motion to player
-        AddMotion(_velocity * Time.deltaTime);
+        AddMotion(_velocity * Time.deltaTime);*/
+        
+        
+        // add forward and strafe motions
+        //AddMotion(_moveDelta.y * moveSpeed * Time.deltaTime * _bodyTransform.TransformDirection(Vector3.forward));
+        //AddMotion(_moveDelta.x * strafeSpeed * Time.deltaTime * _bodyTransform.TransformDirection(Vector3.right));
+        // get target move and strafe speeds
+        //var targetMoveSpeed = _moveDelta.y * (_sprint ? sprintSpeed : walkSpeed);
+        var targetMoveSpeed = _moveDelta.y * walkSpeed;
+        var targetStrafeSpeed = _moveDelta.x * strafeSpeed;
+        
+        if (_velocity.y < targetMoveSpeed - k_SpeedMargin || _velocity.y > targetMoveSpeed + k_SpeedMargin) {
+            // player is outside target move margin, calculate speed using acceleration
+            _velocity.y = Mathf.Lerp(_velocity.y, targetMoveSpeed, accelerationRate * Time.deltaTime);
+        } else {
+            // player is inside target move margin, set speed to target speed
+            _velocity.y = targetMoveSpeed;
+        }
+        
+        if (_velocity.x < targetStrafeSpeed - k_SpeedMargin || _velocity.x > targetStrafeSpeed + k_SpeedMargin) {
+            // player is outside target move margin, calculate speed using acceleration
+            _velocity.x = Mathf.Lerp(_velocity.x, targetStrafeSpeed, strafeAccelerationRate * Time.deltaTime);
+        } else {
+            // player is inside target move margin, set speed to target speed
+            _velocity.x = targetStrafeSpeed;
+        }
+        
+        // add move and strafe motions
+        AddMotion(_velocity.y * Time.deltaTime * _movePoint.TransformDirection(Vector3.forward));
+        AddMotion(_velocity.x * Time.deltaTime * _movePoint.TransformDirection(Vector3.right));
     }
 
     private void Dash() {
@@ -409,8 +496,12 @@ public class Player : Character {
     }
 
     private void InputManager_OnLook(InputManager.ActionPhase phase, InputManager.InputDevice inputDevice, Vector2 value) {
-        _lookDevice = inputDevice;
+        //_lookDevice = inputDevice;
         _lookDelta = value;
+    }
+
+    private void InputManager_OnJump(InputManager.ActionPhase phase) {
+        AddJump(jumpVelocity);
     }
     
     private void InputManager_OnDash(InputManager.ActionPhase phase) {

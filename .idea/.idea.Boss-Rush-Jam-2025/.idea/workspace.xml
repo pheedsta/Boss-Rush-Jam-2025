@@ -6,15 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="c0323cdc-65bc-4b30-b3bb-f1969ff69110" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Boss-Rush-Jam-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Boss-Rush-Jam-2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/pheedsta/Skellyworm Acid.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/pheedsta/Skellyworm Acid.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input/InputActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/InputActions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input/InputActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/InputActions.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/pheedsta/Heart Test.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/pheedsta/Heart Test.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Heart_Gem.fbx.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Skellyworm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Skellyworm.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/pheedsta/Test 2.5D.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pheedsta/Test 2.5D.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/Skellyworm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/Skellyworm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/ComponentRegistry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/ComponentRegistry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/InputManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/pheedsta/Character.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/pheedsta/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,6 +136,9 @@
       <workItem from="1736839408086" duration="2502000" />
       <workItem from="1736893659560" duration="6694000" />
       <workItem from="1736900394485" duration="596000" />
+      <workItem from="1737265888509" duration="41000" />
+      <workItem from="1737266176958" duration="3712000" />
+      <workItem from="1737273309017" duration="998000" />
     </task>
     <servers />
   </component>

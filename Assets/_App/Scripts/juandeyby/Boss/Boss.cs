@@ -103,5 +103,21 @@ namespace _App.Scripts.juandeyby.Boss
         {
             UIServiceLocator.Get<UIHealthCanvas>().ReturnHealthBar(_healthBar);
         }
+
+        /// <summary>
+        /// Play the aerial barrage effect
+        /// </summary>
+        public void PlayAerialBarrageEffect()
+        {
+            Debug.LogWarningFormat("<color=red>PlayAerialBarrageEffect not implemented</color>");
+        }
+        
+        /// <summary>
+        /// Stop the aerial barrage effect
+        /// </summary>
+        public void StopAerialBarrageEffect()
+        {
+            Debug.LogWarningFormat("<color=red>StopAerialBarrageEffect not implemented</color>");
+        }
     }
 }

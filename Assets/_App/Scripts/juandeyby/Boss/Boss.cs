@@ -87,7 +87,7 @@ namespace _App.Scripts.juandeyby.Boss
         /// <exception cref="NotImplementedException"></exception>
         public void PlaySweepingStrikeEffect()
         {
-            throw new NotImplementedException();
+            Debug.LogWarningFormat("<color=red>PlaySweepingStrikeEffect not implemented</color>");
         }
         
         /// <summary>
@@ -96,7 +96,7 @@ namespace _App.Scripts.juandeyby.Boss
         /// <exception cref="NotImplementedException"></exception>
         public void StopSweepingStrikeEffect()
         {
-            throw new NotImplementedException();
+            Debug.LogWarningFormat("<color=red>StopSweepingStrikeEffect not implemented</color>");
         }
 
         private void OnDestroy()

@@ -35,8 +35,8 @@ namespace _App.Scripts.juandeyby.Boss
                     if (_wanderCount >= _maxWanderCount)
                     {
                         Exit(boss);
-                        boss.SetState(new BossVortexPullState());
-                        return;
+                        // boss.SetState(new BossVortexPullState());
+                        boss.SetState(new BossSweepingStrikeState());
                     }
                     else
                     {

@@ -4,9 +4,9 @@ namespace _App.Scripts.juandeyby.Boss
 {
     public class BossAbilityVortexPull : BossAbility
     {
-        [Header("Vortex Settings")]
+        [Header("Settings")]
         [SerializeField] private float duration = 5f;
-        [SerializeField] private float range = 10f;
+        [SerializeField] private float range = 7f;
         [SerializeField] private float pullForce = 10f;
         
         private float _timer;

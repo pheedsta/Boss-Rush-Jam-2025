@@ -7,9 +7,9 @@ using UnityEngine;
 
 [RequireComponent(typeof(Health))]
 
-//++++++++++++++++++++++++++++++++++++++++//
+//++++++++++++++++++++++++++++++//
 // CLASS: Player
-//++++++++++++++++++++++++++++++++++++++++//
+//++++++++++++++++++++++++++++++//
 
 public class Player : Character {
     
@@ -29,8 +29,8 @@ public class Player : Character {
     // Constants
     //:::::::::::::::::::::::::::::://
 
+    private const float k_InputThreshold = 0.01f; // a margin to determine if player is inputting movement
     private const float k_SpeedMargin = 0.1f; // a margin to prevent constant speed calculations when player is almost at speed
-    private const float k_InputThreshold = 0.01f; // if input is below this threshold; make it zero 
     
     //:::::::::::::::::::::::::::::://
     // Serialized Fields
@@ -44,6 +44,10 @@ public class Player : Character {
     [SerializeField] private PlayerStateScript specialStateScript;
     [SerializeField] private PlayerStateScript dieStateScript;
     
+    [Header("Turning")]
+    [Tooltip("Rotation speed of the player")]
+    [SerializeField] private float turnSpeed = 100f;
+    
     [Header("Moving")]
     [Tooltip("Walk speed of the player in m/s")]
     [SerializeField] private float walkSpeed = 10f;
@@ -52,42 +56,24 @@ public class Player : Character {
     [Tooltip("How fast the player decelerates")]
     [SerializeField] private float decelerationRate = 10f;
     
-    [Header("Strafing")]
-    [Tooltip("Strafe speed of the player in m/s")]
-    [SerializeField] private float strafeSpeed = 10f;
-    [Tooltip("How fast the player accelerates")]
-    [SerializeField] private float strafeAccelerationRate = 10f;
-    
-    [Header("Jumping")]
-    [SerializeField] private float jumpVelocity = 5f;
-    [SerializeField] private float jumpHeight = 1.5f;
-    
-    [Header("Dashing")]
+    /*[Header("Dashing")]
     [Tooltip("How far the player dashes in meters")]
     [SerializeField] private float dashDistance = 10f;
     [Tooltip("How many seconds the dash takes")]
     [SerializeField] private float dashDuration = 0.5f;
     [Tooltip("How many seconds before the player can dash again")]
-    [SerializeField] private float dashCooldown = 2f;
+    [SerializeField] private float dashCooldown = 2f;*/
     
-    [Header("Turning & Aiming")]
-    [Tooltip("Rotation speed of the player")]
-    [SerializeField] private float turnSpeed = 100f;
-    [SerializeField] private float aimSpeed = 50f;
-    [Range(-10f, -90f)]
-    [Tooltip("How far in degrees the aim camera moves down")]
-    [SerializeField] private float minAimDegrees = -80.0f;
-    [Range(10f, 90f)]
-    [Tooltip("How far in degrees the aim camera moves up")]
-    [SerializeField] private float maxAimDegrees = 80.0f;
-    
-    [Header("Aiming")]
-    [SerializeField] private float mouseAimSpeed = 5f;
-    [SerializeField] private float gamepadAimSpeed = 3f;
+    [Header("Jumping")]
+    [SerializeField] private float jumpVelocity = 5f;
+    [SerializeField] private float jumpHeight = 1.5f;
     
     [Header("Shards")]
     [Tooltip("How many fire shards to collect to fully charge fire ability")]
     [SerializeField] private int minimumFireShards = 10;
+    
+    [Header("Camera")]
+    [SerializeField] private Transform cameraTarget;
     
     [Header("Prefabs")]
     [SerializeField] private FireAbility fireAbilityPrefab;
@@ -113,17 +99,8 @@ public class Player : Character {
     // Components
     //:::::::::::::::::::::::::::::://
     
-    private Camera _camera;
     private Health _health;
-    //private Animator _animator;
     private UIManager _uiManager;
-    
-    //:::::::::::::::::::::::::::::://
-    // Transforms
-    //:::::::::::::::::::::::::::::://
-
-    private Transform _aimPoint;
-    private Transform _movePoint;
     
     //:::::::::::::::::::::::::::::://
     // Local Fields
@@ -131,23 +108,11 @@ public class Player : Character {
 
     private int _fireShardCount;
     
-    private float _dashTimer;
-    private float _dashSpeed;
+    //private float _dashTimer;
+    //private float _dashSpeed;
     
-    private Plane _plane;
-    private Vector2 _lookDelta;
     private Vector2 _moveDelta;
-    private Vector3 _velocity;
-    
-    
-    private Vector3 _cameraRotation;
-    
-    //private InputManager.InputDevice _lookDevice;
-    
-    private Transform _cameraTransform;
-
-    //private float _cinemachineTargetPitch;
-    //private float _cinemachineTargetYaw;
+    private Vector3 _moveVelocity;
     
     //:::::::::::::::::::::::::::::://
     // Unity Callbacks
@@ -173,22 +138,17 @@ public class Player : Character {
         
         // subscribe to InputManager events
         InputManager.OnMove += InputManager_OnMove;
-        InputManager.OnLook += InputManager_OnLook;
         InputManager.OnJump += InputManager_OnJump;
-        InputManager.OnDash += InputManager_OnDash;
+        //InputManager.OnDash += InputManager_OnDash;
         InputManager.OnAttack += InputManager_OnAttack;
         InputManager.OnSpecial += InputManager_OnSpecial;
         
         // subscribe to CharacterHealth events
         Health.OnChange += Health_OnChange;
         
-        // reset transforms to defaults
-        _aimPoint.rotation = Quaternion.identity;
-        _movePoint.rotation = Quaternion.identity;
-        
         // reset fields to defaults
-        _velocity = Vector3.zero;
-        _dashTimer = dashCooldown; // this allows player to dash immediately
+        _moveVelocity = Vector3.zero;
+        //_dashTimer = dashCooldown; // this allows player to dash immediately
     }
 
     protected override void Start() {
@@ -203,21 +163,17 @@ public class Player : Character {
         base.Update();
         
         // process player inputs
-        Look();
-        Rotate();
         Move();
-        Dash();
-        
-        
         
         // increment dash timer
-        _dashTimer += Time.deltaTime;
+        //_dashTimer += Time.deltaTime;
     }
 
     protected override void LateUpdate() {
         base.LateUpdate();
-
-        //Look();
+        
+        // move camera target to follow player
+        MoveCameraTarget();
     }
 
     protected override void OnDisable() {
@@ -228,8 +184,7 @@ public class Player : Character {
         
         // unsubscribe from InputManager events
         InputManager.OnMove -= InputManager_OnMove;
-        InputManager.OnLook -= InputManager_OnLook;
-        InputManager.OnDash -= InputManager_OnDash;
+        //InputManager.OnDash -= InputManager_OnDash;
         InputManager.OnAttack -= InputManager_OnAttack;
         InputManager.OnSpecial -= InputManager_OnSpecial;
         
@@ -238,15 +193,21 @@ public class Player : Character {
     }
     
     //------------------------------//
-    // Shards
+    // Collectables
     //------------------------------//
 
-    public void CollectShards(int count) {
-        // increment shard count
-        _fireShardCount += count;
-        
-        // update special ability UI
-        UpdateSpecialAbilityUI();
+    public void Collect(Collectable collectable) {
+        switch (collectable) {
+            case CollectableShard:
+                // increment shard count and update special ability UI
+                _fireShardCount++;
+                UpdateSpecialAbilityUI();
+                break;
+            case CollectableHeart heart:
+                // apply heal
+                Health.ApplyHeal(heart.Health);
+                break;
+        }
     }
 
     //:::::::::::::::::::::::::::::://
@@ -254,28 +215,12 @@ public class Player : Character {
     //:::::::::::::::::::::::::::::://
 
     private void Configure() {
+        //++++++++++++++++++++++++++++++//
+        Debug.Assert(cameraTarget, "'Camera Target' is not set");
+        //++++++++++++++++++++++++++++++//
+        
         // get required components (these won't be null)
         _health = GetComponent<Health>();
-        
-        // get camera
-        _camera = Camera.main;
-        //++++++++++++++++++++++++++++++//
-        Debug.Assert(_camera, "Main Camera is null");
-        //++++++++++++++++++++++++++++++//
-        
-        // get components
-        //_animator = transform.GetComponentInChildren<Animator>();
-        //++++++++++++++++++++++++++++++//
-        //Debug.Assert(_animator, "Animator component is null");
-        //++++++++++++++++++++++++++++++//
-        
-        // get transforms
-        _aimPoint = transform.Find("Aim Point");
-        _movePoint = transform.Find("Move Point");
-        //++++++++++++++++++++++++++++++//
-        Debug.Assert(_aimPoint, "'Aim Point' transform is null");
-        Debug.Assert(_movePoint, "'Move Point' transform is null");
-        //++++++++++++++++++++++++++++++//
         
         // initialise private CharacterStates
         _idleState = new CharacterState(this, Instantiate(idleStateScript));
@@ -284,17 +229,9 @@ public class Player : Character {
         _attackState = new CharacterState(this, Instantiate(attackStateScript));
         _specialState = new CharacterState(this, Instantiate(specialStateScript));
         _dieState = new CharacterState(this, Instantiate(dieStateScript));
-
-        // initialise reference plane for ray casting
-        _plane = new Plane(Vector3.up, Vector3.zero);
         
         // calculate dash speed once
-        _dashSpeed = dashDistance / dashDuration;
-
-
-
-
-        _cameraTransform = transform.Find("Camera Follow");
+        //_dashSpeed = dashDistance / dashDuration;
     }
     
     //:::::::::::::::::::::::::::::://
@@ -347,144 +284,58 @@ public class Player : Character {
     }
 
     //:::::::::::::::::::::::::::::://
-    // Look
-    //:::::::::::::::::::::::::::::://
-
-    private void Look() {
-        /*if (_lookDevice == InputManager.InputDevice.Mouse) {
-            LookMouse(_lookDelta);
-        } else {
-            LookGamepad(_lookDelta);
-        }*/
-        
-        // update camera rotation values (clamping to min / max)
-        _cameraRotation.x = Mathf.Clamp(_cameraRotation.x + _lookDelta.y * aimSpeed * Time.deltaTime, minAimDegrees, maxAimDegrees);
-        //_cameraRotation.y += _lookDelta.x * turnSpeed * Time.deltaTime;
-    
-        // rotate camera around x axis (up / down)
-        _cameraTransform.localEulerAngles = _cameraRotation;
-    }
-
-    private void Rotate() {
-        AddRotation(_lookDelta.x * turnSpeed * Time.deltaTime);
-        
-        
-    }
-
-    private void LookMouse(Vector2 input) {
-        // get ray from camera to mouse position
-        var ray = _camera.ScreenPointToRay(input);
-        
-        // if raycast onto plane fails; we're done (this should not happen)
-        if (!_plane.Raycast(ray, out var enter)) return;
-        
-        // calculate rotation needed to look at mouse point
-        var focusPositionOnPlane = _plane.ClosestPointOnPlane(_aimPoint.position);
-        var rotation = Quaternion.LookRotation(ray.GetPoint(enter) - focusPositionOnPlane);
-
-        // rotate towards point using mouse aim speed
-        _aimPoint.rotation = Quaternion.Slerp(_aimPoint.rotation, rotation, mouseAimSpeed * Time.deltaTime);
-    }
-
-    private void LookGamepad(Vector2 input) {
-        // if input is zero, we're done
-        if (input == Vector2.zero) return;
-        
-        // convert input to Vector3
-        var direction = new Vector3(input.x, 0f, input.y);
-        
-        // calculate rotation
-        var rotation = Quaternion.LookRotation(direction);
-
-        // rotate towards point using gamepad aim speed
-        _aimPoint.rotation = Quaternion.Slerp(_aimPoint.rotation, rotation, gamepadAimSpeed * Time.deltaTime);
-    }
-
-    //:::::::::::::::::::::::::::::://
-    // Move & Dash
+    // Moving
     //:::::::::::::::::::::::::::::://
     
     private void Move() {
-        /*if (_moveDelta != Vector2.zero) {
-            // if move delta is not zero; rotate move point to the input direction
-            // this allows player to dash in the direction they were last moving
-            var direction = new Vector3(_moveDelta.x, 0f, _moveDelta.y);
-            _movePoint.rotation = Quaternion.LookRotation(direction);
-        }
-        
-        // if player is dashing we're done
-        if (_dashTimer <= dashDuration) return;
-        
-        // calculate deceleration delta for this frame once
-        var decelerationDelta = decelerationRate * Time.deltaTime;
-        
-        if (Mathf.Abs(_moveDelta.x) < k_InputThreshold) {
-            // x input is less than threshold, decelerate towards zero
-            if (Mathf.Abs(_velocity.x) < decelerationDelta) {
-                // absolute velocity (x) is less than the amount we will decelerate; just set it to zero
-                _velocity.x = 0f;
-            } else {
-                // move towards zero
-                _velocity.x -= Mathf.Sign(_velocity.x) * decelerationDelta;
-            }
+        if (Mathf.Abs(_moveDelta.x) < k_InputThreshold && Mathf.Abs(_moveDelta.y) < k_InputThreshold) {
+            // no move input; we want to slow the velocity (using deceleration rate)
+            // if move velocity is less than threshold; reset to zero than target move speed; cap move velocity 
+            _moveVelocity -= decelerationRate * Time.deltaTime * _moveVelocity.normalized;
+            if (_moveVelocity.magnitude < 0.1f) _moveVelocity = Vector3.zero;
         } else {
-            // x input is greater than threshold, accelerate towards max speed
-            _velocity.x += _moveDelta.x * accelerationRate * Time.deltaTime;
-        }
-        
-        if (Mathf.Abs(_moveDelta.y) < k_InputThreshold) {
-            // y input is less than threshold, decelerate towards zero
-            if (Mathf.Abs(_velocity.z) < decelerationDelta) {
-                // absolute velocity (z) is less than the amount we will decelerate; just set it to zero
-                _velocity.z = 0f;
-            } else {
-                // move towards zero
-                _velocity.z -= Mathf.Sign(_velocity.z) * decelerationDelta;
-            }
-        } else {
-            // y input is greater than threshold, accelerate towards max speed
-            _velocity.z += _moveDelta.y * accelerationRate * Time.deltaTime;
-        }
-        
-        // cap velocity to move speed
-        if (_velocity.magnitude > walkSpeed) _velocity = _velocity.normalized * walkSpeed;
-        
-        // add motion to player
-        AddMotion(_velocity * Time.deltaTime);*/
-        
-        
-        // add forward and strafe motions
-        //AddMotion(_moveDelta.y * moveSpeed * Time.deltaTime * _bodyTransform.TransformDirection(Vector3.forward));
-        //AddMotion(_moveDelta.x * strafeSpeed * Time.deltaTime * _bodyTransform.TransformDirection(Vector3.right));
-        // get target move and strafe speeds
-        //var targetMoveSpeed = _moveDelta.y * (_sprint ? sprintSpeed : walkSpeed);
-        var targetMoveSpeed = _moveDelta.y * walkSpeed;
-        var targetStrafeSpeed = _moveDelta.x * strafeSpeed;
-        
-        if (_velocity.y < targetMoveSpeed - k_SpeedMargin || _velocity.y > targetMoveSpeed + k_SpeedMargin) {
-            // player is outside target move margin, calculate speed using acceleration
-            _velocity.y = Mathf.Lerp(_velocity.y, targetMoveSpeed, accelerationRate * Time.deltaTime);
-        } else {
-            // player is inside target move margin, set speed to target speed
-            _velocity.y = targetMoveSpeed;
-        }
-        
-        if (_velocity.x < targetStrafeSpeed - k_SpeedMargin || _velocity.x > targetStrafeSpeed + k_SpeedMargin) {
-            // player is outside target move margin, calculate speed using acceleration
-            _velocity.x = Mathf.Lerp(_velocity.x, targetStrafeSpeed, strafeAccelerationRate * Time.deltaTime);
-        } else {
-            // player is inside target move margin, set speed to target speed
-            _velocity.x = targetStrafeSpeed;
-        }
-        
-        // add move and strafe motions
-        AddMotion(_velocity.y * Time.deltaTime * _movePoint.TransformDirection(Vector3.forward));
-        AddMotion(_velocity.x * Time.deltaTime * _movePoint.TransformDirection(Vector3.right));
-    }
+            // get target move speed
+            //var targetMoveSpeed = _dashTimer <= dashDuration ? _dashSpeed : walkSpeed;
+            //var targetAcceleration = _dashTimer <= dashDuration ? accelerationRate * (_dashSpeed / walkSpeed) : accelerationRate;
+            
+            // get the forward vector of the camera target
+            var cameraForward = cameraTarget.forward;
+            var cameraRight = cameraTarget.right;
 
-    private void Dash() {
-        // if player is dash, dash in the direction they're moving
-        if (_dashTimer <= dashDuration) AddMotion(_dashSpeed * Time.deltaTime * _movePoint.forward);
+            // exclude pitch rotation from vectors
+            cameraForward.y = 0f;
+            cameraRight.y = 0f;
+
+            // calculate direction using camera direction and user input
+            var direction = _moveDelta.y * cameraForward + _moveDelta.x * cameraRight;
+
+            // update move velocity (using acceleration rate)
+            // if move velocity is faster than target move speed; cap move velocity 
+            _moveVelocity += accelerationRate * Time.deltaTime * direction;
+            if (_moveVelocity.magnitude > walkSpeed) _moveVelocity = _moveVelocity.normalized * walkSpeed;
+            
+            // rotate player towards new move direction (using turn speed)
+            var rotation = Vector3.RotateTowards(transform.forward, direction, turnSpeed * Time.deltaTime, 0f);
+            transform.rotation = Quaternion.LookRotation(rotation);
+        }
+        
+        // move the player
+        AddMotion(_moveVelocity * Time.deltaTime);
+    }
+    
+    //:::::::::::::::::::::::::::::://
+    // Camera Target
+    //:::::::::::::::::::::::::::::://
+
+    private void MoveCameraTarget() {
+        // get the camera target position and update x and z values
+        var position = cameraTarget.transform.position;
+        position.x = transform.position.x;
+        position.y = transform.position.y + 1.5f;
+        position.z = transform.position.z;
+
+        // update position
+        cameraTarget.position = position;
     }
     
     //:::::::::::::::::::::::::::::://
@@ -495,42 +346,46 @@ public class Player : Character {
         _moveDelta = inputDevice == InputManager.InputDevice.Keyboard ? DigitiseKeyboardInput(value) : value;
     }
 
-    private void InputManager_OnLook(InputManager.ActionPhase phase, InputManager.InputDevice inputDevice, Vector2 value) {
-        //_lookDevice = inputDevice;
-        _lookDelta = value;
-    }
-
     private void InputManager_OnJump(InputManager.ActionPhase phase) {
-        AddJump(jumpVelocity);
+        if (phase == InputManager.ActionPhase.Performed) AddJump(jumpVelocity);
     }
     
     private void InputManager_OnDash(InputManager.ActionPhase phase) {
+        /* do nothing for now
         // if dash was not performed OR dash is on cooldown, we're done
         if (phase != InputManager.ActionPhase.Performed || _dashTimer < dashCooldown) return;
         
         // reset dash timer
-        _dashTimer = 0f;
+        _dashTimer = 0f;*/
     }
     
     private void InputManager_OnAttack(InputManager.ActionPhase phase) {
     }
     
     private void InputManager_OnSpecial(InputManager.ActionPhase phase) {
-        // if player hasn't collected enough fire shards; we're done
-        if (_fireShardCount < minimumFireShards) return;
+        // if phase is not performed OR player hasn't collected enough shards; we're done
+        if (phase != InputManager.ActionPhase.Performed || _fireShardCount < minimumFireShards) return;
         
-        // player has collected enough fire shards, decrement count and update UI
+        // special button 'performed' AND player has collected enough fire shards, decrement count and update UI
         _fireShardCount -= minimumFireShards;
         UpdateSpecialAbilityUI();
 
         // if there is a fire ability prefab; instantiate it
-        if (fireAbilityPrefab) _ = ReusablePool.FetchReusable(fireAbilityPrefab, transform.position, _aimPoint.rotation);
+        if (!fireAbilityPrefab) return;
+        
+        // get direction of the fireball (depending on where player is looking)
+        var cameraForward = cameraTarget.forward;
+        cameraForward.y = 0f;
+        var rotation = Quaternion.LookRotation(cameraForward);
+        
+        // instantiate fireball
+        _ = ReusablePool.FetchReusable(fireAbilityPrefab, cameraTarget.position, rotation);
     }
     
     //:::::::::::::::::::::::::::::://
     // Utilities
     //:::::::::::::::::::::::::::::://
-
+    
     private static Vector2 DigitiseKeyboardInput(Vector2 input) {
         // initialise field
         var digitisedInput = Vector2.zero;

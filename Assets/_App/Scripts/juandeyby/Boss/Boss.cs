@@ -119,5 +119,21 @@ namespace _App.Scripts.juandeyby.Boss
         {
             Debug.LogWarningFormat("<color=red>StopAerialBarrageEffect not implemented</color>");
         }
+
+        /// <summary>
+        /// Play the portal summon effect
+        /// </summary>
+        public void PlayPortalSummonEffect()
+        {
+            Debug.LogWarningFormat("<color=red>PlayPortalSummonEffect not implemented</color>");
+        }
+
+        /// <summary>
+        /// Stop the portal summon effect
+        /// </summary>
+        public void StopPortalSummonEffect()
+        {
+            Debug.LogWarningFormat("<color=red>StopPortalSummonEffect not implemented</color>");
+        }
     }
 }

@@ -19,6 +19,7 @@ namespace _App.Scripts.juandeyby.Boss
         
         public void Enter(Boss boss)
         {
+            _timer = 0f;
             _navMeshAgent = boss.GetMeshAgent();
             MoveToRandomPosition(boss);
         }
@@ -34,15 +35,27 @@ namespace _App.Scripts.juandeyby.Boss
                     _wanderCount++;
                     if (_wanderCount >= _maxWanderCount)
                     {
-                        Exit(boss);
-                        // boss.SetState(new BossVortexPullState());
-                        boss.SetState(new BossSweepingStrikeState());
+                        var random = Random.Range(0, 4);
+                        switch (random)
+                        {
+                            case 0:
+                                boss.SetState(new BossVortexPullState());
+                                break;
+                            case 1:
+                                boss.SetState(new BossSweepingStrikeState());
+                                break;
+                            case 2:
+                                boss.SetState(new BossPortalSummonState());
+                                break;
+                            case 3:
+                                boss.SetState(new BossAerialBarrageState());
+                                break;
+                        }
                     }
                     else
                     {
                         MoveToRandomPosition(boss);
                     }
-                    _timer = 0f;
                 }
             }
         }

@@ -52,7 +52,7 @@ namespace _App.Scripts.juandeyby.Boss
                 }
             }
             
-            Debug.DrawLine(startPosition, startPosition + endPosition * distance, Color.red, 1f);
+            Debug.DrawLine(startPosition, startPosition + endPosition * distance, Color.red);
         }
     }
 }

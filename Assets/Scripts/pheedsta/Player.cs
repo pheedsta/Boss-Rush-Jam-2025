@@ -1,5 +1,6 @@
 using _App.Scripts.juandeyby;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 //------------------------------//
 // Required Components
@@ -66,17 +67,17 @@ public class Player : Character {
     
     [Header("Jumping")]
     [SerializeField] private float jumpVelocity = 5f;
-    [SerializeField] private float jumpHeight = 1.5f;
+    //[SerializeField] private float jumpHeight = 1.5f;
     
     [Header("Shards")]
     [Tooltip("How many fire shards to collect to fully charge fire ability")]
     [SerializeField] private int minimumFireShards = 10;
     
     [Header("Camera")]
-    [SerializeField] private Transform cameraTarget;
+    [SerializeField] private CameraTarget cameraTarget;
     
     [Header("Prefabs")]
-    [SerializeField] private FireAbility fireAbilityPrefab;
+    [SerializeField] private Projectile projectilePrefab;
     
     //:::::::::::::::::::::::::::::://
     // Properties
@@ -107,6 +108,7 @@ public class Player : Character {
     //:::::::::::::::::::::::::::::://
 
     private int _fireShardCount;
+    private bool _isAiming;
     
     //private float _dashTimer;
     //private float _dashSpeed;
@@ -147,6 +149,7 @@ public class Player : Character {
         Health.OnChange += Health_OnChange;
         
         // reset fields to defaults
+        _isAiming = false;
         _moveVelocity = Vector3.zero;
         //_dashTimer = dashCooldown; // this allows player to dash immediately
     }
@@ -288,6 +291,7 @@ public class Player : Character {
     //:::::::::::::::::::::::::::::://
     
     private void Move() {
+        
         if (Mathf.Abs(_moveDelta.x) < k_InputThreshold && Mathf.Abs(_moveDelta.y) < k_InputThreshold) {
             // no move input; we want to slow the velocity (using deceleration rate)
             // if move velocity is less than threshold; reset to zero than target move speed; cap move velocity 
@@ -299,8 +303,8 @@ public class Player : Character {
             //var targetAcceleration = _dashTimer <= dashDuration ? accelerationRate * (_dashSpeed / walkSpeed) : accelerationRate;
             
             // get the forward vector of the camera target
-            var cameraForward = cameraTarget.forward;
-            var cameraRight = cameraTarget.right;
+            var cameraForward = cameraTarget.transform.forward;
+            var cameraRight = cameraTarget.transform.right;
 
             // exclude pitch rotation from vectors
             cameraForward.y = 0f;
@@ -313,14 +317,26 @@ public class Player : Character {
             // if move velocity is faster than target move speed; cap move velocity 
             _moveVelocity += accelerationRate * Time.deltaTime * direction;
             if (_moveVelocity.magnitude > walkSpeed) _moveVelocity = _moveVelocity.normalized * walkSpeed;
-            
-            // rotate player towards new move direction (using turn speed)
-            var rotation = Vector3.RotateTowards(transform.forward, direction, turnSpeed * Time.deltaTime, 0f);
-            transform.rotation = Quaternion.LookRotation(rotation);
+
+            if (!_isAiming) {
+                // player is not aiming, rotate player towards new move direction (using turn speed)
+                var rotation = Vector3.RotateTowards(transform.forward, direction, turnSpeed * Time.deltaTime, 0f);
+                transform.rotation = Quaternion.LookRotation(rotation);
+            }
         }
         
         // move the player
         AddMotion(_moveVelocity * Time.deltaTime);
+        
+        // if player is not aiming, we're done
+        if (!_isAiming) return;
+        
+        // player is aiming, get camera target rotation (excluding y rotation)
+        var cameraRotation = cameraTarget.transform.forward;
+        cameraRotation.y = 0f;
+        
+        // rotate the player in the direction of the camera
+        transform.rotation = Quaternion.LookRotation(cameraRotation);
     }
     
     //:::::::::::::::::::::::::::::://
@@ -335,7 +351,7 @@ public class Player : Character {
         position.z = transform.position.z;
 
         // update position
-        cameraTarget.position = position;
+        cameraTarget.transform.position = position;
     }
     
     //:::::::::::::::::::::::::::::://
@@ -350,36 +366,53 @@ public class Player : Character {
         if (phase == InputManager.ActionPhase.Performed) AddJump(jumpVelocity);
     }
     
-    private void InputManager_OnDash(InputManager.ActionPhase phase) {
-        /* do nothing for now
+    /*private void InputManager_OnDash(InputManager.ActionPhase phase) {
         // if dash was not performed OR dash is on cooldown, we're done
         if (phase != InputManager.ActionPhase.Performed || _dashTimer < dashCooldown) return;
         
         // reset dash timer
-        _dashTimer = 0f;*/
-    }
+        _dashTimer = 0f;
+    }*/
     
     private void InputManager_OnAttack(InputManager.ActionPhase phase) {
     }
     
     private void InputManager_OnSpecial(InputManager.ActionPhase phase) {
-        // if phase is not performed OR player hasn't collected enough shards; we're done
-        if (phase != InputManager.ActionPhase.Performed || _fireShardCount < minimumFireShards) return;
-        
-        // special button 'performed' AND player has collected enough fire shards, decrement count and update UI
-        _fireShardCount -= minimumFireShards;
-        UpdateSpecialAbilityUI();
+        if (phase == InputManager.ActionPhase.Canceled) {
+            // special button released; reset field
+            _isAiming = false;
+            
+            // hide the crosshairs
+            CrosshairCanvas.Instance.HideCrosshairs();
+            
+            // stop camera target from aiming
+            cameraTarget.StopAiming();
 
-        // if there is a fire ability prefab; instantiate it
-        if (!fireAbilityPrefab) return;
+            // if we don't have enough fire shards, we're done
+            if (_fireShardCount < minimumFireShards) return;
+            
+            // decrement shard count and update UI
+            _fireShardCount -= minimumFireShards;
+            UpdateSpecialAbilityUI();
+
+            // if there is no fire ability prefab; we're done
+            if (!projectilePrefab) return;
         
-        // get direction of the fireball (depending on where player is looking)
-        var cameraForward = cameraTarget.forward;
-        cameraForward.y = 0f;
-        var rotation = Quaternion.LookRotation(cameraForward);
+            // get direction of the fireball (depending on where camera is looking)
+            var rotation = Quaternion.LookRotation(cameraTarget.transform.forward);
         
-        // instantiate fireball
-        _ = ReusablePool.FetchReusable(fireAbilityPrefab, cameraTarget.position, rotation);
+            // instantiate fireball
+            _ = ReusablePool.FetchReusable(projectilePrefab, cameraTarget.transform.position, rotation);
+        } else {
+            // special button pressed; update field
+            _isAiming = true;
+            
+            // show the crosshairs
+            CrosshairCanvas.Instance.ShowCrosshairs();
+            
+            // start camera target from aiming
+            cameraTarget.StartAiming();
+        }
     }
     
     //:::::::::::::::::::::::::::::://

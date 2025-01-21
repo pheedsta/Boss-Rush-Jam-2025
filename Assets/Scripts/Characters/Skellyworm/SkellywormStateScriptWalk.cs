@@ -21,7 +21,7 @@ public class SkellywormStateScriptWalk : SkellywormStateScript {
     public override void Update() {
         base.Update();
 
-        if (!Skellyworm.IsAlive) {
+        if (!Skellyworm.Health.IsAlive) {
             //Skellyworm is dead; change to die state
             Skellyworm.StateMachine.ChangeState(Skellyworm.DieState);
         } else {

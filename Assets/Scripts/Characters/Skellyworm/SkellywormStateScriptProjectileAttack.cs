@@ -39,12 +39,17 @@ public class SkellywormStateScriptProjectileAttack : SkellywormStateScript {
         // increment progress
         _progress += Time.deltaTime;
 
-        if (!Skellyworm.IsAlive) {
+        if (!Skellyworm.Health.IsAlive) {
             // Skellyworm is dead; change to die state
             Skellyworm.StateMachine.ChangeState(Skellyworm.DieState);
         } else if (k_AnimationDuration <= _progress) {
             // Skellyworm is alive AND we've reached maximum animation duration; change to walk state
             Skellyworm.StateMachine.ChangeState(Skellyworm.WalkState);
+            
+            
+            
+            // for now shoot acid projectile
+            Skellyworm.ShootProjectileTowardsPlayer();
         }
     }
 }

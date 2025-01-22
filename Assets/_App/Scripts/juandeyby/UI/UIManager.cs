@@ -3,6 +3,7 @@ using _App.Scripts.juandeyby;
 using _App.Scripts.juandeyby.UI;
 using UnityEngine;
 
+[DefaultExecutionOrder(-100)]
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private UIStart startPanel;

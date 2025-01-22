@@ -9,7 +9,7 @@ namespace _App.Scripts.juandeyby.Boss
 
         private void Start()
         {
-            boss.SetState(new BossWanderState()); 
+            boss.SetState(new BossAerialBarrageState());
         }
     }
 }

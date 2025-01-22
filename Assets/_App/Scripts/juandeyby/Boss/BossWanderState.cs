@@ -35,6 +35,9 @@ namespace _App.Scripts.juandeyby.Boss
                     _wanderCount++;
                     if (_wanderCount >= _maxWanderCount)
                     {
+                        boss.SetState(new BossAerialBarrageState());
+                        return;
+                        
                         var random = Random.Range(0, 4);
                         switch (random)
                         {

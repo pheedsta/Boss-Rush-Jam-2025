@@ -552,9 +552,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f31ed03d432d3a4c997554573e2508a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stepCount: 20
+  gravityMultiplier: 25
+  stepCount: 100
   rb: {fileID: 3704385643537818574}
-  targetMarkerPrefab: {fileID: -6042062742147829588, guid: d29ea9f2ef11d0e4fa9c3fa66c87b220, type: 3}
 --- !u!54 &3704385643537818574
 Rigidbody:
   m_ObjectHideFlags: 0

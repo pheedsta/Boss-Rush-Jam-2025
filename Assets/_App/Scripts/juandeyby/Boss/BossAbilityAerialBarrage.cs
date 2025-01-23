@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace _App.Scripts.juandeyby.Boss
@@ -10,11 +11,12 @@ namespace _App.Scripts.juandeyby.Boss
         [SerializeField] private float projectileCount = 10f;
         
         private float _timer;
+        private Coroutine _aerialBarrageCoroutine;
         
         public override void Activate(Boss boss)
         {
             _timer = 0f;
-            ApplyAerialBarrage(boss);
+            StartCoroutine(GenerateSpiralProjectiles(boss));
             boss.PlayAerialBarrageEffect();
         }
         
@@ -33,17 +35,31 @@ namespace _App.Scripts.juandeyby.Boss
             boss.StopAerialBarrageEffect();
         }
         
-        private void ApplyAerialBarrage(Boss boss)
+        private IEnumerator GenerateSpiralProjectiles(Boss boss)
         {
+            var angleStep = 60f; 
+            var currentAngle = Random.Range(0f, 360f);
+            var currentRange = 0.3f; 
+
             for (var i = 0; i < projectileCount; i++)
             {
-                var direction = Random.insideUnitCircle.normalized;
-                var position = boss.transform.position + new Vector3(direction.x, 3f, direction.y) * range;
+                var radians = currentAngle * Mathf.Deg2Rad;
+                var x = Mathf.Cos(radians);
+                var y = Mathf.Sin(radians);
+
+                var direction = new Vector2(x, y).normalized;
+                var position = boss.transform.position +
+                               new Vector3(direction.x * currentRange, 3f, direction.y * currentRange);
                 var origin = boss.transform.position;
 
                 var projectile = ServiceLocator.Get<ProjectileManager>().GetProjectile();
                 projectile.transform.position = position;
                 projectile.Config(origin);
+
+                currentAngle += angleStep;
+                currentRange += 0.1f;
+
+                yield return new WaitForSeconds(0.5f);
             }
         }
     }

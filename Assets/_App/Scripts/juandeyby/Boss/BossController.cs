@@ -21,9 +21,21 @@ namespace _App.Scripts.juandeyby.Boss
         {
             while (true)
             {
-                yield return new WaitForSeconds(30f);
+                yield return new WaitForSeconds(5f);
                 boss.SetState(new BossSweepingStrikeState());
+                yield return new WaitForSeconds(5f);
+                boss.SetState(new BossAerialBarrageState());
+                yield return new WaitForSeconds(5f);
+                boss.SetState(new BossPortalSummonState());
+                yield return new WaitForSeconds(5f);
+                boss.SetState(new BossVortexPullState());
             }
+
+            // while (true)
+            // {
+            //     yield return new WaitForSeconds(30f);
+            //     boss.SetState(new BossSweepingStrikeState());
+            // }
         }
         
         public void SpectralWarnerPhase()

@@ -21,6 +21,7 @@ namespace _App.Scripts.juandeyby.Boss
         {
             _timer = 0f;
             _navMeshAgent = boss.GetMeshAgent();
+            _navMeshAgent.isStopped = false;
             MoveToRandomPosition(boss);
         }
 
@@ -33,39 +34,14 @@ namespace _App.Scripts.juandeyby.Boss
                 if (_timer >= _waitTime)
                 {
                     _wanderCount++;
-                    if (_wanderCount >= _maxWanderCount)
-                    {
-                        boss.SetState(new BossAerialBarrageState());
-                        return;
-                        
-                        var random = Random.Range(0, 4);
-                        switch (random)
-                        {
-                            case 0:
-                                boss.SetState(new BossVortexPullState());
-                                break;
-                            case 1:
-                                boss.SetState(new BossSweepingStrikeState());
-                                break;
-                            case 2:
-                                boss.SetState(new BossPortalSummonState());
-                                break;
-                            case 3:
-                                boss.SetState(new BossAerialBarrageState());
-                                break;
-                        }
-                    }
-                    else
-                    {
-                        MoveToRandomPosition(boss);
-                    }
+                    MoveToRandomPosition(boss);
                 }
             }
         }
 
         public void Exit(Boss boss)
         {
-            
+            _navMeshAgent.isStopped = true;
         }
         
         /// <summary>

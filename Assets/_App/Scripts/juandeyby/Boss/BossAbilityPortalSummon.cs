@@ -35,11 +35,19 @@ namespace _App.Scripts.juandeyby.Boss
         
         private void ApplyPortalSummon(Boss boss)
         {
+            var angleStep = 360f / portalCount;
+            var radius = range;
+
             for (var i = 0; i < portalCount; i++)
             {
-                var randomPosition = boss.transform.position + Random.insideUnitSphere * range;
+                var angle = i * angleStep * Mathf.Deg2Rad;
+                var x = Mathf.Cos(angle) * radius;
+                var z = Mathf.Sin(angle) * radius;
+                var offset = new Vector3(x, 3f, z);
+                var portalPosition = boss.transform.position + offset;
+
                 var portal = ServiceLocator.Get<PortalManager>().GetPortal();
-                portal.transform.position = randomPosition;
+                portal.transform.position = portalPosition;
             }
         }
     }

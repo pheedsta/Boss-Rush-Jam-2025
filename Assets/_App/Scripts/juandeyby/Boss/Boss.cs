@@ -74,12 +74,6 @@ namespace _App.Scripts.juandeyby.Boss
             vortexPullSoundStop.Post(gameObject);
             vortexEffect.SetActive(false);
         }
-        
-        private void OnDrawGizmos()
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(transform.position, 7f);
-        }
 
         /// <summary>
         /// Play the sweeping strike effect

@@ -5,16 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0323cdc-65bc-4b30-b3bb-f1969ff69110" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/pheedsta/Projectile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Boss-Rush-Jam-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Boss-Rush-Jam-2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/pheedsta/Skellyworm Acid.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/pheedsta/Skellyworm Acid.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input/InputActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/InputActions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input/InputActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/InputActions.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/pheedsta/SkellywormAcid.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/pheedsta/SkellywormAcid.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Player.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Player.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Skellyworm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Skellyworm.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/pheedsta/Test 2.5D.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pheedsta/Test 2.5D.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/pheedsta/Fire Ability.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/pheedsta/Fire Ability.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/pheedsta/Test 3rd Person.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pheedsta/Test 3rd Person.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/Skellyworm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/Skellyworm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/ComponentRegistry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/ComponentRegistry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/SkellywormStateScriptMeleeAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/SkellywormStateScriptMeleeAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/SkellywormStateScriptProjectileAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/SkellywormStateScriptProjectileAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/SkellywormStateScriptSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/SkellywormStateScriptSpawn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/SkellywormStateScriptWalk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/SkellywormStateScriptWalk.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/CameraTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/pheedsta/CameraTarget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/FireAbility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/FireAbility.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/pheedsta/Projectile.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/pheedsta/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +38,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Characters/Player/PlayerStateScriptDie.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/SkellywormStateScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/pheedsta/Collectable.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -132,6 +144,15 @@
       <workItem from="1736839408086" duration="2502000" />
       <workItem from="1736893659560" duration="6694000" />
       <workItem from="1736900394485" duration="596000" />
+      <workItem from="1737265888509" duration="41000" />
+      <workItem from="1737266176958" duration="3712000" />
+      <workItem from="1737273309017" duration="998000" />
+      <workItem from="1737328525367" duration="9320000" />
+      <workItem from="1737339464661" duration="4861000" />
+      <workItem from="1737345186781" duration="2285000" />
+      <workItem from="1737347811091" duration="172000" />
+      <workItem from="1737412458810" duration="1024000" />
+      <workItem from="1737413647053" duration="17946000" />
     </task>
     <servers />
   </component>

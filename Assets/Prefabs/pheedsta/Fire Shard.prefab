@@ -46,10 +46,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMovingTowardsPlayer: 0
-  identifier: FIRE_SHARD
+  identifier: COLLECTABLE_SHARD
   collectDistance: 0.5
-  vacuumDistance: 4
-  vacuumSpeed: 12
+  vacuumDistance: 6
+  vacuumSpeed: 18
+  collectSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 10ebba1a1a770454da317b17a4be095e, type: 2}
 --- !u!1 &8389282395045858566
 GameObject:
   m_ObjectHideFlags: 0

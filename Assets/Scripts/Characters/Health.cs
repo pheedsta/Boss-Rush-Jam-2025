@@ -46,17 +46,28 @@ public class Health : MonoBehaviour {
     }
     
     //------------------------------//
-    // Damage Methods
+    // Health Methods
     //------------------------------//
 
-    public void ApplyDamage(float damage) {
-        // if damage is zero; we're done
-        if (Mathf.Approximately(damage, 0f)) return;   
+    private void AdjustHealth(float value) {
+        // if value is zero; we're done
+        if (Mathf.Approximately(value, 0f)) return;   
         
         // update health (with absolute value)
-        _exactHealth -= Mathf.Abs(damage);
+        _exactHealth += value;
+        
+        // clamp health to min / max
+        _exactHealth = Mathf.Clamp(_exactHealth, 0f, startingHealth);
         
         // call OnChange event
         OnChange.Invoke(Mathf.CeilToInt(_exactHealth));
+    }
+
+    public void ApplyDamage(float damage) {
+        AdjustHealth(-Mathf.Abs(damage));
+    }
+
+    public void ApplyHeal(float heal) {
+        AdjustHealth(Mathf.Abs(heal));
     }
 }

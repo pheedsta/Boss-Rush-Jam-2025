@@ -25,6 +25,12 @@ public class Character : MonoBehaviour {
     private const float k_GroundedOffset = 0.15f;
     
     //:::::::::::::::::::::::::::::://
+    // Constants
+    //:::::::::::::::::::::::::::::://
+
+    private const float k_MaxGroundedGravityY = -2f; // using -2f instead of zero stops Character 'bouncing' down ramps
+    
+    //:::::::::::::::::::::::::::::://
     // Serialized Fields
     //:::::::::::::::::::::::::::::://
     
@@ -57,7 +63,9 @@ public class Character : MonoBehaviour {
     //:::::::::::::::::::::::::::::://
     // Local Fields
     //:::::::::::::::::::::::::::::://
-    
+
+    private float _rotation;
+    private float _jumpVelocity;
     private Vector3 _horizontalVelocity;
     private Vector3 _verticalVelocity;
     private Collider _groundCollider;
@@ -85,10 +93,17 @@ public class Character : MonoBehaviour {
         AddPlatformRotation();
         AddGravity();
         
-        // move character controller using motion and gravity and reset horizontal velocity field
+        // move character controller using motion and gravity
         // NB: gravity is the only vector multiplied by delta time
         _characterController.Move(_horizontalVelocity + _verticalVelocity * Time.deltaTime);
+        
+        // rotation character transform
+        transform.Rotate(transform.up, _rotation);
+        
+        // reset horizontal, jump velocity and rotation fields
         _horizontalVelocity = Vector3.zero;
+        _jumpVelocity = 0f;
+        _rotation = 0f;
         
         // reset the ground collider
         _groundCollider = GetGroundCollider();
@@ -126,6 +141,15 @@ public class Character : MonoBehaviour {
         // increment motion vector (ignoring y axis)
         _horizontalVelocity.x += motion.x;
         _horizontalVelocity.z += motion.z;
+    }
+
+    protected void AddJump(float velocity) {
+        // increment jump velocity
+        _jumpVelocity += velocity;
+    }
+
+    protected void AddRotation(float angle) {
+        _rotation += angle;
     }
     
     //:::::::::::::::::::::::::::::://
@@ -170,9 +194,9 @@ public class Character : MonoBehaviour {
     }
     
     private void AddGravity() {
-        // if character is grounded, reset vertical velocity
-        // NB: this prevents gravity from accumulating
-        if (IsGrounded) _verticalVelocity.y = 0f;
+        // if character is grounded and vertical velocity is less than zero, reset vertical velocity (to jump velocity which may be zero)
+        // we need to check y value because player may still be 'grounded' after the first frame(s) of a jump
+        if (IsGrounded && _verticalVelocity.y < 0f) _verticalVelocity.y = _jumpVelocity;
         
         // factor in gravity
         _verticalVelocity.y += gravity * Time.deltaTime;

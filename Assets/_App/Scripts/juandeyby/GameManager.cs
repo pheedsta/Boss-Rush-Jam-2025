@@ -17,6 +17,7 @@ namespace _App.Scripts.juandeyby
 
         private void Awake()
         {
+            Cursor.visible = false;
             Pause();
         }
 

@@ -77,6 +77,7 @@ namespace _App.Scripts.juandeyby.Boss
             Debug.DrawLine(boss.transform.position, player.transform.position, Color.yellow);
 
             var directionToPlayer = (player.transform.position - boss.transform.position).normalized;
+            directionToPlayer.y = 0f;
             var distanceToPlayer = Vector3.Distance(boss.transform.position, player.transform.position);
 
             // Check if the player is within the detection range

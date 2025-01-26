@@ -11342,6 +11342,7 @@ GameObject:
   - component: {fileID: 8360833185071686463}
   - component: {fileID: 1494821302479572398}
   - component: {fileID: 9017626648274685586}
+  - component: {fileID: 9017626648274685587}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -11375,6 +11376,7 @@ MonoBehaviour:
   walkSpeed: 8
   accelerationRate: 100
   decelerationRate: 50
+  playerAnimator: {fileID: 0}
   jumpVelocity: 8
   minimumFireShards: 10
   cameraTarget: {fileID: 973220959}
@@ -11421,6 +11423,19 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 1.05, z: 0}
+--- !u!114 &9017626648274685587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5803771819916152825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21aaa884d01718345bde15efb90d38f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -5,6 +5,8 @@ namespace _App.Scripts.juandeyby
 {
     public class GameManager : MonoBehaviour
     {
+        private GamePhase _gamePhase;
+        
         private void OnEnable()
         {
             ServiceLocator.Register(this);
@@ -18,6 +20,10 @@ namespace _App.Scripts.juandeyby
         private void Awake()
         {
             Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            
+            // Start the game in phase 1
+            _gamePhase = GamePhase.Phase1;
             Pause();
         }
 
@@ -30,5 +36,18 @@ namespace _App.Scripts.juandeyby
         {
             Time.timeScale = 1;
         }
+        
+        public GamePhase GetGamePhase()
+        {
+            return _gamePhase;
+        }
+    }
+    
+    public enum GamePhase
+    {
+        Phase1, // The game starts in 3th ring
+        Phase2, // The game starts in 2nd ring
+        Phase3 // The game starts in 1st ring
     }
 }
+

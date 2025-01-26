@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
-  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Virtual Acoustics
       ObjectType: 5
@@ -21,12 +21,12 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: e8fb3888e0c0cd42b6b8a18fd59a211a
-    ParentPath: Virtual Acoustics/Default Work Unit
+    ParentPath: Virtual Acoustics\Default Work Unit
     guid: e8fb3888e0c0cd42b6b8a18fd59a211a
     GuidInternal: 
-    m_lastTime: -8584653239534946123
+    m_lastTime: -8584646977327824573
     List: []
-  - PhysicalPath: Virtual Acoustics/Factory Acoustic Textures.wwu
+  - PhysicalPath: Virtual Acoustics\Factory Acoustic Textures.wwu
     PathAndIcons:
     - ElementName: Virtual Acoustics
       ObjectType: 5
@@ -34,10 +34,10 @@ MonoBehaviour:
     - ElementName: Factory Acoustic Textures
       ObjectType: 12
       guid: 6b663d46a83ca54f8b4a5fef12b883f6
-    ParentPath: Virtual Acoustics/Factory Acoustic Textures
+    ParentPath: Virtual Acoustics\Factory Acoustic Textures
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
     GuidInternal: 
-    m_lastTime: -8584653239534944615
+    m_lastTime: -8584646977327824573
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -55,7 +55,7 @@ MonoBehaviour:
       - ElementName: Acoustic_Banner
         ObjectType: 15
         guid: f2532d2fccda8e408b8898b1b52a26d6
-      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Acoustic_Banner
+      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Acoustic_Banner
     - name: Anechoic
       guid: 32c20a8be202de4ebeacfdd1a900e3ed
       id: 1873957695
@@ -72,7 +72,7 @@ MonoBehaviour:
       - ElementName: Anechoic
         ObjectType: 15
         guid: 32c20a8be202de4ebeacfdd1a900e3ed
-      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Anechoic
+      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Anechoic
     - name: Brick
       guid: a9a586b004f2534ca838bdb18b18f6d6
       id: 504532776
@@ -89,7 +89,7 @@ MonoBehaviour:
       - ElementName: Brick
         ObjectType: 15
         guid: a9a586b004f2534ca838bdb18b18f6d6
-      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Brick
+      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Brick
     - name: Carpet
       guid: 8975223456dc604296c4b9f4b669092b
       id: 2412606308
@@ -106,7 +106,7 @@ MonoBehaviour:
       - ElementName: Carpet
         ObjectType: 15
         guid: 8975223456dc604296c4b9f4b669092b
-      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Carpet
+      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Carpet
     - name: Concrete
       guid: 001cf85c9628e04aaf7c3080bdaba682
       id: 841620460
@@ -123,7 +123,7 @@ MonoBehaviour:
       - ElementName: Concrete
         ObjectType: 15
         guid: 001cf85c9628e04aaf7c3080bdaba682
-      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Concrete
+      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Concrete
     - name: Cork_Tiles
       guid: 19c9d2305f92434189063dbb3c4ae5e2
       id: 3195498748
@@ -140,7 +140,7 @@ MonoBehaviour:
       - ElementName: Cork_Tiles
         ObjectType: 15
         guid: 19c9d2305f92434189063dbb3c4ae5e2
-      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Cork_Tiles
+      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Cork_Tiles
     - name: Curtains
       guid: 339ee6f8975c6849b508a1535f2d66e8
       id: 2928161104
@@ -157,7 +157,7 @@ MonoBehaviour:
       - ElementName: Curtains
         ObjectType: 15
         guid: 339ee6f8975c6849b508a1535f2d66e8
-      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Curtains
+      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Curtains
     - name: Drywall
       guid: f4e3a4680b4c8746a8b8a84db93dbc8f
       id: 3670307564
@@ -174,7 +174,7 @@ MonoBehaviour:
       - ElementName: Drywall
         ObjectType: 15
         guid: f4e3a4680b4c8746a8b8a84db93dbc8f
-      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Drywall
+      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Drywall
     - name: Fabric
       guid: 32d581836edbed4ea7a3bc7b0a0b8ba8
       id: 1970351858
@@ -191,7 +191,7 @@ MonoBehaviour:
       - ElementName: Fabric
         ObjectType: 15
         guid: 32d581836edbed4ea7a3bc7b0a0b8ba8
-      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Fabric
+      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Fabric
     - name: Mountain
       guid: 313793c51a00b44a98dd9b033a8c8eab
       id: 513139656
@@ -208,7 +208,7 @@ MonoBehaviour:
       - ElementName: Mountain
         ObjectType: 15
         guid: 313793c51a00b44a98dd9b033a8c8eab
-      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Mountain
+      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Mountain
     - name: Textures
       guid: a3121e7828e3df4a8bba5fb89c74031d
       id: 1276632493
@@ -222,7 +222,7 @@ MonoBehaviour:
       - ElementName: Textures
         ObjectType: 4
         guid: a3121e7828e3df4a8bba5fb89c74031d
-      Path: Virtual Acoustics/Factory Acoustic Textures/Textures
+      Path: Virtual Acoustics\Factory Acoustic Textures\Textures
     - name: Tile
       guid: c4da82a82a13b747ba9db9907ba29cc0
       id: 2637588553
@@ -239,7 +239,7 @@ MonoBehaviour:
       - ElementName: Tile
         ObjectType: 15
         guid: c4da82a82a13b747ba9db9907ba29cc0
-      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Tile
+      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Tile
     - name: Wood
       guid: 96bcff1fe76f9e48ba6c7c14a71391ae
       id: 2058049674
@@ -256,7 +256,7 @@ MonoBehaviour:
       - ElementName: Wood
         ObjectType: 15
         guid: 96bcff1fe76f9e48ba6c7c14a71391ae
-      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Wood
+      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Wood
     - name: Wood_Bright
       guid: e5d1857ba2c1634e9a13cec54b641adc
       id: 4262522749
@@ -273,7 +273,7 @@ MonoBehaviour:
       - ElementName: Wood_Bright
         ObjectType: 15
         guid: e5d1857ba2c1634e9a13cec54b641adc
-      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Wood_Bright
+      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Wood_Bright
     - name: Wood_Deep
       guid: 8e474652dac50c4ea0dec98d1479529a
       id: 1755085759
@@ -290,9 +290,9 @@ MonoBehaviour:
       - ElementName: Wood_Deep
         ObjectType: 15
         guid: 8e474652dac50c4ea0dec98d1479529a
-      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Wood_Deep
+      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Wood_Deep
   AuxBusWwu:
-  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Master-Mixer Hierarchy
       ObjectType: 5
@@ -300,10 +300,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: e092c96b424a6f4daee39b46ef623096
-    ParentPath: Master-Mixer Hierarchy/Default Work Unit
+    ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: e092c96b424a6f4daee39b46ef623096
     GuidInternal: 
-    m_lastTime: -8584653239535384536
+    m_lastTime: -8584646977327867189
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -318,8 +318,8 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
-      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus
-  - PhysicalPath: Master-Mixer Hierarchy/Master-Mixer-MUSIC.wwu
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+  - PhysicalPath: Master-Mixer Hierarchy\Master-Mixer-MUSIC.wwu
     PathAndIcons:
     - ElementName: Master-Mixer Hierarchy
       ObjectType: 5
@@ -327,12 +327,12 @@ MonoBehaviour:
     - ElementName: Master-Mixer-MUSIC
       ObjectType: 12
       guid: 9f7ada5fa93de948bdb7675ee83e3409
-    ParentPath: Master-Mixer Hierarchy/Master-Mixer-MUSIC
+    ParentPath: Master-Mixer Hierarchy\Master-Mixer-MUSIC
     guid: 9f7ada5fa93de948bdb7675ee83e3409
     GuidInternal: 
-    m_lastTime: -8584652305190785912
+    m_lastTime: -8584646977327867189
     List: []
-  - PhysicalPath: Master-Mixer Hierarchy/Master-Mixer-SFX.wwu
+  - PhysicalPath: Master-Mixer Hierarchy\Master-Mixer-SFX.wwu
     PathAndIcons:
     - ElementName: Master-Mixer Hierarchy
       ObjectType: 5
@@ -340,10 +340,10 @@ MonoBehaviour:
     - ElementName: Master-Mixer-SFX
       ObjectType: 12
       guid: aeb126c73522e04385086ecab35d8869
-    ParentPath: Master-Mixer Hierarchy/Master-Mixer-SFX
+    ParentPath: Master-Mixer Hierarchy\Master-Mixer-SFX
     guid: aeb126c73522e04385086ecab35d8869
     GuidInternal: 
-    m_lastTime: -8584652305190784699
+    m_lastTime: -8584646977327862102
     List:
     - name: Boss Bus
       guid: 915f3295d65b6b4e833c86be2db9f2a7
@@ -358,7 +358,7 @@ MonoBehaviour:
       - ElementName: Boss Bus
         ObjectType: 2
         guid: 915f3295d65b6b4e833c86be2db9f2a7
-      Path: Master-Mixer Hierarchy/Master-Mixer-SFX/Boss Bus
+      Path: Master-Mixer Hierarchy\Master-Mixer-SFX\Boss Bus
     - name: Dialogue Bus
       guid: 45931568418735479fe3ab507daad3c4
       id: 3714968413
@@ -372,7 +372,7 @@ MonoBehaviour:
       - ElementName: Dialogue Bus
         ObjectType: 2
         guid: 45931568418735479fe3ab507daad3c4
-      Path: Master-Mixer Hierarchy/Master-Mixer-SFX/Dialogue Bus
+      Path: Master-Mixer Hierarchy\Master-Mixer-SFX\Dialogue Bus
     - name: Environmental Bus
       guid: 642546daeca3d545bf1e5c2994014a9b
       id: 3600197733
@@ -386,7 +386,7 @@ MonoBehaviour:
       - ElementName: Environmental Bus
         ObjectType: 2
         guid: 642546daeca3d545bf1e5c2994014a9b
-      Path: Master-Mixer Hierarchy/Master-Mixer-SFX/Environmental Bus
+      Path: Master-Mixer Hierarchy\Master-Mixer-SFX\Environmental Bus
     - name: Player Bus
       guid: d345961aef60524dacee59cbdc6a1970
       id: 174537428
@@ -400,9 +400,9 @@ MonoBehaviour:
       - ElementName: Player Bus
         ObjectType: 2
         guid: d345961aef60524dacee59cbdc6a1970
-      Path: Master-Mixer Hierarchy/Master-Mixer-SFX/Player Bus
+      Path: Master-Mixer Hierarchy\Master-Mixer-SFX\Player Bus
   BankWwu:
-  - PhysicalPath: SoundBanks/Default Work Unit.wwu
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: SoundBanks
       ObjectType: 5
@@ -410,10 +410,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 31a2ef76e1a40e42aa196c39c75de723
-    ParentPath: SoundBanks/Default Work Unit
+    ParentPath: SoundBanks\Default Work Unit
     guid: 31a2ef76e1a40e42aa196c39c75de723
     GuidInternal: 
-    m_lastTime: -8584642664826404821
+    m_lastTime: -8584646977251015861
     List:
     - name: Main
       guid: 178af0441e574b4685bea2ed4f72914e
@@ -428,9 +428,9 @@ MonoBehaviour:
       - ElementName: Main
         ObjectType: 7
         guid: 178af0441e574b4685bea2ed4f72914e
-      Path: SoundBanks/Default Work Unit/Main
+      Path: SoundBanks\Default Work Unit\Main
   EventWwu:
-  - PhysicalPath: Events/Default Work Unit.wwu
+  - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Events
       ObjectType: 5
@@ -438,12 +438,12 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 72888a428f9ed341a9eb562ff682d9cd
-    ParentPath: Events/Default Work Unit
+    ParentPath: Events\Default Work Unit
     guid: 72888a428f9ed341a9eb562ff682d9cd
     GuidInternal: 
-    m_lastTime: -8584653239535599228
+    m_lastTime: -8584646977328571970
     List: []
-  - PhysicalPath: Events/Music.wwu
+  - PhysicalPath: Events\Music.wwu
     PathAndIcons:
     - ElementName: Events
       ObjectType: 5
@@ -451,12 +451,12 @@ MonoBehaviour:
     - ElementName: Music
       ObjectType: 12
       guid: 5d75d029a07b604e9c8cbd1929750e02
-    ParentPath: Events/Music
+    ParentPath: Events\Music
     guid: 5d75d029a07b604e9c8cbd1929750e02
     GuidInternal: 
-    m_lastTime: -8584653239535598532
+    m_lastTime: -8584646977328565858
     List: []
-  - PhysicalPath: Events/SFX.wwu
+  - PhysicalPath: Events\SFX.wwu
     PathAndIcons:
     - ElementName: Events
       ObjectType: 5
@@ -464,14 +464,14 @@ MonoBehaviour:
     - ElementName: SFX
       ObjectType: 12
       guid: cd8906f9ee8ee2468b6e6f9195ffba84
-    ParentPath: Events/SFX
+    ParentPath: Events\SFX
     guid: cd8906f9ee8ee2468b6e6f9195ffba84
     GuidInternal: 
-    m_lastTime: -8584642664827362121
+    m_lastTime: -8584646977255216555
     List:
-    - name: Acid_Hit
-      guid: 21fd7ae3021e2244887c2cfde8f831ef
-      id: 2782789220
+    - name: Behavior
+      guid: 92f0e86e8ba1914790394e774555fa66
+      id: 2002200035
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -479,22 +479,19 @@ MonoBehaviour:
       - ElementName: SFX
         ObjectType: 12
         guid: cd8906f9ee8ee2468b6e6f9195ffba84
-      - ElementName: Enemy
+      - ElementName: Boss
         ObjectType: 4
         guid: d93cbe0a483464488606311f9169d9e7
-      - ElementName: Weapons
+      - ElementName: Behavior
         ObjectType: 4
         guid: 92f0e86e8ba1914790394e774555fa66
-      - ElementName: Acid_Hit
-        ObjectType: 3
-        guid: 21fd7ae3021e2244887c2cfde8f831ef
-      Path: Events/SFX/Enemy/Weapons/Acid_Hit
+      Path: Events\SFX\Boss\Behavior
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Acid_Sizzle
-      guid: 97fb082d454cbe4f8476af8b4af15839
-      id: 3310374200
+    - name: Boss
+      guid: d93cbe0a483464488606311f9169d9e7
+      id: 1560169506
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -502,128 +499,10 @@ MonoBehaviour:
       - ElementName: SFX
         ObjectType: 12
         guid: cd8906f9ee8ee2468b6e6f9195ffba84
-      - ElementName: Enemy
+      - ElementName: Boss
         ObjectType: 4
         guid: d93cbe0a483464488606311f9169d9e7
-      - ElementName: Weapons
-        ObjectType: 4
-        guid: 92f0e86e8ba1914790394e774555fa66
-      - ElementName: Acid_Sizzle
-        ObjectType: 3
-        guid: 97fb082d454cbe4f8476af8b4af15839
-      Path: Events/SFX/Enemy/Weapons/Acid_Sizzle
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Acid_Sizzle_Stop
-      guid: 2567b97956d5124e92e465351b82daeb
-      id: 3573332599
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: SFX
-        ObjectType: 12
-        guid: cd8906f9ee8ee2468b6e6f9195ffba84
-      - ElementName: Enemy
-        ObjectType: 4
-        guid: d93cbe0a483464488606311f9169d9e7
-      - ElementName: Weapons
-        ObjectType: 4
-        guid: 92f0e86e8ba1914790394e774555fa66
-      - ElementName: Acid_Sizzle_Stop
-        ObjectType: 3
-        guid: 2567b97956d5124e92e465351b82daeb
-      Path: Events/SFX/Enemy/Weapons/Acid_Sizzle_Stop
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Acid_Spray
-      guid: 06b334f47b74cf46a4c22097319e13eb
-      id: 4204383620
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: SFX
-        ObjectType: 12
-        guid: cd8906f9ee8ee2468b6e6f9195ffba84
-      - ElementName: Enemy
-        ObjectType: 4
-        guid: d93cbe0a483464488606311f9169d9e7
-      - ElementName: Weapons
-        ObjectType: 4
-        guid: 92f0e86e8ba1914790394e774555fa66
-      - ElementName: Acid_Spray
-        ObjectType: 3
-        guid: 06b334f47b74cf46a4c22097319e13eb
-      Path: Events/SFX/Enemy/Weapons/Acid_Spray
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Acid_SpraySizzle
-      guid: 241f8737c0ac99418d0193ef1e52eade
-      id: 2594170985
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: SFX
-        ObjectType: 12
-        guid: cd8906f9ee8ee2468b6e6f9195ffba84
-      - ElementName: Enemy
-        ObjectType: 4
-        guid: d93cbe0a483464488606311f9169d9e7
-      - ElementName: Weapons
-        ObjectType: 4
-        guid: 92f0e86e8ba1914790394e774555fa66
-      - ElementName: Acid_SpraySizzle
-        ObjectType: 3
-        guid: 241f8737c0ac99418d0193ef1e52eade
-      Path: Events/SFX/Enemy/Weapons/Acid_SpraySizzle
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Attack
-      guid: a2f44d10799fec47947c1f981aed4cea
-      id: 180661997
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: SFX
-        ObjectType: 12
-        guid: cd8906f9ee8ee2468b6e6f9195ffba84
-      - ElementName: Player
-        ObjectType: 4
-        guid: addc77495063be49a6407ac3715a843b
-      - ElementName: Attack
-        ObjectType: 4
-        guid: a2f44d10799fec47947c1f981aed4cea
-      Path: Events/SFX/Player/Attack
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Dash_Player
-      guid: 119732a2c198914e98161c70d26b142e
-      id: 4281377955
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: SFX
-        ObjectType: 12
-        guid: cd8906f9ee8ee2468b6e6f9195ffba84
-      - ElementName: Player
-        ObjectType: 4
-        guid: addc77495063be49a6407ac3715a843b
-      - ElementName: Movement
-        ObjectType: 4
-        guid: d3492cd80baf0c4cb5cd21eaa776fe13
-      - ElementName: Dash_Player
-        ObjectType: 3
-        guid: 119732a2c198914e98161c70d26b142e
-      Path: Events/SFX/Player/Movement/Dash_Player
+      Path: Events\SFX\Boss
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -640,24 +519,7 @@ MonoBehaviour:
       - ElementName: Dialogue
         ObjectType: 4
         guid: bed3b14cf5a9e64aac54a68e64e609ac
-      Path: Events/SFX/Dialogue
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Enemy
-      guid: d93cbe0a483464488606311f9169d9e7
-      id: 2299321487
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: SFX
-        ObjectType: 12
-        guid: cd8906f9ee8ee2468b6e6f9195ffba84
-      - ElementName: Enemy
-        ObjectType: 4
-        guid: d93cbe0a483464488606311f9169d9e7
-      Path: Events/SFX/Enemy
+      Path: Events\SFX\Dialogue
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -674,16 +536,13 @@ MonoBehaviour:
       - ElementName: Player
         ObjectType: 4
         guid: addc77495063be49a6407ac3715a843b
-      - ElementName: Attack
-        ObjectType: 4
-        guid: a2f44d10799fec47947c1f981aed4cea
       - ElementName: Spells
         ObjectType: 4
         guid: 2e90167c10b86d4ca619aef727f52c18
       - ElementName: FireSpell_Burn
         ObjectType: 3
         guid: bf61e991121b0746b93c21e3154da67a
-      Path: Events/SFX/Player/Attack/Spells/FireSpell_Burn
+      Path: Events\SFX\Player\Spells\FireSpell_Burn
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -700,16 +559,13 @@ MonoBehaviour:
       - ElementName: Player
         ObjectType: 4
         guid: addc77495063be49a6407ac3715a843b
-      - ElementName: Attack
-        ObjectType: 4
-        guid: a2f44d10799fec47947c1f981aed4cea
       - ElementName: Spells
         ObjectType: 4
         guid: 2e90167c10b86d4ca619aef727f52c18
       - ElementName: FireSpell_Burn_Stop
         ObjectType: 3
         guid: e18714fe84789a44834fac8798416fe2
-      Path: Events/SFX/Player/Attack/Spells/FireSpell_Burn_Stop
+      Path: Events\SFX\Player\Spells\FireSpell_Burn_Stop
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -726,16 +582,13 @@ MonoBehaviour:
       - ElementName: Player
         ObjectType: 4
         guid: addc77495063be49a6407ac3715a843b
-      - ElementName: Attack
-        ObjectType: 4
-        guid: a2f44d10799fec47947c1f981aed4cea
       - ElementName: Spells
         ObjectType: 4
         guid: 2e90167c10b86d4ca619aef727f52c18
       - ElementName: FireSpell_Fire
         ObjectType: 3
         guid: 5de963ee887d6f4580a867eb4e6c35e3
-      Path: Events/SFX/Player/Attack/Spells/FireSpell_Fire
+      Path: Events\SFX\Player\Spells\FireSpell_Fire
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -752,16 +605,13 @@ MonoBehaviour:
       - ElementName: Player
         ObjectType: 4
         guid: addc77495063be49a6407ac3715a843b
-      - ElementName: Attack
-        ObjectType: 4
-        guid: a2f44d10799fec47947c1f981aed4cea
       - ElementName: Spells
         ObjectType: 4
         guid: 2e90167c10b86d4ca619aef727f52c18
       - ElementName: FireSpell_FireBurn
         ObjectType: 3
         guid: caab402722fecb45a3de52e11d9ba5d4
-      Path: Events/SFX/Player/Attack/Spells/FireSpell_FireBurn
+      Path: Events\SFX\Player\Spells\FireSpell_FireBurn
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -778,79 +628,13 @@ MonoBehaviour:
       - ElementName: Player
         ObjectType: 4
         guid: addc77495063be49a6407ac3715a843b
-      - ElementName: Attack
-        ObjectType: 4
-        guid: a2f44d10799fec47947c1f981aed4cea
       - ElementName: Spells
         ObjectType: 4
         guid: 2e90167c10b86d4ca619aef727f52c18
       - ElementName: FireSpell_Hit
         ObjectType: 3
         guid: cd2ddb1c6060814eb2d64c52d0f52a7f
-      Path: Events/SFX/Player/Attack/Spells/FireSpell_Hit
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Health_Regenerate
-      guid: 402b232c82f3694596266f0158b497e5
-      id: 2890568120
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: SFX
-        ObjectType: 12
-        guid: cd8906f9ee8ee2468b6e6f9195ffba84
-      - ElementName: Player
-        ObjectType: 4
-        guid: addc77495063be49a6407ac3715a843b
-      - ElementName: Misc
-        ObjectType: 4
-        guid: 1d3eb7d5cba3ca419faa3497e17b76aa
-      - ElementName: Health_Regenerate
-        ObjectType: 3
-        guid: 402b232c82f3694596266f0158b497e5
-      Path: Events/SFX/Player/Misc/Health_Regenerate
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Misc
-      guid: 1d3eb7d5cba3ca419faa3497e17b76aa
-      id: 3062523257
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: SFX
-        ObjectType: 12
-        guid: cd8906f9ee8ee2468b6e6f9195ffba84
-      - ElementName: Player
-        ObjectType: 4
-        guid: addc77495063be49a6407ac3715a843b
-      - ElementName: Misc
-        ObjectType: 4
-        guid: 1d3eb7d5cba3ca419faa3497e17b76aa
-      Path: Events/SFX/Player/Misc
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Movement
-      guid: d3492cd80baf0c4cb5cd21eaa776fe13
-      id: 2129636626
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: SFX
-        ObjectType: 12
-        guid: cd8906f9ee8ee2468b6e6f9195ffba84
-      - ElementName: Player
-        ObjectType: 4
-        guid: addc77495063be49a6407ac3715a843b
-      - ElementName: Movement
-        ObjectType: 4
-        guid: d3492cd80baf0c4cb5cd21eaa776fe13
-      Path: Events/SFX/Player/Movement
+      Path: Events\SFX\Player\Spells\FireSpell_Hit
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -870,7 +654,7 @@ MonoBehaviour:
       - ElementName: Play_Boss_Line_Phase1
         ObjectType: 3
         guid: 29aea0e1456b114b8eb75354352e319d
-      Path: Events/SFX/Dialogue/Play_Boss_Line_Phase1
+      Path: Events\SFX\Dialogue\Play_Boss_Line_Phase1
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -890,7 +674,7 @@ MonoBehaviour:
       - ElementName: Play_Boss_Line_Phase3
         ObjectType: 3
         guid: a7adc92ba0c3894c96dd317c60e4a08d
-      Path: Events/SFX/Dialogue/Play_Boss_Line_Phase3
+      Path: Events\SFX\Dialogue\Play_Boss_Line_Phase3
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -907,30 +691,7 @@ MonoBehaviour:
       - ElementName: Player
         ObjectType: 4
         guid: addc77495063be49a6407ac3715a843b
-      Path: Events/SFX/Player
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Shards_Pickup
-      guid: 23a256f81cbf364bb0767efa3f780f5f
-      id: 1114393929
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: SFX
-        ObjectType: 12
-        guid: cd8906f9ee8ee2468b6e6f9195ffba84
-      - ElementName: Player
-        ObjectType: 4
-        guid: addc77495063be49a6407ac3715a843b
-      - ElementName: Misc
-        ObjectType: 4
-        guid: 1d3eb7d5cba3ca419faa3497e17b76aa
-      - ElementName: Shards_Pickup
-        ObjectType: 3
-        guid: 23a256f81cbf364bb0767efa3f780f5f
-      Path: Events/SFX/Player/Misc/Shards_Pickup
+      Path: Events\SFX\Player
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -947,114 +708,10 @@ MonoBehaviour:
       - ElementName: Player
         ObjectType: 4
         guid: addc77495063be49a6407ac3715a843b
-      - ElementName: Attack
-        ObjectType: 4
-        guid: a2f44d10799fec47947c1f981aed4cea
       - ElementName: Spells
         ObjectType: 4
         guid: 2e90167c10b86d4ca619aef727f52c18
-      Path: Events/SFX/Player/Attack/Spells
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: SwordSlash
-      guid: 7c23712914082e4ea2713e5ba370dc7f
-      id: 3113731383
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: SFX
-        ObjectType: 12
-        guid: cd8906f9ee8ee2468b6e6f9195ffba84
-      - ElementName: Player
-        ObjectType: 4
-        guid: addc77495063be49a6407ac3715a843b
-      - ElementName: Attack
-        ObjectType: 4
-        guid: a2f44d10799fec47947c1f981aed4cea
-      - ElementName: SwordSlash
-        ObjectType: 4
-        guid: 7c23712914082e4ea2713e5ba370dc7f
-      Path: Events/SFX/Player/Attack/SwordSlash
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: SwordSlash_Draw
-      guid: ff09f50862c36640bbc3e4c5ed811128
-      id: 1651434072
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: SFX
-        ObjectType: 12
-        guid: cd8906f9ee8ee2468b6e6f9195ffba84
-      - ElementName: Player
-        ObjectType: 4
-        guid: addc77495063be49a6407ac3715a843b
-      - ElementName: Attack
-        ObjectType: 4
-        guid: a2f44d10799fec47947c1f981aed4cea
-      - ElementName: SwordSlash
-        ObjectType: 4
-        guid: 7c23712914082e4ea2713e5ba370dc7f
-      - ElementName: SwordSlash_Draw
-        ObjectType: 3
-        guid: ff09f50862c36640bbc3e4c5ed811128
-      Path: Events/SFX/Player/Attack/SwordSlash/SwordSlash_Draw
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: SwordSlash_Hit
-      guid: 41392a66dc1cbe47ab133ee6f1677504
-      id: 2144487013
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: SFX
-        ObjectType: 12
-        guid: cd8906f9ee8ee2468b6e6f9195ffba84
-      - ElementName: Player
-        ObjectType: 4
-        guid: addc77495063be49a6407ac3715a843b
-      - ElementName: Attack
-        ObjectType: 4
-        guid: a2f44d10799fec47947c1f981aed4cea
-      - ElementName: SwordSlash
-        ObjectType: 4
-        guid: 7c23712914082e4ea2713e5ba370dc7f
-      - ElementName: SwordSlash_Hit
-        ObjectType: 3
-        guid: 41392a66dc1cbe47ab133ee6f1677504
-      Path: Events/SFX/Player/Attack/SwordSlash/SwordSlash_Hit
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: SwordSlash_Whoosh
-      guid: 60f98448079aa8479a2af141d7eb6b6d
-      id: 3181568868
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: SFX
-        ObjectType: 12
-        guid: cd8906f9ee8ee2468b6e6f9195ffba84
-      - ElementName: Player
-        ObjectType: 4
-        guid: addc77495063be49a6407ac3715a843b
-      - ElementName: Attack
-        ObjectType: 4
-        guid: a2f44d10799fec47947c1f981aed4cea
-      - ElementName: SwordSlash
-        ObjectType: 4
-        guid: 7c23712914082e4ea2713e5ba370dc7f
-      - ElementName: SwordSlash_Whoosh
-        ObjectType: 3
-        guid: 60f98448079aa8479a2af141d7eb6b6d
-      Path: Events/SFX/Player/Attack/SwordSlash/SwordSlash_Whoosh
+      Path: Events\SFX\Player\Spells
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1071,7 +728,7 @@ MonoBehaviour:
       - ElementName: Test_Sound
         ObjectType: 3
         guid: d53718451c138e43af75995d8e2d3a4a
-      Path: Events/SFX/Test_Sound
+      Path: Events\SFX\Test_Sound
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1085,16 +742,16 @@ MonoBehaviour:
       - ElementName: SFX
         ObjectType: 12
         guid: cd8906f9ee8ee2468b6e6f9195ffba84
-      - ElementName: Enemy
+      - ElementName: Boss
         ObjectType: 4
         guid: d93cbe0a483464488606311f9169d9e7
-      - ElementName: Weapons
+      - ElementName: Behavior
         ObjectType: 4
         guid: 92f0e86e8ba1914790394e774555fa66
       - ElementName: VortexPull_Boss_Start
         ObjectType: 3
         guid: bef29f69fff0cc4d806b67bd86bf79bb
-      Path: Events/SFX/Enemy/Weapons/VortexPull_Boss_Start
+      Path: Events\SFX\Boss\Behavior\VortexPull_Boss_Start
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1108,41 +765,21 @@ MonoBehaviour:
       - ElementName: SFX
         ObjectType: 12
         guid: cd8906f9ee8ee2468b6e6f9195ffba84
-      - ElementName: Enemy
+      - ElementName: Boss
         ObjectType: 4
         guid: d93cbe0a483464488606311f9169d9e7
-      - ElementName: Weapons
+      - ElementName: Behavior
         ObjectType: 4
         guid: 92f0e86e8ba1914790394e774555fa66
       - ElementName: VortexPull_Boss_Stop
         ObjectType: 3
         guid: f95417b5d869ab47b3391d6f7579d9b9
-      Path: Events/SFX/Enemy/Weapons/VortexPull_Boss_Stop
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Weapons
-      guid: 92f0e86e8ba1914790394e774555fa66
-      id: 1467963052
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: SFX
-        ObjectType: 12
-        guid: cd8906f9ee8ee2468b6e6f9195ffba84
-      - ElementName: Enemy
-        ObjectType: 4
-        guid: d93cbe0a483464488606311f9169d9e7
-      - ElementName: Weapons
-        ObjectType: 4
-        guid: 92f0e86e8ba1914790394e774555fa66
-      Path: Events/SFX/Enemy/Weapons
+      Path: Events\SFX\Boss\Behavior\VortexPull_Boss_Stop
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
   RtpcWwu:
-  - PhysicalPath: Game Parameters/Default Work Unit.wwu
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Game Parameters
       ObjectType: 5
@@ -1150,13 +787,13 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: d1ba5a2ad9f5be478fd9c755c4667634
-    ParentPath: Game Parameters/Default Work Unit
+    ParentPath: Game Parameters\Default Work Unit
     guid: d1ba5a2ad9f5be478fd9c755c4667634
     GuidInternal: 
-    m_lastTime: -8584653239535596928
+    m_lastTime: -8584646977328565858
     List: []
   StateWwu:
-  - PhysicalPath: States/Default Work Unit.wwu
+  - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: States
       ObjectType: 5
@@ -1164,13 +801,13 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 0bae785595aac948ab59fd81e77b198e
-    ParentPath: States/Default Work Unit
+    ParentPath: States\Default Work Unit
     guid: 0bae785595aac948ab59fd81e77b198e
     GuidInternal: 
-    m_lastTime: -8584653239534949082
+    m_lastTime: -8584646977327829869
     List: []
   SwitchWwu:
-  - PhysicalPath: Switches/Default Work Unit.wwu
+  - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Switches
       ObjectType: 5
@@ -1178,13 +815,13 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 07a2bacfe66953459e1d379090167931
-    ParentPath: Switches/Default Work Unit
+    ParentPath: Switches\Default Work Unit
     guid: 07a2bacfe66953459e1d379090167931
     GuidInternal: 
-    m_lastTime: -8584653239534948019
+    m_lastTime: -8584646977327829869
     List: []
   TriggerWwu:
-  - PhysicalPath: Triggers/Default Work Unit.wwu
+  - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Triggers
       ObjectType: 5
@@ -1192,12 +829,12 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 24fd55dad4f63e4face481789109fde0
-    ParentPath: Triggers/Default Work Unit
+    ParentPath: Triggers\Default Work Unit
     guid: 24fd55dad4f63e4face481789109fde0
     GuidInternal: 
-    m_lastTime: -8584653239534947071
+    m_lastTime: -8584646977327829869
     List: []
-  - PhysicalPath: Triggers/Triggers_Music.wwu
+  - PhysicalPath: Triggers\Triggers_Music.wwu
     PathAndIcons:
     - ElementName: Triggers
       ObjectType: 5
@@ -1205,12 +842,12 @@ MonoBehaviour:
     - ElementName: Triggers_Music
       ObjectType: 12
       guid: a4313736a2eb6b4aa84ca3b2ce8b0a6a
-    ParentPath: Triggers/Triggers_Music
+    ParentPath: Triggers\Triggers_Music
     guid: a4313736a2eb6b4aa84ca3b2ce8b0a6a
     GuidInternal: 
-    m_lastTime: -8584647135992129126
+    m_lastTime: -8584646977250795300
     List: []
-  - PhysicalPath: Triggers/Triggers_SFX.wwu
+  - PhysicalPath: Triggers\Triggers_SFX.wwu
     PathAndIcons:
     - ElementName: Triggers
       ObjectType: 5
@@ -1218,10 +855,10 @@ MonoBehaviour:
     - ElementName: Triggers_SFX
       ObjectType: 12
       guid: ba8d24d06126034aaa9050747884bcf9
-    ParentPath: Triggers/Triggers_SFX
+    ParentPath: Triggers\Triggers_SFX
     guid: ba8d24d06126034aaa9050747884bcf9
     GuidInternal: 
-    m_lastTime: -8584647135992128264
+    m_lastTime: -8584646977250720009
     List:
     - name: Vortex_Pull_End_Apex
       guid: f1119536e786004db5d7bd1a780b8db0
@@ -1236,7 +873,7 @@ MonoBehaviour:
       - ElementName: Vortex_Pull_End_Apex
         ObjectType: 14
         guid: f1119536e786004db5d7bd1a780b8db0
-      Path: Triggers/Triggers_SFX/Vortex_Pull_End_Apex
+      Path: Triggers\Triggers_SFX\Vortex_Pull_End_Apex
   ExpandedFileSystemItemIds: 010000000200000003000000050000000600000007000000080000000b0000000c0000000e0000000f00000013000000190000001e000000
   ExpandedWaapiItemIds: 0b0000000c000000
   AutoSyncSelection: 0

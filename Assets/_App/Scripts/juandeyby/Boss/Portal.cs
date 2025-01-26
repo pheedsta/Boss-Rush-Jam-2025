@@ -22,7 +22,8 @@ namespace _App.Scripts.juandeyby.Boss
             
             var enemy = UnityEngine.Random.Range(0, 2) == 0 ? wormPrefab : ghostPrefab;
             Instantiate(enemy, transform.position, Quaternion.identity);
-            Destroy(gameObject, 2f);
+            yield return new WaitForSeconds(2f);
+            ServiceLocator.Get<PortalManager>().ReturnPortal(this);
         }
     }
 }

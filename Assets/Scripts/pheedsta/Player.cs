@@ -57,6 +57,9 @@ public class Player : Character {
     [Tooltip("How fast the player decelerates")]
     [SerializeField] private float decelerationRate = 10f;
     
+    [Header("Animation")]
+    [SerializeField] PlayerAnimator playerAnimator;
+    
     /*[Header("Dashing")]
     [Tooltip("How far the player dashes in meters")]
     [SerializeField] private float dashDistance = 10f;

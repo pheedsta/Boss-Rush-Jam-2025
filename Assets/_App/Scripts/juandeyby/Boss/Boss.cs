@@ -122,7 +122,7 @@ namespace _App.Scripts.juandeyby.Boss
         /// <exception cref="NotImplementedException"></exception>
         public void PlaySweepingStrikeEffect()
         {
-            Debug.LogWarningFormat("<color=red>PlaySweepingStrikeEffect not implemented</color>");
+            Debug.LogWarningFormat("<color=cyan>PlaySweepingStrikeEffect not implemented</color>");
         }
         
         /// <summary>
@@ -131,7 +131,7 @@ namespace _App.Scripts.juandeyby.Boss
         /// <exception cref="NotImplementedException"></exception>
         public void StopSweepingStrikeEffect()
         {
-            Debug.LogWarningFormat("<color=red>StopSweepingStrikeEffect not implemented</color>");
+            Debug.LogFormat("<color=cyan>StopSweepingStrikeEffect not implemented</color>");
         }
 
         // private void OnDestroy()
@@ -144,7 +144,7 @@ namespace _App.Scripts.juandeyby.Boss
         /// </summary>
         public void PlayAerialBarrageEffect()
         {
-            Debug.LogWarningFormat("<color=red>PlayAerialBarrageEffect not implemented</color>");
+            Debug.LogFormat("<color=cyan>PlayAerialBarrageEffect not implemented</color>");
         }
         
         /// <summary>
@@ -152,7 +152,7 @@ namespace _App.Scripts.juandeyby.Boss
         /// </summary>
         public void StopAerialBarrageEffect()
         {
-            Debug.LogWarningFormat("<color=red>StopAerialBarrageEffect not implemented</color>");
+            Debug.LogFormat("<color=cyan>StopAerialBarrageEffect not implemented</color>");
         }
 
         /// <summary>
@@ -160,7 +160,7 @@ namespace _App.Scripts.juandeyby.Boss
         /// </summary>
         public void PlayPortalSummonEffect()
         {
-            Debug.LogWarningFormat("<color=red>PlayPortalSummonEffect not implemented</color>");
+            Debug.LogFormat("<color=cyan>PlayPortalSummonEffect not implemented</color>");
         }
 
         /// <summary>
@@ -168,7 +168,7 @@ namespace _App.Scripts.juandeyby.Boss
         /// </summary>
         public void StopPortalSummonEffect()
         {
-            Debug.LogWarningFormat("<color=red>StopPortalSummonEffect not implemented</color>");
+            Debug.LogFormat("<color=cyan>StopPortalSummonEffect not implemented</color>");
         }
     }
 }

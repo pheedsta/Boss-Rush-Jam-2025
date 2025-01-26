@@ -1,0 +1,257 @@
+fileFormatVersion: 2
+guid: d9fc0781dd977e24ba94e0678c14f3ce
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiStandardSurface1
+    second: {fileID: 2100000, guid: 70566f6eafcec0d4aa6f4ecbf6a45df5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiStandardSurface2
+    second: {fileID: 2100000, guid: 58bc2b63856c95a4badd0a70181be97a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiStandardSurface3
+    second: {fileID: 2100000, guid: 13cbd3d3c5f372e4a924f58f3765616a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiStandardSurface4
+    second: {fileID: 2100000, guid: a9ffb89c1dbe2424ba0455a3e955bf2f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiStandardSurface5
+    second: {fileID: 2100000, guid: b371424b91d55a649b74c8275fb18f5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiStandardSurface6
+    second: {fileID: 2100000, guid: 51a32862a934f5f429586c4e4e5668ac, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arena_standardSurface1_Height.1001
+    second: {fileID: 2800000, guid: 3deccff9a51aa1b4c914047ebb5886cb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arena_standardSurface1_Height.1002
+    second: {fileID: 2800000, guid: 018070f872739f84a8bc48c346177c99, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arena_standardSurface1_Height.1003
+    second: {fileID: 2800000, guid: f871a6db9c861444eaf5ed112c4985ec, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arena_standardSurface1_Height.1004
+    second: {fileID: 2800000, guid: 2aa1f8d06091ad340a55a8a017e568d7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arena_standardSurface1_Height.1005
+    second: {fileID: 2800000, guid: 5559b341cf1b1004e8b380d829082c54, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arena_standardSurface1_Height.1006
+    second: {fileID: 2800000, guid: d01e4f6046227624eab5357b6304cee5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arena_standardSurface1_Metallic.1001
+    second: {fileID: 2800000, guid: f7f51cc0e5957814b954b03fef074e57, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arena_standardSurface1_Metallic.1002
+    second: {fileID: 2800000, guid: eefa0eb1dc361214e9bc38cc3d58bf15, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arena_standardSurface1_Metallic.1003
+    second: {fileID: 2800000, guid: 634327ee73eb00e40ad5e6c40ebaf405, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arena_standardSurface1_Metallic.1004
+    second: {fileID: 2800000, guid: dd4fc9b22467f684799e71c1dd4c1af0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arena_standardSurface1_Metallic.1005
+    second: {fileID: 2800000, guid: 10c2ac121cfd71e44a37307d6a585e2a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arena_standardSurface1_Metallic.1006
+    second: {fileID: 2800000, guid: 6e5b1463e56d438499320d07dad3c43f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arena_standardSurface1_Normal.1001
+    second: {fileID: 2800000, guid: 8b76a0ceb2216c84d850fb816aa3e03f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arena_standardSurface1_Normal.1002
+    second: {fileID: 2800000, guid: 4affbd07ad36d6a409038fac07a6a6d3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arena_standardSurface1_Normal.1003
+    second: {fileID: 2800000, guid: ebcca4f08debe81469ec28ba926de86a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arena_standardSurface1_Normal.1004
+    second: {fileID: 2800000, guid: a0a6729c1d4076c4a9e171b7a0da58b3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arena_standardSurface1_Normal.1005
+    second: {fileID: 2800000, guid: 5a1c7041743e6f34286c8c0039acc4b0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arena_standardSurface1_Normal.1006
+    second: {fileID: 2800000, guid: 9b69f23f7ec55c340ab0a9e26bf5add2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arena_standardSurface1_Roughness.1001
+    second: {fileID: 2800000, guid: 0dc9f5ff8127ccf49851f7a198834afb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arena_standardSurface1_Roughness.1002
+    second: {fileID: 2800000, guid: 98a8bacd9245a4c469c32bf8a4a58125, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arena_standardSurface1_Roughness.1003
+    second: {fileID: 2800000, guid: ef0acec0deaa0b54bba5f4e6bcb6e629, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arena_standardSurface1_Roughness.1004
+    second: {fileID: 2800000, guid: 2f4c49e0eddfb1842aa72db2e94443f5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arena_standardSurface1_Roughness.1005
+    second: {fileID: 2800000, guid: 66f14f7412864cb46a51668ebd4dc8d2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arena_standardSurface1_Roughness.1006
+    second: {fileID: 2800000, guid: 596e82599d4da48429695fcf668ee814, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

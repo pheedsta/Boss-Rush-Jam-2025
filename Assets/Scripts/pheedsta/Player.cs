@@ -342,6 +342,11 @@ public class Player : Character {
         transform.rotation = Quaternion.LookRotation(cameraRotation);
     }
     
+    public void Stroke(Vector3 direction, float force) {
+        // add knockback force to player
+        AddMotion(direction * force);
+    }
+    
     //:::::::::::::::::::::::::::::://
     // Camera Target
     //:::::::::::::::::::::::::::::://

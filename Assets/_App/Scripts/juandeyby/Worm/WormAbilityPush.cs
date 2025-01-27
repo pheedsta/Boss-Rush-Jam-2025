@@ -1,20 +1,54 @@
+using UnityEngine;
+
 namespace _App.Scripts.juandeyby
 {
     public class WormAbilityPush : WormAbility
     {
+        [Header("Settings")]
+        [SerializeField] private float force = 4f;
+        [SerializeField] private float duration = 2f;
+        
+        private float _timer;
+        
         public override void Activate(Worm worm)
         {
-            throw new System.NotImplementedException();
+            _timer = 0f;
+            worm.MeshAgent.isStopped = true;
+            ApplyForcePush(worm);
+            
+            // worm.PlayForsePushEffect();
         }
 
         public override void UpdateAbility(Worm worm, float deltaTime)
         {
-            throw new System.NotImplementedException();
+            _timer += deltaTime;
+            
+            if (_timer >= duration)
+            {
+                worm.SetState(new WormChaseState());
+            }
         }
 
         public override void Deactivate(Worm worm)
         {
-            throw new System.NotImplementedException();
+            worm.MeshAgent.isStopped = false;
+            
+            // worm.StopForsePushEffect();
+        }
+        
+        /// <summary>
+        /// Apply force push to player
+        /// </summary>
+        /// <param name="worm"> Worm </param>
+        private void ApplyForcePush(Worm worm)
+        {
+            var player = Player.Instance;
+            var direction = (player.transform.position - worm.transform.position).normalized;
+
+            direction.y = 1f;
+            direction = direction.normalized;
+
+            // player.Stroke(direction, force);
         }
     }
 }

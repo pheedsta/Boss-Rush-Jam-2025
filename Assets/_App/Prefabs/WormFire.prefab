@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7680204406814180024}
   - component: {fileID: 2924538416230855553}
   - component: {fileID: 2380243947025526338}
+  - component: {fileID: 8553347276855157588}
   m_Layer: 0
   m_Name: WormFire
   m_TagString: Untagged
@@ -98,6 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 512a71b81088464bad9aae1ac6033b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  force: 4
+  duration: 2
 --- !u!136 &2924538416230855553
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -148,6 +151,52 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &8553347276855157588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4961437074870156763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03bc8063c9e95401f9a8a38bc716750d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Method: 2
+  m_Curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5
+      value: 0.7
+      inSlope: -0.37459612
+      outSlope: -0.37459612
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1.9530872
+      outSlope: -1.9530872
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.13333333
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &570585195811114659
 PrefabInstance:
   m_ObjectHideFlags: 0

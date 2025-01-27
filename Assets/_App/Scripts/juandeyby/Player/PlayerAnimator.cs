@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -5,12 +6,20 @@ namespace _App.Scripts.juandeyby
 {
     public class PlayerAnimator : MonoBehaviour
     {
-        private static readonly int Jumping = Animator.StringToHash("Jump");
         [SerializeField] private Animator animator;
-        
-        public void Jump()
+        private int _horizontal;
+        private int _vertical;
+
+        private void Awake()
         {
-            animator.SetTrigger(Jumping);
+            _horizontal = Animator.StringToHash("Horizontal");
+            _vertical = Animator.StringToHash("Vertical");
+        }
+
+        public void UpdateAnimatorValues(float horizontalValue, float verticalValue)
+        {
+            animator.SetFloat(_horizontal, horizontalValue);
+            animator.SetFloat(_vertical, verticalValue);
         }
     }
 }

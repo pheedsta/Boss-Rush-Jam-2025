@@ -1,17 +1,21 @@
+using System;
 using System.Collections.Generic;
+using _App.Scripts.juandeyby;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 //++++++++++++++++++++++++++++++//
 // CLASS: CollectableManager
 //++++++++++++++++++++++++++++++//
 
-public class CollectableManager : MonoBehaviour {
-    
+public class CollectableManager : MonoBehaviour
+{
     //:::::::::::::::::::::::::::::://
     // Serialized Fields
     //:::::::::::::::::::::::::::::://
 
-    [SerializeField] private Collectable[] collectables; // this is just for testing
+    [SerializeField] private CollectableHeart collectableHeartPrefab;
+    [SerializeField] private CollectableShard collectableShardPrefab;
     
     //:::::::::::::::::::::::::::::://
     // Properties
@@ -31,15 +35,40 @@ public class CollectableManager : MonoBehaviour {
     //:::::::::::::::::::::::::::::://
 
     private Player _player;
+    private readonly Queue<CollectableHeart> _collectableHearts = new();
+    private readonly Queue<CollectableShard> _collectableShards = new();
+    private readonly int _maxCollectableHearts = 2;
+    private readonly int _maxCollectableShards = 4;
     
     //:::::::::::::::::::::::::::::://
     // Unity Callbacks
     //:::::::::::::::::::::::::::::://
 
-    private void Awake() {
-        // for now add starting collectables to the HashSet
-        foreach (var collectable in collectables) _collectables.Add(collectable);
+    private void OnEnable()
+    {
+        ServiceLocator.Register<CollectableManager>(this);
     }
+
+    private void Awake()
+    {
+        // create collectable hearts
+        for (var i = 0; i < _maxCollectableHearts; i++) {
+            var collectableHeart = Instantiate(collectableHeartPrefab, transform);
+            collectableHeart.transform.position = GetPosition();
+            _collectableHearts.Enqueue(collectableHeart);
+            _collectables.Add(collectableHeart);
+        }
+        
+        // create collectable shards
+        for (var i = 0; i < _maxCollectableShards; i++) {
+            var collectableShard = Instantiate(collectableShardPrefab, transform);
+            collectableShard.transform.position = GetPosition();
+            _collectableShards.Enqueue(collectableShard);
+            _collectables.Add(collectableShard);
+        }
+    }
+
+
 
     private void Update() {
         // get player instance
@@ -69,21 +98,64 @@ public class CollectableManager : MonoBehaviour {
             // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
             collectable.collectSound.Post(collectable.gameObject);
             
+            // reassign collectable position
+            collectable.transform.position = GetPosition();
+            
             // remove collectable from HashSet
-            _collectables.Remove(collectable);
+            // _collectables.Remove(collectable);
             
             // return collectable to ReusablePool
-            ReusablePool.ReturnReusable(collectable);
+            // ReusablePool.ReturnReusable(collectable);
         }
         
         // clear list
         _collectList.Clear();
     }
-    
+
+    private void OnDisable()
+    {
+        ServiceLocator.Unregister<CollectableManager>();
+    }
+
     //:::::::::::::::::::::::::::::://
     // Shard Methods
     //:::::::::::::::::::::::::::::://
 
+    
+    private Vector3 GetPosition()
+    {
+        var innerRadius = 0f;
+        var outerRadius = 0f;
+
+        switch (ServiceLocator.Get<GameManager>().GetGamePhase())
+        {
+            case GamePhase.Phase3:
+                innerRadius = 12f;
+                outerRadius = 15f; 
+                break;
+            case GamePhase.Phase2:
+                innerRadius = 18f;
+                outerRadius = 21f;
+                break;
+            case GamePhase.Phase1:
+                innerRadius = 24f;
+                outerRadius = 27f;
+                break;
+        }
+
+        var angle = Random.Range(0f, 360f);
+        var radians = angle * Mathf.Deg2Rad;
+
+        var radius = Random.Range(innerRadius, outerRadius);
+
+        var x = Mathf.Cos(radians) * radius;
+        var z = Mathf.Sin(radians) * radius;
+
+        var position = new Vector3(x, 0.5f, z);
+
+        return position;
+    }
+    
     private static void MoveCollectableTowardsPlayer(Player player, Collectable collectable) {
         // move shard towards player
         var direction = (player.transform.position - collectable.transform.position).normalized;

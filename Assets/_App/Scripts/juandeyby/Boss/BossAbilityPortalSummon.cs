@@ -6,8 +6,9 @@ namespace _App.Scripts.juandeyby.Boss
     {
         [Header("Settings")]
         [SerializeField] private float duration = 5f;
-        [SerializeField] private float range = 3f;
-        [SerializeField] private int portalCount = 5;
+        [SerializeField] private float range = 12f;
+        [SerializeField] private int portalCount = 8;
+        [SerializeField] private float height = 4f;
         
         private float _timer;
         
@@ -35,11 +36,19 @@ namespace _App.Scripts.juandeyby.Boss
         
         private void ApplyPortalSummon(Boss boss)
         {
+            var angleStep = 360f / portalCount;
+            var radius = range;
+
             for (var i = 0; i < portalCount; i++)
             {
-                var randomPosition = boss.transform.position + Random.insideUnitSphere * range;
+                var angle = i * angleStep * Mathf.Deg2Rad;
+                var x = Mathf.Cos(angle) * radius;
+                var z = Mathf.Sin(angle) * radius;
+                var offset = new Vector3(x, height, z);
+                var portalPosition = offset;
+
                 var portal = ServiceLocator.Get<PortalManager>().GetPortal();
-                portal.transform.position = randomPosition;
+                portal.transform.position = portalPosition;
             }
         }
     }

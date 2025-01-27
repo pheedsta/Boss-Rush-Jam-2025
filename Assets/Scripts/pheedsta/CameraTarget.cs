@@ -1,5 +1,5 @@
 using System.Collections;
-using Cinemachine;
+using Unity.Cinemachine;
 using UnityEngine;
 
 //++++++++++++++++++++++++++++++//
@@ -106,7 +106,7 @@ public class CameraTarget : MonoBehaviour {
         _cameraRotation.y += _lookDelta.x * yawSpeed * Time.deltaTime;
         
         // calculate camera pitch (rotation up and down) clamping to min / max
-        _cameraRotation.x = Mathf.Clamp(_cameraRotation.x + _lookDelta.y * pitchSpeed * Time.deltaTime, minimumPitch, maximumPitch);
+        _cameraRotation.x = Mathf.Clamp(_cameraRotation.x - _lookDelta.y * pitchSpeed * Time.deltaTime, minimumPitch, maximumPitch);
     
         // rotate camera using yaw and pitch
         transform.localEulerAngles = _cameraRotation;

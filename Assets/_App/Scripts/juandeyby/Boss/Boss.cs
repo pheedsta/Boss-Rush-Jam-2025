@@ -8,6 +8,7 @@ namespace _App.Scripts.juandeyby.Boss
     public class Boss : MonoBehaviour
     {
         [SerializeField] private NavMeshAgent meshAgent;
+        public NavMeshAgent MeshAgent => meshAgent;
         private IBossState _currentState;
         
         // VFX

@@ -13,7 +13,7 @@ namespace _App.Scripts.juandeyby.Boss
         
         public void Enter(Boss boss)
         {
-            _navMeshAgent = boss.GetComponent<NavMeshAgent>();
+            _navMeshAgent = boss.MeshAgent;
             _navMeshAgent.isStopped = false;
         }
 

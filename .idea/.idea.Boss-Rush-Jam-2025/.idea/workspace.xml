@@ -5,27 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0323cdc-65bc-4b30-b3bb-f1969ff69110" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Worm/IPoisonWorm.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Worm/IPoisonWorm.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Worm/IPushWorm.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Worm/IPushWorm.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Worm/IWormState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Worm/IWormState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Worm/WormAbility.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Worm/WormAbility.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Worm/WormAbilityPoisonSpit.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Worm/WormAbilityPoisonSpit.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Worm/WormAbilityPush.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Worm/WormAbilityPush.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Worm/WormAttackState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Worm/WormAttackState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Worm/WormChaseState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Worm/WormChaseState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Worm/WormFire.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Worm/WormFire.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Worm/WormPoison.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Worm/WormPoison.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Worm/WormSpawnState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Worm/WormSpawnState.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Boss-Rush-Jam-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Boss-Rush-Jam-2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/CollectableHeart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/pheedsta/CollectableHeart.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/CollectableManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/pheedsta/CollectableManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/pheedsta/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Wwise/LauncherInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/LauncherInfo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Wwise/ScriptableObjects/Event/2C232B40-F382-4569-9626-6F0158B497E5.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Wwise/ScriptableObjects/Event/2C232B40-F382-4569-9626-6F0158B497E5.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Wwise/ScriptableObjects/Event/2D08FB97-4C45-4FBE-8476-AF8B4AF15839.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Wwise/ScriptableObjects/Event/2D08FB97-4C45-4FBE-8476-AF8B4AF15839.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Wwise/ScriptableObjects/Event/E37AFD21-1E02-4422-887C-2CFDE8F831EF.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Wwise/ScriptableObjects/Event/E37AFD21-1E02-4422-887C-2CFDE8F831EF.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Wwise/ScriptableObjects/Event/F434B306-747B-46CF-A4C2-2097319E13EB.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Wwise/ScriptableObjects/Event/F434B306-747B-46CF-A4C2-2097319E13EB.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Wwise/ScriptableObjects/Event/F856A223-BF1C-4B36-B076-7EFA3F780F5F.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Wwise/ScriptableObjects/Event/F856A223-BF1C-4B36-B076-7EFA3F780F5F.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Wwise/ScriptableObjects/Web.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/ScriptableObjects/Web.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WwiseSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WwiseSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/pheedsta/Collectable Heart.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/pheedsta/Collectable Heart.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_App/Prefabs/Portal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_App/Prefabs/Portal.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_App/Prefabs/Worm.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_App/Prefabs/Worm.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_App/Scene/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_App/Scene/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Boss/Boss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Boss/Boss.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Boss/BossChaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Boss/BossChaseState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Boss/Portal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Boss/Portal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +66,9 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2qrZmW4BerJUZBwKd0yUDoIuvsI" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -164,7 +180,7 @@
       <workItem from="1737599752763" duration="9148000" />
       <workItem from="1737687950840" duration="10776000" />
       <workItem from="1737824791912" duration="23820000" />
-      <workItem from="1737909714041" duration="7095000" />
+      <workItem from="1737909714041" duration="15958000" />
     </task>
     <servers />
   </component>

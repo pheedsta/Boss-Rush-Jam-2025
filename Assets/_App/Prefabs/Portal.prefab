@@ -218,5 +218,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5755be902640e49b5c2738b2f07ea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wormPrefab: {fileID: 1010557010063524687, guid: bea9d255fa080463cba1e85aa32b37e4, type: 3}
-  ghostPrefab: {fileID: 1010557010063524687, guid: bea9d255fa080463cba1e85aa32b37e4, type: 3}
+  wormPrefab: {fileID: 4961437074870156763, guid: cea3be9a88f7f5844bdd49c1e2d21032, type: 3}
+  ghostPrefab: {fileID: 4961437074870156763, guid: cea3be9a88f7f5844bdd49c1e2d21032, type: 3}

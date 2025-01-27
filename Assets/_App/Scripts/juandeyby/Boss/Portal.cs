@@ -20,8 +20,8 @@ namespace _App.Scripts.juandeyby.Boss
             yield return new WaitForSeconds(delay);
             _spawnCoroutine = null;
             
-            var enemy = UnityEngine.Random.Range(0, 2) == 0 ? wormPrefab : ghostPrefab;
-            Instantiate(enemy, transform.position, Quaternion.identity);
+            var worm = ServiceLocator.Get<WormManager>().GetWorm();
+            worm.transform.position = transform.position;
             yield return new WaitForSeconds(2f);
             ServiceLocator.Get<PortalManager>().ReturnPortal(this);
         }

@@ -21,7 +21,7 @@ public class CollectableManager : MonoBehaviour
     // Properties
     //:::::::::::::::::::::::::::::://
 
-    private Player Player => GetPlayer();
+    private _App.Scripts.juandeyby.Player Player => GetPlayer();
     
     //:::::::::::::::::::::::::::::://
     // Readonly Fields
@@ -34,7 +34,7 @@ public class CollectableManager : MonoBehaviour
     // Local Fields
     //:::::::::::::::::::::::::::::://
 
-    private Player _player;
+    private _App.Scripts.juandeyby.Player _player;
     private readonly Queue<CollectableHeart> _collectableHearts = new();
     private readonly Queue<CollectableShard> _collectableShards = new();
     private readonly int _maxCollectableHearts = 2;
@@ -83,7 +83,7 @@ public class CollectableManager : MonoBehaviour
                 _collectList.Add(collectable);
             } else if (collectable.isMovingTowardsPlayer || distance <= collectable.VacuumDistance) {
                 // collectable is within range for vacuum OR is already following player; move collectable towards player
-                MoveCollectableTowardsPlayer(player, collectable);
+                MoveCollectableTowardsPlayer(player.transform, collectable);
             }
         }
 
@@ -92,7 +92,7 @@ public class CollectableManager : MonoBehaviour
 
         foreach (var collectable in _collectList) {
             // register collectable with player
-            player.Collect(collectable);
+            player.PlayerCollection.Collect(collectable);
             
             // play collect sound
             // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
@@ -156,9 +156,9 @@ public class CollectableManager : MonoBehaviour
         return position;
     }
     
-    private static void MoveCollectableTowardsPlayer(Player player, Collectable collectable) {
+    private static void MoveCollectableTowardsPlayer(Transform player, Collectable collectable) {
         // move shard towards player
-        var direction = (player.transform.position - collectable.transform.position).normalized;
+        var direction = (player.position - collectable.transform.position).normalized;
         collectable.transform.position += collectable.VacuumSpeed * Time.deltaTime * direction;
     }
     
@@ -166,12 +166,12 @@ public class CollectableManager : MonoBehaviour
     // Getters
     //:::::::::::::::::::::::::::::://
 
-    private Player GetPlayer() {
+    private _App.Scripts.juandeyby.Player GetPlayer() {
         // if player has already been set we're done
         if (_player) return _player;
         
         // get player instance
-        _player = Player.Instance;
+        _player = _App.Scripts.juandeyby.Player.Instance;
         //++++++++++++++++++++++++++++++//
         Debug.Assert(_player, "Player instance is null");
         //++++++++++++++++++++++++++++++//

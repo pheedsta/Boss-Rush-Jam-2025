@@ -1194,9 +1194,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 975d945e78af884479fcd448911533ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerManager: {fileID: 1544330375}
+  playerAnimator: {fileID: 1544330382}
   inputManager: {fileID: 1544330376}
   rb: {fileID: 1544330377}
   movementSpeed: 5
+  inAirTimer: 0
+  fallingVelocity: 33
+  leapingVelocity: 3
+  rayCastHeightOffset: -0.1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  isGrounded: 1
+  isJumping: 0
+  jumpHeight: 3
 --- !u!114 &1544330375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1209,9 +1221,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 155c89cdfa477dc49aadafbed7735ed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1708553424}
   playerLocomotion: {fileID: 1544330374}
   inputManager: {fileID: 1544330376}
   cameraManager: {fileID: 1585339871}
+  isInteracting: 0
 --- !u!114 &1544330376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1225,12 +1239,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAnimator: {fileID: 1544330382}
+  playerLocomotion: {fileID: 1544330374}
   movementInput: {x: 0, y: 0}
   cameraInput: {x: 0, y: 0}
   verticalInput: 0
   horizontalInput: 0
   cameraInputX: 0
   cameraInputY: 0
+  jumpInput: 0
 --- !u!54 &1544330377
 Rigidbody:
   m_ObjectHideFlags: 0

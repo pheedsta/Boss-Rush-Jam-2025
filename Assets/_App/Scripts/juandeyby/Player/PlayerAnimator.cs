@@ -7,6 +7,7 @@ namespace _App.Scripts.juandeyby
     public class PlayerAnimator : MonoBehaviour
     {
         [SerializeField] private Animator animator;
+        public Animator Animator => animator;
         private int _horizontal;
         private int _vertical;
 
@@ -14,6 +15,13 @@ namespace _App.Scripts.juandeyby
         {
             _horizontal = Animator.StringToHash("Horizontal");
             _vertical = Animator.StringToHash("Vertical");
+        }
+        
+        public void PlayTargetAnimation(string targetAnimation, bool isInteracting)
+        {
+            // animator.applyRootMotion = isInteracting;
+            animator.SetBool("IsInteracting", isInteracting);
+            animator.CrossFade(targetAnimation, 0.2f);
         }
 
         public void UpdateAnimatorValues(float horizontalValue, float verticalValue)

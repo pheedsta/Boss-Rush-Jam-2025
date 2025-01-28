@@ -1,0 +1,53 @@
+using System;
+using UnityEngine;
+
+namespace _App.Scripts.juandeyby
+{
+    public class GameManager : MonoBehaviour
+    {
+        private GamePhase _gamePhase;
+        
+        private void OnEnable()
+        {
+            ServiceLocator.Register(this);
+        }
+        
+        private void OnDisable()
+        {
+            ServiceLocator.Unregister<GameManager>();
+        }
+
+        private void Awake()
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            
+            // Start the game in phase 1
+            _gamePhase = GamePhase.Phase1;
+            Pause();
+        }
+
+        public void Pause()
+        {
+            Time.timeScale = 0;
+        }
+        
+        public void Resume()
+        {
+            Time.timeScale = 1;
+        }
+        
+        public GamePhase GetGamePhase()
+        {
+            return _gamePhase;
+        }
+    }
+    
+    public enum GamePhase
+    {
+        Phase1, // The game starts in 3th ring
+        Phase2, // The game starts in 2nd ring
+        Phase3 // The game starts in 1st ring
+    }
+}
+

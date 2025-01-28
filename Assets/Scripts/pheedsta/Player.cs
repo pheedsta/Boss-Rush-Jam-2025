@@ -57,6 +57,9 @@ public class Player : Character {
     [Tooltip("How fast the player decelerates")]
     [SerializeField] private float decelerationRate = 10f;
     
+    [Header("Animation")]
+    [SerializeField] PlayerAnimator playerAnimator;
+    
     /*[Header("Dashing")]
     [Tooltip("How far the player dashes in meters")]
     [SerializeField] private float dashDistance = 10f;
@@ -337,6 +340,11 @@ public class Player : Character {
         
         // rotate the player in the direction of the camera
         transform.rotation = Quaternion.LookRotation(cameraRotation);
+    }
+    
+    public void Stroke(Vector3 direction, float force) {
+        // add knockback force to player
+        AddMotion(direction * force);
     }
     
     //:::::::::::::::::::::::::::::://

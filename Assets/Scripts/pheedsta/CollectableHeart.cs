@@ -22,7 +22,7 @@ public class CollectableHeart : Collectable {
     // Serialized Fields
     //:::::::::::::::::::::::::::::://
     
-    [SerializeField] private int health = 20;
+    [SerializeField] private int health = 25;
     
     //:::::::::::::::::::::::::::::://
     // Unity Callbacks

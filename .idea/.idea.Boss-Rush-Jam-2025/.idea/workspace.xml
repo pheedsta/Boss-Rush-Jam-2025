@@ -5,27 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0323cdc-65bc-4b30-b3bb-f1969ff69110" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/pheedsta/Projectile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Boss-Rush-Jam-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Boss-Rush-Jam-2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input/InputActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/InputActions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input/InputActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/InputActions.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/pheedsta/SkellywormAcid.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/pheedsta/SkellywormAcid.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Player.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Player.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Skellyworm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Skellyworm.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/pheedsta/Fire Ability.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/pheedsta/Fire Ability.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/pheedsta/Test 3rd Person.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pheedsta/Test 3rd Person.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/Skellyworm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/Skellyworm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/SkellywormStateScriptMeleeAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/SkellywormStateScriptMeleeAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/SkellywormStateScriptProjectileAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/SkellywormStateScriptProjectileAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/SkellywormStateScriptSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/SkellywormStateScriptSpawn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/SkellywormStateScriptWalk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/SkellywormStateScriptWalk.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/Wizard_Idle_sword.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player/Wizard_Idle_sword.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animators/Player.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animators/Player.controller.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/CameraTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/pheedsta/CameraTarget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/FireAbility.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/FireAbility.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/pheedsta/Projectile.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/pheedsta/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/pheedsta/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_App/Models/Wiz_Idle_02.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_App/Models/Wiz_Idle_02.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_App/Models/Wiz_Runcycle_02.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_App/Models/Wiz_Runcycle_02.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_App/Prefabs/WormFire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_App/Prefabs/WormFire.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_App/Prefabs/WormPoison.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_App/Prefabs/WormPoison.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_App/Scene/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_App/Scene/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_App/Scene/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_App/Scene/Test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Player/PlayerAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Player/PlayerAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Worm/WormAbilityPush.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Worm/WormAbilityPush.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +34,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/44f3679c53d1477a9c6e72f269e3a3a91de200/14/ffc63798/GameObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/44f3679c53d1477a9c6e72f269e3a3a91de200/37/f229ae67/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Characters/Player/PlayerStateScriptDie.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/SkellywormStateScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Characters/Skellyworm/SkellywormStateScriptSpawn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/pheedsta/Collectable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Boss/BossAbilityAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Boss/BossAttackState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Boss/BossChaseState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Boss/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/InputManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_App/Scripts/juandeyby/Player/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -46,6 +56,9 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2qrZmW4BerJUZBwKd0yUDoIuvsI" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -54,7 +67,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;pheedsta-work-branch&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;juandeyby-work-branch&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -65,7 +78,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/6000.0.32f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="E:\Unity\6000.0.32f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;$PROJECT_DIR$&quot; -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -73,7 +86,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/6000.0.32f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="E:\Unity\6000.0.32f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;$PROJECT_DIR$&quot; -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -153,6 +166,11 @@
       <workItem from="1737347811091" duration="172000" />
       <workItem from="1737412458810" duration="1024000" />
       <workItem from="1737413647053" duration="17946000" />
+      <workItem from="1737509523923" duration="12054000" />
+      <workItem from="1737599752763" duration="9148000" />
+      <workItem from="1737687950840" duration="10776000" />
+      <workItem from="1737824791912" duration="23820000" />
+      <workItem from="1737909714041" duration="30736000" />
     </task>
     <servers />
   </component>

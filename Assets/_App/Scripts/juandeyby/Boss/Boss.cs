@@ -8,6 +8,7 @@ namespace _App.Scripts.juandeyby.Boss
     public class Boss : MonoBehaviour
     {
         [SerializeField] private NavMeshAgent meshAgent;
+        public NavMeshAgent MeshAgent => meshAgent;
         private IBossState _currentState;
         
         // VFX
@@ -17,12 +18,53 @@ namespace _App.Scripts.juandeyby.Boss
         [SerializeField] private AK.Wwise.Event vortexPullSoundStart;
         [SerializeField] private AK.Wwise.Event vortexPullSoundStop;
         
-        private UIHealthBar _healthBar;
+        private Health _health;
+        public Health Health => GetHealth();
+        
+        private UIManager UIManager => GetUIManager(); 
+        private UIManager _uiManager;
+        
+        // private UIHealthBar _healthBar;
+        //
+        // private void Start()
+        // {
+        //     _healthBar = UIServiceLocator.Get<UIHealthCanvas>().GetHealthBar();
+        //     _healthBar.SetUnit(transform, new Vector3(0, 2f, 0));
+        // }
 
         private void Start()
         {
-            _healthBar = UIServiceLocator.Get<UIHealthCanvas>().GetHealthBar();
-            _healthBar.SetUnit(transform, new Vector3(0, 2f, 0));
+            UpdateHealthUI();
+        }
+
+        private void UpdateHealthUI()
+        {
+            UIManager.HubPanel.BossHealth.SetHealth(Health.HealthPercentage);
+        }
+        
+        private UIManager GetUIManager() {
+            // if UIManager has already been found, we're done
+            if (_uiManager) return _uiManager;
+        
+            // get UIManager from UIServiceLocator
+            _uiManager = UIServiceLocator.Get<UIManager>();
+            //++++++++++++++++++++++++++++++//
+            Debug.Assert(_uiManager, "UIManager is null");
+            //++++++++++++++++++++++++++++++//
+        
+            // return UIManager
+            return _uiManager;
+        }
+        
+        private Health GetHealth() {
+            // if Health component has already been found, we're done
+            if (_health) return _health;
+        
+            // Health is a required component so it will never be null
+            _health = GetComponent<Health>();
+        
+            // return Health component
+            return _health;
         }
 
         /// <summary>
@@ -81,7 +123,7 @@ namespace _App.Scripts.juandeyby.Boss
         /// <exception cref="NotImplementedException"></exception>
         public void PlaySweepingStrikeEffect()
         {
-            Debug.LogWarningFormat("<color=red>PlaySweepingStrikeEffect not implemented</color>");
+            Debug.LogWarningFormat("<color=cyan>PlaySweepingStrikeEffect not implemented</color>");
         }
         
         /// <summary>
@@ -90,20 +132,20 @@ namespace _App.Scripts.juandeyby.Boss
         /// <exception cref="NotImplementedException"></exception>
         public void StopSweepingStrikeEffect()
         {
-            Debug.LogWarningFormat("<color=red>StopSweepingStrikeEffect not implemented</color>");
+            Debug.LogFormat("<color=cyan>StopSweepingStrikeEffect not implemented</color>");
         }
 
-        private void OnDestroy()
-        {
-            UIServiceLocator.Get<UIHealthCanvas>().ReturnHealthBar(_healthBar);
-        }
+        // private void OnDestroy()
+        // {
+        //     UIServiceLocator.Get<UIHealthCanvas>().ReturnHealthBar(_healthBar);
+        // }
 
         /// <summary>
         /// Play the aerial barrage effect
         /// </summary>
         public void PlayAerialBarrageEffect()
         {
-            Debug.LogWarningFormat("<color=red>PlayAerialBarrageEffect not implemented</color>");
+            Debug.LogFormat("<color=cyan>PlayAerialBarrageEffect not implemented</color>");
         }
         
         /// <summary>
@@ -111,7 +153,7 @@ namespace _App.Scripts.juandeyby.Boss
         /// </summary>
         public void StopAerialBarrageEffect()
         {
-            Debug.LogWarningFormat("<color=red>StopAerialBarrageEffect not implemented</color>");
+            Debug.LogFormat("<color=cyan>StopAerialBarrageEffect not implemented</color>");
         }
 
         /// <summary>
@@ -119,7 +161,7 @@ namespace _App.Scripts.juandeyby.Boss
         /// </summary>
         public void PlayPortalSummonEffect()
         {
-            Debug.LogWarningFormat("<color=red>PlayPortalSummonEffect not implemented</color>");
+            Debug.LogFormat("<color=cyan>PlayPortalSummonEffect not implemented</color>");
         }
 
         /// <summary>
@@ -127,7 +169,7 @@ namespace _App.Scripts.juandeyby.Boss
         /// </summary>
         public void StopPortalSummonEffect()
         {
-            Debug.LogWarningFormat("<color=red>StopPortalSummonEffect not implemented</color>");
+            Debug.LogFormat("<color=cyan>StopPortalSummonEffect not implemented</color>");
         }
     }
 }

@@ -63,6 +63,18 @@
         {
             "id": "DeploymentPlatforms",
             "valueId": "Emscripten"
+        },
+        {
+            "id": "Packages",
+            "valueId": "Unity"
+        },
+        {
+            "id": "DeploymentPlatforms",
+            "valueId": "Mac"
+        },
+        {
+            "id": "DeploymentPlatforms",
+            "valueId": "Windows"
         }
     ]
 }

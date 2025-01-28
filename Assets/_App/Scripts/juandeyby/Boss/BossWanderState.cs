@@ -9,63 +9,45 @@ namespace _App.Scripts.juandeyby.Boss
         
         // The time the boss will wait before moving to another position
         private readonly float _waitTime = 2f;
-        private float _timer = 0f;
-        
-        // The number of times the boss will wander
-        private int _wanderCount = 0;
-        private readonly int _maxWanderCount = 3;
+        private float _timer;
         
         private NavMeshAgent _navMeshAgent;
+        
+        // Detection range of the boss
+        private readonly float _detectionRange = 10f;
+        private readonly float _fieldOfView = 60f;
         
         public void Enter(Boss boss)
         {
             _timer = 0f;
             _navMeshAgent = boss.GetMeshAgent();
+            _navMeshAgent.isStopped = false;
             MoveToRandomPosition(boss);
         }
 
         public void Update(Boss boss)
         {
+            if (IsPlayerInSight(boss))
+            {
+                boss.SetState(new BossChaseState());
+                return;
+            }
+
             if (!_navMeshAgent.pathPending && _navMeshAgent.remainingDistance < _navMeshAgent.stoppingDistance)
             {
                 _timer += Time.deltaTime;
-                
+
                 if (_timer >= _waitTime)
                 {
-                    _wanderCount++;
-                    if (_wanderCount >= _maxWanderCount)
-                    {
-                        boss.SetState(new BossAerialBarrageState());
-                        return;
-                        
-                        var random = Random.Range(0, 4);
-                        switch (random)
-                        {
-                            case 0:
-                                boss.SetState(new BossVortexPullState());
-                                break;
-                            case 1:
-                                boss.SetState(new BossSweepingStrikeState());
-                                break;
-                            case 2:
-                                boss.SetState(new BossPortalSummonState());
-                                break;
-                            case 3:
-                                boss.SetState(new BossAerialBarrageState());
-                                break;
-                        }
-                    }
-                    else
-                    {
-                        MoveToRandomPosition(boss);
-                    }
+                    _timer = 0f;
+                    MoveToRandomPosition(boss);
                 }
             }
         }
 
         public void Exit(Boss boss)
         {
-            
+            _navMeshAgent.isStopped = true;
         }
         
         /// <summary>
@@ -81,6 +63,47 @@ namespace _App.Scripts.juandeyby.Boss
            {
                _navMeshAgent.SetDestination(hit.position);
            } 
+        }
+        
+        /// <summary>
+        /// Check if the player is in sight of the boss
+        /// </summary>
+        /// <param name="boss"> The boss to check </param>
+        /// <returns></returns>
+        private bool IsPlayerInSight(Boss boss)
+        {
+            var player = Player.Instance;
+            if (player == null) return false;
+            Debug.DrawLine(boss.transform.position, player.transform.position, Color.yellow);
+
+            var directionToPlayer = (player.transform.position - boss.transform.position).normalized;
+            directionToPlayer.y = 0f;
+            var distanceToPlayer = Vector3.Distance(boss.transform.position, player.transform.position);
+
+            // Check if the player is within the detection range
+            if (distanceToPlayer > _detectionRange) return false;
+            Debug.Log("<color=cyan>Player within detection range</color>");
+            Debug.DrawLine(boss.transform.position, player.transform.position, Color.green);
+
+            // Check if the player is within the field of view
+            var angleToPlayer = Vector3.Angle(boss.transform.forward, directionToPlayer);
+            if (angleToPlayer > _fieldOfView / 2) return false;
+            Debug.Log("<color=cyan>Player within field of view</color>");
+            Debug.DrawLine(boss.transform.position, player.transform.position, Color.blue);
+
+            // Check if the player is in sight
+            if (Physics.Raycast(boss.transform.position, directionToPlayer, out var hit, _detectionRange))
+            {
+                Debug.Log("<color=cyan>Player in sight</color>");
+                Debug.DrawRay(boss.transform.position, directionToPlayer * _detectionRange, Color.red);
+                if (hit.collider.CompareTag("Player"))
+                {
+                    Debug.Log("<color=cyan>Player found</color>");
+                    return true; // the player is in sight
+                }
+            }
+
+            return false;
         }
     }
 }

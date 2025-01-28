@@ -54,6 +54,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 166c807b9644a44e2957c02734473e53, type: 2}
+  health: 25
 --- !u!1 &8389282395045858566
 GameObject:
   m_ObjectHideFlags: 0

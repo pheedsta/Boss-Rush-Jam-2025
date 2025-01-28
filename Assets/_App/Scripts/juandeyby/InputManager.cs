@@ -8,6 +8,7 @@ namespace _App.Scripts.juandeyby
         private InputActions _inputActions;
         
         [SerializeField] private PlayerAnimator playerAnimator;
+        [SerializeField] private PlayerLocomotion playerLocomotion;
         [SerializeField] private Vector2 movementInput;
         [SerializeField] private Vector2 cameraInput;
         [SerializeField] private float verticalInput;
@@ -20,6 +21,8 @@ namespace _App.Scripts.juandeyby
         public float CameraInputY => cameraInputY;
         private float _moveAmount;
 
+        [SerializeField] private bool jumpInput;
+
         private void OnEnable()
         {
             if (_inputActions == null)
@@ -30,6 +33,8 @@ namespace _App.Scripts.juandeyby
                 
                 _inputActions.Player.Look.performed += i => cameraInput = i.ReadValue<Vector2>();
                 _inputActions.Player.Look.canceled += i => cameraInput = Vector2.zero;
+                
+                _inputActions.Player.Jump.performed += i => jumpInput = true;
             }
             _inputActions.Enable();
         }
@@ -42,7 +47,7 @@ namespace _App.Scripts.juandeyby
         public void HandleAllInputs()
         {
             HandleMovementInput();
-            // HandleJumpInput();
+            HandleJumpInput();
             // HandleAttackInput();
         }
         
@@ -56,6 +61,15 @@ namespace _App.Scripts.juandeyby
             
             _moveAmount = Mathf.Clamp01(Mathf.Abs(horizontalInput) + Mathf.Abs(verticalInput));
             playerAnimator.UpdateAnimatorValues(0, _moveAmount);
+        }
+        
+        private void HandleJumpInput()
+        {
+            if (jumpInput)
+            {
+                jumpInput = false;
+                playerLocomotion.HandleJumping();
+            }
         }
     }
 }

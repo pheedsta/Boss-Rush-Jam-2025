@@ -135,11 +135,11 @@ public class CollectableManager : MonoBehaviour
                 break;
             case GamePhase.Phase2:
                 innerRadius = 18f;
-                outerRadius = 21f;
+                outerRadius = 23f;
                 break;
             case GamePhase.Phase1:
-                innerRadius = 24f;
-                outerRadius = 27f;
+                innerRadius = 26f;
+                outerRadius = 31f;
                 break;
         }
 

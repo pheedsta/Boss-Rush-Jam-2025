@@ -91,7 +91,7 @@ namespace _App.Scripts.juandeyby
                 rb.AddForce(Vector3.down * fallingVelocity * inAirTimer);
             }
             
-            Debug.DrawRay(rayCastOrigin, Vector3.down * 1f, Color.red);
+            Debug.DrawRay(rayCastOrigin, Vector3.down, Color.red);
             if (Physics.SphereCast(rayCastOrigin, 0.2f, Vector3.down, out var hit, groundLayer))
             {
                 if (!isGrounded && !playerManager.IsInteracting)
@@ -100,6 +100,8 @@ namespace _App.Scripts.juandeyby
                 }
                 inAirTimer = 0;
                 isGrounded = true;
+                
+                // transform.SetParent(hit.transform);
             }
             else
             {
@@ -118,7 +120,45 @@ namespace _App.Scripts.juandeyby
                 var playerVelocity = _moveDirection;
                 playerVelocity.y = jumpingVelocity;
                 rb.linearVelocity = playerVelocity;
+                
+                // transform.SetParent(null);
             }
+        }
+        
+        public void HandleAttack()
+        {
+            if (isJumping) return;
+            if (isGrounded)
+            {
+                var randomAttack = UnityEngine.Random.Range(0, 3);
+                switch (randomAttack)
+                {
+                    case 0:
+                        playerAnimator.PlayTargetAnimation("Attack1", true);
+                        break;
+                    case 1:
+                        playerAnimator.PlayTargetAnimation("Attack2", true);
+                        break;
+                    case 2:
+                        playerAnimator.PlayTargetAnimation("Attack3", true);
+                        break;
+                }
+            }
+        }
+
+        public void HandleSpecial()
+        {
+            if (isJumping) return;
+            if (isGrounded)
+            {
+                playerAnimator.PlayTargetAnimation("RangeAttack", true);
+            }
+        }
+        
+        public void Stroke(Vector3 direction, float force)
+        {
+            Debug.Log("Stroke!");
+            rb.AddForce(direction * force, ForceMode.Impulse);
         }
     }
 }

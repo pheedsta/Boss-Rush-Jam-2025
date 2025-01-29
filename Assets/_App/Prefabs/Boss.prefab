@@ -346,6 +346,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1039136196579238288}
+  - component: {fileID: 6302266837749981453}
   - component: {fileID: 305262823215086455}
   - component: {fileID: 5540391922533892788}
   - component: {fileID: 817542864684775800}
@@ -353,7 +354,6 @@ GameObject:
   - component: {fileID: 1079184730557045589}
   - component: {fileID: 4072284718156632040}
   - component: {fileID: 5699482676869456265}
-  - component: {fileID: 227014556254215690}
   - component: {fileID: 5402284956838146804}
   m_Layer: 0
   m_Name: Boss
@@ -381,6 +381,18 @@ Transform:
   - {fileID: 3231527152300886438}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6302266837749981453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8309486014097789768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b0effbf91d593468510de5b266d16c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &305262823215086455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -500,19 +512,6 @@ MonoBehaviour:
   range: 12
   portalCount: 8
   height: 4
---- !u!114 &227014556254215690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8309486014097789768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30d3143ae0ef74d23a667c6a6505f986, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
 --- !u!114 &5402284956838146804
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,0 +1,24 @@
+Event	ID	Name			Wwise Object Path	Notes
+	658623236	FireSpell_Fire			\SFX\Player\Spells\FireSpell_Fire	
+	1054166863	FireSpell_Hit			\SFX\Player\Spells\FireSpell_Hit	
+	1631683011	FireSpell_FireBurn			\SFX\Player\Spells\FireSpell_FireBurn	
+	1695950791	FireSpell_Burn			\SFX\Player\Spells\FireSpell_Burn	
+	1936185617	Test_Sound			\SFX\Test_Sound	
+	2097991953	VortexPull_Boss_Start			\SFX\Boss\Behavior\VortexPull_Boss_Start	
+	2733481739	VortexPull_Boss_Stop			\SFX\Boss\Behavior\VortexPull_Boss_Stop	
+	2924361409	Play_Boss_Line_Phase3			\SFX\Dialogue\Play_Boss_Line_Phase3	
+	2924361411	Play_Boss_Line_Phase1			\SFX\Dialogue\Play_Boss_Line_Phase1	
+	3367592642	FireSpell_Burn_Stop			\SFX\Player\Spells\FireSpell_Burn_Stop	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	39525447	Test_Sound	Y:\Documents\WwiseProjects\Boss-Rush-Jam-2025_Wwise\.cache\BE\{BE0311E6-7FDC-8464-E284-0431F72172B3}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Environmental\Test_Sound		5499596
+	249203653	You cannot defy	Y:\Documents\WwiseProjects\Boss-Rush-Jam-2025_Wwise\.cache\40\{402958A5-5CA5-1774-E2AF-DC8B21645802}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Dialogue\You cannot defy		132194
+	298882402	FireSpell_Hit_01	Y:\Documents\WwiseProjects\Boss-Rush-Jam-2025_Wwise\.cache\94\{942ADA15-ED58-CBEB-3013-1F60B7A47E91}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Spells\FireSpell\FireSpell_Hit\FireSpell_Hit_01		15589
+	347026546	VortexPull_Boss_01	Y:\Documents\WwiseProjects\Boss-Rush-Jam-2025_Wwise\.cache\91\{91B27E7C-DBFB-0503-2143-89E588BC4E95}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Boss\Behavior\VortexPull_Boss\VortexPull_Boss_01		101097
+	436423167	FireSpell_Fire_01	Y:\Documents\WwiseProjects\Boss-Rush-Jam-2025_Wwise\.cache\48\{48001333-EB07-EDF5-E2FD-7518DC025B93}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Spells\FireSpell\FireSpell_Fire\FireSpell_Fire_01		16694
+	619057983	FireSpell_Hit_02	Y:\Documents\WwiseProjects\Boss-Rush-Jam-2025_Wwise\.cache\CC\{CC4F0397-04E9-4505-DEED-86B362A85CEA}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Spells\FireSpell\FireSpell_Hit\FireSpell_Hit_02		15276
+	641056015	VortexPull_Boss_End	Y:\Documents\WwiseProjects\Boss-Rush-Jam-2025_Wwise\.cache\D6\{D61279CA-EE22-EE80-7D06-4D6ABFE23DB7}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Boss\Behavior\VortexPull_Boss\VortexPull_Boss_End		13385
+	687586525	If I must fall	Y:\Documents\WwiseProjects\Boss-Rush-Jam-2025_Wwise\.cache\59\{59C0576C-FD8A-FE92-0226-87A1E9ECF95B}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Dialogue\If I must fall		87644
+	990286089	FireSpell_Burn_01	Y:\Documents\WwiseProjects\Boss-Rush-Jam-2025_Wwise\.cache\F5\{F53AA686-78DF-F116-1019-8A0D9317063F}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Spells\FireSpell\FireSpell_Burn\FireSpell_Burn_01		99928
+	1037413223	FireSpell_Burn_02	Y:\Documents\WwiseProjects\Boss-Rush-Jam-2025_Wwise\.cache\9F\{9F2CB6B9-1613-3E73-2CA4-A613302AC83B}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Spells\FireSpell\FireSpell_Burn\FireSpell_Burn_02		106645
+

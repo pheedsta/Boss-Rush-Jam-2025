@@ -8,15 +8,17 @@ namespace _App.Scripts.juandeyby.Boss
         [SerializeField] private float duration = 3f;
         [SerializeField] private float damage = 10f;
         [SerializeField] private float radius = 5f;
-        [SerializeField] private GameObject chain;
     
         private float _timer;
 
         public override void Activate(Boss boss)
         {
             _timer = 0f;
-            ApplySweepingStrike(boss);
+            // ApplySweepingStrike(boss);
             boss.PlaySweepingStrikeEffect();
+            
+            // Play animation
+            boss.BossAnimator.PlaySweepingStrike();
         }
 
         public override void UpdateAbility(Boss boss, float deltaTime)
@@ -25,8 +27,6 @@ namespace _App.Scripts.juandeyby.Boss
             
             if (_timer >= duration)
             {
-                chain.transform.localScale = new Vector3(1, 1, 0);
-                chain.SetActive(false);
                 boss.SetState(new BossWanderState());
             }
         }
@@ -52,9 +52,6 @@ namespace _App.Scripts.juandeyby.Boss
                     
                 }
             }
-            
-            chain.SetActive(true);
-            chain.transform.localScale = new Vector3(1, 1, distance);
         }
     }
 }

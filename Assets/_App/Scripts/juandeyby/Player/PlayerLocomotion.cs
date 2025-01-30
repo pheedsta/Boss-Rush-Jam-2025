@@ -70,7 +70,7 @@ namespace _App.Scripts.juandeyby
             }
             
             var targetRotation = Quaternion.LookRotation(lookDirection);
-            var playerRotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10);
+            var playerRotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 20);
             
             rb.rotation = playerRotation;
         }

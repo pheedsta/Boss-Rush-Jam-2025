@@ -4,7 +4,7 @@ namespace _App.Scripts.juandeyby
     {
         public override void Activate(Worm worm)
         {
-            throw new System.NotImplementedException();
+            worm.SetState(new WormChaseState());
         }
 
         public override void UpdateAbility(Worm worm, float deltaTime)

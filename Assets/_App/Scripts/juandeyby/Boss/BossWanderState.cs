@@ -8,13 +8,16 @@ namespace _App.Scripts.juandeyby.Boss
         private readonly float _wanderRadius = 10f;
         
         // The time the boss will wait before moving to another position
-        private readonly float _waitTime = 2f;
+        private readonly float _waitTime = 0.5f;
         private float _timer;
         
         private NavMeshAgent _navMeshAgent;
         
         // Detection range of the boss
-        private readonly float _detectionRange = 10f;
+        private readonly float _maxSweepingDetectionRange = 20f;
+        private readonly float _minSweepingDetectionRange = 7f;
+        
+        private readonly float _attackDetectionRange = 5f;
         private readonly float _fieldOfView = 60f;
         
         public void Enter(Boss boss)
@@ -23,13 +26,24 @@ namespace _App.Scripts.juandeyby.Boss
             _navMeshAgent = boss.GetMeshAgent();
             _navMeshAgent.isStopped = false;
             MoveToRandomPosition(boss);
+            
+            // Play the wander animation
+            boss.BossAnimator.PlayWander();
         }
 
         public void Update(Boss boss)
         {
+            // Check if the player is in sight of the boss 
             if (IsPlayerInSight(boss))
             {
                 boss.SetState(new BossChaseState());
+                return;
+            }
+            
+            // Check if the player is close to the boss
+            if (IsPlayerClose(boss))
+            {
+                boss.SetState(new BossAttackState());
                 return;
             }
 
@@ -56,13 +70,32 @@ namespace _App.Scripts.juandeyby.Boss
         /// <param name="boss"> The boss to move </param>
         private void MoveToRandomPosition(Boss boss)
         {
-           var randomDirection = Random.insideUnitSphere * _wanderRadius;
-           randomDirection += boss.transform.position;
-           
-           if (NavMesh.SamplePosition(randomDirection, out var hit, _wanderRadius, NavMesh.AllAreas))
-           {
-               _navMeshAgent.SetDestination(hit.position);
-           } 
+            var randomDirection = Random.insideUnitSphere * _wanderRadius;
+            randomDirection += boss.transform.position;
+
+            // Check if the random direction is valid
+            if (NavMesh.SamplePosition(randomDirection, out var hit, _wanderRadius, NavMesh.AllAreas))
+            {
+                _navMeshAgent.SetDestination(hit.position);
+            }
+            else
+            {
+                // If the random direction is not valid, move to the opposite direction
+                randomDirection = boss.transform.position - randomDirection;
+        
+                if (NavMesh.SamplePosition(randomDirection, out hit, _wanderRadius, NavMesh.AllAreas))
+                {
+                    _navMeshAgent.SetDestination(hit.position);
+                }
+            }
+        }
+        
+        private bool IsPlayerClose(Boss boss)
+        {
+            var player = Player.Instance;
+            if (player == null) return false;
+            var distance = Vector3.Distance(boss.transform.position, player.transform.position);
+            return distance <= _attackDetectionRange;
         }
         
         /// <summary>
@@ -81,7 +114,7 @@ namespace _App.Scripts.juandeyby.Boss
             var distanceToPlayer = Vector3.Distance(boss.transform.position, player.transform.position);
 
             // Check if the player is within the detection range
-            if (distanceToPlayer > _detectionRange) return false;
+            if (distanceToPlayer > _maxSweepingDetectionRange || distanceToPlayer < _minSweepingDetectionRange) return false;
             Debug.Log("<color=cyan>Player within detection range</color>");
             Debug.DrawLine(boss.transform.position, player.transform.position, Color.green);
 
@@ -92,17 +125,23 @@ namespace _App.Scripts.juandeyby.Boss
             Debug.DrawLine(boss.transform.position, player.transform.position, Color.blue);
 
             // Check if the player is in sight
-            if (Physics.Raycast(boss.transform.position, directionToPlayer, out var hit, _detectionRange))
+            float[] heightOffsets = { 0f, 2.5f };
+            foreach (var offset in heightOffsets)
             {
-                Debug.Log("<color=cyan>Player in sight</color>");
-                Debug.DrawRay(boss.transform.position, directionToPlayer * _detectionRange, Color.red);
-                if (hit.collider.CompareTag("Player"))
+                var rayStart = boss.transform.position + Vector3.up * offset;
+                var rayEnd = player.transform.position + Vector3.up * offset;
+                var direction = (rayEnd - rayStart).normalized;
+                
+                Debug.DrawRay(rayStart, direction * _maxSweepingDetectionRange, Color.red);
+                if (Physics.Raycast(rayStart, direction, out var hit, _maxSweepingDetectionRange))
                 {
-                    Debug.Log("<color=cyan>Player found</color>");
-                    return true; // the player is in sight
+                    if (hit.collider.CompareTag("Player"))
+                    {
+                        Debug.Log("<color=cyan>Player found</color>");
+                        return true; // Se encontró al jugador
+                    }
                 }
             }
-
             return false;
         }
     }

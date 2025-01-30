@@ -49,6 +49,18 @@ public class CollectableManager : MonoBehaviour
         ServiceLocator.Register<CollectableManager>(this);
     }
 
+    private void Start()
+    {
+        ServiceLocator.Get<GameManager>().OnGamePhaseChanged += OnGamePhaseChanged;
+    }
+
+    private void OnGamePhaseChanged(GamePhase phase)
+    {
+        foreach (var collectable in _collectables) {
+            collectable.transform.position = GetPosition();
+        }
+    }
+
     private void Awake()
     {
         // create collectable hearts

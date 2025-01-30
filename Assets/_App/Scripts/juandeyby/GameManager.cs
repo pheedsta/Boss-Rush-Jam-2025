@@ -6,6 +6,7 @@ namespace _App.Scripts.juandeyby
     public class GameManager : MonoBehaviour
     {
         private GamePhase _gamePhase;
+        public event Action<GamePhase> OnGamePhaseChanged;
         
         private void OnEnable()
         {
@@ -40,6 +41,12 @@ namespace _App.Scripts.juandeyby
         public GamePhase GetGamePhase()
         {
             return _gamePhase;
+        }
+        
+        public void SetGamePhase(GamePhase gamePhase)
+        {
+            _gamePhase = gamePhase;
+            OnGamePhaseChanged?.Invoke(_gamePhase);
         }
     }
     

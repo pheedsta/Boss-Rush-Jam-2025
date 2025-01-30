@@ -7,6 +7,7 @@ namespace _App.Scripts.juandeyby.Boss
     {
         [SerializeField] private int maxHealth = 100;
         private int _currentHealth;
+        private GameManager _gameManager;
         
         private void Awake()
         {
@@ -16,6 +17,7 @@ namespace _App.Scripts.juandeyby.Boss
         private void Start()
         {
             UIServiceLocator.Get<UIManager>().HubPanel.BossHealth.SetHealth(_currentHealth / (float) maxHealth);
+            _gameManager = ServiceLocator.Get<GameManager>();
         }
 
         private void TakeDamage(int damage)
@@ -27,7 +29,34 @@ namespace _App.Scripts.juandeyby.Boss
                 // Die();
                 UIServiceLocator.Get<UIManager>().ShowEndingPanel();
             }
+            CheckPhase();
             UIServiceLocator.Get<UIManager>().HubPanel.BossHealth.SetHealth(_currentHealth / (float) maxHealth);
+        }
+
+        /// <summary>
+        /// Check if the boss should change phase
+        /// </summary>
+        private void CheckPhase()
+        {
+            var phase = _gameManager.GetGamePhase();
+            if (phase == GamePhase.Phase1)
+            {
+                if (_currentHealth <= 70)
+                {
+                    _gameManager.SetGamePhase(GamePhase.Phase2);
+                }
+            }
+            else if (phase == GamePhase.Phase2)
+            {
+                if (_currentHealth <= 40)
+                {
+                    _gameManager.SetGamePhase(GamePhase.Phase3);
+                }
+            }
+            else if (phase == GamePhase.Phase3)
+            {
+                // Do something
+            }
         }
         
         public void MeleeDamage()

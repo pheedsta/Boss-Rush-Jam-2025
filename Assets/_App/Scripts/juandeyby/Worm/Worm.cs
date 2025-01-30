@@ -26,6 +26,16 @@ namespace _App.Scripts.juandeyby
             {
                 _currentState.Update(this);
             }
+            
+            CheckFall();
+        }
+        
+        private void CheckFall()
+        {
+            if (transform.position.y < -10)
+            {
+                ServiceLocator.Get<WormManager>().ReturnWorm(this);
+            }
         }
     }
 }

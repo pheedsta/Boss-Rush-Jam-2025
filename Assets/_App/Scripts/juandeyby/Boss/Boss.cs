@@ -1,5 +1,4 @@
 using System;
-using _App.Scripts.juandeyby.UI;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -7,6 +6,8 @@ namespace _App.Scripts.juandeyby.Boss
 {
     public class Boss : MonoBehaviour
     {
+        [SerializeField] private BossAnimator bossAnimator;
+        public BossAnimator BossAnimator => bossAnimator;
         [SerializeField] private NavMeshAgent meshAgent;
         public NavMeshAgent MeshAgent => meshAgent;
         private IBossState _currentState;

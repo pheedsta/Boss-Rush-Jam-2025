@@ -35,7 +35,7 @@ namespace _App.Scripts.juandeyby
             UIServiceLocator.Get<UIManager>().HubPanel.PlayerHealth.SetHealth(uiValue);
         }
 
-        public void Damage(int damage)
+        public void TakeDamage(int damage)
         {
             health -= damage;
             if (health <= 0)

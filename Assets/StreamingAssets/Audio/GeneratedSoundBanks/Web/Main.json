@@ -1,0 +1,262 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Web",
+  "BasePlatform": "Web",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3161908922",
+    "Type": "User",
+    "GUID": "{44F08A17-571E-464B-85BE-A2ED4F72914E}",
+    "Language": "SFX",
+    "Hash": "{F0B02BFD-B769-8350-4430-52C53FF35809}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
+    "ShortName": "Main",
+    "Path": "Main.bnk",
+    "Media": [
+     {
+      "Id": "39525447",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Designed, Drone, Dark Ambience, Creepy, Scifi 01 SND120956.wav",
+      "CachePath": "BE/{BE0311E6-7FDC-8464-E284-0431F72172B3}.wem"
+     },
+     {
+      "Id": "249203653",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "You cannot defy....wav",
+      "CachePath": "40/{402958A5-5CA5-1774-E2AF-DC8B21645802}.wem"
+     },
+     {
+      "Id": "298882402",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "FireSpell_Hit_01.wav",
+      "CachePath": "94/{942ADA15-ED58-CBEB-3013-1F60B7A47E91}.wem"
+     },
+     {
+      "Id": "347026546",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VortexPull_Boss_01.wav",
+      "CachePath": "91/{91B27E7C-DBFB-0503-2143-89E588BC4E95}.wem"
+     },
+     {
+      "Id": "436423167",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "FireSpell_Fire_01.wav",
+      "CachePath": "48/{48001333-EB07-EDF5-E2FD-7518DC025B93}.wem"
+     },
+     {
+      "Id": "619057983",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "FireSpell_Hit_02.wav",
+      "CachePath": "CC/{CC4F0397-04E9-4505-DEED-86B362A85CEA}.wem"
+     },
+     {
+      "Id": "641056015",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VortexPull_Boss_End.wav",
+      "CachePath": "D6/{D61279CA-EE22-EE80-7D06-4D6ABFE23DB7}.wem"
+     },
+     {
+      "Id": "687586525",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "If I must fall....wav",
+      "CachePath": "59/{59C0576C-FD8A-FE92-0226-87A1E9ECF95B}.wem"
+     },
+     {
+      "Id": "990286089",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "FireSpell_Burn_01.wav",
+      "CachePath": "F5/{F53AA686-78DF-F116-1019-8A0D9317063F}.wem"
+     },
+     {
+      "Id": "1037413223",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "FireSpell_Burn_02.wav",
+      "CachePath": "9F/{9F2CB6B9-1613-3E73-2CA4-A613302AC83B}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1695950791",
+      "Name": "FireSpell_Burn",
+      "ObjectPath": "\\Events\\SFX\\Player\\Spells\\FireSpell_Burn",
+      "GUID": "{91E961BF-1B12-4607-B93C-21E3154DA67A}",
+      "Color": "2",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "990286089"
+       },
+       {
+        "Id": "1037413223"
+       }
+      ]
+     },
+     {
+      "Id": "3367592642",
+      "Name": "FireSpell_Burn_Stop",
+      "ObjectPath": "\\Events\\SFX\\Player\\Spells\\FireSpell_Burn_Stop",
+      "GUID": "{FE1487E1-7884-449A-834F-AC8798416FE2}",
+      "Color": "2",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "658623236",
+      "Name": "FireSpell_Fire",
+      "ObjectPath": "\\Events\\SFX\\Player\\Spells\\FireSpell_Fire",
+      "GUID": "{EE63E95D-7D88-456F-80A8-67EB4E6C35E3}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2281733",
+      "DurationMax": "1.2281733",
+      "MediaRefs": [
+       {
+        "Id": "436423167"
+       }
+      ]
+     },
+     {
+      "Id": "1631683011",
+      "Name": "FireSpell_FireBurn",
+      "ObjectPath": "\\Events\\SFX\\Player\\Spells\\FireSpell_FireBurn",
+      "GUID": "{2740ABCA-FE22-45CB-A3DE-52E11D9BA5D4}",
+      "Color": "2",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "436423167"
+       },
+       {
+        "Id": "990286089"
+       },
+       {
+        "Id": "1037413223"
+       }
+      ]
+     },
+     {
+      "Id": "1054166863",
+      "Name": "FireSpell_Hit",
+      "ObjectPath": "\\Events\\SFX\\Player\\Spells\\FireSpell_Hit",
+      "GUID": "{1CDB2DCD-6060-4E81-B2D6-4C52D0F52A7F}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "1.1162359",
+      "DurationMax": "1.1520833",
+      "MediaRefs": [
+       {
+        "Id": "298882402"
+       },
+       {
+        "Id": "619057983"
+       }
+      ]
+     },
+     {
+      "Id": "2924361411",
+      "Name": "Play_Boss_Line_Phase1",
+      "ObjectPath": "\\Events\\SFX\\Dialogue\\Play_Boss_Line_Phase1",
+      "GUID": "{E1A0AE29-6B45-4B11-8EB7-5354352E319D}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "9.268434",
+      "DurationMax": "9.268434",
+      "MediaRefs": [
+       {
+        "Id": "249203653"
+       }
+      ]
+     },
+     {
+      "Id": "2924361409",
+      "Name": "Play_Boss_Line_Phase3",
+      "ObjectPath": "\\Events\\SFX\\Dialogue\\Play_Boss_Line_Phase3",
+      "GUID": "{2BC9ADA7-C3A0-4C89-96DD-317C60E4A08D}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "6.2681665",
+      "DurationMax": "6.2681665",
+      "MediaRefs": [
+       {
+        "Id": "687586525"
+       }
+      ]
+     },
+     {
+      "Id": "1936185617",
+      "Name": "Test_Sound",
+      "ObjectPath": "\\Events\\SFX\\Test_Sound",
+      "GUID": "{451837D5-131C-438E-AF75-995D8E2D3A4A}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "28.643229",
+      "DurationMax": "28.643229",
+      "MediaRefs": [
+       {
+        "Id": "39525447"
+       }
+      ]
+     },
+     {
+      "Id": "2097991953",
+      "Name": "VortexPull_Boss_Start",
+      "ObjectPath": "\\Events\\SFX\\Boss\\Behavior\\VortexPull_Boss_Start",
+      "GUID": "{699FF2BE-F0FF-4DCC-806B-67BD86BF79BB}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "8.190958",
+      "DurationMax": "8.190958",
+      "MediaRefs": [
+       {
+        "Id": "347026546"
+       },
+       {
+        "Id": "641056015"
+       }
+      ]
+     },
+     {
+      "Id": "2733481739",
+      "Name": "VortexPull_Boss_Stop",
+      "ObjectPath": "\\Events\\SFX\\Boss\\Behavior\\VortexPull_Boss_Stop",
+      "GUID": "{B51754F9-69D8-47AB-B339-1D6F7579D9B9}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2109584",
+      "DurationMax": "1.2109584",
+      "MediaRefs": [
+       {
+        "Id": "641056015"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{B415B8DA-3D38-57ED-81F0-6A101FC3F54A}"
+ }
+}

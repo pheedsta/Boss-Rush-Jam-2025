@@ -5,6 +5,7 @@ namespace _App.Scripts.juandeyby.Boss
 {
     public class BossHealth : MonoBehaviour, IDamageable
     {
+        [SerializeField] private Boss boss;
         [SerializeField] private int maxHealth = 100;
         private int _currentHealth;
         private GameManager _gameManager;
@@ -26,7 +27,7 @@ namespace _App.Scripts.juandeyby.Boss
             if (_currentHealth <= 0)
             {
                 _currentHealth = 0;
-                // Die();
+                boss.SetState(new BossDeathState());
                 UIServiceLocator.Get<UIManager>().ShowEndingPanel();
             }
             CheckPhase();

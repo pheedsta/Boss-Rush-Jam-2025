@@ -37,6 +37,13 @@ namespace _App.Scripts.juandeyby
                 }
             }
         }
+        
+        public void SpendChange()
+        {
+            currentEnergy = 0;
+            currentCharges = 0;
+            UpdateUI();
+        }
 
         private void UpdateUI()
         {

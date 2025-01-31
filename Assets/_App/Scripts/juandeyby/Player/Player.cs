@@ -29,14 +29,6 @@ namespace _App.Scripts.juandeyby
             }
         }
 
-        private void Update()
-        {
-            if (transform.position.y < -10)
-            {
-                transform.position = spawnPoint.position;
-                transform.rotation = spawnPoint.rotation;
-                rb.linearVelocity = Vector3.zero;
-            }
-        }
+
     }
 }

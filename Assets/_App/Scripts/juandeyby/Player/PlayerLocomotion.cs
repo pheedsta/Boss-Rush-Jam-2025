@@ -77,6 +77,7 @@ namespace _App.Scripts.juandeyby
         
         private void HandleFallingAndLanding()
         {
+            Debug.Log("HandleFallingAndLanding");
             var rayCastOrigin = transform.position;
             rayCastOrigin.y += rayCastHeightOffset;
             

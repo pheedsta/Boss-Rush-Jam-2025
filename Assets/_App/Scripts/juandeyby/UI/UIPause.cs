@@ -11,6 +11,9 @@ namespace _App.Scripts.juandeyby.UI
         public void Show()
         {   
             leanWindow.TurnOn();
+            
+            // Play Music
+            ServiceLocator.Get<MusicManager>().Pause();
         }
 
         public void Hide()
@@ -20,7 +23,7 @@ namespace _App.Scripts.juandeyby.UI
 
         private void Update()
         {
-            if (leanWindow.On && Keyboard.current.anyKey.wasPressedThisFrame)
+            if (leanWindow.On && Keyboard.current.spaceKey.wasPressedThisFrame)
             {
                 ServiceLocator.Get<GameManager>().Resume();
                 UIServiceLocator.Get<UIManager>().ShowHubPanel();

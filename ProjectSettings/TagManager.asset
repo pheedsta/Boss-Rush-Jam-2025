@@ -6,6 +6,9 @@ TagManager:
   tags:
   - CinemachineTarget
   - Sword
+  - A
+  - B
+  - C
   layers:
   - Default
   - TransparentFX

@@ -4,28 +4,29 @@ namespace _App.Scripts.juandeyby
 {
     public class WormAttackState : IWormState
     {
-        private WormAbilityPoisonSpit _poisonSpit;
+        private WormAbilityPoison _poison;
         private WormAbilityPush _push;
         
         public void Enter(Worm worm)
         {
             if (worm is IPoisonWorm)
             {
-                _poisonSpit = worm.GetComponent<WormAbilityPoisonSpit>();
-                _poisonSpit.Activate(worm);
+                _poison = worm.GetComponent<WormAbilityPoison>();
+                _poison.Activate(worm);
             }
             else if (worm is IPushWorm)
             {
                 _push = worm.GetComponent<WormAbilityPush>();
                 _push.Activate(worm);
             }
+            worm.WormAnimator.PlayAttack();
         }
 
         public void Update(Worm worm)
         {
             if (worm is IPoisonWorm)
             {
-                _poisonSpit.UpdateAbility(worm, Time.deltaTime);
+                _poison.UpdateAbility(worm, Time.deltaTime);
             }
             else if (worm is IPushWorm)
             {
@@ -37,7 +38,7 @@ namespace _App.Scripts.juandeyby
         {
             if (worm is IPoisonWorm)
             {
-                _poisonSpit.Deactivate(worm);
+                _poison.Deactivate(worm);
             }
             else if (worm is IPushWorm)
             {

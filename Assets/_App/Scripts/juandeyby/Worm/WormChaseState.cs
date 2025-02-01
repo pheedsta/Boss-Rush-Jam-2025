@@ -13,6 +13,7 @@ namespace _App.Scripts.juandeyby
         {
             _navMeshAgent = worm.MeshAgent;
             _navMeshAgent.isStopped = false;
+            worm.WormAnimator.PlayWalk();
         }
 
         public void Update(Worm worm)

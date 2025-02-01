@@ -16,6 +16,8 @@ namespace _App.Scripts.juandeyby.UI
         public void Hide()
         {
             leanWindow.TurnOff();
+            
+            ServiceLocator.Get<MusicManager>().PlayBossMusic();
         }
 
         private void Update()

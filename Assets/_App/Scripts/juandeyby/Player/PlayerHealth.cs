@@ -6,6 +6,8 @@ namespace _App.Scripts.juandeyby
 {
     public class PlayerHealth : MonoBehaviour
     {
+        [SerializeField] private PlayerAnimator playerAnimator;
+        
         [SerializeField] private Transform spawnPointPhase1;
         [SerializeField] private Transform spawnPointPhase2;
         [SerializeField] private Transform spawnPointPhase3;
@@ -14,6 +16,7 @@ namespace _App.Scripts.juandeyby
         [SerializeField] private int maxHealth = 100;
         [SerializeField] private int health;
         public int Health => health;
+        private bool _isDead;
 
         private void Start()
         {
@@ -49,12 +52,12 @@ namespace _App.Scripts.juandeyby
         public void TakeDamage(int damage)
         {
             health -= damage;
-            if (health <= 0)
+            if (health <= 0 && _isDead == false)
             {
                 health = 0;
-                // Die();
+                _isDead = true;
+                playerAnimator.PlayTargetAnimation("Die", false);
             }
-            
             var uiValue = health / (float) maxHealth;
             UIServiceLocator.Get<UIManager>().HubPanel.PlayerHealth.SetHealth(uiValue);
         }

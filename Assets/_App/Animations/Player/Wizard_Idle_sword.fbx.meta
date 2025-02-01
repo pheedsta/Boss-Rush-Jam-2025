@@ -3,7 +3,42 @@ guid: 4c62ebdb98ac3784d8688e794102e953
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Model_Clean_rig_03_Body inside filler
+    second: {fileID: 2100000, guid: e89722b845428fe4db510bfa77f1e91e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Model_Clean_rig_03_Body meachnic part
+    second: {fileID: 2100000, guid: 172195b3bf47c0e4a827bb97ab5530b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Model_Clean_rig_03_Hat and Cape
+    second: {fileID: 2100000, guid: e7e9a3e56d1b2ac44b0a1e5d9d1b25d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Model_Clean_rig_03_Main Body base
+    second: {fileID: 2100000, guid: 74d3ddc36cea7f84081f7d3ab297ba80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lowPoly_sword_YS_2019_Sword_Steel
+    second: {fileID: 2100000, guid: 8cec90e7f8907ea499bd60f86b6ca1a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lowPoly_sword_YS_2019_sword_Hilt
+    second: {fileID: 2100000, guid: 16f751c81381e954a8394bee06c77b24, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lowPoly_sword_YS_2019_sword_leather
+    second: {fileID: 2100000, guid: 76e9d59c4a1727c4bb289a9ddeaf506e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -17,22 +52,7 @@ ModelImporter:
     removeConstantScaleCurves: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
-      might lower retargeting quality:\nNote: Activate translation DOF on avatar
-      to improve retargeting quality.\n\t'Model_Clean_rig_03:Spine1_M' has translation
-      animation that will be discarded.\n\t'Model_Clean_rig_03:Spine1_M' has scale
-      animation that will be discarded.\n\t'Model_Clean_rig_03:Spine2_M' has translation
-      animation that will be discarded.\n\t'Model_Clean_rig_03:Spine2_M' has scale
-      animation that will be discarded.\n\t'Model_Clean_rig_03:Chest_M' has translation
-      animation that will be discarded.\n\t'Model_Clean_rig_03:Scapula_R' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'Model_Clean_rig_03:ElbowPart1_R'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Model_Clean_rig_03:Scapula_L'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Model_Clean_rig_03:ElbowPart1_L'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Model_Clean_rig_03:HipPart1_R'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Model_Clean_rig_03:KneePart1_R'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Model_Clean_rig_03:HipPart1_L'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Model_Clean_rig_03:KneePart1_L'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0

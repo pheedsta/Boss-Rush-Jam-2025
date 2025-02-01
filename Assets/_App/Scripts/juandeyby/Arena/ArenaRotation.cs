@@ -13,6 +13,7 @@ namespace _App.Scripts.juandeyby
 
         private void Start()
         {
+            animator.enabled = false;
             ServiceLocator.Get<GameManager>().OnGamePhaseChanged += OnGamePhaseChanged;
         }
 
@@ -41,10 +42,8 @@ namespace _App.Scripts.juandeyby
 
         private void Update()
         {
-            Debug.Log("Update");
             if (_isRotating)
             {
-                Debug.Log("Rotate");
                 Rotate();
             }
         }
@@ -58,6 +57,7 @@ namespace _App.Scripts.juandeyby
     
     public enum Ring
     {
+        RingA,
         RingC,
         RingB,
     }

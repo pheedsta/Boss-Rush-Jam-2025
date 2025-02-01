@@ -12,6 +12,8 @@ namespace _App.Scripts.juandeyby
         
         [SerializeField] private PlayerCollection playerCollection;
         public PlayerCollection PlayerCollection => playerCollection;
+        [SerializeField] private PlayerGround playerGround;
+        public PlayerGround PlayerGround => playerGround;
         
         [Header("Player Settings")]
         [SerializeField] Transform spawnPoint;
@@ -28,7 +30,5 @@ namespace _App.Scripts.juandeyby
                 Destroy(gameObject);
             }
         }
-
-
     }
 }

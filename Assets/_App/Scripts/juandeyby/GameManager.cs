@@ -28,6 +28,12 @@ namespace _App.Scripts.juandeyby
             Pause();
         }
 
+        private void Start()
+        {
+            // Play the main menu music
+            ServiceLocator.Get<MusicManager>().PlayMainMusic();
+        }
+
         public void Pause()
         {
             Time.timeScale = 0;

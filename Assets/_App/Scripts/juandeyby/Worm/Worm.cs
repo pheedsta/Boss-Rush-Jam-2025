@@ -1,12 +1,15 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
 
 namespace _App.Scripts.juandeyby
 {
     public class Worm : MonoBehaviour
     {
-        [SerializeField] private NavMeshAgent _meshAgent;
-        public NavMeshAgent MeshAgent => _meshAgent;
+        [SerializeField] private WormAnimator wormAnimator;
+        public WormAnimator WormAnimator => wormAnimator;
+        [SerializeField] private NavMeshAgent meshAgent;
+        public NavMeshAgent MeshAgent => meshAgent;
         private IWormState _currentState;
 
         public void SetState(IWormState state)

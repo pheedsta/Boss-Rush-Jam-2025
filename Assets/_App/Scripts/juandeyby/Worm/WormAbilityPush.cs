@@ -44,8 +44,6 @@ namespace _App.Scripts.juandeyby
         {
             var player = Player.Instance;
             var direction = (player.transform.position - worm.transform.position).normalized;
-
-            direction.y = 0.5f;
             direction = direction.normalized;
 
             var playerLocomotion = player.GetComponent<PlayerLocomotion>();

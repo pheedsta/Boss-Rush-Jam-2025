@@ -12,6 +12,8 @@ namespace _App.Scripts.juandeyby
         
         [SerializeField] private PlayerCollection playerCollection;
         public PlayerCollection PlayerCollection => playerCollection;
+        [SerializeField] private PlayerGround playerGround;
+        public PlayerGround PlayerGround => playerGround;
         
         [Header("Player Settings")]
         [SerializeField] Transform spawnPoint;
@@ -26,16 +28,6 @@ namespace _App.Scripts.juandeyby
             else
             {
                 Destroy(gameObject);
-            }
-        }
-
-        private void Update()
-        {
-            if (transform.position.y < -10)
-            {
-                transform.position = spawnPoint.position;
-                transform.rotation = spawnPoint.rotation;
-                rb.linearVelocity = Vector3.zero;
             }
         }
     }

@@ -36,5 +36,10 @@ namespace _App.Scripts.juandeyby
         {
             animator.CrossFade("SweepingStrike", 0.1f);
         }
+
+        public void PlayDead()
+        {
+            animator.CrossFade("Dead", 0.1f);
+        }
     }
 }

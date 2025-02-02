@@ -1,0 +1,101 @@
+Event	ID	Name			Wwise Object Path	Notes
+	589300157	PortalSummon_Stop			\SFX\Enemy\Weapons\PortalSummon_Stop	
+	656877296	Stop_BossMusic			\Music\Stop_BossMusic	
+	658623236	FireSpell_Fire			\SFX\Player\Attack\Spells\FireSpell_Fire	
+	696315660	Set_LayerControl			\Music\Set_LayerControl	
+	890527358	Stop_MainMenu			\Music\Stop_MainMenu	
+	1054166863	FireSpell_Hit			\SFX\Player\Attack\Spells\FireSpell_Hit	
+	1114393929	Shards_Pickup			\SFX\Player\Misc\Shards_Pickup	
+	1631683011	FireSpell_FireBurn			\SFX\Player\Attack\Spells\FireSpell_FireBurn	
+	1651434072	SwordSlash_Draw			\SFX\Player\Attack\SwordSlash\SwordSlash_Draw	
+	1695950791	FireSpell_Burn			\SFX\Player\Attack\Spells\FireSpell_Burn	
+	1719332078	Hurt_Player			\SFX\Player\Misc\Hurt_Player	
+	1936185617	Test_Sound			\SFX\Test_Sound	
+	2097991953	VortexPull_Boss_Start			\SFX\Enemy\Weapons\VortexPull_Boss_Start	
+	2144487013	SwordSlash_Hit			\SFX\Player\Attack\SwordSlash\SwordSlash_Hit	
+	2584346859	Jump_Player			\SFX\Player\Movement\Jump_Player	
+	2594170985	Acid_SpraySizzle			\SFX\Enemy\Weapons\Acid_SpraySizzle	
+	2733481739	VortexPull_Boss_Stop			\SFX\Enemy\Weapons\VortexPull_Boss_Stop	
+	2782789220	Acid_Hit			\SFX\Enemy\Weapons\Acid_Hit	
+	2890568120	Health_Regenerate			\SFX\Player\Misc\Health_Regenerate	
+	2924361411	Play_Boss_Line_Phase1			\SFX\Dialogue\Play_Boss_Line_Phase1	
+	3181568868	SwordSlash_Whoosh			\SFX\Player\Attack\SwordSlash\SwordSlash_Whoosh	
+	3310374200	Acid_Sizzle			\SFX\Enemy\Weapons\Acid_Sizzle	
+	3367592642	FireSpell_Burn_Stop			\SFX\Player\Attack\Spells\FireSpell_Burn_Stop	
+	3463024606	Play_BossMusic			\Music\Play_BossMusic	
+	3573332599	Acid_Sizzle_Stop			\SFX\Enemy\Weapons\Acid_Sizzle_Stop	
+	3604213277	Play_BossDeath_Music			\Music\Play_BossDeath_Music	
+	3738780720	Play_MainMenu			\Music\Play_MainMenu	
+	4064282583	PortalSummon_Start			\SFX\Enemy\Weapons\PortalSummon_Start	
+	4204383620	Acid_Spray			\SFX\Enemy\Weapons\Acid_Spray	
+	4281377955	Dash_Player			\SFX\Player\Movement\Dash_Player	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	2012657067	New_State_Group			\Default Work Unit\New_State_Group	
+
+State	ID	Name	State Group			Notes
+	319258907	Paused	New_State_Group			
+	748895195	None	New_State_Group			
+	1852808225	Playing	New_State_Group			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1879554359	Layercontrol			\Default Work Unit\Layercontrol	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	3955584	JumpPlayer_04	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\73\{73762420-A7BB-378D-AA18-A93B2C6C149F}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Movement\Jump\JumpPlayer_04		7778
+	39525447	Test_Sound	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\E0\{E0B10291-C84C-19CC-1E00-D924BE82845C}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Environmental\Test_Sound		393382
+	59567599	SwordSlash_Whoosh_10	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\CA\{CAB6E4AF-610B-5125-7FC5-0907C70DEA42}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Whoosh\SwordSlash_Whoosh_10		5923
+	108155573	Acid_Spray_01	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\6B\{6B36DDCF-B500-5852-3F40-81C05BA6CF52}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Enemy\Weapons\Acid\Acid_Spray\Acid_Spray_01		15879
+	118299635	SwordSlash_Hit_04	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\DF\{DFC3A0F3-0653-B9F7-12D2-A698C317FD11}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Hit\SwordSlash_Hit_04		8246
+	214809757	JumpPlayer_01	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\B1\{B1135A3F-3E45-BD69-1531-7048ABCFDA53}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Movement\Jump\JumpPlayer_01		5642
+	235738653	Acid_Sizzle_01	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\84\{8409B3A3-F91D-6E2F-2644-745008DBDE28}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Enemy\Weapons\Acid\Acid_Sizzle\Acid_Sizzle_01		60504
+	244878740	Every soul	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\C0\{C0E7AB38-437E-18F3-EB33-FAC1F9F2B3F0}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Dialogue\Boss_Phase_1\Every soul		68178
+	298882402	FireSpell_Hit_01	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\62\{6275E1FC-B503-6EC2-26DE-DAA64C5CFB4C}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\Spells\FireSpell\FireSpell_Hit\FireSpell_Hit_01		15589
+	347026546	VortexPull_Boss_01	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\D0\{D0809DCD-A568-7E87-4AE1-DA7484941ACA}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Enemy\Weapons\VortexPull_Boss\VortexPull_Boss_01		90878
+	378458012	Dead_Boss	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\ED\{ED50100C-6C40-2DB7-93FB-FFC2F8BDD506}.wem		\Interactive Music Hierarchy\Boss-Rush-MUSIC\Death_Boss\Dead_Boss		300834
+	401117487	SwordSlash_Whoosh_01	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\C7\{C7233C97-86B9-7794-D642-E72E686FDAAB}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Whoosh\SwordSlash_Whoosh_01		9338
+	422536706	SwordSlash_Hit_01	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\7F\{7F5769D1-231B-F254-FD53-B5C06D30606C}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Hit\SwordSlash_Hit_01		11290
+	423370867	HurtPlayer_03	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\47\{47B12BC7-D415-F590-70D0-AFA7C43C30F9}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Misc\Hurt\HurtPlayer_03		6909
+	433441780	SwordSlash_Whoosh_09	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\E0\{E0357703-2949-8120-47FF-C8C883E4181A}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Whoosh\SwordSlash_Whoosh_09		5586
+	436423167	FireSpell_Fire_01	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\48\{48001333-EB07-EDF5-E2FD-7518DC025B93}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\Spells\FireSpell\FireSpell_Fire\FireSpell_Fire_01		16694
+	466370189	Mortal	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\18\{18D7C4D5-58F3-B047-F0A5-4BC4920460F2}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Dialogue\Boss_Phase_1\Mortal		30397
+	472636486	HurtPlayer_04	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\B3\{B3199102-5222-8A4F-08A9-AD25E86FDF9C}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Misc\Hurt\HurtPlayer_04		6240
+	478594435	TES_MainMenu_Gameplay	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\25\{257DA9AF-A4B0-E91F-1BD8-A4E887DCD567}.wem		\Interactive Music Hierarchy\Boss-Rush-MUSIC\MainMenu\TES_MainMenu_Gameplay\TES_MainMenu_Gameplay		279433
+	510844697	TES_Layer1	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\75\{75956046-FE54-146B-D239-F39F1956C239}.wem		\Interactive Music Hierarchy\Boss-Rush-MUSIC\New Music Playlist Container\New Music Segment\TES_Layer1		2232933
+	529920245	SwordSlash_Whoosh_02	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\DF\{DF200A74-3F72-07A7-A0FC-65EBCAE12E07}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Whoosh\SwordSlash_Whoosh_02		9870
+	548978409	PortalSummon_01	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\6B\{6B4A4061-ACE6-8A86-2D96-59A7AC7AEED1}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Enemy\Weapons\Portal Summon\PortalSummon_01		112649
+	563532479	SwordSlash_Hit_03	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\91\{91D6C8A8-9155-14DB-11F2-E85F02A84E63}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Hit\SwordSlash_Hit_03		9423
+	603019579	SwordSlash_Hit_02	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\9A\{9ADEA2C8-0AB0-1534-2A95-D47ACEBA3589}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Hit\SwordSlash_Hit_02		7278
+	609702374	TES_Layer3	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\34\{34857923-22AA-48FD-D0D7-885C6FCD7DC6}.wem		\Interactive Music Hierarchy\Boss-Rush-MUSIC\New Music Playlist Container\New Music Segment\TES_Layer3		1906572
+	611719745	SwordSlash_Whoosh_08	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\E6\{E6C102F5-9C92-A839-896F-28AE53330FBE}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Whoosh\SwordSlash_Whoosh_08		5519
+	619057983	FireSpell_Hit_02	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\F2\{F2888CC4-A633-9C52-D596-3BDAA8D55B65}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\Spells\FireSpell\FireSpell_Hit\FireSpell_Hit_02		15276
+	627166481	JumpPlayer_02	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\3F\{3FA9B863-7896-F400-4848-20725D021E54}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Movement\Jump\JumpPlayer_02		6395
+	628150378	SwordSlash_Draw_01	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\6A\{6A78645B-6BE3-0848-02A9-B076FF3B81C4}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Draw\SwordSlash_Draw_01		16963
+	641056015	VortexPull_Boss_End	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\6E\{6E863518-4A96-B79E-04B5-7B407A5DA244}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Enemy\Weapons\VortexPull_Boss\VortexPull_Boss_End		16837
+	643520808	JumpPlayer_03	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\46\{46C44031-8FEA-A74A-F401-85CB9B0F93E2}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Movement\Jump\JumpPlayer_03		6526
+	677623532	SwordSlash_Draw_04	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\CA\{CAC97E48-7920-43AE-036A-229AC6E37735}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Draw\SwordSlash_Draw_04		15757
+	693424491	SwordSlash_Draw_05	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\D7\{D7C93876-A344-BDC4-586C-4D0D4708ADA2}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Draw\SwordSlash_Draw_05		15178
+	699933523	TES_Layer2	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\1D\{1D51DCF1-29F6-037D-5BFD-C3DE7776984E}.wem		\Interactive Music Hierarchy\Boss-Rush-MUSIC\New Music Playlist Container\New Music Segment\TES_Layer2		1447314
+	719844841	Health_Regenerate_01	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\C3\{C3C42CCA-AF12-0B33-D18A-7F9209E10768}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Misc\HealthRegenerate\Health_Regenerate_01		43493
+	727541938	Acid_Spray_02	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\BC\{BC880F9E-B4D1-E017-9C9C-974F05D40913}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Enemy\Weapons\Acid\Acid_Spray\Acid_Spray_02		15075
+	748200115	SwordSlash_Whoosh_04	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\EC\{ECCDA79F-2F81-A3F0-35D6-5D858C9EF610}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Whoosh\SwordSlash_Whoosh_04		7226
+	792316907	HurtPlayer_01	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\BC\{BC1419AE-BFA4-EB6B-FFE9-E9B37DBE3DA1}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Misc\Hurt\HurtPlayer_01		7042
+	809984412	Shards_Pickup_01	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\4D\{4D183B92-B964-7A3E-13E4-21818F800142}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Misc\ShardsPickup\Shards_Pickup_01		9602
+	825916254	TES_Layer0	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\3F\{3F4D3ADE-1014-CE65-A926-07CFF782D153}.wem		\Interactive Music Hierarchy\Boss-Rush-MUSIC\New Music Playlist Container\New Music Segment\TES_Layer0		2048842
+	857535237	JumpPlayer_05	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\5D\{5D79D85B-6D0F-2055-14DF-01095A67B39C}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Movement\Jump\JumpPlayer_05		7043
+	888344127	SwordSlash_Whoosh_05	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\73\{7365A23D-9BDD-C49C-C029-D0260260A196}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Whoosh\SwordSlash_Whoosh_05		7791
+	891989968	SwordSlash_Hit_05	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\7A\{7A1FD0D4-EBE4-A05F-444D-9F2B14195C3F}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Hit\SwordSlash_Hit_05		7580
+	901910761	SwordSlash_Whoosh_03	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\4E\{4E4E71A2-0CB6-C899-30BE-6EBD1C2AC5B0}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Whoosh\SwordSlash_Whoosh_03		8832
+	910820392	HurtPlayer_02	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\69\{69D7A6AB-D338-FB5E-1F12-AD7D47DDAD9C}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Misc\Hurt\HurtPlayer_02		6943
+	930363931	You cannot defy	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\DD\{DDC2F733-68DE-68EE-A49D-0A631B388C8B}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Dialogue\Boss_Phase_1\You cannot defy		51408
+	967870706	DashPlayer_01	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\25\{2537C981-FB7F-7B32-6E3F-4F8270040F74}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Movement\Dash\DashPlayer_01		9967
+	990286089	FireSpell_Burn_01	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\47\{471272BA-DC54-DA23-220A-AC05CF869A98}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\Spells\FireSpell\FireSpell_Burn\FireSpell_Burn_01		99928
+	999116253	Acid_Hit_01	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\B4\{B4F12B64-6746-071B-6E5E-66EB96A594F3}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Enemy\Weapons\Acid\Acid_Hit\Acid_Hit_01		16258
+	1022690532	SwordSlash_Draw_03	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\0E\{0E29744B-D3F8-1544-FFE0-90A1C9430178}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Draw\SwordSlash_Draw_03		17280
+	1037413223	FireSpell_Burn_02	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\90\{90B148BB-0216-EE4E-136D-820358FE5755}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\Spells\FireSpell\FireSpell_Burn\FireSpell_Burn_02		106645
+	1043459733	SwordSlash_Whoosh_06	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\C9\{C901DC7B-B68A-1E41-DC71-6A2F6C20D51E}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Whoosh\SwordSlash_Whoosh_06		5904
+	1051423169	SwordSlash_Whoosh_07	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\1E\{1E639481-6B34-0C92-052A-9279F07F3196}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Whoosh\SwordSlash_Whoosh_07		5296
+	1054907133	SwordSlash_Hit_07	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\E0\{E013A838-537B-29D6-7B7D-BBC7A2791567}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Hit\SwordSlash_Hit_07		10056
+	1063209621	SwordSlash_Draw_02	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\01\{0178B468-312E-36AC-5974-FFBD22D59177}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Draw\SwordSlash_Draw_02		16724
+	1067549914	SwordSlash_Hit_06	Y:\Documents\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\CB\{CB36362E-0BA9-03B0-A2F8-9FB7A5C19194}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Hit\SwordSlash_Hit_06		10707
+

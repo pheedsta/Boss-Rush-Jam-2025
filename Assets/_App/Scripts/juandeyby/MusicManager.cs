@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
+using System.IO;
 using UnityEngine;
+using UnityEngine.Networking;
 
 namespace _App.Scripts.juandeyby
 {
@@ -17,6 +19,51 @@ namespace _App.Scripts.juandeyby
             ServiceLocator.Unregister<MusicManager>();
         }
 
+        private void Awake()
+        {
+            StartCoroutine(DownloadFile("https://raw.githubusercontent.com/andrewgioia/Random-Text-Generator/master/README.md"));
+        }
+
+        
+        private IEnumerator DownloadFile(string url)
+        {
+            // Realizar la solicitud para descargar el archivo
+            UnityWebRequest request = UnityWebRequest.Get(url);
+
+            // Esperar hasta que la descarga termine
+            yield return request.SendWebRequest();
+
+            // Comprobar si hubo algún error
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                // Ruta de destino en persistentDataPath con la estructura de carpetas deseada
+                string folderPath = Path.Combine(Application.persistentDataPath, "Audio/GeneratedSoundBanks/Web");
+            
+                // Crear las carpetas necesarias si no existen
+                if (!Directory.Exists(folderPath))
+                {
+                    Directory.CreateDirectory(folderPath);
+                }
+
+                // Nombre del archivo a guardar
+                string fileName = "downloadedFile.txt";  // Puedes cambiar esto según sea necesario
+                string filePath = Path.Combine(folderPath, fileName);
+
+                // Escribir los datos descargados en el archivo
+                File.WriteAllBytes(filePath, request.downloadHandler.data);
+
+                Debug.Log("Archivo descargado y guardado en: " + filePath);
+
+                // Cargar el archivo (si es necesario)
+                string text = File.ReadAllText(filePath);
+                Debug.Log("Texto cargado: " + text);
+            }
+            else
+            {
+                Debug.LogError("Error en la descarga: " + request.error);
+            }
+        }
+        
         private void Start()
         {
             ServiceLocator.Get<GameManager>().OnGamePhaseChanged += OnGamePhaseChanged;

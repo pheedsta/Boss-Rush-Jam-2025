@@ -15,5 +15,5 @@ MonoBehaviour:
   objectName: VortexPull_Boss_Start
   id: 2097991953
   guid: 699FF2BE-F0FF-4DCC-806B-67BD86BF79BB
-  IsInUserDefinedSoundBank: 0
+  IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

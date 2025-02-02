@@ -25,7 +25,7 @@ namespace _App.Scripts.juandeyby.Boss
             
             if (_timer >= duration)
             {
-                boss.SetState(new BossWanderState());
+                boss.SetState(new BossChaseState());
             }
         }
         

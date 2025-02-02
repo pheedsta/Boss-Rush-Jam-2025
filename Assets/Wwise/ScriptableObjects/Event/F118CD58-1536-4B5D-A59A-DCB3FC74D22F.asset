@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d178a15070e44505b248b7d271bcc57, type: 3}
-  m_Name: 91E961BF-1B12-4607-B93C-21E3154DA67A
+  m_Name: F118CD58-1536-4B5D-A59A-DCB3FC74D22F
   m_EditorClassIdentifier: 
-  objectName: FireSpell_Burn
-  id: 1695950791
-  guid: 91E961BF-1B12-4607-B93C-21E3154DA67A
+  objectName: Set_LayerControl
+  id: 696315660
+  guid: F118CD58-1536-4B5D-A59A-DCB3FC74D22F
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

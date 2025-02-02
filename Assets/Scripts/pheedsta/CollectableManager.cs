@@ -49,6 +49,18 @@ public class CollectableManager : MonoBehaviour
         ServiceLocator.Register<CollectableManager>(this);
     }
 
+    private void Start()
+    {
+        ServiceLocator.Get<GameManager>().OnGamePhaseChanged += OnGamePhaseChanged;
+    }
+
+    private void OnGamePhaseChanged(GamePhase phase)
+    {
+        foreach (var collectable in _collectables) {
+            collectable.transform.position = GetPosition();
+        }
+    }
+
     private void Awake()
     {
         // create collectable hearts
@@ -135,11 +147,11 @@ public class CollectableManager : MonoBehaviour
                 break;
             case GamePhase.Phase2:
                 innerRadius = 18f;
-                outerRadius = 21f;
+                outerRadius = 23f;
                 break;
             case GamePhase.Phase1:
-                innerRadius = 24f;
-                outerRadius = 27f;
+                innerRadius = 26f;
+                outerRadius = 31f;
                 break;
         }
 

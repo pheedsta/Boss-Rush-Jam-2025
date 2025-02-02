@@ -22,6 +22,8 @@ namespace _App.Scripts.juandeyby
         private float _moveAmount;
 
         [SerializeField] private bool jumpInput;
+        [SerializeField] private bool attackInput;
+        [SerializeField] private bool specialInput;
 
         private void OnEnable()
         {
@@ -35,6 +37,8 @@ namespace _App.Scripts.juandeyby
                 _inputActions.Player.Look.canceled += i => cameraInput = Vector2.zero;
                 
                 _inputActions.Player.Jump.performed += i => jumpInput = true;
+                _inputActions.Player.Attack.performed += i => attackInput = true;
+                _inputActions.Player.Special.performed += i => specialInput = true;
             }
             _inputActions.Enable();
         }
@@ -48,7 +52,8 @@ namespace _App.Scripts.juandeyby
         {
             HandleMovementInput();
             HandleJumpInput();
-            // HandleAttackInput();
+            HandleAttackInput();
+            HandleSpecialInput();
         }
         
         private void HandleMovementInput()
@@ -69,6 +74,24 @@ namespace _App.Scripts.juandeyby
             {
                 jumpInput = false;
                 playerLocomotion.HandleJumping();
+            }
+        }
+        
+        private void HandleAttackInput()
+        {
+            if (attackInput)
+            {
+                attackInput = false;
+                playerLocomotion.HandleAttack();
+            }
+        }
+        
+        private void HandleSpecialInput()
+        {
+            if (specialInput)
+            {
+                specialInput = false;
+                playerLocomotion.HandleSpecial();
             }
         }
     }

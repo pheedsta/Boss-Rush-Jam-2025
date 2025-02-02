@@ -19,6 +19,7 @@ namespace _App.Scripts.juandeyby
             if (Physics.Raycast(worm.transform.position, Vector3.down, out var hit, 1.5f))
             {
                 Debug.DrawRay(worm.transform.position, Vector3.down * 1.5f, Color.red);
+                worm.WormAnimator.PlayStandUp();
                 worm.SetState(new WormChaseState());
             }
         }

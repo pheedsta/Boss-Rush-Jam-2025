@@ -14,8 +14,8 @@ namespace _App.Scripts.juandeyby
         {
             _timer = 0f;
             worm.MeshAgent.isStopped = true;
-            ApplyForcePush(worm);
             
+            ApplyForcePush(worm);
             // worm.PlayForsePushEffect();
         }
 
@@ -44,11 +44,10 @@ namespace _App.Scripts.juandeyby
         {
             var player = Player.Instance;
             var direction = (player.transform.position - worm.transform.position).normalized;
-
-            direction.y = 1f;
             direction = direction.normalized;
 
-            // player.Stroke(direction, force);
+            var playerLocomotion = player.GetComponent<PlayerLocomotion>();
+            playerLocomotion.Stroke(direction, force);
         }
     }
 }

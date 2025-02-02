@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - CinemachineTarget
+  - Sword
+  - A
+  - B
+  - C
   layers:
   - Default
   - TransparentFX
@@ -15,7 +19,7 @@ TagManager:
   - Platform
   - Player
   - Enemy
-  - 
+  - Ground
   - 
   - 
   - 

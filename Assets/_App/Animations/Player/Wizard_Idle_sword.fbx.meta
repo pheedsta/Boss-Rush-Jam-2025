@@ -1,0 +1,1531 @@
+fileFormatVersion: 2
+guid: 4c62ebdb98ac3784d8688e794102e953
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Model_Clean_rig_03_Body inside filler
+    second: {fileID: 2100000, guid: e89722b845428fe4db510bfa77f1e91e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Model_Clean_rig_03_Body meachnic part
+    second: {fileID: 2100000, guid: 172195b3bf47c0e4a827bb97ab5530b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Model_Clean_rig_03_Hat and Cape
+    second: {fileID: 2100000, guid: e7e9a3e56d1b2ac44b0a1e5d9d1b25d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Model_Clean_rig_03_Main Body base
+    second: {fileID: 2100000, guid: 74d3ddc36cea7f84081f7d3ab297ba80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lowPoly_sword_YS_2019_Sword_Steel
+    second: {fileID: 2100000, guid: 8cec90e7f8907ea499bd60f86b6ca1a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lowPoly_sword_YS_2019_sword_Hilt
+    second: {fileID: 2100000, guid: 16f751c81381e954a8394bee06c77b24, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lowPoly_sword_YS_2019_sword_leather
+    second: {fileID: 2100000, guid: 76e9d59c4a1727c4bb289a9ddeaf506e, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      internalID: 1827226128182048838
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: Wizard_Idle_sword(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ReLight_Grp
+      parentName: Wizard_Idle_sword(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ReLight_Follow_Grp
+      parentName: ReLight_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ReLight_Di_Rim
+      parentName: ReLight_Follow_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.6777414, y: 0.4525936, z: 0.23461424, w: 0.52988845}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ReLight_Di_Specular
+      parentName: ReLight_Follow_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.34012026, y: -0.33623216, z: -0.2606694, w: 0.8386403}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ReLight_Amb
+      parentName: ReLight_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ReLight_Di_Key
+      parentName: ReLight_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.33011863, y: 0.8589052, z: -0.030250149, w: -0.3903697}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Group
+      parentName: Wizard_Idle_sword(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:MotionSystem
+      parentName: Model_Clean_rig_03:Group
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:RootSystem
+      parentName: Model_Clean_rig_03:MotionSystem
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:FKOffsetroot_M
+      parentName: Model_Clean_rig_03:RootSystem
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:FKFollowroot_M
+      parentName: Model_Clean_rig_03:FKOffsetroot_M
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:FKExtraroot_M
+      parentName: Model_Clean_rig_03:FKFollowroot_M
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:FKroot_M
+      parentName: Model_Clean_rig_03:FKExtraroot_M
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:DeformationSystem
+      parentName: Model_Clean_rig_03:Group
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:root
+      parentName: Model_Clean_rig_03:DeformationSystem
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Root_M
+      parentName: Model_Clean_rig_03:root
+      position: {x: 0.000000059604645, y: 6.6910696, z: 0.7342317}
+      rotation: {x: 0.46845332, y: -0.52967113, z: -0.46845332, w: 0.5296712}
+      scale: {x: 1.0000002, y: 1.0000015, z: 1.0000036}
+    - name: Model_Clean_rig_03:Spine1_M
+      parentName: Model_Clean_rig_03:Root_M
+      position: {x: -1.1074764, y: -0.07792869, z: 0.16298337}
+      rotation: {x: -0.000000029802319, y: -0, z: -0.03515401, w: 0.9993819}
+      scale: {x: 1.0226088, y: 1.0226079, z: 1.0226071}
+    - name: Model_Clean_rig_03:Spine2_M
+      parentName: Model_Clean_rig_03:Spine1_M
+      position: {x: -0.94205254, y: 0.00042086307, z: -0.0011400803}
+      rotation: {x: 0.000000091412815, y: -0.00000005570202, z: -0.024277225, w: 0.99970526}
+      scale: {x: 1.0226085, y: 1.0226084, z: 1.0226067}
+    - name: Model_Clean_rig_03:Chest_M
+      parentName: Model_Clean_rig_03:Spine2_M
+      position: {x: -0.8823823, y: -0.0022277331, z: -0.005918246}
+      rotation: {x: 0.00000009184836, y: 0.000000040409997, z: 0.08187093, w: -0.99664295}
+      scale: {x: 1.0000004, y: 0.9999999, z: 1.0000011}
+    - name: Model_Clean_rig_03:Tail0_M
+      parentName: Model_Clean_rig_03:Chest_M
+      position: {x: -1.25664, y: -1.1313384, z: -0.0114287855}
+      rotation: {x: -0.13582103, y: -0.99073344, z: 0.000000010649187, w: -0.000000013315612}
+      scale: {x: 1.0000026, y: 1.0000026, z: 1.0000015}
+    - name: Model_Clean_rig_03:Tail1_M
+      parentName: Model_Clean_rig_03:Tail0_M
+      position: {x: -1.0174723, y: 0.024483299, z: -0.047424573}
+      rotation: {x: -0.00000007594515, y: 0.00000012320879, z: -0.17102608, w: 0.98526657}
+      scale: {x: 0.9999987, y: 0.9999995, z: 1.0000001}
+    - name: Model_Clean_rig_03:Tail2_M
+      parentName: Model_Clean_rig_03:Tail1_M
+      position: {x: -2.282591, y: 0.089478, z: -0.03523984}
+      rotation: {x: 0.00000005307352, y: -0.0000000645952, z: -0.016338542, w: 0.9998666}
+      scale: {x: 1.0000021, y: 1.0000039, z: 1.0000023}
+    - name: Model_Clean_rig_03:Tail3_M
+      parentName: Model_Clean_rig_03:Tail2_M
+      position: {x: -0.38096735, y: 1.1368684e-15, z: -2.842171e-16}
+      rotation: {x: -0.0000000836752, y: 0.000000067347344, z: 0.0008551085, w: 0.99999964}
+      scale: {x: 1.0000007, y: 1.0000004, z: 1.0000008}
+    - name: Model_Clean_rig_03:Tail4_M
+      parentName: Model_Clean_rig_03:Tail3_M
+      position: {x: -2.4067867, y: -1.08002494e-14, z: 1.4210854e-15}
+      rotation: {x: 0.00000007149595, y: -0.00000003660778, z: 0.0023456225, w: 0.9999973}
+      scale: {x: 1.0000108, y: 1.0000108, z: 1.0000073}
+    - name: Model_Clean_rig_03:Tail5_M
+      parentName: Model_Clean_rig_03:Tail4_M
+      position: {x: -2.5191846, y: 0.21951778, z: 0.1496273}
+      rotation: {x: 0.000000012284931, y: -0.00000003118114, z: 0.0072434032, w: 0.9999738}
+      scale: {x: 1.0000019, y: 1.0000025, z: 1.0000031}
+    - name: Model_Clean_rig_03:Tail6_M
+      parentName: Model_Clean_rig_03:Tail5_M
+      position: {x: -2.5460274, y: -1.1368683e-14, z: -4.263256e-15}
+      rotation: {x: -0, y: -0, z: 3.8305818e-16, w: 1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000002}
+    - name: Model_Clean_rig_03:Neck_M
+      parentName: Model_Clean_rig_03:Chest_M
+      position: {x: -1.3406434, y: 1.7053025e-15, z: 3.126388e-15}
+      rotation: {x: -0.000000101697246, y: -0.00000007690966, z: 0.08478812, w: -0.996399}
+      scale: {x: 0.9999996, y: 0.9999999, z: 0.999999}
+    - name: Model_Clean_rig_03:Head_M
+      parentName: Model_Clean_rig_03:Neck_M
+      position: {x: -0.78206986, y: 0, z: -4.2632563e-16}
+      rotation: {x: -0.000000062645654, y: 0.00000002848271, z: 0.13749367, w: 0.9905027}
+      scale: {x: 1.000002, y: 1.0000025, z: 1.0000026}
+    - name: Model_Clean_rig_03:HeadEnd_M
+      parentName: Model_Clean_rig_03:Head_M
+      position: {x: -1.8604323, y: 0, z: 0}
+      rotation: {x: -0, y: -0, z: 1.7843177e-15, w: 1}
+      scale: {x: 1.0000008, y: 1.0000014, z: 1.000001}
+    - name: Model_Clean_rig_03:Eye_R
+      parentName: Model_Clean_rig_03:Head_M
+      position: {x: -1.2687511, y: 0.8040705, z: -0.69656044}
+      rotation: {x: -0.000000028943916, y: 0.000000016721772, z: 0.7071067, w: -0.7071068}
+      scale: {x: 1.0000008, y: 1.0000005, z: 1.0000008}
+    - name: Model_Clean_rig_03:EyeEnd_R
+      parentName: Model_Clean_rig_03:Eye_R
+      position: {x: -0.13061532, y: 0, z: 0}
+      rotation: {x: -0, y: -0, z: 4.8399357e-16, w: 1}
+      scale: {x: 1.0000004, y: 1.0000018, z: 1.0000011}
+    - name: Model_Clean_rig_03:Hat1_M
+      parentName: Model_Clean_rig_03:Head_M
+      position: {x: -1.8491393, y: -0.25099427, z: -3.9790393e-15}
+      rotation: {x: -0.34518075, y: 0.32695675, z: 0.63870484, w: 0.6049841}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000004}
+    - name: Model_Clean_rig_03:Hat2_R
+      parentName: Model_Clean_rig_03:Hat1_M
+      position: {x: -0.000000008499528, y: 2.0584276, z: -0.82446194}
+      rotation: {x: -0.12250972, y: 0.69641334, z: 0.12250971, w: -0.6964132}
+      scale: {x: 1.0000001, y: 0.9999998, z: 1.0000004}
+    - name: Model_Clean_rig_03:Hat3_R
+      parentName: Model_Clean_rig_03:Hat2_R
+      position: {x: -1.6820632, y: -0.000000033335343, z: -8.3008506e-10}
+      rotation: {x: -0.00000004470348, y: -0.000000059604638, z: 0.268441, w: 0.9632961}
+      scale: {x: 1.0000005, y: 0.9999999, z: 1.0000005}
+    - name: Model_Clean_rig_03:Hat4_R
+      parentName: Model_Clean_rig_03:Hat3_R
+      position: {x: -3.0397801, y: 0, z: 0}
+      rotation: {x: 3.5527133e-15, y: -0, z: -2.6645348e-15, w: 1}
+      scale: {x: 1.0000001, y: 0.9999998, z: 1.0000002}
+    - name: Model_Clean_rig_03:Eye_L
+      parentName: Model_Clean_rig_03:Head_M
+      position: {x: -1.2687511, y: 0.8040705, z: 0.69656044}
+      rotation: {x: -0.000000028943916, y: 0.000000016721772, z: 0.7071067, w: -0.7071068}
+      scale: {x: 1.0000008, y: 1.0000005, z: 1.0000008}
+    - name: Model_Clean_rig_03:EyeEnd_L
+      parentName: Model_Clean_rig_03:Eye_L
+      position: {x: -0.13061532, y: 0, z: 0}
+      rotation: {x: -0, y: -0, z: 4.8399357e-16, w: 1}
+      scale: {x: 1.0000004, y: 1.0000018, z: 1.0000011}
+    - name: Model_Clean_rig_03:Jaw_M
+      parentName: Model_Clean_rig_03:Head_M
+      position: {x: 0.21470809, y: 0.3099957, z: 4.2632563e-16}
+      rotation: {x: 0.000000043456918, y: 0.000000015372747, z: -0.86486983, w: 0.5019961}
+      scale: {x: 0.99999934, y: 0.9999999, z: 0.9999997}
+    - name: Model_Clean_rig_03:JawEnd_M
+      parentName: Model_Clean_rig_03:Jaw_M
+      position: {x: -0.56949157, y: 0, z: 0}
+      rotation: {x: 1.7763568e-15, y: -3.5527137e-15, z: -6.680523e-16, w: 1}
+      scale: {x: 0.9999997, y: 1.0000004, z: 0.9999999}
+    - name: Model_Clean_rig_03:Scapula_L
+      parentName: Model_Clean_rig_03:Chest_M
+      position: {x: -0.5770692, y: 0.22917785, z: 0.9479619}
+      rotation: {x: 0.77391547, y: 0.045297567, z: 0.6309447, w: -0.030196633}
+      scale: {x: 1.0000092, y: 1.0000064, z: 1.0000048}
+    - name: Model_Clean_rig_03:Shoulder_L
+      parentName: Model_Clean_rig_03:Scapula_L
+      position: {x: 0.97329533, y: -4.291678e-14, z: 1.1368684e-15}
+      rotation: {x: -0.061162814, y: -0.03599012, z: -0.061263848, w: 0.9955956}
+      scale: {x: 1.0000061, y: 0.99999815, z: 1.0000025}
+    - name: Model_Clean_rig_03:ShoulderPart1_L
+      parentName: Model_Clean_rig_03:Shoulder_L
+      position: {x: 1.2112832, y: 5.684342e-16, z: 0}
+      rotation: {x: 0.000000029802319, y: 0.101956606, z: 0.061509367, w: 0.9928855}
+      scale: {x: 1.0000038, y: 1.0000025, z: 1.0000012}
+    - name: Model_Clean_rig_03:Elbow_L
+      parentName: Model_Clean_rig_03:ShoulderPart1_L
+      position: {x: 1.2112832, y: 0, z: 2.2737367e-15}
+      rotation: {x: 0.0060588038, y: 0.026868442, z: -0.012786285, w: 0.9995389}
+      scale: {x: 1.0000058, y: 0.9999989, z: 1.000003}
+    - name: Model_Clean_rig_03:ElbowPart1_L
+      parentName: Model_Clean_rig_03:Elbow_L
+      position: {x: 2.0225525, y: -2.9842794e-15, z: 0}
+      rotation: {x: -0.0000000137166065, y: -0.000000006912104, z: 0.000000029802319, w: 1}
+      scale: {x: 1.0000229, y: 1.000008, z: 1.000014}
+    - name: Model_Clean_rig_03:Wrist_L
+      parentName: Model_Clean_rig_03:ElbowPart1_L
+      position: {x: 2.0225525, y: -1.563194e-15, z: -2.2737367e-15}
+      rotation: {x: -0.07299652, y: -0.037123784, z: -0.30024928, w: -0.9503387}
+      scale: {x: 0.999956, y: 1.0000309, z: 1.0000093}
+    - name: Model_Clean_rig_03:ThumbFinger1_L
+      parentName: Model_Clean_rig_03:Wrist_L
+      position: {x: -0.15336186, y: -0.5353677, z: 0.19643088}
+      rotation: {x: 0.39186135, y: -0.10895412, z: 0.3895376, w: -0.82633775}
+      scale: {x: 0.99997133, y: 1.0000205, z: 1.0000081}
+    - name: Model_Clean_rig_03:ThumbFinger2_L
+      parentName: Model_Clean_rig_03:ThumbFinger1_L
+      position: {x: 0.47264078, y: -2.2737367e-15, z: -3.410605e-15}
+      rotation: {x: 0.090731815, y: -0.039108586, z: -0.008700015, w: 0.99506915}
+      scale: {x: 1.0000035, y: 1.0000077, z: 0.9999958}
+    - name: Model_Clean_rig_03:ThumbFinger3_L
+      parentName: Model_Clean_rig_03:ThumbFinger2_L
+      position: {x: 0.47205874, y: 5.684342e-16, z: 2.8421708e-15}
+      rotation: {x: -0.000000618398, y: -0.00000016018744, z: 0.039500397, w: 0.99921954}
+      scale: {x: 1.0000001, y: 0.99999994, z: 0.99999994}
+    - name: Model_Clean_rig_03:ThumbFinger4_L
+      parentName: Model_Clean_rig_03:ThumbFinger3_L
+      position: {x: 0.44756597, y: 0, z: 0}
+      rotation: {x: -0, y: -1.4210851e-14, z: 0.000000007450574, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: Model_Clean_rig_03:MiddleFinger1_L
+      parentName: Model_Clean_rig_03:Wrist_L
+      position: {x: 0.52451116, y: 1.7337242e-13, z: 1.16529e-13}
+      rotation: {x: 0.25983956, y: -0.03657135, z: 0.009875762, w: 0.9649085}
+      scale: {x: 0.99998873, y: 1.0000126, z: 1.0000001}
+    - name: Model_Clean_rig_03:MiddleFinger2_L
+      parentName: Model_Clean_rig_03:MiddleFinger1_L
+      position: {x: 0.4827677, y: 2.2737367e-15, z: 7.389644e-15}
+      rotation: {x: 0.00031939152, y: 0.032436732, z: 0.00002274057, w: 0.99947375}
+      scale: {x: 1.0000088, y: 1.0000007, z: 0.9999938}
+    - name: Model_Clean_rig_03:MiddleFinger3_L
+      parentName: Model_Clean_rig_03:MiddleFinger2_L
+      position: {x: 0.40268752, y: -1.1368684e-15, z: -4.263256e-15}
+      rotation: {x: 0.00046592095, y: 0.010409534, z: -0.0000008837342, w: 0.99994576}
+      scale: {x: 1.0000002, y: 1.0000012, z: 0.9999996}
+    - name: Model_Clean_rig_03:MiddleFinger4_L
+      parentName: Model_Clean_rig_03:MiddleFinger3_L
+      position: {x: 0.50793594, y: 0, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000007, z: 0.9999998}
+    - name: Model_Clean_rig_03:IndexFinger1_L
+      parentName: Model_Clean_rig_03:Wrist_L
+      position: {x: 0.5482361, y: -0.24592315, z: -0.053789053}
+      rotation: {x: 0.13590565, y: 0.0040238197, z: 0.03196658, w: 0.9901978}
+      scale: {x: 1.0000097, y: 1.0000035, z: 0.99998814}
+    - name: Model_Clean_rig_03:IndexFinger2_L
+      parentName: Model_Clean_rig_03:IndexFinger1_L
+      position: {x: 0.5503059, y: -3.410605e-15, z: -5.684342e-16}
+      rotation: {x: -0.000014021991, y: 0.03506639, z: -0.0004012733, w: 0.99938494}
+      scale: {x: 1.0000051, y: 1.0000013, z: 0.9999976}
+    - name: Model_Clean_rig_03:IndexFinger3_L
+      parentName: Model_Clean_rig_03:IndexFinger2_L
+      position: {x: 0.4433138, y: -2.2737367e-15, z: 0}
+      rotation: {x: -0.014282469, y: 0.015188932, z: 0.00004330191, w: 0.9997827}
+      scale: {x: 1.0000002, y: 1.0000006, z: 1.0000001}
+    - name: Model_Clean_rig_03:IndexFinger4_L
+      parentName: Model_Clean_rig_03:IndexFinger3_L
+      position: {x: 0.39881495, y: 0, z: 0}
+      rotation: {x: 0.00000006891787, y: 0.00000008754432, z: -0.000000052139512, w: 1}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1.0000005}
+    - name: Model_Clean_rig_03:RingFinger1_L
+      parentName: Model_Clean_rig_03:Wrist_L
+      position: {x: 0.45888957, y: 0.09894143, z: 0.17434217}
+      rotation: {x: 0.35660768, y: -0.032690655, z: 0.07242534, w: 0.9308688}
+      scale: {x: 0.999999, y: 1.0000178, z: 0.99998844}
+    - name: Model_Clean_rig_03:RingFinger2_L
+      parentName: Model_Clean_rig_03:RingFinger1_L
+      position: {x: 0.6117999, y: 4.5474734e-15, z: 2.842171e-16}
+      rotation: {x: -0.0024666486, y: 0.020437667, z: 0.00009188427, w: 0.99978817}
+      scale: {x: 1.0000004, y: 1.000001, z: 1.0000007}
+    - name: Model_Clean_rig_03:RingFinger3_L
+      parentName: Model_Clean_rig_03:RingFinger2_L
+      position: {x: 0.48268318, y: 2.2737367e-15, z: 2.8421708e-15}
+      rotation: {x: 0.0049400087, y: 0.010442123, z: 0.00002127164, w: 0.99993336}
+      scale: {x: 1.0000007, y: 1.0000007, z: 1}
+    - name: Model_Clean_rig_03:RingFinger4_L
+      parentName: Model_Clean_rig_03:RingFinger3_L
+      position: {x: 0.41261435, y: 0, z: 0}
+      rotation: {x: -0.000000028405328, y: 0.00000006519256, z: -0.000000042033193, w: 1}
+      scale: {x: 1.0000006, y: 1.0000006, z: 0.99999994}
+    - name: Model_Clean_rig_03:PinkyFinger1_L
+      parentName: Model_Clean_rig_03:Wrist_L
+      position: {x: 0.5433979, y: -0.010989091, z: 0.43567365}
+      rotation: {x: 0.198337, y: 0.0652345, z: 0.01926174, w: -0.9777709}
+      scale: {x: 0.9999269, y: 1.0000386, z: 1.000034}
+    - name: Model_Clean_rig_03:PinkyFinger2_L
+      parentName: Model_Clean_rig_03:PinkyFinger1_L
+      position: {x: 0.17790349, y: 5.4001247e-15, z: 8.242295e-14}
+      rotation: {x: 0.0023266673, y: 0.0062767565, z: 0.00028592348, w: 0.9999776}
+      scale: {x: 1.0000017, y: 1.0000007, z: 1.0000014}
+    - name: Model_Clean_rig_03:PinkyFinger3_L
+      parentName: Model_Clean_rig_03:PinkyFinger2_L
+      position: {x: 0.10877722, y: 7.958079e-15, z: 3.8085088e-14}
+      rotation: {x: 0.018705364, y: 0.05022922, z: 0.0012290453, w: 0.99856186}
+      scale: {x: 1.0000019, y: 0.99999964, z: 1.0000004}
+    - name: Model_Clean_rig_03:PinkyFinger4_L
+      parentName: Model_Clean_rig_03:PinkyFinger3_L
+      position: {x: 0.13600692, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Scapula_R
+      parentName: Model_Clean_rig_03:Chest_M
+      position: {x: -0.5770692, y: 0.22917785, z: -0.9479619}
+      rotation: {x: 0.045297597, y: -0.77391523, z: 0.030196534, w: 0.6309449}
+      scale: {x: 1.000002, y: 1.0000037, z: 1.0000019}
+    - name: Model_Clean_rig_03:Shoulder_R
+      parentName: Model_Clean_rig_03:Scapula_R
+      position: {x: -0.97329533, y: 4.4337865e-14, z: -2.2737367e-15}
+      rotation: {x: -0.061162807, y: -0.035990175, z: -0.06126385, w: 0.9955956}
+      scale: {x: 1.0000039, y: 1.0000026, z: 1.0000006}
+    - name: Model_Clean_rig_03:ShoulderPart1_R
+      parentName: Model_Clean_rig_03:Shoulder_R
+      position: {x: -1.2112832, y: -1.1368684e-15, z: 4.5474734e-15}
+      rotation: {x: 0.000000059604645, y: 0.10195668, z: 0.061509848, w: 0.9928854}
+      scale: {x: 1.000004, y: 1.0000017, z: 1.0000018}
+    - name: Model_Clean_rig_03:Elbow_R
+      parentName: Model_Clean_rig_03:ShoulderPart1_R
+      position: {x: -1.2112832, y: 1.1368684e-15, z: 3.410605e-15}
+      rotation: {x: 0.0060590114, y: 0.026868101, z: -0.012785124, w: 0.9995389}
+      scale: {x: 1.0000045, y: 1.0000012, z: 1.0000029}
+    - name: Model_Clean_rig_03:ElbowPart1_R
+      parentName: Model_Clean_rig_03:Elbow_R
+      position: {x: -2.0225525, y: 5.684342e-16, z: 1.1368684e-15}
+      rotation: {x: -0.00000010022142, y: 0.000000004130758, z: -2.9388564e-15, w: 1}
+      scale: {x: 1.0000048, y: 1.0000031, z: 1.000002}
+    - name: Model_Clean_rig_03:Wrist_R
+      parentName: Model_Clean_rig_03:ElbowPart1_R
+      position: {x: -2.0225525, y: 1.1368684e-15, z: 0}
+      rotation: {x: 0.07299563, y: 0.037120413, z: 0.30024925, w: 0.95033896}
+      scale: {x: 0.9999997, y: 1.0000063, z: 1.0000104}
+    - name: Model_Clean_rig_03:ThumbFinger1_R
+      parentName: Model_Clean_rig_03:Wrist_R
+      position: {x: 0.15336186, y: 0.5353677, z: -0.19643088}
+      rotation: {x: -0.39186254, y: 0.10896074, z: -0.38953453, w: 0.8263379}
+      scale: {x: 0.99997854, y: 1.0000166, z: 1.0000064}
+    - name: Model_Clean_rig_03:ThumbFinger2_R
+      parentName: Model_Clean_rig_03:ThumbFinger1_R
+      position: {x: -0.47264078, y: 5.6843415e-15, z: 2.2737367e-15}
+      rotation: {x: 0.090730995, y: -0.039107807, z: -0.008701004, w: 0.9950692}
+      scale: {x: 0.99999946, y: 0.9999997, z: 1.0000021}
+    - name: Model_Clean_rig_03:ThumbFinger3_R
+      parentName: Model_Clean_rig_03:ThumbFinger2_R
+      position: {x: -0.47205874, y: 2.2737367e-15, z: 1.1368684e-15}
+      rotation: {x: 0.000000014901154, y: -0.00000029802308, z: 0.039502293, w: 0.9992195}
+      scale: {x: 1.0000008, y: 1.0000001, z: 1.0000004}
+    - name: Model_Clean_rig_03:ThumbFinger4_R
+      parentName: Model_Clean_rig_03:ThumbFinger3_R
+      position: {x: -0.44756597, y: 0, z: 0}
+      rotation: {x: -0, y: -0, z: -4.274356e-14, w: 1}
+      scale: {x: 1.0000002, y: 1.0000005, z: 0.9999996}
+    - name: Model_Clean_rig_03:MiddleFinger1_R
+      parentName: Model_Clean_rig_03:Wrist_R
+      position: {x: -0.52451116, y: -1.7394086e-13, z: -1.1937117e-13}
+      rotation: {x: 0.25983945, y: -0.036571402, z: 0.00987582, w: 0.96490854}
+      scale: {x: 1.0000025, y: 1.0000213, z: 0.9999882}
+    - name: Model_Clean_rig_03:MiddleFinger2_R
+      parentName: Model_Clean_rig_03:MiddleFinger1_R
+      position: {x: -0.4827677, y: -1.1368684e-15, z: -4.636291e-15}
+      rotation: {x: 0.00031957033, y: 0.032436796, z: 0.000022680035, w: 0.99947375}
+      scale: {x: 1.0000049, y: 0.99999905, z: 1.0000015}
+    - name: Model_Clean_rig_03:MiddleFinger3_R
+      parentName: Model_Clean_rig_03:MiddleFinger2_R
+      position: {x: -0.40268752, y: 2.2737367e-15, z: 3.410605e-15}
+      rotation: {x: 0.00046583582, y: 0.010409571, z: -0.0000009901923, w: 0.99994576}
+      scale: {x: 0.99999976, y: 1.0000005, z: 1.0000006}
+    - name: Model_Clean_rig_03:MiddleFinger4_R
+      parentName: Model_Clean_rig_03:MiddleFinger3_R
+      position: {x: -0.50793594, y: 0, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000005}
+    - name: Model_Clean_rig_03:IndexFinger1_R
+      parentName: Model_Clean_rig_03:Wrist_R
+      position: {x: -0.5482361, y: 0.24592315, z: 0.053789053}
+      rotation: {x: 0.13590549, y: 0.00402385, z: 0.031966563, w: 0.9901978}
+      scale: {x: 1.0000054, y: 1.0000132, z: 0.9999858}
+    - name: Model_Clean_rig_03:IndexFinger2_R
+      parentName: Model_Clean_rig_03:IndexFinger1_R
+      position: {x: -0.5503059, y: 6.252776e-15, z: 1.7053025e-15}
+      rotation: {x: -0.0000139921885, y: 0.035066336, z: -0.00040139764, w: 0.99938494}
+      scale: {x: 1.0000029, y: 1.0000001, z: 1.0000007}
+    - name: Model_Clean_rig_03:IndexFinger3_R
+      parentName: Model_Clean_rig_03:IndexFinger2_R
+      position: {x: -0.4433138, y: 1.4210854e-15, z: -2.2737367e-15}
+      rotation: {x: -0.014282565, y: 0.015188809, z: 0.000043535692, w: 0.9997826}
+      scale: {x: 0.99999994, y: 0.9999998, z: 0.9999995}
+    - name: Model_Clean_rig_03:IndexFinger4_R
+      parentName: Model_Clean_rig_03:IndexFinger3_R
+      position: {x: -0.39881495, y: 0, z: 0}
+      rotation: {x: 9.313228e-10, y: -0, z: 1.4551919e-11, w: 1}
+      scale: {x: 1.0000006, y: 1.0000002, z: 1.0000002}
+    - name: Model_Clean_rig_03:RingFinger1_R
+      parentName: Model_Clean_rig_03:Wrist_R
+      position: {x: -0.45888957, y: -0.09894143, z: -0.17434217}
+      rotation: {x: 0.35660693, y: -0.032693464, z: 0.072431326, w: 0.9308686}
+      scale: {x: 1.000001, y: 1.000029, z: 0.9999833}
+    - name: Model_Clean_rig_03:RingFinger2_R
+      parentName: Model_Clean_rig_03:RingFinger1_R
+      position: {x: -0.6117999, y: 0, z: -0.000000004005506}
+      rotation: {x: -0.0024666786, y: 0.020437729, z: 0.000091848895, w: 0.9997881}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000006}
+    - name: Model_Clean_rig_03:RingFinger3_R
+      parentName: Model_Clean_rig_03:RingFinger2_R
+      position: {x: -0.48268318, y: 1.2150849e-11, z: -2.4868995e-15}
+      rotation: {x: 0.004940038, y: 0.010442258, z: 0.000021314156, w: 0.9999333}
+      scale: {x: 1, y: 0.9999996, z: 1.0000001}
+    - name: Model_Clean_rig_03:RingFinger4_R
+      parentName: Model_Clean_rig_03:RingFinger3_R
+      position: {x: -0.41261435, y: 0, z: 0}
+      rotation: {x: -4.6566123e-10, y: -9.3132246e-10, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000004}
+    - name: Model_Clean_rig_03:PinkyFinger1_R
+      parentName: Model_Clean_rig_03:Wrist_R
+      position: {x: -0.5433979, y: 0.010989091, z: -0.43567365}
+      rotation: {x: -0.19833985, y: -0.065244, z: -0.019264441, w: 0.9777696}
+      scale: {x: 0.999968, y: 1.0000039, z: 1.0000335}
+    - name: Model_Clean_rig_03:PinkyFinger2_R
+      parentName: Model_Clean_rig_03:PinkyFinger1_R
+      position: {x: -0.17790349, y: -2.8421708e-15, z: -7.389644e-14}
+      rotation: {x: 0.0023266226, y: 0.0062767556, z: 0.00028582662, w: 0.9999775}
+      scale: {x: 1.0000024, y: 1.0000006, z: 1.0000007}
+    - name: Model_Clean_rig_03:PinkyFinger3_R
+      parentName: Model_Clean_rig_03:PinkyFinger2_R
+      position: {x: -0.10877722, y: -7.958079e-15, z: -3.524292e-14}
+      rotation: {x: 0.018705478, y: 0.05022923, z: 0.0012291488, w: 0.99856186}
+      scale: {x: 1.0000007, y: 1.0000007, z: 0.9999999}
+    - name: Model_Clean_rig_03:PinkyFinger4_R
+      parentName: Model_Clean_rig_03:PinkyFinger3_R
+      position: {x: -0.13600692, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Hip_R
+      parentName: Model_Clean_rig_03:Root_M
+      position: {x: 0.3178755, y: -0.08036549, z: -1.1433961}
+      rotation: {x: 0.039148986, y: 0.9494685, z: -0.3095398, w: -0.034088638}
+      scale: {x: 1.0000024, y: 1.0000024, z: 1.0000027}
+    - name: Model_Clean_rig_03:HipPart1_R
+      parentName: Model_Clean_rig_03:Hip_R
+      position: {x: -1.4229939, y: -1.7053025e-15, z: -2.5579537e-15}
+      rotation: {x: 0.00000005261972, y: -0.00000009685753, z: 0.000000104308114, w: 1}
+      scale: {x: 1.0000036, y: 1.0000023, z: 1.0000035}
+    - name: Model_Clean_rig_03:Knee_R
+      parentName: Model_Clean_rig_03:HipPart1_R
+      position: {x: -1.4229939, y: -1.7053025e-15, z: -3.410605e-15}
+      rotation: {x: -0.00000018377591, y: 0.00000004684123, z: 0.0052532293, w: 0.9999863}
+      scale: {x: 1.0000042, y: 1.0000046, z: 1.0000087}
+    - name: Model_Clean_rig_03:KneePart1_R
+      parentName: Model_Clean_rig_03:Knee_R
+      position: {x: -1.295721, y: 2.2737367e-15, z: 1.1368684e-15}
+      rotation: {x: 0.00000008675456, y: -0.00000006192389, z: 0.000000022351736, w: 1}
+      scale: {x: 1.0000054, y: 1.0000038, z: 1.0000048}
+    - name: Model_Clean_rig_03:Ankle_R
+      parentName: Model_Clean_rig_03:KneePart1_R
+      position: {x: -1.295721, y: 1.7053025e-15, z: 5.684342e-16}
+      rotation: {x: -0.26317874, y: -0.0127207, z: 0.014712533, w: 0.964551}
+      scale: {x: 1.0000002, y: 1.0000106, z: 0.99999136}
+    - name: Model_Clean_rig_03:Toes_R
+      parentName: Model_Clean_rig_03:Ankle_R
+      position: {x: -0.7481801, y: 1.0591908, z: 4.5952218e-12}
+      rotation: {x: 0.0045720483, y: 0.0036753411, z: -0.6265217, w: 0.7793819}
+      scale: {x: 1.0000044, y: 0.9999998, z: 1.0000014}
+    - name: Model_Clean_rig_03:ToesEnd_R
+      parentName: Model_Clean_rig_03:Toes_R
+      position: {x: -0.68502706, y: 0, z: -0.0000000014760394}
+      rotation: {x: -2.3283062e-10, y: -0, z: 0.000000034473484, w: 1}
+      scale: {x: 1.0000024, y: 1.000001, z: 1.0000029}
+    - name: Model_Clean_rig_03:Hip_L
+      parentName: Model_Clean_rig_03:Root_M
+      position: {x: 0.3178755, y: -0.08036549, z: 1.1433961}
+      rotation: {x: -0.94946855, y: 0.039148927, z: -0.034088627, w: 0.3095398}
+      scale: {x: 1.0000036, y: 1.0000043, z: 1.0000014}
+    - name: Model_Clean_rig_03:HipPart1_L
+      parentName: Model_Clean_rig_03:Hip_L
+      position: {x: 1.4229939, y: 3.236033e-10, z: -9.006513e-10}
+      rotation: {x: -0, y: 0.000000029802319, z: -0.00000001117587, w: 1}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1}
+    - name: Model_Clean_rig_03:Knee_L
+      parentName: Model_Clean_rig_03:HipPart1_L
+      position: {x: 1.4229939, y: 5.728691e-10, z: -7.666239e-10}
+      rotation: {x: 0.000000029645756, y: -0.00000007450539, z: 0.0052533853, w: 0.9999862}
+      scale: {x: 1.0000045, y: 1.0000054, z: 1.0000005}
+    - name: Model_Clean_rig_03:KneePart1_L
+      parentName: Model_Clean_rig_03:Knee_L
+      position: {x: 1.295721, y: 7.0298567e-10, z: 5.684342e-16}
+      rotation: {x: 0.0000000596821, y: 0.000000014587831, z: 0.000000059604638, w: 1}
+      scale: {x: 1.0000043, y: 1.0000031, z: 1.0000026}
+    - name: Model_Clean_rig_03:Ankle_L
+      parentName: Model_Clean_rig_03:KneePart1_L
+      position: {x: 1.295721, y: 6.9296524e-10, z: -1.1827068e-10}
+      rotation: {x: -0.26317877, y: -0.01272065, z: 0.014712414, w: 0.96455103}
+      scale: {x: 1.0000013, y: 1.000012, z: 0.9999948}
+    - name: Model_Clean_rig_03:Toes_L
+      parentName: Model_Clean_rig_03:Ankle_L
+      position: {x: 0.7481801, y: -1.0591908, z: -1.7791876e-10}
+      rotation: {x: -0.004572034, y: -0.0036753314, z: 0.62652165, w: -0.77938205}
+      scale: {x: 1.0000019, y: 1.0000045, z: 1.0000018}
+    - name: Model_Clean_rig_03:ToesEnd_L
+      parentName: Model_Clean_rig_03:Toes_L
+      position: {x: 0.68502706, y: 0, z: 0.0000000014760383}
+      rotation: {x: 0.000000009313225, y: -0.00000001164153, z: 0.0000000048385114, w: 1}
+      scale: {x: 1, y: 1.0000007, z: 1.0000002}
+    - name: Model_Clean_rig_03:Geometry
+      parentName: Model_Clean_rig_03:Group
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:geo
+      parentName: Model_Clean_rig_03:Geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Cube
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface25
+      parentName: Model_Clean_rig_03:Cube
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface26
+      parentName: Model_Clean_rig_03:Cube
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform4
+      parentName: Model_Clean_rig_03:Cube
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Cube.001
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface91
+      parentName: Model_Clean_rig_03:Cube.001
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface92
+      parentName: Model_Clean_rig_03:Cube.001
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform26
+      parentName: Model_Clean_rig_03:Cube.001
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Icosphere
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Plane
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.001
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.002
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.003
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.005
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.006
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface61
+      parentName: Model_Clean_rig_03:Robot For Jam.006
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface62
+      parentName: Model_Clean_rig_03:Robot For Jam.006
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform20
+      parentName: Model_Clean_rig_03:Robot For Jam.006
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.007
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface57
+      parentName: Model_Clean_rig_03:Robot For Jam.007
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface58
+      parentName: Model_Clean_rig_03:Robot For Jam.007
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform18
+      parentName: Model_Clean_rig_03:Robot For Jam.007
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.009
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface51
+      parentName: Model_Clean_rig_03:Robot For Jam.009
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface52
+      parentName: Model_Clean_rig_03:Robot For Jam.009
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform15
+      parentName: Model_Clean_rig_03:Robot For Jam.009
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.010
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface53
+      parentName: Model_Clean_rig_03:Robot For Jam.010
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface54
+      parentName: Model_Clean_rig_03:Robot For Jam.010
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform16
+      parentName: Model_Clean_rig_03:Robot For Jam.010
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.014
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface87
+      parentName: Model_Clean_rig_03:Robot For Jam.014
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface88
+      parentName: Model_Clean_rig_03:Robot For Jam.014
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform24
+      parentName: Model_Clean_rig_03:Robot For Jam.014
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.015
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface19
+      parentName: Model_Clean_rig_03:Robot For Jam.015
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface20
+      parentName: Model_Clean_rig_03:Robot For Jam.015
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform2
+      parentName: Model_Clean_rig_03:Robot For Jam.015
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.016
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface31
+      parentName: Model_Clean_rig_03:Robot For Jam.016
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface32
+      parentName: Model_Clean_rig_03:Robot For Jam.016
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface33
+      parentName: Model_Clean_rig_03:Robot For Jam.016
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface34
+      parentName: Model_Clean_rig_03:Robot For Jam.016
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform7
+      parentName: Model_Clean_rig_03:Robot For Jam.016
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.017
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface1
+      parentName: Model_Clean_rig_03:Robot For Jam.017
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface2
+      parentName: Model_Clean_rig_03:Robot For Jam.017
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface3
+      parentName: Model_Clean_rig_03:Robot For Jam.017
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface4
+      parentName: Model_Clean_rig_03:Robot For Jam.017
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface5
+      parentName: Model_Clean_rig_03:Robot For Jam.017
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface6
+      parentName: Model_Clean_rig_03:Robot For Jam.017
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface7
+      parentName: Model_Clean_rig_03:Robot For Jam.017
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface8
+      parentName: Model_Clean_rig_03:Robot For Jam.017
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface9
+      parentName: Model_Clean_rig_03:Robot For Jam.017
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface10
+      parentName: Model_Clean_rig_03:Robot For Jam.017
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface11
+      parentName: Model_Clean_rig_03:Robot For Jam.017
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface12
+      parentName: Model_Clean_rig_03:Robot For Jam.017
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface13
+      parentName: Model_Clean_rig_03:Robot For Jam.017
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface14
+      parentName: Model_Clean_rig_03:Robot For Jam.017
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface15
+      parentName: Model_Clean_rig_03:Robot For Jam.017
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface16
+      parentName: Model_Clean_rig_03:Robot For Jam.017
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface17
+      parentName: Model_Clean_rig_03:Robot For Jam.017
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface18
+      parentName: Model_Clean_rig_03:Robot For Jam.017
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform1
+      parentName: Model_Clean_rig_03:Robot For Jam.017
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.018
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface37
+      parentName: Model_Clean_rig_03:Robot For Jam.018
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface38
+      parentName: Model_Clean_rig_03:Robot For Jam.018
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform9
+      parentName: Model_Clean_rig_03:Robot For Jam.018
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.019
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.020
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.021
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface21
+      parentName: Model_Clean_rig_03:Robot For Jam.021
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface22
+      parentName: Model_Clean_rig_03:Robot For Jam.021
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface23
+      parentName: Model_Clean_rig_03:Robot For Jam.021
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface24
+      parentName: Model_Clean_rig_03:Robot For Jam.021
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform3
+      parentName: Model_Clean_rig_03:Robot For Jam.021
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.022
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.026
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface27
+      parentName: Model_Clean_rig_03:Robot For Jam.026
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface28
+      parentName: Model_Clean_rig_03:Robot For Jam.026
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform5
+      parentName: Model_Clean_rig_03:Robot For Jam.026
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.027
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface29
+      parentName: Model_Clean_rig_03:Robot For Jam.027
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface30
+      parentName: Model_Clean_rig_03:Robot For Jam.027
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform6
+      parentName: Model_Clean_rig_03:Robot For Jam.027
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.029
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface39
+      parentName: Model_Clean_rig_03:Robot For Jam.029
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface40
+      parentName: Model_Clean_rig_03:Robot For Jam.029
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface41
+      parentName: Model_Clean_rig_03:Robot For Jam.029
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface42
+      parentName: Model_Clean_rig_03:Robot For Jam.029
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform10
+      parentName: Model_Clean_rig_03:Robot For Jam.029
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.031
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface43
+      parentName: Model_Clean_rig_03:Robot For Jam.031
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface44
+      parentName: Model_Clean_rig_03:Robot For Jam.031
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform11
+      parentName: Model_Clean_rig_03:Robot For Jam.031
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.033
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface47
+      parentName: Model_Clean_rig_03:Robot For Jam.033
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface48
+      parentName: Model_Clean_rig_03:Robot For Jam.033
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform13
+      parentName: Model_Clean_rig_03:Robot For Jam.033
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.041
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface35
+      parentName: Model_Clean_rig_03:Robot For Jam.041
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface36
+      parentName: Model_Clean_rig_03:Robot For Jam.041
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform8
+      parentName: Model_Clean_rig_03:Robot For Jam.041
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.042
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface49
+      parentName: Model_Clean_rig_03:Robot For Jam.042
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface50
+      parentName: Model_Clean_rig_03:Robot For Jam.042
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform14
+      parentName: Model_Clean_rig_03:Robot For Jam.042
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.044
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.045
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.049
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.053
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface45
+      parentName: Model_Clean_rig_03:Robot For Jam.053
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface46
+      parentName: Model_Clean_rig_03:Robot For Jam.053
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform12
+      parentName: Model_Clean_rig_03:Robot For Jam.053
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.059
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.068
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.076
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.094
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface55
+      parentName: Model_Clean_rig_03:Robot For Jam.094
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface56
+      parentName: Model_Clean_rig_03:Robot For Jam.094
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform17
+      parentName: Model_Clean_rig_03:Robot For Jam.094
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.095
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface63
+      parentName: Model_Clean_rig_03:Robot For Jam.095
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface64
+      parentName: Model_Clean_rig_03:Robot For Jam.095
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform21
+      parentName: Model_Clean_rig_03:Robot For Jam.095
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.097
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface59
+      parentName: Model_Clean_rig_03:Robot For Jam.097
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface60
+      parentName: Model_Clean_rig_03:Robot For Jam.097
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform19
+      parentName: Model_Clean_rig_03:Robot For Jam.097
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.098
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface89
+      parentName: Model_Clean_rig_03:Robot For Jam.098
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface90
+      parentName: Model_Clean_rig_03:Robot For Jam.098
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform25
+      parentName: Model_Clean_rig_03:Robot For Jam.098
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.099
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface85
+      parentName: Model_Clean_rig_03:Robot For Jam.099
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface86
+      parentName: Model_Clean_rig_03:Robot For Jam.099
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:transform23
+      parentName: Model_Clean_rig_03:Robot For Jam.099
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.111
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.124
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.131
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.141
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:Robot For Jam.150
+      parentName: Model_Clean_rig_03:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface65
+      parentName: Model_Clean_rig_03:Robot For Jam.150
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface66
+      parentName: Model_Clean_rig_03:Robot For Jam.150
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface67
+      parentName: Model_Clean_rig_03:Robot For Jam.150
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface68
+      parentName: Model_Clean_rig_03:Robot For Jam.150
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface69
+      parentName: Model_Clean_rig_03:Robot For Jam.150
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface70
+      parentName: Model_Clean_rig_03:Robot For Jam.150
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface71
+      parentName: Model_Clean_rig_03:Robot For Jam.150
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface72
+      parentName: Model_Clean_rig_03:Robot For Jam.150
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface73
+      parentName: Model_Clean_rig_03:Robot For Jam.150
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface74
+      parentName: Model_Clean_rig_03:Robot For Jam.150
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface75
+      parentName: Model_Clean_rig_03:Robot For Jam.150
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface76
+      parentName: Model_Clean_rig_03:Robot For Jam.150
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface77
+      parentName: Model_Clean_rig_03:Robot For Jam.150
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface78
+      parentName: Model_Clean_rig_03:Robot For Jam.150
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface79
+      parentName: Model_Clean_rig_03:Robot For Jam.150
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface80
+      parentName: Model_Clean_rig_03:Robot For Jam.150
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface81
+      parentName: Model_Clean_rig_03:Robot For Jam.150
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface82
+      parentName: Model_Clean_rig_03:Robot For Jam.150
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface83
+      parentName: Model_Clean_rig_03:Robot For Jam.150
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Model_Clean_rig_03:polySurface84
+      parentName: Model_Clean_rig_03:Robot For Jam.150
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: lowPoly_sword_YS_2019:sword_CTRL
+      parentName: Wizard_Idle_sword(Clone)
+      position: {x: -5.68361, y: 5.196847, z: -4.119738}
+      rotation: {x: 0.5652812, y: 0.1845238, z: 0.29770356, w: 0.7468472}
+      scale: {x: 12.421, y: 12.421, z: 12.421}
+    - name: lowPoly_sword_YS_2019:sword_GEO
+      parentName: lowPoly_sword_YS_2019:sword_CTRL
+      position: {x: -0, y: 0, z: 0.022966413}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

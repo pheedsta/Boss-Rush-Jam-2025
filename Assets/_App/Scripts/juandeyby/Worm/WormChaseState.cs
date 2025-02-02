@@ -7,12 +7,13 @@ namespace _App.Scripts.juandeyby
     {
         private NavMeshAgent _navMeshAgent;
         
-        private readonly float _detectRange = 1f;
+        private readonly float _detectRange = 1.5f;
         
         public void Enter(Worm worm)
         {
             _navMeshAgent = worm.MeshAgent;
             _navMeshAgent.isStopped = false;
+            worm.WormAnimator.PlayWalk();
         }
 
         public void Update(Worm worm)

@@ -1,5 +1,4 @@
 using System;
-using _App.Scripts.juandeyby.UI;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -7,6 +6,8 @@ namespace _App.Scripts.juandeyby.Boss
 {
     public class Boss : MonoBehaviour
     {
+        [SerializeField] private BossAnimator bossAnimator;
+        public BossAnimator BossAnimator => bossAnimator;
         [SerializeField] private NavMeshAgent meshAgent;
         public NavMeshAgent MeshAgent => meshAgent;
         private IBossState _currentState;
@@ -18,55 +19,6 @@ namespace _App.Scripts.juandeyby.Boss
         [SerializeField] private AK.Wwise.Event vortexPullSoundStart;
         [SerializeField] private AK.Wwise.Event vortexPullSoundStop;
         
-        private Health _health;
-        public Health Health => GetHealth();
-        
-        private UIManager UIManager => GetUIManager(); 
-        private UIManager _uiManager;
-        
-        // private UIHealthBar _healthBar;
-        //
-        // private void Start()
-        // {
-        //     _healthBar = UIServiceLocator.Get<UIHealthCanvas>().GetHealthBar();
-        //     _healthBar.SetUnit(transform, new Vector3(0, 2f, 0));
-        // }
-
-        private void Start()
-        {
-            UpdateHealthUI();
-        }
-
-        private void UpdateHealthUI()
-        {
-            UIManager.HubPanel.BossHealth.SetHealth(Health.HealthPercentage);
-        }
-        
-        private UIManager GetUIManager() {
-            // if UIManager has already been found, we're done
-            if (_uiManager) return _uiManager;
-        
-            // get UIManager from UIServiceLocator
-            _uiManager = UIServiceLocator.Get<UIManager>();
-            //++++++++++++++++++++++++++++++//
-            Debug.Assert(_uiManager, "UIManager is null");
-            //++++++++++++++++++++++++++++++//
-        
-            // return UIManager
-            return _uiManager;
-        }
-        
-        private Health GetHealth() {
-            // if Health component has already been found, we're done
-            if (_health) return _health;
-        
-            // Health is a required component so it will never be null
-            _health = GetComponent<Health>();
-        
-            // return Health component
-            return _health;
-        }
-
         /// <summary>
         /// Set the current state of the boss
         /// </summary>

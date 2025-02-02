@@ -20,9 +20,6 @@ namespace _App.Scripts.juandeyby
 
         private void Awake()
         {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-            
             // Start the game in phase 1
             _gamePhase = GamePhase.Phase1;
             Pause();

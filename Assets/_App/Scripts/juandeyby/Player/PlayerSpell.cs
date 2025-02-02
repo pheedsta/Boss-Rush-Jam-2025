@@ -20,25 +20,27 @@ namespace _App.Scripts.juandeyby
 
         public void Charge()
         {
-            if (currentEnergy < maxEnergyCost)
-            {
-                currentEnergy += Mathf.CeilToInt(100 / 6f);
-                if (currentEnergy > maxEnergyCost)
-                {
-                    currentEnergy = maxEnergyCost;
-                }
-                UpdateUI();
+            currentEnergy += maxEnergyCost / 5;
+            if (currentEnergy >= maxEnergyCost) {
+                currentEnergy = maxEnergyCost;
+                currentCharges = maxCharges;
             }
-            else
-            {
-                if (currentCharges < maxCharges)
-                {
-                    currentCharges++;
-                }
-            }
+            UpdateUI();
         }
         
-        public void SpendChange()
+        public bool CanCastSpell()
+        {
+            if (currentCharges > 0)
+            {
+                currentCharges = 0;
+                currentEnergy = 0;
+                UpdateUI();
+                return true;
+            }
+            return false;
+        }
+        
+        public void LoseChange()
         {
             currentEnergy = 0;
             currentCharges = 0;

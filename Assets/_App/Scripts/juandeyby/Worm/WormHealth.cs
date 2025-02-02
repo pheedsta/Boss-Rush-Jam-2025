@@ -50,6 +50,9 @@ namespace _App.Scripts.juandeyby
             }
             _damageCoroutine = StartCoroutine(DamageCoroutine());
             TakeDamage(1);
+            
+            // Play sound effect
+            ServiceLocator.Get<MusicManager>().PlaySwordHit();
         }
 
         public void RangedDamage()
@@ -60,6 +63,9 @@ namespace _App.Scripts.juandeyby
             }
             _damageCoroutine = StartCoroutine(DamageCoroutine());
             TakeDamage(3);
+            
+            // Play sound effect
+            ServiceLocator.Get<MusicManager>().PlaySpellHit();
         }
 
         private IEnumerator DamageCoroutine()

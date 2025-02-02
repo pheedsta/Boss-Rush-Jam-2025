@@ -163,7 +163,7 @@ public class CollectableManager : MonoBehaviour
         var x = Mathf.Cos(radians) * radius;
         var z = Mathf.Sin(radians) * radius;
 
-        var position = new Vector3(x, 0.5f, z);
+        var position = new Vector3(x, 0.75f, z);
 
         return position;
     }

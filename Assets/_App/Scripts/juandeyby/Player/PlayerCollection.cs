@@ -9,6 +9,7 @@ namespace _App.Scripts.juandeyby
         
         public void Collect(Collectable collectable)
         {
+            collectable.collectSound.Post(gameObject);
             if (collectable is CollectableHeart)
             {
                 playerHealth.Heal();

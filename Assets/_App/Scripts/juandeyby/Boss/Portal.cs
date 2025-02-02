@@ -10,8 +10,12 @@ namespace _App.Scripts.juandeyby.Boss
         [SerializeField] private GameObject ghostPrefab;
         private Coroutine _spawnCoroutine;
         
-        private void Start()
+        private void OnEnable()
         {
+            if (_spawnCoroutine != null)
+            {
+                StopCoroutine(_spawnCoroutine);
+            }
             _spawnCoroutine = StartCoroutine(DelayedSpawn(1f));
         }
         
@@ -20,9 +24,12 @@ namespace _App.Scripts.juandeyby.Boss
             yield return new WaitForSeconds(delay);
             _spawnCoroutine = null;
             
+            ServiceLocator.Get<MusicManager>().PlayPortalSummon();
             var worm = ServiceLocator.Get<WormManager>().GetWorm();
             worm.transform.position = transform.position;
-            yield return new WaitForSeconds(2f);
+            worm.SetState(new WormSpawnState());
+            yield return new WaitForSeconds(2.5f);
+            ServiceLocator.Get<MusicManager>().StopPortalSummon();
             ServiceLocator.Get<PortalManager>().ReturnPortal(this);
         }
     }

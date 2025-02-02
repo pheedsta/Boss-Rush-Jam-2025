@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace _App.Scripts.juandeyby
@@ -7,6 +8,7 @@ namespace _App.Scripts.juandeyby
     [DefaultExecutionOrder(-100)]
     public class WormManager : MonoBehaviour
     {
+        [SerializeField] private Boss.Boss boss;
         [SerializeField] private WormPoison wormPrefab;
         [SerializeField] private WormFire wormFirePrefab;
         private readonly Queue<Worm> _worms = new Queue<Worm>();
@@ -56,6 +58,18 @@ namespace _App.Scripts.juandeyby
         {
             worm.gameObject.SetActive(false);
             _worms.Enqueue(worm);
+            
+            CheckWorms();
+        }
+
+        private void CheckWorms()
+        {
+            var children = transform.GetComponentsInChildren<Worm>(true);
+            var activeWorms = children.Count(c => c.gameObject.activeSelf);
+            if (activeWorms == 0)
+            {
+                boss.SetState(new Boss.BossPortalSummonState());
+            }
         }
     }
 }

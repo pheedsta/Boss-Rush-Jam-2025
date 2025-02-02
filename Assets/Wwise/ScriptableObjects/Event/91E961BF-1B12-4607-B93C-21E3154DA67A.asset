@@ -15,5 +15,5 @@ MonoBehaviour:
   objectName: FireSpell_Burn
   id: 1695950791
   guid: 91E961BF-1B12-4607-B93C-21E3154DA67A
-  IsInUserDefinedSoundBank: 0
+  IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

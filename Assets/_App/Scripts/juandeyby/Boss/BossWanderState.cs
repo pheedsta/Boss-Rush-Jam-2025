@@ -33,30 +33,36 @@ namespace _App.Scripts.juandeyby.Boss
 
         public void Update(Boss boss)
         {
-            // Check if the player is in sight of the boss 
-            if (IsPlayerInSight(boss))
-            {
-                boss.SetState(new BossChaseState());
-                return;
-            }
+            // // Check if the player is in sight of the boss 
+            // if (IsPlayerInSight(boss))
+            // {
+            //     boss.SetState(new BossChaseState());
+            //     return;
+            // }
             
             // Check if the player is close to the boss
-            if (IsPlayerClose(boss))
+            var playerPosition = Player.Instance.transform.position; 
+            if (IsPathAvailable(playerPosition))
             {
-                boss.SetState(new BossAttackState());
+                boss.SetState(new BossChaseState());
                 return;
             }
 
             if (!_navMeshAgent.pathPending && _navMeshAgent.remainingDistance < _navMeshAgent.stoppingDistance)
             {
                 _timer += Time.deltaTime;
-
                 if (_timer >= _waitTime)
                 {
                     _timer = 0f;
                     MoveToRandomPosition(boss);
                 }
             }
+        }
+
+        private bool IsPathAvailable(Vector3 targetPosition)
+        {
+            var path = new NavMeshPath();
+            return _navMeshAgent.CalculatePath(targetPosition, path) && path.status == NavMeshPathStatus.PathComplete;
         }
 
         public void Exit(Boss boss)
@@ -90,13 +96,7 @@ namespace _App.Scripts.juandeyby.Boss
             }
         }
         
-        private bool IsPlayerClose(Boss boss)
-        {
-            var player = Player.Instance;
-            if (player == null) return false;
-            var distance = Vector3.Distance(boss.transform.position, player.transform.position);
-            return distance <= _attackDetectionRange;
-        }
+
         
         /// <summary>
         /// Check if the player is in sight of the boss

@@ -4,6 +4,7 @@ using _App.Scripts.juandeyby;
 using _App.Scripts.juandeyby.UI;
 using Lean.Gui;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIEnding : MonoBehaviour, IUIPanel
 {
@@ -24,6 +25,8 @@ public class UIEnding : MonoBehaviour, IUIPanel
     {
         yield return new WaitForSeconds(3f);
         leanWindow.TurnOn();
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         ServiceLocator.Get<GameManager>().Pause();
     }
 

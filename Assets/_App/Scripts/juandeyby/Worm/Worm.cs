@@ -6,6 +6,8 @@ namespace _App.Scripts.juandeyby
 {
     public class Worm : MonoBehaviour
     {
+        [SerializeField] private Rigidbody rb;
+        public Rigidbody Rb => rb;
         [SerializeField] private WormAnimator wormAnimator;
         public WormAnimator WormAnimator => wormAnimator;
         [SerializeField] private NavMeshAgent meshAgent;

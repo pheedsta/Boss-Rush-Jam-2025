@@ -31,6 +31,7 @@ namespace _App.Scripts.juandeyby.UI
         {
             if (leanWindow.On && Keyboard.current.pKey.wasPressedThisFrame)
             {
+                ServiceLocator.Get<GameManager>().Pause();
                 UIServiceLocator.Get<UIManager>().ShowPausePanel();
             }
         }

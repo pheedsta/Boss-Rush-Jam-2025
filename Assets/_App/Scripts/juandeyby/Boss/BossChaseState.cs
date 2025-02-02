@@ -7,9 +7,8 @@ namespace _App.Scripts.juandeyby.Boss
     {
         private NavMeshAgent _navMeshAgent;
         
-        private readonly float _detectionRange = 10f;
-        private readonly float _spellRange = 6f;
-        private readonly float _attackRange = 4f;
+        private readonly float _spellRange = 10f;
+        private readonly float _attackRange = 3f;
         
         public void Enter(Boss boss)
         {
@@ -19,7 +18,9 @@ namespace _App.Scripts.juandeyby.Boss
 
         public void Update(Boss boss)
         {
-            var distance = Vector3.Distance(boss.transform.position, Player.Instance.transform.position);
+            var playerPosition = Player.Instance.transform.position;
+            var distance = Vector3.Distance(boss.transform.position, playerPosition);
+    
             if (distance <= _attackRange)
             {
                 Debug.Log("<color=red>Attack!</color>");
@@ -30,16 +31,22 @@ namespace _App.Scripts.juandeyby.Boss
                 Debug.Log("<color=red>Spell!</color>");
                 boss.SetState(new BossSweepingStrikeState());
             }
-            else if (distance <= _detectionRange)
+            else if (IsPathAvailable(playerPosition))
             {
                 Debug.Log("<color=red>Chase!</color>");
-                _navMeshAgent.SetDestination(Player.Instance.transform.position);
+                _navMeshAgent.SetDestination(playerPosition);
             }
             else
             {
                 Debug.Log("<color=red>Wander!</color>");
                 boss.SetState(new BossWanderState());
             }
+        }
+        
+        private bool IsPathAvailable(Vector3 targetPosition)
+        {
+            var path = new NavMeshPath();
+            return _navMeshAgent.CalculatePath(targetPosition, path) && path.status == NavMeshPathStatus.PathComplete;
         }
 
         public void Exit(Boss boss)

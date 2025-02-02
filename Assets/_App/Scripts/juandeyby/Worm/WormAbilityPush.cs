@@ -48,6 +48,9 @@ namespace _App.Scripts.juandeyby
 
             var playerLocomotion = player.GetComponent<PlayerLocomotion>();
             playerLocomotion.Stroke(direction, force);
+            
+            var playerHealth = player.GetComponent<PlayerHealth>();
+            playerHealth.TakeDamage(1);
         }
     }
 }

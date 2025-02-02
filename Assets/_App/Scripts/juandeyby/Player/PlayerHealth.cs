@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -17,7 +18,8 @@ namespace _App.Scripts.juandeyby
         [SerializeField] private int health;
         public int Health => health;
         private bool _isDead;
-
+        private Coroutine _respawnCoroutine;
+        
         private void Start()
         {
             health = maxHealth;
@@ -57,11 +59,21 @@ namespace _App.Scripts.juandeyby
                 health = 0;
                 _isDead = true;
                 playerAnimator.PlayTargetAnimation("Die", false);
+                _respawnCoroutine = StartCoroutine(Respawn());
             }
-            var uiValue = health / (float) maxHealth;
-            UIServiceLocator.Get<UIManager>().HubPanel.PlayerHealth.SetHealth(uiValue);
+            ServiceLocator.Get<MusicManager>().PlayHurt();
+            UpdateUI();
         }
         
+        private IEnumerator Respawn()
+        {
+            yield return new WaitForSeconds(3);
+            _isDead = false;
+            Spawn();
+            MaxHeal();
+            playerSpell.LoseChange();
+            playerAnimator.PlayTargetAnimation("Jump", false);
+        }
         
         private void Update()
         {
@@ -69,7 +81,7 @@ namespace _App.Scripts.juandeyby
             {
                 Spawn();
                 MaxHeal();
-                playerSpell.SpendChange();
+                playerSpell.LoseChange();
             }
         }
 
@@ -79,6 +91,7 @@ namespace _App.Scripts.juandeyby
             switch (phase)
             {
                 case GamePhase.Phase1:
+                    Debug.Log("Phase 1 spawn");
                     transform.position = spawnPointPhase1.position;
                     transform.rotation = spawnPointPhase1.rotation;
                     break;

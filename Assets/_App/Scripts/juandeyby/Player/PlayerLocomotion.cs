@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -6,6 +7,7 @@ namespace _App.Scripts.juandeyby
 {
     public class PlayerLocomotion : MonoBehaviour
     {
+        [SerializeField] private PlayerSpell playerSpell;
         [SerializeField] private PlayerManager playerManager;
         [SerializeField] private PlayerAnimator playerAnimator;
         [SerializeField] private InputManager inputManager;
@@ -29,6 +31,9 @@ namespace _App.Scripts.juandeyby
 
         [Header("Jump Speeds")]
         [SerializeField] float jumpHeight = 3f;
+        
+        [Header("Poison Stroke")]
+        private Coroutine _poisonStrokeCoroutine;
         
         private void Awake()
         {
@@ -70,8 +75,8 @@ namespace _App.Scripts.juandeyby
             }
             
             var targetRotation = Quaternion.LookRotation(lookDirection);
+            Debug.DrawRay(transform.position, targetRotation * Vector3.forward * 10f, Color.blue);
             var playerRotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 20);
-            
             rb.rotation = playerRotation;
         }
         
@@ -93,7 +98,7 @@ namespace _App.Scripts.juandeyby
             }
             
             Debug.DrawRay(rayCastOrigin, Vector3.down, Color.red);
-            if (Physics.SphereCast(rayCastOrigin, 0.2f, Vector3.down, out var hit, groundLayer))
+            if (Physics.SphereCast(rayCastOrigin, 0.2f, Vector3.down, out var hit, 1, groundLayer))
             {
                 if (!isGrounded && !playerManager.IsInteracting)
                 {
@@ -102,7 +107,7 @@ namespace _App.Scripts.juandeyby
                 inAirTimer = 0;
                 isGrounded = true;
                 
-                // transform.SetParent(hit.transform);
+                transform.SetParent(hit.transform);
             }
             else
             {
@@ -117,12 +122,14 @@ namespace _App.Scripts.juandeyby
                 playerAnimator.Animator.SetBool("IsJumping", true);
                 playerAnimator.PlayTargetAnimation("Jump", false);
                 
+                ServiceLocator.Get<MusicManager>().Jump();
+                
                 var jumpingVelocity = Mathf.Sqrt(-2 * Physics.gravity.y * jumpHeight);
                 var playerVelocity = _moveDirection;
                 playerVelocity.y = jumpingVelocity;
                 rb.linearVelocity = playerVelocity;
                 
-                // transform.SetParent(null);
+                transform.SetParent(null);
             }
         }
         
@@ -144,13 +151,16 @@ namespace _App.Scripts.juandeyby
                         playerAnimator.PlayTargetAnimation("Attack3", true);
                         break;
                 }
+                
+                // Play sound effect
+                ServiceLocator.Get<MusicManager>().PlaySwordWhoosh();
             }
         }
 
         public void HandleSpecial()
         {
             if (isJumping) return;
-            if (isGrounded)
+            if (isGrounded && playerSpell.CanCastSpell())
             {
                 playerAnimator.PlayTargetAnimation("RangeAttack", true);
             }
@@ -160,6 +170,30 @@ namespace _App.Scripts.juandeyby
         {
             Debug.Log("Stroke!");
             rb.AddForce(direction * force, ForceMode.Impulse);
+        }
+        
+        public void Poison()
+        {
+            if (_poisonStrokeCoroutine != null)
+            {
+                StopCoroutine(_poisonStrokeCoroutine);
+            }
+            _poisonStrokeCoroutine = StartCoroutine(OnPoisonCoroutine());
+        }
+
+        private IEnumerator OnPoisonCoroutine()
+        {
+            var poisonTime = 5f;
+            var elapsedTime = 0f;
+            movementSpeed = 3f;
+            ServiceLocator.Get<MusicManager>().PlaySizzle();
+            while (elapsedTime < poisonTime)
+            {
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+            ServiceLocator.Get<MusicManager>().StopSizzle();
+            movementSpeed = 7.5f;
         }
     }
 }

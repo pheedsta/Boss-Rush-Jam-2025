@@ -15,5 +15,6 @@ MonoBehaviour:
   objectName: Acid_Spray
   id: 4204383620
   guid: F434B306-747B-46CF-A4C2-2097319E13EB
+  AutoBank: {fileID: 0}
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

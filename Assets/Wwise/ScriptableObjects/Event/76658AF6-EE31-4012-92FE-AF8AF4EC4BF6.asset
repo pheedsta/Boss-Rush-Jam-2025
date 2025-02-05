@@ -15,5 +15,6 @@ MonoBehaviour:
   objectName: Jump_Player
   id: 2584346859
   guid: 76658AF6-EE31-4012-92FE-AF8AF4EC4BF6
+  AutoBank: {fileID: 0}
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

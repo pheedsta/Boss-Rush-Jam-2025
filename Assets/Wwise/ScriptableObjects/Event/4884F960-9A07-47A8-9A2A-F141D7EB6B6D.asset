@@ -15,5 +15,6 @@ MonoBehaviour:
   objectName: SwordSlash_Whoosh
   id: 3181568868
   guid: 4884F960-9A07-47A8-9A2A-F141D7EB6B6D
+  AutoBank: {fileID: 0}
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

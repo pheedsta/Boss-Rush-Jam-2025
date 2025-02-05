@@ -15,5 +15,6 @@ MonoBehaviour:
   objectName: Shards_Pickup
   id: 1114393929
   guid: F856A223-BF1C-4B36-B076-7EFA3F780F5F
+  AutoBank: {fileID: 0}
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

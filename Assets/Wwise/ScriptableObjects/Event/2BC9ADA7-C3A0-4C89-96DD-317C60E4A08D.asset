@@ -15,5 +15,6 @@ MonoBehaviour:
   objectName: Play_Boss_Line_Phase3
   id: 2924361409
   guid: 2BC9ADA7-C3A0-4C89-96DD-317C60E4A08D
+  AutoBank: {fileID: 11400000, guid: d59b3a20c25217f47ba692c0e8c6af41, type: 2}
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

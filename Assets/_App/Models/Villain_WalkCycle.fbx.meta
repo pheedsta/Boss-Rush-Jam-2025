@@ -3,7 +3,22 @@ guid: 480b0a2bbaf2d0446ae65f45ba5e0fd5
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: villain_model_Dress
+    second: {fileID: 2100000, guid: f8ce4096dc48bb744a53d2610de8fe6a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: villain_model_Skin
+    second: {fileID: 2100000, guid: c1f871181614cb0409d63f78c7b542f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: villain_model_Weapon
+    second: {fileID: 2100000, guid: 93edc03549504d642812cd4b0660678e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

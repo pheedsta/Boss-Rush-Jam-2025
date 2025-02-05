@@ -35,6 +35,7 @@ namespace _App.Scripts.juandeyby
                 _health = 0;
                 var worm = GetComponent<Worm>();
                 ServiceLocator.Get<WormManager>().ReturnWorm(worm);
+                UIServiceLocator.Get<UIHealthCanvas>().ReturnHealthBar(_uiHealthBar);
             }
             else
             {
@@ -83,11 +84,6 @@ namespace _App.Scripts.juandeyby
             {
                 renderer.SetPropertyBlock(oldBlock);
             }
-        }
-
-        private void OnDisable()
-        {
-            UIServiceLocator.Get<UIHealthCanvas>().ReturnHealthBar(_uiHealthBar);
         }
     }
 }

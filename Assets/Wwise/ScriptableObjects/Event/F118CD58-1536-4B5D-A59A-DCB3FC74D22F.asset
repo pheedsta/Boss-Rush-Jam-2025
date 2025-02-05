@@ -15,5 +15,6 @@ MonoBehaviour:
   objectName: Set_LayerControl
   id: 696315660
   guid: F118CD58-1536-4B5D-A59A-DCB3FC74D22F
+  AutoBank: {fileID: 0}
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

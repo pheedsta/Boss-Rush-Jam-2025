@@ -15,5 +15,6 @@ MonoBehaviour:
   objectName: Play_BossDeath_Music
   id: 3604213277
   guid: 4F0E6A87-9DA6-4DFA-9EA3-7CD7C1A06B0D
+  AutoBank: {fileID: 0}
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

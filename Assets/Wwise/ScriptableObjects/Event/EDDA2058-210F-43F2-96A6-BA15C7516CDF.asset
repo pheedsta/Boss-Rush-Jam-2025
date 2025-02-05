@@ -15,5 +15,6 @@ MonoBehaviour:
   objectName: Play_BossMusic
   id: 3463024606
   guid: EDDA2058-210F-43F2-96A6-BA15C7516CDF
+  AutoBank: {fileID: 0}
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

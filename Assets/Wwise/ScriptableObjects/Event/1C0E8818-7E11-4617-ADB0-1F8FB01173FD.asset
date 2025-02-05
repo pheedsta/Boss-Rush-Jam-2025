@@ -15,5 +15,6 @@ MonoBehaviour:
   objectName: Play_MainMenu
   id: 3738780720
   guid: 1C0E8818-7E11-4617-ADB0-1F8FB01173FD
+  AutoBank: {fileID: 0}
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

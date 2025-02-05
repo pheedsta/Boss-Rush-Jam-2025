@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="Boss-Rush-Jam-2025_Wwise" GUID="{A33B395D-B36C-46E3-9F3E-6C10EE7F7399}" Generator="2024.1.1.8691"/>
+	<CacheRoot>../../../../Boss-Rush-Jam-2025_Wwise/.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Web" GUID="{3F743B65-F0DB-4567-BDEA-A3E30B43C455}" BasePlatform="Web" BasePlatformGUID="{639AD233-23F2-4C0F-9127-79F44C15E1DA}" Path="Web"/>
+		<Platform Name="Windows" GUID="{3D3337CA-E7A4-4F09-B419-E3860885F8A1}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="Windows"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{A91A0CEA-9875-4DFD-81A0-285473176312}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{05612687-5B55-BB49-AD0F-6EE89A5C28AB}</FileHash>
+</ProjectInfo>

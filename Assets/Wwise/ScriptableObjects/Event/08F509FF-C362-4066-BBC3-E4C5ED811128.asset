@@ -15,5 +15,6 @@ MonoBehaviour:
   objectName: SwordSlash_Draw
   id: 1651434072
   guid: 08F509FF-C362-4066-BBC3-E4C5ED811128
+  AutoBank: {fileID: 0}
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

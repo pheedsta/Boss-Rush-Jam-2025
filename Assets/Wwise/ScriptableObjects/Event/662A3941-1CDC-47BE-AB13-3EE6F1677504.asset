@@ -15,5 +15,6 @@ MonoBehaviour:
   objectName: SwordSlash_Hit
   id: 2144487013
   guid: 662A3941-1CDC-47BE-AB13-3EE6F1677504
+  AutoBank: {fileID: 0}
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

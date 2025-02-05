@@ -15,5 +15,6 @@ MonoBehaviour:
   objectName: PortalSummon_Start
   id: 4064282583
   guid: BD794903-927F-4EDD-9D4C-BE9B48D11A45
+  AutoBank: {fileID: 0}
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

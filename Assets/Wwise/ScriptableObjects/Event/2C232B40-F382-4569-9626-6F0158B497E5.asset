@@ -15,5 +15,6 @@ MonoBehaviour:
   objectName: Health_Regenerate
   id: 2890568120
   guid: 2C232B40-F382-4569-9626-6F0158B497E5
+  AutoBank: {fileID: 0}
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

@@ -15,5 +15,6 @@ MonoBehaviour:
   objectName: Acid_Hit
   id: 2782789220
   guid: E37AFD21-1E02-4422-887C-2CFDE8F831EF
+  AutoBank: {fileID: 0}
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

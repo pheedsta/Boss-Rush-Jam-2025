@@ -15,5 +15,6 @@ MonoBehaviour:
   objectName: Acid_Sizzle_Stop
   id: 3573332599
   guid: 79B96725-D556-4E12-92E4-65351B82DAEB
+  AutoBank: {fileID: 0}
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

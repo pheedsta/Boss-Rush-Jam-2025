@@ -15,5 +15,6 @@ MonoBehaviour:
   objectName: Stop_BossMusic
   id: 656877296
   guid: D83EC020-47AF-457F-B53D-613102603EBF
+  AutoBank: {fileID: 0}
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

@@ -15,5 +15,6 @@ MonoBehaviour:
   objectName: Dash_Player
   id: 4281377955
   guid: A2329711-98C1-4E91-9816-1C70D26B142E
+  AutoBank: {fileID: 0}
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

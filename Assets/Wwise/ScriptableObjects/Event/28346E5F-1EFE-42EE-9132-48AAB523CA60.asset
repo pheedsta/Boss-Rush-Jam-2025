@@ -15,5 +15,6 @@ MonoBehaviour:
   objectName: Hurt_Player
   id: 1719332078
   guid: 28346E5F-1EFE-42EE-9132-48AAB523CA60
+  AutoBank: {fileID: 0}
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

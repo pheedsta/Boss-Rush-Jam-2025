@@ -15,5 +15,6 @@ MonoBehaviour:
   objectName: Acid_SpraySizzle
   id: 2594170985
   guid: 37871F24-ACC0-4199-8D01-93EF1E52EADE
+  AutoBank: {fileID: 0}
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

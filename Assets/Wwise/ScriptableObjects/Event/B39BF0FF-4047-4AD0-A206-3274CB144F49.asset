@@ -15,5 +15,6 @@ MonoBehaviour:
   objectName: Stop_MainMenu
   id: 890527358
   guid: B39BF0FF-4047-4AD0-A206-3274CB144F49
+  AutoBank: {fileID: 0}
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

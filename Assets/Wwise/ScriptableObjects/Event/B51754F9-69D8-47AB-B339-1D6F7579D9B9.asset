@@ -15,5 +15,6 @@ MonoBehaviour:
   objectName: VortexPull_Boss_Stop
   id: 2733481739
   guid: B51754F9-69D8-47AB-B339-1D6F7579D9B9
+  AutoBank: {fileID: 0}
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

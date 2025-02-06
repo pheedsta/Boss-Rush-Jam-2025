@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{B814E88E-7AE1-1AFF-8A8D-F93F5887F26E}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{23144AB3-E299-94C6-55AE-A9D0BEA96D16}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -21,10 +21,18 @@
 			</Plugins>
 			<Busses>
 				<Bus Id="174537428" Name="Player Bus" ObjectPath="\Master-Mixer Hierarchy\Master-Mixer-SFX\Player Bus" GUID="{1A9645D3-60EF-4D52-ACEE-59CBDC6A1970}" Color="2"/>
+				<Bus Id="1069431850" Name="Player" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Bus\Player" GUID="{7FBE4A11-3C4A-4271-895B-E0B04D7E49C9}" Color="2"/>
+				<Bus Id="1502772432" Name="SFX Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Bus" GUID="{C52A9255-F13B-45EB-8D82-E65C5C497A82}" Color="2"/>
+				<Bus Id="1560169506" Name="Boss" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Bus\Boss" GUID="{676EE948-E088-409E-8C63-BDD128677F66}" Color="2"/>
+				<Bus Id="1973600711" Name="Environmental" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Bus\Environmental" GUID="{15E47E10-EB91-4C19-920C-CFC064E532DE}" Color="2"/>
+				<Bus Id="1991862712" Name="MainMenuMusic" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music Bus\MainMenuMusic" GUID="{FA5C6B32-CA58-4397-B23B-1E3C80F25B22}" Color="4"/>
+				<Bus Id="2275179450" Name="GameplayMusic" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music Bus\GameplayMusic" GUID="{BDCC511B-05E5-43AA-B2B3-89E1E2854A68}" Color="4"/>
 				<Bus Id="2633636108" Name="Boss Bus" ObjectPath="\Master-Mixer Hierarchy\Master-Mixer-SFX\Boss Bus" GUID="{95325F91-5BD6-4E6B-833C-86BE2DB9F2A7}" Color="2"/>
+				<Bus Id="3127962312" Name="Music Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music Bus" GUID="{8BCC9852-B4CA-4C87-9834-2B27DAF38C8A}" Color="4"/>
 				<Bus Id="3600197733" Name="Environmental Bus" ObjectPath="\Master-Mixer Hierarchy\Master-Mixer-SFX\Environmental Bus" GUID="{DA462564-A3EC-45D5-BF1E-5C2994014A9B}" Color="2"/>
 				<Bus Id="3714968413" Name="Dialogue Bus" ObjectPath="\Master-Mixer Hierarchy\Master-Mixer-SFX\Dialogue Bus" GUID="{68159345-8741-4735-9FE3-AB507DAAD3C4}" Color="2"/>
 				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
+				<Bus Id="3930136735" Name="Dialogue" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Bus\Dialogue" GUID="{2EE9473E-EDB6-45CA-9D7D-5FBB3F2B6A57}" Color="2"/>
 			</Busses>
 			<GameParameters>
 				<GameParameter Id="1879554359" Name="Layercontrol" ObjectPath="\Game Parameters\Default Work Unit\Layercontrol" GUID="{1FFB5301-E54F-47B1-9028-6A47A818882C}" Color="4"/>
@@ -167,7 +175,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" GUID="{44F08A17-571E-464B-85BE-A2ED4F72914E}" Language="SFX" Hash="{C6038AFA-6BF3-140C-50D7-FDD7DB9E14E8}">
+		<SoundBank Id="3161908922" Type="User" GUID="{44F08A17-571E-464B-85BE-A2ED4F72914E}" Language="SFX" Hash="{1D52BA1B-9221-098D-F224-F598F103F1CD}">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -569,5 +577,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{217F4F7D-1D54-0775-0E7B-A2FB6F658A95}</FileHash>
+	<FileHash>{ACD27C11-885C-0A54-AD61-32A75FD0F346}</FileHash>
 </SoundBanksInfo>

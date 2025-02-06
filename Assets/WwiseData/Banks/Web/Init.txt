@@ -24,10 +24,18 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	174537428	Player Bus			\Master-Mixer-SFX\Player Bus	
+	1069431850	Player			\Default Work Unit\Master Audio Bus\SFX Bus\Player	
+	1502772432	SFX Bus			\Default Work Unit\Master Audio Bus\SFX Bus	
+	1560169506	Boss			\Default Work Unit\Master Audio Bus\SFX Bus\Boss	
+	1973600711	Environmental			\Default Work Unit\Master Audio Bus\SFX Bus\Environmental	
+	1991862712	MainMenuMusic			\Default Work Unit\Master Audio Bus\Music Bus\MainMenuMusic	
+	2275179450	GameplayMusic			\Default Work Unit\Master Audio Bus\Music Bus\GameplayMusic	
 	2633636108	Boss Bus			\Master-Mixer-SFX\Boss Bus	
+	3127962312	Music Bus			\Default Work Unit\Master Audio Bus\Music Bus	
 	3600197733	Environmental Bus			\Master-Mixer-SFX\Environmental Bus	
 	3714968413	Dialogue Bus			\Master-Mixer-SFX\Dialogue Bus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3930136735	Dialogue			\Default Work Unit\Master Audio Bus\SFX Bus\Dialogue	
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

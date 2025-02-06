@@ -29,14 +29,12 @@ namespace _App.Scripts.juandeyby
             for (var i = 0; i < _maxWorms / 2; i++)
             {
                 var worm = Instantiate(wormPrefab, transform);
-                worm.gameObject.SetActive(false);
                 _worms.Enqueue(worm);
             }
             
             for (var i = 0; i < _maxWorms / 2; i++)
             {
                 var worm = Instantiate(wormFirePrefab, transform);
-                worm.gameObject.SetActive(false);
                 _worms.Enqueue(worm);
             }
         }

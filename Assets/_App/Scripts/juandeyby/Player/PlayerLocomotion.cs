@@ -76,9 +76,9 @@ namespace _App.Scripts.juandeyby
             
             var targetRotation = Quaternion.LookRotation(lookDirection);
             Debug.DrawRay(transform.position, targetRotation * Vector3.forward * 10f, Color.blue);
-            var playerRotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 20f);
-            Debug.DrawRay(transform.position, playerRotation * Vector3.forward * 10f, Color.green);
-            rb.MoveRotation(targetRotation);
+            // var playerRotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 20f);
+            // Debug.DrawRay(transform.position, playerRotation * Vector3.forward * 10f, Color.green);
+            rb.rotation = targetRotation;
         }
         
         private void HandleFallingAndLanding()

@@ -76,8 +76,9 @@ namespace _App.Scripts.juandeyby
             
             var targetRotation = Quaternion.LookRotation(lookDirection);
             Debug.DrawRay(transform.position, targetRotation * Vector3.forward * 10f, Color.blue);
-            var playerRotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 20);
-            rb.rotation = playerRotation;
+            // var playerRotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 20f);
+            // Debug.DrawRay(transform.position, playerRotation * Vector3.forward * 10f, Color.green);
+            rb.rotation = targetRotation;
         }
         
         private void HandleFallingAndLanding()
@@ -105,9 +106,8 @@ namespace _App.Scripts.juandeyby
                     playerAnimator.PlayTargetAnimation("Land", true);
                 }
                 inAirTimer = 0;
+                if (isGrounded == false) transform.SetParent(hit.transform);
                 isGrounded = true;
-                
-                transform.SetParent(hit.transform);
             }
             else
             {
@@ -128,7 +128,7 @@ namespace _App.Scripts.juandeyby
                 var playerVelocity = _moveDirection;
                 playerVelocity.y = jumpingVelocity;
                 rb.linearVelocity = playerVelocity;
-                
+
                 transform.SetParent(null);
             }
         }

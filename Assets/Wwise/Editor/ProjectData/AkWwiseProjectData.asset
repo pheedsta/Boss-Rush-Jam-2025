@@ -303,8 +303,108 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: e092c96b424a6f4daee39b46ef623096
     GuidInternal: 
-    m_lastTime: -8584629624034754159
+    m_lastTime: -8584628770539122028
     List:
+    - name: Boss
+      guid: 48e96e6788e09e408c63bdd128677f66
+      id: 1560169506
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e092c96b424a6f4daee39b46ef623096
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX Bus
+        ObjectType: 2
+        guid: 55922ac53bf1eb458d82e65c5c497a82
+      - ElementName: Boss
+        ObjectType: 2
+        guid: 48e96e6788e09e408c63bdd128677f66
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Bus\Boss
+    - name: Dialogue
+      guid: 3e47e92eb6edca459d7d5fbb3f2b6a57
+      id: 3930136735
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e092c96b424a6f4daee39b46ef623096
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX Bus
+        ObjectType: 2
+        guid: 55922ac53bf1eb458d82e65c5c497a82
+      - ElementName: Dialogue
+        ObjectType: 2
+        guid: 3e47e92eb6edca459d7d5fbb3f2b6a57
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Bus\Dialogue
+    - name: Environmental
+      guid: 107ee41591eb194c920ccfc064e532de
+      id: 1973600711
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e092c96b424a6f4daee39b46ef623096
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX Bus
+        ObjectType: 2
+        guid: 55922ac53bf1eb458d82e65c5c497a82
+      - ElementName: Environmental
+        ObjectType: 2
+        guid: 107ee41591eb194c920ccfc064e532de
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Bus\Environmental
+    - name: GameplayMusic
+      guid: 1b51ccbde505aa43b2b389e1e2854a68
+      id: 2275179450
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e092c96b424a6f4daee39b46ef623096
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Music Bus
+        ObjectType: 2
+        guid: 5298cc8bcab4874c98342b27daf38c8a
+      - ElementName: GameplayMusic
+        ObjectType: 2
+        guid: 1b51ccbde505aa43b2b389e1e2854a68
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music Bus\GameplayMusic
+    - name: MainMenuMusic
+      guid: 326b5cfa58ca9743b23b1e3c80f25b22
+      id: 1991862712
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e092c96b424a6f4daee39b46ef623096
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Music Bus
+        ObjectType: 2
+        guid: 5298cc8bcab4874c98342b27daf38c8a
+      - ElementName: MainMenuMusic
+        ObjectType: 2
+        guid: 326b5cfa58ca9743b23b1e3c80f25b22
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music Bus\MainMenuMusic
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -319,6 +419,60 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: Music Bus
+      guid: 5298cc8bcab4874c98342b27daf38c8a
+      id: 3127962312
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e092c96b424a6f4daee39b46ef623096
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Music Bus
+        ObjectType: 2
+        guid: 5298cc8bcab4874c98342b27daf38c8a
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music Bus
+    - name: Player
+      guid: 114abe7f4a3c7142895be0b04d7e49c9
+      id: 1069431850
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e092c96b424a6f4daee39b46ef623096
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX Bus
+        ObjectType: 2
+        guid: 55922ac53bf1eb458d82e65c5c497a82
+      - ElementName: Player
+        ObjectType: 2
+        guid: 114abe7f4a3c7142895be0b04d7e49c9
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Bus\Player
+    - name: SFX Bus
+      guid: 55922ac53bf1eb458d82e65c5c497a82
+      id: 1502772432
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e092c96b424a6f4daee39b46ef623096
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX Bus
+        ObjectType: 2
+        guid: 55922ac53bf1eb458d82e65c5c497a82
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Bus
   - PhysicalPath: Master-Mixer Hierarchy\Master-Mixer-MUSIC.wwu
     PathAndIcons:
     - ElementName: Master-Mixer Hierarchy

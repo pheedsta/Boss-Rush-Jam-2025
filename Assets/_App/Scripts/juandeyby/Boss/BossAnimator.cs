@@ -41,5 +41,10 @@ namespace _App.Scripts.juandeyby
         {
             animator.CrossFade("Dead", 0.1f);
         }
+        
+        public void PlayPortalSummon()
+        {
+            animator.CrossFade("PortalSummon", 0.1f);
+        }
     }
 }

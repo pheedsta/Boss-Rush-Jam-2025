@@ -41,7 +41,13 @@ namespace _App.Scripts.juandeyby.Boss
             // }
             
             // Check if the player is close to the boss
-            var playerPosition = Player.Instance.transform.position; 
+            var playerPosition = Player.Instance.transform.position;
+            var playerParent = Player.Instance.transform.parent;
+            if (playerParent != null && playerParent.CompareTag("B"))
+            {
+                boss.SetState(new BossChaseState());
+                return;
+            }
             if (IsPathAvailable(playerPosition))
             {
                 boss.SetState(new BossChaseState());

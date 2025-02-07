@@ -15,7 +15,7 @@ public class FireProjectile : MonoBehaviour
 
     private IEnumerator DestroyProjectile()
     {
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(3f);
         rb.linearVelocity = Vector3.zero;
         rb.isKinematic = false;
         rb.useGravity = true;

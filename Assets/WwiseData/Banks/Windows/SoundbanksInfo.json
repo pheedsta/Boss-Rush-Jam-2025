@@ -18,7 +18,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{47F503A1-E7E0-B495-CF61-21C5F3533A87}",
+    "Hash": "{2162CDEB-9E30-71A3-6EEB-7CE31F0B2E51}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -51,11 +51,60 @@
       "Color": "2"
      },
      {
+      "Id": "1069431850",
+      "Name": "Player",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Bus\\Player",
+      "GUID": "{7FBE4A11-3C4A-4271-895B-E0B04D7E49C9}",
+      "Color": "2"
+     },
+     {
+      "Id": "1502772432",
+      "Name": "SFX Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Bus",
+      "GUID": "{C52A9255-F13B-45EB-8D82-E65C5C497A82}",
+      "Color": "2"
+     },
+     {
+      "Id": "1560169506",
+      "Name": "Boss",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Bus\\Boss",
+      "GUID": "{676EE948-E088-409E-8C63-BDD128677F66}",
+      "Color": "2"
+     },
+     {
+      "Id": "1973600711",
+      "Name": "Environmental",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Bus\\Environmental",
+      "GUID": "{15E47E10-EB91-4C19-920C-CFC064E532DE}",
+      "Color": "2"
+     },
+     {
+      "Id": "1991862712",
+      "Name": "MainMenuMusic",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Music Bus\\MainMenuMusic",
+      "GUID": "{FA5C6B32-CA58-4397-B23B-1E3C80F25B22}",
+      "Color": "4"
+     },
+     {
+      "Id": "2275179450",
+      "Name": "GameplayMusic",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Music Bus\\GameplayMusic",
+      "GUID": "{BDCC511B-05E5-43AA-B2B3-89E1E2854A68}",
+      "Color": "4"
+     },
+     {
       "Id": "2633636108",
       "Name": "Boss Bus",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Master-Mixer-SFX\\Boss Bus",
       "GUID": "{95325F91-5BD6-4E6B-833C-86BE2DB9F2A7}",
       "Color": "2"
+     },
+     {
+      "Id": "3127962312",
+      "Name": "Music Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Music Bus",
+      "GUID": "{8BCC9852-B4CA-4C87-9834-2B27DAF38C8A}",
+      "Color": "4"
      },
      {
       "Id": "3600197733",
@@ -76,6 +125,13 @@
       "Name": "Master Audio Bus",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
       "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     },
+     {
+      "Id": "3930136735",
+      "Name": "Dialogue",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Bus\\Dialogue",
+      "GUID": "{2EE9473E-EDB6-45CA-9D7D-5FBB3F2B6A57}",
+      "Color": "2"
      }
     ],
     "GameParameters": [
@@ -598,7 +654,7 @@
     "Type": "User",
     "GUID": "{44F08A17-571E-464B-85BE-A2ED4F72914E}",
     "Language": "SFX",
-    "Hash": "{C6038AFA-6BF3-140C-50D7-FDD7DB9E14E8}",
+    "Hash": "{1D52BA1B-9221-098D-F224-F598F103F1CD}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -1596,6 +1652,6 @@
     ]
    }
   ],
-  "FileHash": "{9000493B-60A5-EFC7-F3FB-02A97910138A}"
+  "FileHash": "{5B919A7E-F936-9935-1E13-3C1B967B6C8E}"
  }
 }

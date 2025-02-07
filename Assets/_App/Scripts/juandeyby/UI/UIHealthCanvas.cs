@@ -11,7 +11,7 @@ namespace _App.Scripts.juandeyby.UI
     {
         [SerializeField] private UIHealthBar uiHealthBarPrefab;
         private readonly Queue<UIHealthBar> _healthBars = new Queue<UIHealthBar>();
-        private readonly int _maxHealthBars = 20;
+        private readonly int _maxHealthBars = 8;
 
         private void OnEnable()
         {
@@ -38,6 +38,7 @@ namespace _App.Scripts.juandeyby.UI
             if (_healthBars.Count == 0)
             {
                 var healthBar = Instantiate(uiHealthBarPrefab, transform);
+                healthBar.gameObject.SetActive(false);
                 _healthBars.Enqueue(healthBar);
             }
 

@@ -75,7 +75,7 @@ namespace _App.Scripts.juandeyby.Boss
         public void RangedDamage()
         {
             ServiceLocator.Get<MusicManager>().PlaySpellHit();
-            TakeDamage(10);
+            TakeDamage(5);
         }
     }
 }

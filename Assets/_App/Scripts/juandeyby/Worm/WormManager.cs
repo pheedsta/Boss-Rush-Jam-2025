@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -13,6 +14,7 @@ namespace _App.Scripts.juandeyby
         [SerializeField] private WormFire wormFirePrefab;
         private readonly Queue<Worm> _worms = new Queue<Worm>();
         private readonly int _maxWorms = 8;
+        private Coroutine _spawnCoroutine;
         
         private void OnEnable()
         {
@@ -57,6 +59,7 @@ namespace _App.Scripts.juandeyby
             worm.gameObject.SetActive(false);
             _worms.Enqueue(worm);
             
+            Debug.Log("Worm returned!");
             CheckWorms();
         }
 
@@ -66,6 +69,23 @@ namespace _App.Scripts.juandeyby
             var activeWorms = children.Count(c => c.gameObject.activeSelf);
             if (activeWorms == 0)
             {
+                
+                boss.SetState(new Boss.BossPortalSummonState());
+                
+                // if (_spawnCoroutine != null)
+                // {
+                //     StopCoroutine(_spawnCoroutine);
+                // }
+                // Debug.Log("All worms are dead!");
+                // _spawnCoroutine = StartCoroutine(RespawnWorms());
+            }
+        }
+        
+        private IEnumerator RespawnWorms()
+        {
+            while (true)
+            {
+                yield return new WaitForSeconds(6f);
                 boss.SetState(new Boss.BossPortalSummonState());
             }
         }

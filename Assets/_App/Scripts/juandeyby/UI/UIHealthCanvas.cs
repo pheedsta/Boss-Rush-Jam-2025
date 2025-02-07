@@ -35,7 +35,6 @@ namespace _App.Scripts.juandeyby.UI
         
         public UIHealthBar GetHealthBar()
         {
-            Debug.LogWarning(_healthBars.Count);
             if (_healthBars.Count == 0)
             {
                 var healthBar = Instantiate(uiHealthBarPrefab, transform);

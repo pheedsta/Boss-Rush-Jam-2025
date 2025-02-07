@@ -19,6 +19,7 @@ namespace _App.Scripts.juandeyby.Boss
         public void Update(Boss boss)
         {
             var playerPosition = Player.Instance.transform.position;
+            var playerParent = Player.Instance.transform.parent;
             var distance = Vector3.Distance(boss.transform.position, playerPosition);
     
             if (distance <= _attackRange)
@@ -30,6 +31,10 @@ namespace _App.Scripts.juandeyby.Boss
             {
                 Debug.Log("<color=red>Spell!</color>");
                 boss.SetState(new BossSweepingStrikeState());
+            }
+            else if (playerParent != null && playerParent.CompareTag("B"))
+            {
+                _navMeshAgent.SetDestination(playerPosition);
             }
             else if (IsPathAvailable(playerPosition))
             {

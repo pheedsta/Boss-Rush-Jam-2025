@@ -128,7 +128,7 @@ namespace _App.Scripts.juandeyby
                 var playerVelocity = _moveDirection;
                 playerVelocity.y = jumpingVelocity;
                 rb.linearVelocity = playerVelocity;
-                
+
                 transform.SetParent(null);
             }
         }

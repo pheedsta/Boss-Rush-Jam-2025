@@ -5,6 +5,9 @@ namespace _App.Scripts.juandeyby
     public class WormAbilityPoison : WormAbility
     {
         [Header("Settings")]
+        [SerializeField] private PoisonCollider poisonColliderPrefab;
+        [SerializeField] private Transform poisonColliderSpawnPoint;
+        [SerializeField] private ParticleSystem vfx;
         [SerializeField] private float force = 4f;
         [SerializeField] private float duration = 2f;
         
@@ -15,8 +18,13 @@ namespace _App.Scripts.juandeyby
             _timer = 0f;
             worm.MeshAgent.isStopped = true;
             
-            // ApplyForcePush(worm);
-            // worm.PlayForsePushEffect();
+            vfx.Play();
+            
+            var poisonCollider = Instantiate(poisonColliderPrefab, poisonColliderSpawnPoint.position, Quaternion.identity, worm.transform);
+            var rbPoisonCollider = poisonCollider.GetComponent<Rigidbody>();
+            rbPoisonCollider.AddForce(worm.transform.forward * force, ForceMode.Impulse);
+            
+            ServiceLocator.Get<MusicManager>().PlayAcidSpray();
         }
 
         public override void UpdateAbility(Worm worm, float deltaTime)

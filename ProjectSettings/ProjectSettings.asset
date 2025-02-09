@@ -17,7 +17,7 @@ PlayerSettings:
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
-  m_ShowUnitySplashScreen: 1
+  m_ShowUnitySplashScreen: 0
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 1
@@ -799,7 +799,7 @@ PlayerSettings:
   blurSplashScreenBackground: 1
   spritePackerPolicy: 
   webGLMemorySize: 32
-  webGLExceptionSupport: 0
+  webGLExceptionSupport: 1
   webGLNameFilesAsHashes: 0
   webGLShowDiagnostics: 0
   webGLDataCaching: 1
@@ -837,9 +837,10 @@ PlayerSettings:
     PS5: DOTWEEN
     QNX: DOTWEEN
     ReservedCFE: DOTWEEN
+    Server: 
     Standalone: WWISE_ADDRESSABLES_23_1_OR_LATER;WWISE_ADDRESSABLES_24_1_OR_LATER;WWISE_2024_OR_LATER;DOTWEEN
     VisionOS: DOTWEEN
-    WebGL: WWISE_ADDRESSABLES_23_1_OR_LATER;WWISE_ADDRESSABLES_24_1_OR_LATER;WWISE_2024_OR_LATER;DOTWEEN
+    WebGL: WWISE_ADDRESSABLES_23_1_OR_LATER;WWISE_ADDRESSABLES_24_1_OR_LATER;WWISE_2024_OR_LATER
     Windows Store Apps: DOTWEEN
     XboxOne: DOTWEEN
     iPhone: DOTWEEN

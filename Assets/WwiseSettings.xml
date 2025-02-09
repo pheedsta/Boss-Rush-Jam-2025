@@ -3,11 +3,12 @@
   <CopySoundBanksAsPreBuildStep>true</CopySoundBanksAsPreBuildStep>
   <GenerateSoundBanksAsPreBuildStep>false</GenerateSoundBanksAsPreBuildStep>
   <SoundbankPath>Audio/GeneratedSoundBanks</SoundbankPath>
+  <GeneratedSoundbanksPath>WwiseData/Banks</GeneratedSoundbanksPath>
   <CreatedPicker>true</CreatedPicker>
   <CreateWwiseGlobal>true</CreateWwiseGlobal>
   <CreateWwiseListener>true</CreateWwiseListener>
   <ObjectReferenceAutoCleanup>true</ObjectReferenceAutoCleanup>
-  <LoadSoundEngineInEditMode>true</LoadSoundEngineInEditMode>
+  <LoadSoundEngineInEditMode>false</LoadSoundEngineInEditMode>
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
   <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
   <WwiseInstallationPathMac>/Applications/Audiokinetic/Wwise2024.1.1.8691/Wwise.app</WwiseInstallationPathMac>

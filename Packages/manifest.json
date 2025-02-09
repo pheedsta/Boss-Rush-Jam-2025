@@ -1,11 +1,12 @@
 {
   "dependencies": {
+    "com.audiokinetic.wwise.addressables": "https://github.com/audiokinetic/WwiseUnityAddressables.git",
     "com.coffee.softmask-for-ugui": "https://github.com/mob-sakai/SoftMaskForUGUI.git?path=Packages/src#3.2.1",
     "com.unity.2d.sprite": "1.0.0",
+    "com.unity.addressables": "2.3.16",
     "com.unity.ai.navigation": "2.0.5",
     "com.unity.burst": "1.8.18",
     "com.unity.cinemachine": "3.1.2",
-    "com.unity.collab-proxy": "2.6.0",
     "com.unity.collections": "2.5.1",
     "com.unity.ext.nunit": "2.0.5",
     "com.unity.formats.alembic": "2.4.0",

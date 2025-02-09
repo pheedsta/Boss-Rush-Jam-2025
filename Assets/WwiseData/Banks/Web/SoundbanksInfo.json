@@ -1,0 +1,1657 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Web",
+  "BasePlatform": "Web",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "RootPaths": {
+   "ProjectRoot": "../../../../../Boss-Rush-Jam-2025_Wwise",
+   "SourceFilesRoot": "../../../../../Boss-Rush-Jam-2025_Wwise/.cache",
+   "SoundBanksRoot": ".",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "../../../../../Boss-Rush-Jam-2025_Wwise/GeneratedSoundBanks/Web"
+  },
+  "DialogueEvents": [],
+  "SoundBanks": [
+   {
+    "Id": "1355168291",
+    "Type": "User",
+    "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
+    "Language": "SFX",
+    "Hash": "{23144AB3-E299-94C6-55AE-A9D0BEA96D16}",
+    "ObjectPath": "Init",
+    "ShortName": "Init",
+    "Path": "Init.bnk",
+    "Plugins": {
+     "AudioDevices": [
+      {
+       "Id": "2317455096",
+       "Name": "No_Output",
+       "ObjectPath": "\\Audio Devices\\Default Work Unit\\No_Output",
+       "GUID": "{234314DC-8FDE-4F98-9FFB-8D7A2246D44F}",
+       "LibName": "No Output",
+       "LibId": "11862023"
+      },
+      {
+       "Id": "3859886410",
+       "Name": "System",
+       "ObjectPath": "\\Audio Devices\\Default Work Unit\\System",
+       "GUID": "{416468BE-66E1-411F-A001-3EAB2D7F0FD3}",
+       "LibName": "System",
+       "LibId": "11403271"
+      }
+     ]
+    },
+    "Busses": [
+     {
+      "Id": "174537428",
+      "Name": "Player Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Master-Mixer-SFX\\Player Bus",
+      "GUID": "{1A9645D3-60EF-4D52-ACEE-59CBDC6A1970}",
+      "Color": "2"
+     },
+     {
+      "Id": "1069431850",
+      "Name": "Player",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Bus\\Player",
+      "GUID": "{7FBE4A11-3C4A-4271-895B-E0B04D7E49C9}",
+      "Color": "2"
+     },
+     {
+      "Id": "1502772432",
+      "Name": "SFX Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Bus",
+      "GUID": "{C52A9255-F13B-45EB-8D82-E65C5C497A82}",
+      "Color": "2"
+     },
+     {
+      "Id": "1560169506",
+      "Name": "Boss",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Bus\\Boss",
+      "GUID": "{676EE948-E088-409E-8C63-BDD128677F66}",
+      "Color": "2"
+     },
+     {
+      "Id": "1973600711",
+      "Name": "Environmental",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Bus\\Environmental",
+      "GUID": "{15E47E10-EB91-4C19-920C-CFC064E532DE}",
+      "Color": "2"
+     },
+     {
+      "Id": "1991862712",
+      "Name": "MainMenuMusic",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Music Bus\\MainMenuMusic",
+      "GUID": "{FA5C6B32-CA58-4397-B23B-1E3C80F25B22}",
+      "Color": "4"
+     },
+     {
+      "Id": "2275179450",
+      "Name": "GameplayMusic",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Music Bus\\GameplayMusic",
+      "GUID": "{BDCC511B-05E5-43AA-B2B3-89E1E2854A68}",
+      "Color": "4"
+     },
+     {
+      "Id": "2633636108",
+      "Name": "Boss Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Master-Mixer-SFX\\Boss Bus",
+      "GUID": "{95325F91-5BD6-4E6B-833C-86BE2DB9F2A7}",
+      "Color": "2"
+     },
+     {
+      "Id": "3127962312",
+      "Name": "Music Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Music Bus",
+      "GUID": "{8BCC9852-B4CA-4C87-9834-2B27DAF38C8A}",
+      "Color": "4"
+     },
+     {
+      "Id": "3600197733",
+      "Name": "Environmental Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Master-Mixer-SFX\\Environmental Bus",
+      "GUID": "{DA462564-A3EC-45D5-BF1E-5C2994014A9B}",
+      "Color": "2"
+     },
+     {
+      "Id": "3714968413",
+      "Name": "Dialogue Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Master-Mixer-SFX\\Dialogue Bus",
+      "GUID": "{68159345-8741-4735-9FE3-AB507DAAD3C4}",
+      "Color": "2"
+     },
+     {
+      "Id": "3803692087",
+      "Name": "Master Audio Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     },
+     {
+      "Id": "3930136735",
+      "Name": "Dialogue",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Bus\\Dialogue",
+      "GUID": "{2EE9473E-EDB6-45CA-9D7D-5FBB3F2B6A57}",
+      "Color": "2"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "1879554359",
+      "Name": "Layercontrol",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Layercontrol",
+      "GUID": "{1FFB5301-E54F-47B1-9028-6A47A818882C}",
+      "Color": "4"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "2012657067",
+      "Name": "New_State_Group",
+      "ObjectPath": "\\States\\Default Work Unit\\New_State_Group",
+      "GUID": "{D03B22C3-2DA8-4AC0-82E9-28DA309D1C01}",
+      "States": [
+       {
+        "Id": "319258907",
+        "Name": "Paused",
+        "ObjectPath": "\\States\\Default Work Unit\\New_State_Group\\Paused",
+        "GUID": "{0D421874-73C8-4663-BE60-B1C3ABCAF71D}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\New_State_Group\\None",
+        "GUID": "{B6A621DC-71BB-4552-A623-5D42DDE820BA}"
+       },
+       {
+        "Id": "1852808225",
+        "Name": "Playing",
+        "ObjectPath": "\\States\\Default Work Unit\\New_State_Group\\Playing",
+        "GUID": "{417BDFA7-40C0-4777-9988-26386960DB18}"
+       }
+      ]
+     }
+    ],
+    "AcousticTextures": [
+     {
+      "Id": "504532776",
+      "Name": "Brick",
+      "ObjectPath": "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Brick",
+      "GUID": "{B086A5A9-F204-4C53-A838-BDB18B18F6D6}",
+      "Color": "8",
+      "Properties": [
+       {
+        "Name": "AbsorptionLow",
+        "Type": "Real32",
+        "Value": "12"
+       },
+       {
+        "Name": "AbsorptionMidLow",
+        "Type": "Real32",
+        "Value": "18"
+       },
+       {
+        "Name": "AbsorptionMidHigh",
+        "Type": "Real32",
+        "Value": "23"
+       },
+       {
+        "Name": "AbsorptionHigh",
+        "Type": "Real32",
+        "Value": "35"
+       },
+       {
+        "Name": "Scattering",
+        "Type": "Real32",
+        "Value": "0"
+       }
+      ]
+     },
+     {
+      "Id": "513139656",
+      "Name": "Mountain",
+      "ObjectPath": "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Mountain",
+      "GUID": "{C5933731-001A-4AB4-98DD-9B033A8C8EAB}",
+      "Properties": [
+       {
+        "Name": "AbsorptionLow",
+        "Type": "Real32",
+        "Value": "0"
+       },
+       {
+        "Name": "AbsorptionMidLow",
+        "Type": "Real32",
+        "Value": "0"
+       },
+       {
+        "Name": "AbsorptionMidHigh",
+        "Type": "Real32",
+        "Value": "0"
+       },
+       {
+        "Name": "AbsorptionHigh",
+        "Type": "Real32",
+        "Value": "0"
+       },
+       {
+        "Name": "Scattering",
+        "Type": "Real32",
+        "Value": "0"
+       }
+      ]
+     },
+     {
+      "Id": "841620460",
+      "Name": "Concrete",
+      "ObjectPath": "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Concrete",
+      "GUID": "{5CF81C00-2896-4AE0-AF7C-3080BDABA682}",
+      "Color": "27",
+      "Properties": [
+       {
+        "Name": "AbsorptionLow",
+        "Type": "Real32",
+        "Value": "6"
+       },
+       {
+        "Name": "AbsorptionMidLow",
+        "Type": "Real32",
+        "Value": "6"
+       },
+       {
+        "Name": "AbsorptionMidHigh",
+        "Type": "Real32",
+        "Value": "6"
+       },
+       {
+        "Name": "AbsorptionHigh",
+        "Type": "Real32",
+        "Value": "14"
+       },
+       {
+        "Name": "Scattering",
+        "Type": "Real32",
+        "Value": "0"
+       }
+      ]
+     },
+     {
+      "Id": "1755085759",
+      "Name": "Wood_Deep",
+      "ObjectPath": "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Wood_Deep",
+      "GUID": "{5246478E-C5DA-4E0C-A0DE-C98D1479529A}",
+      "Color": "9",
+      "Properties": [
+       {
+        "Name": "AbsorptionLow",
+        "Type": "Real32",
+        "Value": "1"
+       },
+       {
+        "Name": "AbsorptionMidLow",
+        "Type": "Real32",
+        "Value": "8"
+       },
+       {
+        "Name": "AbsorptionMidHigh",
+        "Type": "Real32",
+        "Value": "20"
+       },
+       {
+        "Name": "AbsorptionHigh",
+        "Type": "Real32",
+        "Value": "35"
+       },
+       {
+        "Name": "Scattering",
+        "Type": "Real32",
+        "Value": "0"
+       }
+      ]
+     },
+     {
+      "Id": "1873957695",
+      "Name": "Anechoic",
+      "ObjectPath": "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Anechoic",
+      "GUID": "{8B0AC232-02E2-4EDE-BEAC-FDD1A900E3ED}",
+      "Color": "13",
+      "Properties": [
+       {
+        "Name": "AbsorptionLow",
+        "Type": "Real32",
+        "Value": "100"
+       },
+       {
+        "Name": "AbsorptionMidLow",
+        "Type": "Real32",
+        "Value": "100"
+       },
+       {
+        "Name": "AbsorptionMidHigh",
+        "Type": "Real32",
+        "Value": "100"
+       },
+       {
+        "Name": "AbsorptionHigh",
+        "Type": "Real32",
+        "Value": "100"
+       },
+       {
+        "Name": "Scattering",
+        "Type": "Real32",
+        "Value": "0"
+       }
+      ]
+     },
+     {
+      "Id": "1970351858",
+      "Name": "Fabric",
+      "ObjectPath": "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Fabric",
+      "GUID": "{8381D532-DB6E-4EED-A7A3-BC7B0A0B8BA8}",
+      "Color": "4",
+      "Properties": [
+       {
+        "Name": "AbsorptionLow",
+        "Type": "Real32",
+        "Value": "3"
+       },
+       {
+        "Name": "AbsorptionMidLow",
+        "Type": "Real32",
+        "Value": "13"
+       },
+       {
+        "Name": "AbsorptionMidHigh",
+        "Type": "Real32",
+        "Value": "48"
+       },
+       {
+        "Name": "AbsorptionHigh",
+        "Type": "Real32",
+        "Value": "72"
+       },
+       {
+        "Name": "Scattering",
+        "Type": "Real32",
+        "Value": "0"
+       }
+      ]
+     },
+     {
+      "Id": "2058049674",
+      "Name": "Wood",
+      "ObjectPath": "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Wood",
+      "GUID": "{1FFFBC96-6FE7-489E-BA6C-7C14A71391AE}",
+      "Color": "7",
+      "Properties": [
+       {
+        "Name": "AbsorptionLow",
+        "Type": "Real32",
+        "Value": "32"
+       },
+       {
+        "Name": "AbsorptionMidLow",
+        "Type": "Real32",
+        "Value": "25"
+       },
+       {
+        "Name": "AbsorptionMidHigh",
+        "Type": "Real32",
+        "Value": "20"
+       },
+       {
+        "Name": "AbsorptionHigh",
+        "Type": "Real32",
+        "Value": "35"
+       },
+       {
+        "Name": "Scattering",
+        "Type": "Real32",
+        "Value": "0"
+       }
+      ]
+     },
+     {
+      "Id": "2412606308",
+      "Name": "Carpet",
+      "ObjectPath": "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Carpet",
+      "GUID": "{34227589-DC56-4260-96C4-B9F4B669092B}",
+      "Color": "17",
+      "Properties": [
+       {
+        "Name": "AbsorptionLow",
+        "Type": "Real32",
+        "Value": "46"
+       },
+       {
+        "Name": "AbsorptionMidLow",
+        "Type": "Real32",
+        "Value": "45"
+       },
+       {
+        "Name": "AbsorptionMidHigh",
+        "Type": "Real32",
+        "Value": "76"
+       },
+       {
+        "Name": "AbsorptionHigh",
+        "Type": "Real32",
+        "Value": "100"
+       },
+       {
+        "Name": "Scattering",
+        "Type": "Real32",
+        "Value": "0"
+       }
+      ]
+     },
+     {
+      "Id": "2637588553",
+      "Name": "Tile",
+      "ObjectPath": "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Tile",
+      "GUID": "{A882DAC4-132A-47B7-BA9D-B9907BA29CC0}",
+      "Color": "16",
+      "Properties": [
+       {
+        "Name": "AbsorptionLow",
+        "Type": "Real32",
+        "Value": "67"
+       },
+       {
+        "Name": "AbsorptionMidLow",
+        "Type": "Real32",
+        "Value": "41"
+       },
+       {
+        "Name": "AbsorptionMidHigh",
+        "Type": "Real32",
+        "Value": "12"
+       },
+       {
+        "Name": "AbsorptionHigh",
+        "Type": "Real32",
+        "Value": "0"
+       },
+       {
+        "Name": "Scattering",
+        "Type": "Real32",
+        "Value": "0"
+       }
+      ]
+     },
+     {
+      "Id": "2928161104",
+      "Name": "Curtains",
+      "ObjectPath": "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Curtains",
+      "GUID": "{F8E69E33-5C97-4968-B508-A1535F2D66E8}",
+      "Color": "3",
+      "Properties": [
+       {
+        "Name": "AbsorptionLow",
+        "Type": "Real32",
+        "Value": "7"
+       },
+       {
+        "Name": "AbsorptionMidLow",
+        "Type": "Real32",
+        "Value": "60"
+       },
+       {
+        "Name": "AbsorptionMidHigh",
+        "Type": "Real32",
+        "Value": "0"
+       },
+       {
+        "Name": "AbsorptionHigh",
+        "Type": "Real32",
+        "Value": "84"
+       },
+       {
+        "Name": "Scattering",
+        "Type": "Real32",
+        "Value": "0"
+       }
+      ]
+     },
+     {
+      "Id": "3195498748",
+      "Name": "Cork_Tiles",
+      "ObjectPath": "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Cork_Tiles",
+      "GUID": "{30D2C919-925F-4143-8906-3DBB3C4AE5E2}",
+      "Color": "19",
+      "Properties": [
+       {
+        "Name": "AbsorptionLow",
+        "Type": "Real32",
+        "Value": "14"
+       },
+       {
+        "Name": "AbsorptionMidLow",
+        "Type": "Real32",
+        "Value": "30"
+       },
+       {
+        "Name": "AbsorptionMidHigh",
+        "Type": "Real32",
+        "Value": "73"
+       },
+       {
+        "Name": "AbsorptionHigh",
+        "Type": "Real32",
+        "Value": "100"
+       },
+       {
+        "Name": "Scattering",
+        "Type": "Real32",
+        "Value": "0"
+       }
+      ]
+     },
+     {
+      "Id": "3670307564",
+      "Name": "Drywall",
+      "ObjectPath": "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Drywall",
+      "GUID": "{68A4E3F4-4C0B-4687-A8B8-A84DB93DBC8F}",
+      "Color": "15",
+      "Properties": [
+       {
+        "Name": "AbsorptionLow",
+        "Type": "Real32",
+        "Value": "2"
+       },
+       {
+        "Name": "AbsorptionMidLow",
+        "Type": "Real32",
+        "Value": "2"
+       },
+       {
+        "Name": "AbsorptionMidHigh",
+        "Type": "Real32",
+        "Value": "2"
+       },
+       {
+        "Name": "AbsorptionHigh",
+        "Type": "Real32",
+        "Value": "2"
+       },
+       {
+        "Name": "Scattering",
+        "Type": "Real32",
+        "Value": "0"
+       }
+      ]
+     },
+     {
+      "Id": "4168643977",
+      "Name": "Acoustic_Banner",
+      "ObjectPath": "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Acoustic_Banner",
+      "GUID": "{2F2D53F2-DACC-408E-8B88-98B1B52A26D6}",
+      "Color": "10",
+      "Properties": [
+       {
+        "Name": "AbsorptionLow",
+        "Type": "Real32",
+        "Value": "37"
+       },
+       {
+        "Name": "AbsorptionMidLow",
+        "Type": "Real32",
+        "Value": "100"
+       },
+       {
+        "Name": "AbsorptionMidHigh",
+        "Type": "Real32",
+        "Value": "100"
+       },
+       {
+        "Name": "AbsorptionHigh",
+        "Type": "Real32",
+        "Value": "100"
+       },
+       {
+        "Name": "Scattering",
+        "Type": "Real32",
+        "Value": "0"
+       }
+      ]
+     },
+     {
+      "Id": "4262522749",
+      "Name": "Wood_Bright",
+      "ObjectPath": "\\Virtual Acoustics\\Factory Acoustic Textures\\Textures\\Wood_Bright",
+      "GUID": "{7B85D1E5-C1A2-4E63-9A13-CEC54B641ADC}",
+      "Color": "20",
+      "Properties": [
+       {
+        "Name": "AbsorptionLow",
+        "Type": "Real32",
+        "Value": "32"
+       },
+       {
+        "Name": "AbsorptionMidLow",
+        "Type": "Real32",
+        "Value": "25"
+       },
+       {
+        "Name": "AbsorptionMidHigh",
+        "Type": "Real32",
+        "Value": "10"
+       },
+       {
+        "Name": "AbsorptionHigh",
+        "Type": "Real32",
+        "Value": "9"
+       },
+       {
+        "Name": "Scattering",
+        "Type": "Real32",
+        "Value": "0"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "3161908922",
+    "Type": "User",
+    "GUID": "{44F08A17-571E-464B-85BE-A2ED4F72914E}",
+    "Language": "SFX",
+    "Hash": "{1D52BA1B-9221-098D-F224-F598F103F1CD}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
+    "ShortName": "Main",
+    "Path": "Main.bnk",
+    "Media": [
+     {
+      "Id": "3955584",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "JumpPlayer_04.wav",
+      "CachePath": "73/{73762420-A7BB-378D-AA18-A93B2C6C149F}.wem"
+     },
+     {
+      "Id": "39525447",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Designed, Drone, Dark Ambience, Creepy, Scifi 01 SND120956.wav",
+      "CachePath": "E0/{E0B10291-C84C-19CC-1E00-D924BE82845C}.wem"
+     },
+     {
+      "Id": "59567599",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SwordSlash_Whoosh_10.wav",
+      "CachePath": "CA/{CAB6E4AF-610B-5125-7FC5-0907C70DEA42}.wem"
+     },
+     {
+      "Id": "108155573",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Acid_Spray_01.wav",
+      "CachePath": "6B/{6B36DDCF-B500-5852-3F40-81C05BA6CF52}.wem"
+     },
+     {
+      "Id": "118299635",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SwordSlash_Hit_04.wav",
+      "CachePath": "DF/{DFC3A0F3-0653-B9F7-12D2-A698C317FD11}.wem"
+     },
+     {
+      "Id": "214809757",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "JumpPlayer_01.wav",
+      "CachePath": "B1/{B1135A3F-3E45-BD69-1531-7048ABCFDA53}.wem"
+     },
+     {
+      "Id": "235738653",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Acid_Sizzle_01.wav",
+      "CachePath": "84/{8409B3A3-F91D-6E2F-2644-745008DBDE28}.wem"
+     },
+     {
+      "Id": "244878740",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Every soul.wav",
+      "CachePath": "C0/{C0E7AB38-437E-18F3-EB33-FAC1F9F2B3F0}.wem"
+     },
+     {
+      "Id": "298882402",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "FireSpell_Hit_01.wav",
+      "CachePath": "62/{6275E1FC-B503-6EC2-26DE-DAA64C5CFB4C}.wem"
+     },
+     {
+      "Id": "347026546",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VortexPull_Boss_01.wav",
+      "CachePath": "D0/{D0809DCD-A568-7E87-4AE1-DA7484941ACA}.wem"
+     },
+     {
+      "Id": "378458012",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Dead_Boss.wav",
+      "CachePath": "ED/{ED50100C-6C40-2DB7-93FB-FFC2F8BDD506}.wem"
+     },
+     {
+      "Id": "401117487",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SwordSlash_Whoosh_01.wav",
+      "CachePath": "C7/{C7233C97-86B9-7794-D642-E72E686FDAAB}.wem"
+     },
+     {
+      "Id": "422536706",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SwordSlash_Hit_01.wav",
+      "CachePath": "7F/{7F5769D1-231B-F254-FD53-B5C06D30606C}.wem"
+     },
+     {
+      "Id": "423370867",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "HurtPlayer_03.wav",
+      "CachePath": "47/{47B12BC7-D415-F590-70D0-AFA7C43C30F9}.wem"
+     },
+     {
+      "Id": "433441780",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SwordSlash_Whoosh_09.wav",
+      "CachePath": "E0/{E0357703-2949-8120-47FF-C8C883E4181A}.wem"
+     },
+     {
+      "Id": "436423167",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "FireSpell_Fire_01.wav",
+      "CachePath": "48/{48001333-EB07-EDF5-E2FD-7518DC025B93}.wem"
+     },
+     {
+      "Id": "466370189",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Mortal.wav",
+      "CachePath": "18/{18D7C4D5-58F3-B047-F0A5-4BC4920460F2}.wem"
+     },
+     {
+      "Id": "472636486",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "HurtPlayer_04.wav",
+      "CachePath": "B3/{B3199102-5222-8A4F-08A9-AD25E86FDF9C}.wem"
+     },
+     {
+      "Id": "478594435",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "TES_MainMenu_Gameplay.wav",
+      "CachePath": "25/{257DA9AF-A4B0-E91F-1BD8-A4E887DCD567}.wem"
+     },
+     {
+      "Id": "510844697",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "TES_Layer1.wav",
+      "CachePath": "75/{75956046-FE54-146B-D239-F39F1956C239}.wem"
+     },
+     {
+      "Id": "529920245",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SwordSlash_Whoosh_02.wav",
+      "CachePath": "DF/{DF200A74-3F72-07A7-A0FC-65EBCAE12E07}.wem"
+     },
+     {
+      "Id": "548978409",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "PortalSummon_01.wav",
+      "CachePath": "6B/{6B4A4061-ACE6-8A86-2D96-59A7AC7AEED1}.wem"
+     },
+     {
+      "Id": "563532479",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SwordSlash_Hit_03.wav",
+      "CachePath": "91/{91D6C8A8-9155-14DB-11F2-E85F02A84E63}.wem"
+     },
+     {
+      "Id": "603019579",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SwordSlash_Hit_02.wav",
+      "CachePath": "9A/{9ADEA2C8-0AB0-1534-2A95-D47ACEBA3589}.wem"
+     },
+     {
+      "Id": "609702374",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "TES_Layer3.wav",
+      "CachePath": "34/{34857923-22AA-48FD-D0D7-885C6FCD7DC6}.wem"
+     },
+     {
+      "Id": "611719745",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SwordSlash_Whoosh_08.wav",
+      "CachePath": "E6/{E6C102F5-9C92-A839-896F-28AE53330FBE}.wem"
+     },
+     {
+      "Id": "619057983",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "FireSpell_Hit_02.wav",
+      "CachePath": "F2/{F2888CC4-A633-9C52-D596-3BDAA8D55B65}.wem"
+     },
+     {
+      "Id": "627166481",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "JumpPlayer_02.wav",
+      "CachePath": "3F/{3FA9B863-7896-F400-4848-20725D021E54}.wem"
+     },
+     {
+      "Id": "628150378",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SwordSlash_Draw_01.wav",
+      "CachePath": "6A/{6A78645B-6BE3-0848-02A9-B076FF3B81C4}.wem"
+     },
+     {
+      "Id": "641056015",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "VortexPull_Boss_End.wav",
+      "CachePath": "6E/{6E863518-4A96-B79E-04B5-7B407A5DA244}.wem"
+     },
+     {
+      "Id": "643520808",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "JumpPlayer_03.wav",
+      "CachePath": "46/{46C44031-8FEA-A74A-F401-85CB9B0F93E2}.wem"
+     },
+     {
+      "Id": "677623532",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SwordSlash_Draw_04.wav",
+      "CachePath": "CA/{CAC97E48-7920-43AE-036A-229AC6E37735}.wem"
+     },
+     {
+      "Id": "693424491",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SwordSlash_Draw_05.wav",
+      "CachePath": "D7/{D7C93876-A344-BDC4-586C-4D0D4708ADA2}.wem"
+     },
+     {
+      "Id": "699933523",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "TES_Layer2.wav",
+      "CachePath": "1D/{1D51DCF1-29F6-037D-5BFD-C3DE7776984E}.wem"
+     },
+     {
+      "Id": "719844841",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Health_Regenerate_01.wav",
+      "CachePath": "C3/{C3C42CCA-AF12-0B33-D18A-7F9209E10768}.wem"
+     },
+     {
+      "Id": "727541938",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Acid_Spray_02.wav",
+      "CachePath": "BC/{BC880F9E-B4D1-E017-9C9C-974F05D40913}.wem"
+     },
+     {
+      "Id": "748200115",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SwordSlash_Whoosh_04.wav",
+      "CachePath": "EC/{ECCDA79F-2F81-A3F0-35D6-5D858C9EF610}.wem"
+     },
+     {
+      "Id": "792316907",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "HurtPlayer_01.wav",
+      "CachePath": "BC/{BC1419AE-BFA4-EB6B-FFE9-E9B37DBE3DA1}.wem"
+     },
+     {
+      "Id": "809984412",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shards_Pickup_01.wav",
+      "CachePath": "4D/{4D183B92-B964-7A3E-13E4-21818F800142}.wem"
+     },
+     {
+      "Id": "825916254",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "TES_Layer0.wav",
+      "CachePath": "3F/{3F4D3ADE-1014-CE65-A926-07CFF782D153}.wem"
+     },
+     {
+      "Id": "857535237",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "JumpPlayer_05.wav",
+      "CachePath": "5D/{5D79D85B-6D0F-2055-14DF-01095A67B39C}.wem"
+     },
+     {
+      "Id": "888344127",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SwordSlash_Whoosh_05.wav",
+      "CachePath": "73/{7365A23D-9BDD-C49C-C029-D0260260A196}.wem"
+     },
+     {
+      "Id": "891989968",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SwordSlash_Hit_05.wav",
+      "CachePath": "7A/{7A1FD0D4-EBE4-A05F-444D-9F2B14195C3F}.wem"
+     },
+     {
+      "Id": "901910761",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SwordSlash_Whoosh_03.wav",
+      "CachePath": "4E/{4E4E71A2-0CB6-C899-30BE-6EBD1C2AC5B0}.wem"
+     },
+     {
+      "Id": "910820392",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "HurtPlayer_02.wav",
+      "CachePath": "69/{69D7A6AB-D338-FB5E-1F12-AD7D47DDAD9C}.wem"
+     },
+     {
+      "Id": "930363931",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "You cannot defy.wav",
+      "CachePath": "DD/{DDC2F733-68DE-68EE-A49D-0A631B388C8B}.wem"
+     },
+     {
+      "Id": "967870706",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DashPlayer_01.wav",
+      "CachePath": "25/{2537C981-FB7F-7B32-6E3F-4F8270040F74}.wem"
+     },
+     {
+      "Id": "990286089",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "FireSpell_Burn_01.wav",
+      "CachePath": "47/{471272BA-DC54-DA23-220A-AC05CF869A98}.wem"
+     },
+     {
+      "Id": "999116253",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Acid_Hit_01.wav",
+      "CachePath": "B4/{B4F12B64-6746-071B-6E5E-66EB96A594F3}.wem"
+     },
+     {
+      "Id": "1022690532",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SwordSlash_Draw_03.wav",
+      "CachePath": "0E/{0E29744B-D3F8-1544-FFE0-90A1C9430178}.wem"
+     },
+     {
+      "Id": "1037413223",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "FireSpell_Burn_02.wav",
+      "CachePath": "90/{90B148BB-0216-EE4E-136D-820358FE5755}.wem"
+     },
+     {
+      "Id": "1043459733",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SwordSlash_Whoosh_06.wav",
+      "CachePath": "C9/{C901DC7B-B68A-1E41-DC71-6A2F6C20D51E}.wem"
+     },
+     {
+      "Id": "1051423169",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SwordSlash_Whoosh_07.wav",
+      "CachePath": "1E/{1E639481-6B34-0C92-052A-9279F07F3196}.wem"
+     },
+     {
+      "Id": "1054907133",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SwordSlash_Hit_07.wav",
+      "CachePath": "E0/{E013A838-537B-29D6-7B7D-BBC7A2791567}.wem"
+     },
+     {
+      "Id": "1063209621",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SwordSlash_Draw_02.wav",
+      "CachePath": "01/{0178B468-312E-36AC-5974-FFBD22D59177}.wem"
+     },
+     {
+      "Id": "1067549914",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SwordSlash_Hit_06.wav",
+      "CachePath": "CB/{CB36362E-0BA9-03B0-A2F8-9FB7A5C19194}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2782789220",
+      "Name": "Acid_Hit",
+      "ObjectPath": "\\Events\\SFX\\Enemy\\Weapons\\Acid_Hit",
+      "GUID": "{E37AFD21-1E02-4422-887C-2CFDE8F831EF}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2424729",
+      "DurationMax": "1.2424729",
+      "MediaRefs": [
+       {
+        "Id": "999116253"
+       }
+      ]
+     },
+     {
+      "Id": "3310374200",
+      "Name": "Acid_Sizzle",
+      "ObjectPath": "\\Events\\SFX\\Enemy\\Weapons\\Acid_Sizzle",
+      "GUID": "{2D08FB97-4C45-4FBE-8476-AF8B4AF15839}",
+      "Color": "2",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "235738653"
+       }
+      ]
+     },
+     {
+      "Id": "3573332599",
+      "Name": "Acid_Sizzle_Stop",
+      "ObjectPath": "\\Events\\SFX\\Enemy\\Weapons\\Acid_Sizzle_Stop",
+      "GUID": "{79B96725-D556-4E12-92E4-65351B82DAEB}",
+      "Color": "2",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "4204383620",
+      "Name": "Acid_Spray",
+      "ObjectPath": "\\Events\\SFX\\Enemy\\Weapons\\Acid_Spray",
+      "GUID": "{F434B306-747B-46CF-A4C2-2097319E13EB}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "1.178155",
+      "DurationMax": "1.1839068",
+      "MediaRefs": [
+       {
+        "Id": "108155573"
+       },
+       {
+        "Id": "727541938"
+       }
+      ]
+     },
+     {
+      "Id": "2594170985",
+      "Name": "Acid_SpraySizzle",
+      "ObjectPath": "\\Events\\SFX\\Enemy\\Weapons\\Acid_SpraySizzle",
+      "GUID": "{37871F24-ACC0-4199-8D01-93EF1E52EADE}",
+      "Color": "2",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "108155573"
+       },
+       {
+        "Id": "235738653"
+       },
+       {
+        "Id": "727541938"
+       }
+      ]
+     },
+     {
+      "Id": "4281377955",
+      "Name": "Dash_Player",
+      "ObjectPath": "\\Events\\SFX\\Player\\Movement\\Dash_Player",
+      "GUID": "{A2329711-98C1-4E91-9816-1C70D26B142E}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "0.73328286",
+      "DurationMax": "0.7547697",
+      "MediaRefs": [
+       {
+        "Id": "967870706"
+       }
+      ]
+     },
+     {
+      "Id": "1695950791",
+      "Name": "FireSpell_Burn",
+      "ObjectPath": "\\Events\\SFX\\Player\\Attack\\Spells\\FireSpell_Burn",
+      "GUID": "{91E961BF-1B12-4607-B93C-21E3154DA67A}",
+      "Color": "2",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "990286089"
+       },
+       {
+        "Id": "1037413223"
+       }
+      ]
+     },
+     {
+      "Id": "3367592642",
+      "Name": "FireSpell_Burn_Stop",
+      "ObjectPath": "\\Events\\SFX\\Player\\Attack\\Spells\\FireSpell_Burn_Stop",
+      "GUID": "{FE1487E1-7884-449A-834F-AC8798416FE2}",
+      "Color": "2",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "658623236",
+      "Name": "FireSpell_Fire",
+      "ObjectPath": "\\Events\\SFX\\Player\\Attack\\Spells\\FireSpell_Fire",
+      "GUID": "{EE63E95D-7D88-456F-80A8-67EB4E6C35E3}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2281733",
+      "DurationMax": "1.2281733",
+      "MediaRefs": [
+       {
+        "Id": "436423167"
+       }
+      ]
+     },
+     {
+      "Id": "1631683011",
+      "Name": "FireSpell_FireBurn",
+      "ObjectPath": "\\Events\\SFX\\Player\\Attack\\Spells\\FireSpell_FireBurn",
+      "GUID": "{2740ABCA-FE22-45CB-A3DE-52E11D9BA5D4}",
+      "Color": "2",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "436423167"
+       },
+       {
+        "Id": "990286089"
+       },
+       {
+        "Id": "1037413223"
+       }
+      ]
+     },
+     {
+      "Id": "1054166863",
+      "Name": "FireSpell_Hit",
+      "ObjectPath": "\\Events\\SFX\\Player\\Attack\\Spells\\FireSpell_Hit",
+      "GUID": "{1CDB2DCD-6060-4E81-B2D6-4C52D0F52A7F}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "1.1162359",
+      "DurationMax": "1.1520833",
+      "MediaRefs": [
+       {
+        "Id": "298882402"
+       },
+       {
+        "Id": "619057983"
+       }
+      ]
+     },
+     {
+      "Id": "2890568120",
+      "Name": "Health_Regenerate",
+      "ObjectPath": "\\Events\\SFX\\Player\\Misc\\Health_Regenerate",
+      "GUID": "{2C232B40-F382-4569-9626-6F0158B497E5}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "2.6345375",
+      "DurationMax": "2.6345375",
+      "MediaRefs": [
+       {
+        "Id": "719844841"
+       }
+      ]
+     },
+     {
+      "Id": "1719332078",
+      "Name": "Hurt_Player",
+      "ObjectPath": "\\Events\\SFX\\Player\\Misc\\Hurt_Player",
+      "GUID": "{28346E5F-1EFE-42EE-9132-48AAB523CA60}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "0.43048987",
+      "DurationMax": "0.501625",
+      "MediaRefs": [
+       {
+        "Id": "423370867"
+       },
+       {
+        "Id": "472636486"
+       },
+       {
+        "Id": "792316907"
+       },
+       {
+        "Id": "910820392"
+       }
+      ]
+     },
+     {
+      "Id": "2584346859",
+      "Name": "Jump_Player",
+      "ObjectPath": "\\Events\\SFX\\Player\\Movement\\Jump_Player",
+      "GUID": "{76658AF6-EE31-4012-92FE-AF8AF4EC4BF6}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "0.37616503",
+      "DurationMax": "0.45620832",
+      "MediaRefs": [
+       {
+        "Id": "3955584"
+       },
+       {
+        "Id": "214809757"
+       },
+       {
+        "Id": "627166481"
+       },
+       {
+        "Id": "643520808"
+       },
+       {
+        "Id": "857535237"
+       }
+      ]
+     },
+     {
+      "Id": "2924361411",
+      "Name": "Play_Boss_Line_Phase1",
+      "ObjectPath": "\\Events\\SFX\\Dialogue\\Play_Boss_Line_Phase1",
+      "GUID": "{E1A0AE29-6B45-4B11-8EB7-5354352E319D}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "9.481264",
+      "DurationMax": "9.481264",
+      "MediaRefs": [
+       {
+        "Id": "244878740"
+       },
+       {
+        "Id": "466370189"
+       },
+       {
+        "Id": "930363931"
+       }
+      ]
+     },
+     {
+      "Id": "3604213277",
+      "Name": "Play_BossDeath_Music",
+      "ObjectPath": "\\Events\\Music\\Play_BossDeath_Music",
+      "GUID": "{4F0E6A87-9DA6-4DFA-9EA3-7CD7C1A06B0D}",
+      "Color": "4",
+      "DurationType": "OneShot",
+      "DurationMin": "20.901625",
+      "DurationMax": "20.901625",
+      "MediaRefs": [
+       {
+        "Id": "378458012"
+       }
+      ]
+     },
+     {
+      "Id": "3463024606",
+      "Name": "Play_BossMusic",
+      "ObjectPath": "\\Events\\Music\\Play_BossMusic",
+      "GUID": "{EDDA2058-210F-43F2-96A6-BA15C7516CDF}",
+      "Color": "4",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "510844697"
+       },
+       {
+        "Id": "609702374"
+       },
+       {
+        "Id": "699933523"
+       },
+       {
+        "Id": "825916254"
+       }
+      ]
+     },
+     {
+      "Id": "3738780720",
+      "Name": "Play_MainMenu",
+      "ObjectPath": "\\Events\\Music\\Play_MainMenu",
+      "GUID": "{1C0E8818-7E11-4617-ADB0-1F8FB01173FD}",
+      "Color": "4",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "478594435"
+       }
+      ]
+     },
+     {
+      "Id": "4064282583",
+      "Name": "PortalSummon_Start",
+      "ObjectPath": "\\Events\\SFX\\Enemy\\Weapons\\PortalSummon_Start",
+      "GUID": "{BD794903-927F-4EDD-9D4C-BE9B48D11A45}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "9.6034565",
+      "DurationMax": "9.6034565",
+      "MediaRefs": [
+       {
+        "Id": "548978409"
+       }
+      ]
+     },
+     {
+      "Id": "589300157",
+      "Name": "PortalSummon_Stop",
+      "ObjectPath": "\\Events\\SFX\\Enemy\\Weapons\\PortalSummon_Stop",
+      "GUID": "{CC41C899-1B2B-4179-AC18-3E71DB6B21D2}",
+      "Color": "2",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "696315660",
+      "Name": "Set_LayerControl",
+      "ObjectPath": "\\Events\\Music\\Set_LayerControl",
+      "GUID": "{F118CD58-1536-4B5D-A59A-DCB3FC74D22F}",
+      "Color": "4",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "1114393929",
+      "Name": "Shards_Pickup",
+      "ObjectPath": "\\Events\\SFX\\Player\\Misc\\Shards_Pickup",
+      "GUID": "{F856A223-BF1C-4B36-B076-7EFA3F780F5F}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "0.57860357",
+      "DurationMax": "0.5870195",
+      "MediaRefs": [
+       {
+        "Id": "809984412"
+       }
+      ]
+     },
+     {
+      "Id": "656877296",
+      "Name": "Stop_BossMusic",
+      "ObjectPath": "\\Events\\Music\\Stop_BossMusic",
+      "GUID": "{D83EC020-47AF-457F-B53D-613102603EBF}",
+      "Color": "4",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "890527358",
+      "Name": "Stop_MainMenu",
+      "ObjectPath": "\\Events\\Music\\Stop_MainMenu",
+      "GUID": "{B39BF0FF-4047-4AD0-A206-3274CB144F49}",
+      "Color": "4",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "1651434072",
+      "Name": "SwordSlash_Draw",
+      "ObjectPath": "\\Events\\SFX\\Player\\Attack\\SwordSlash\\SwordSlash_Draw",
+      "GUID": "{08F509FF-C362-4066-BBC3-E4C5ED811128}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "0.97665274",
+      "DurationMax": "1.1465833",
+      "MediaRefs": [
+       {
+        "Id": "628150378"
+       },
+       {
+        "Id": "677623532"
+       },
+       {
+        "Id": "693424491"
+       },
+       {
+        "Id": "1022690532"
+       },
+       {
+        "Id": "1063209621"
+       }
+      ]
+     },
+     {
+      "Id": "2144487013",
+      "Name": "SwordSlash_Hit",
+      "ObjectPath": "\\Events\\SFX\\Player\\Attack\\SwordSlash\\SwordSlash_Hit",
+      "GUID": "{662A3941-1CDC-47BE-AB13-3EE6F1677504}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "0.37774378",
+      "DurationMax": "0.59295833",
+      "MediaRefs": [
+       {
+        "Id": "118299635"
+       },
+       {
+        "Id": "422536706"
+       },
+       {
+        "Id": "563532479"
+       },
+       {
+        "Id": "603019579"
+       },
+       {
+        "Id": "891989968"
+       },
+       {
+        "Id": "1054907133"
+       },
+       {
+        "Id": "1067549914"
+       }
+      ]
+     },
+     {
+      "Id": "3181568868",
+      "Name": "SwordSlash_Whoosh",
+      "ObjectPath": "\\Events\\SFX\\Player\\Attack\\SwordSlash\\SwordSlash_Whoosh",
+      "GUID": "{4884F960-9A07-47A8-9A2A-F141D7EB6B6D}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "0.31841958",
+      "DurationMax": "0.667875",
+      "MediaRefs": [
+       {
+        "Id": "59567599"
+       },
+       {
+        "Id": "401117487"
+       },
+       {
+        "Id": "433441780"
+       },
+       {
+        "Id": "529920245"
+       },
+       {
+        "Id": "611719745"
+       },
+       {
+        "Id": "748200115"
+       },
+       {
+        "Id": "888344127"
+       },
+       {
+        "Id": "901910761"
+       },
+       {
+        "Id": "1043459733"
+       },
+       {
+        "Id": "1051423169"
+       }
+      ]
+     },
+     {
+      "Id": "1936185617",
+      "Name": "Test_Sound",
+      "ObjectPath": "\\Events\\SFX\\Test_Sound",
+      "GUID": "{451837D5-131C-438E-AF75-995D8E2D3A4A}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "28.643229",
+      "DurationMax": "28.643229",
+      "MediaRefs": [
+       {
+        "Id": "39525447"
+       }
+      ]
+     },
+     {
+      "Id": "2097991953",
+      "Name": "VortexPull_Boss_Start",
+      "ObjectPath": "\\Events\\SFX\\Enemy\\Weapons\\VortexPull_Boss_Start",
+      "GUID": "{699FF2BE-F0FF-4DCC-806B-67BD86BF79BB}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "8.482041",
+      "DurationMax": "8.482041",
+      "MediaRefs": [
+       {
+        "Id": "347026546"
+       },
+       {
+        "Id": "641056015"
+       }
+      ]
+     },
+     {
+      "Id": "2733481739",
+      "Name": "VortexPull_Boss_Stop",
+      "ObjectPath": "\\Events\\SFX\\Enemy\\Weapons\\VortexPull_Boss_Stop",
+      "GUID": "{B51754F9-69D8-47AB-B339-1D6F7579D9B9}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "1.5020417",
+      "DurationMax": "1.5020417",
+      "MediaRefs": [
+       {
+        "Id": "641056015"
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "1879554359",
+      "Name": "Layercontrol",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Layercontrol",
+      "GUID": "{1FFB5301-E54F-47B1-9028-6A47A818882C}",
+      "Color": "4"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{BD45B271-F695-DC9B-CFAE-51D8392E01F3}"
+ }
+}

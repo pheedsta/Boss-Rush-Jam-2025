@@ -20,18 +20,9 @@ namespace _App.Scripts.juandeyby
 
         private void Awake()
         {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-            
             // Start the game in phase 1
             _gamePhase = GamePhase.Phase1;
             Pause();
-        }
-
-        private void Start()
-        {
-            // Play the main menu music
-            ServiceLocator.Get<MusicManager>().PlayMainMusic();
         }
 
         public void Pause()

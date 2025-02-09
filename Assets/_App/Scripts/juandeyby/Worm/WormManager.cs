@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace _App.Scripts.juandeyby
@@ -7,10 +9,12 @@ namespace _App.Scripts.juandeyby
     [DefaultExecutionOrder(-100)]
     public class WormManager : MonoBehaviour
     {
+        [SerializeField] private Boss.Boss boss;
         [SerializeField] private WormPoison wormPrefab;
         [SerializeField] private WormFire wormFirePrefab;
         private readonly Queue<Worm> _worms = new Queue<Worm>();
         private readonly int _maxWorms = 8;
+        private Coroutine _spawnCoroutine;
         
         private void OnEnable()
         {
@@ -27,14 +31,12 @@ namespace _App.Scripts.juandeyby
             for (var i = 0; i < _maxWorms / 2; i++)
             {
                 var worm = Instantiate(wormPrefab, transform);
-                worm.gameObject.SetActive(false);
                 _worms.Enqueue(worm);
             }
             
             for (var i = 0; i < _maxWorms / 2; i++)
             {
                 var worm = Instantiate(wormFirePrefab, transform);
-                worm.gameObject.SetActive(false);
                 _worms.Enqueue(worm);
             }
         }
@@ -56,6 +58,36 @@ namespace _App.Scripts.juandeyby
         {
             worm.gameObject.SetActive(false);
             _worms.Enqueue(worm);
+            
+            Debug.Log("Worm returned!");
+            CheckWorms();
+        }
+
+        private void CheckWorms()
+        {
+            var children = transform.GetComponentsInChildren<Worm>(true);
+            var activeWorms = children.Count(c => c.gameObject.activeSelf);
+            if (activeWorms == 0)
+            {
+                
+                boss.SetState(new Boss.BossPortalSummonState());
+                
+                // if (_spawnCoroutine != null)
+                // {
+                //     StopCoroutine(_spawnCoroutine);
+                // }
+                // Debug.Log("All worms are dead!");
+                // _spawnCoroutine = StartCoroutine(RespawnWorms());
+            }
+        }
+        
+        private IEnumerator RespawnWorms()
+        {
+            while (true)
+            {
+                yield return new WaitForSeconds(6f);
+                boss.SetState(new Boss.BossPortalSummonState());
+            }
         }
     }
 }

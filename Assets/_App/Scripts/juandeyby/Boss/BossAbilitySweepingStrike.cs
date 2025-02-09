@@ -10,10 +10,13 @@ namespace _App.Scripts.juandeyby.Boss
         [SerializeField] private float radius = 5f;
     
         private float _timer;
+        private Player _player;
 
         public override void Activate(Boss boss)
         {
             _timer = 0f;
+            _player = Player.Instance;
+            
             // ApplySweepingStrike(boss);
             boss.PlaySweepingStrikeEffect();
             
@@ -24,6 +27,10 @@ namespace _App.Scripts.juandeyby.Boss
         public override void UpdateAbility(Boss boss, float deltaTime)
         {
             _timer += deltaTime;
+            
+            // Rotate towards player with delta time.
+            boss.transform.rotation = Quaternion.Slerp(boss.transform.rotation,
+                Quaternion.LookRotation(_player.transform.position - boss.transform.position), 0.1f);           
             
             if (_timer >= duration)
             {

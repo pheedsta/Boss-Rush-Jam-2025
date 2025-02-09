@@ -16,7 +16,13 @@ namespace _App.Scripts.juandeyby.Boss
         {
             _timer = 0f;
             ApplyPortalSummon(boss);
-            boss.PlayPortalSummonEffect();
+            // boss.PlayPortalSummonEffect();
+            
+            boss.BossAnimator.PlayPortalSummon();
+
+            var player = Player.Instance;
+            var playerLocomotion = player.GetComponent<PlayerLocomotion>();
+            playerLocomotion.Poison();
         }
         
         public override void UpdateAbility(Boss boss, float deltaTime)
@@ -25,13 +31,13 @@ namespace _App.Scripts.juandeyby.Boss
             
             if (_timer >= duration)
             {
-                boss.SetState(new BossWanderState());
+                boss.SetState(new BossChaseState());
             }
         }
         
         public override void Deactivate(Boss boss)
         {
-            boss.StopPortalSummonEffect();
+            // boss.StopPortalSummonEffect();
         }
         
         private void ApplyPortalSummon(Boss boss)

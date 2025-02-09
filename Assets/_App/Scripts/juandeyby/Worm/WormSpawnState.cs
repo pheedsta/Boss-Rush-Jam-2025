@@ -22,10 +22,15 @@ namespace _App.Scripts.juandeyby
                 worm.WormAnimator.PlayStandUp();
                 worm.SetState(new WormChaseState());
             }
+            else
+            {
+                worm.transform.position += Vector3.down * (Time.deltaTime * 3f);
+            }
         }
 
         public void Exit(Worm worm)
         {
+            // worm.Rb.isKinematic = true;
             _navMeshAgent.enabled = true;
         }
     }

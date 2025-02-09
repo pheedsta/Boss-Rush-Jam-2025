@@ -15,5 +15,6 @@ MonoBehaviour:
   objectName: FireSpell_Hit
   id: 1054166863
   guid: 1CDB2DCD-6060-4E81-B2D6-4C52D0F52A7F
-  IsInUserDefinedSoundBank: 0
+  AutoBank: {fileID: 0}
+  IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PlatformInfo>
+	<Platform Name="Web" BasePlatform="Web" Generator="2024.1.1.8691"/>
+	<RootPaths>
+		<ProjectRoot>../../../../../Boss-Rush-Jam-2025_Wwise</ProjectRoot>
+		<SourceFilesRoot>../../../../../Boss-Rush-Jam-2025_Wwise/.cache</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>../../../../../Boss-Rush-Jam-2025_Wwise/GeneratedSoundBanks/Web</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DefaultAlign>16</DefaultAlign>
+	<Settings>
+		<AutoSoundBankDefinition>false</AutoSoundBankDefinition>
+		<CopyLooseStreamedMediaFiles>true</CopyLooseStreamedMediaFiles>
+		<SubFoldersForGeneratedFiles>false</SubFoldersForGeneratedFiles>
+		<RemoveUnusedGeneratedFiles>true</RemoveUnusedGeneratedFiles>
+		<SourceControlGeneratedFiles>true</SourceControlGeneratedFiles>
+		<GenerateHeaderFile>true</GenerateHeaderFile>
+		<GenerateContentTxtFile>true</GenerateContentTxtFile>
+		<GenerateMetadataXML>true</GenerateMetadataXML>
+		<GenerateMetadataJSON>true</GenerateMetadataJSON>
+		<GenerateAllBanksMetadata>true</GenerateAllBanksMetadata>
+		<GeneratePerBankMetadata>false</GeneratePerBankMetadata>
+		<UseSoundBankNames>true</UseSoundBankNames>
+		<AllowExceedingMaxSize>false</AllowExceedingMaxSize>
+		<MaxAttenuationInfo>true</MaxAttenuationInfo>
+		<EstimatedDurationInfo>true</EstimatedDurationInfo>
+		<PrintObjectGuid>true</PrintObjectGuid>
+		<PrintObjectPath>true</PrintObjectPath>
+		<PrintObjectColor>true</PrintObjectColor>
+	</Settings>
+	<FileHash>{B599D093-CA2D-DDD1-C317-F6C789513C68}</FileHash>
+</PlatformInfo>

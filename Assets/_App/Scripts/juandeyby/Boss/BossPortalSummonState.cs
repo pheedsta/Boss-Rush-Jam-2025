@@ -5,7 +5,7 @@ namespace _App.Scripts.juandeyby.Boss
     public class BossPortalSummonState : IBossState
     {
         private BossAbilityPortalSummon _bossAbilityPortalSummon;
-    
+        
         public void Enter(Boss boss)
         {
             _bossAbilityPortalSummon = boss.GetComponent<BossAbilityPortalSummon>();

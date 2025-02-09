@@ -15,5 +15,6 @@ MonoBehaviour:
   objectName: Test_Sound
   id: 1936185617
   guid: 451837D5-131C-438E-AF75-995D8E2D3A4A
-  IsInUserDefinedSoundBank: 0
+  AutoBank: {fileID: 0}
+  IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

@@ -7,6 +7,7 @@ namespace _App.Scripts.juandeyby
         [Header("Settings")]
         [SerializeField] private float force = 4f;
         [SerializeField] private float duration = 2f;
+        [SerializeField] private int damage = 4;
         
         private float _timer;
         
@@ -48,6 +49,9 @@ namespace _App.Scripts.juandeyby
 
             var playerLocomotion = player.GetComponent<PlayerLocomotion>();
             playerLocomotion.Stroke(direction, force);
+            
+            var playerHealth = player.GetComponent<PlayerHealth>();
+            playerHealth.TakeDamage(damage);
         }
     }
 }

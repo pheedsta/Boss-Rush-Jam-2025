@@ -23,7 +23,7 @@ namespace _App.Scripts.juandeyby
             }
             _health = maxHealth;
             _uiHealthBar = UIServiceLocator.Get<UIHealthCanvas>().GetHealthBar();
-            _uiHealthBar.SetUnit(transform, Vector3.up * 0.5f);
+            _uiHealthBar.SetUnit(transform, Vector3.up * 1f);
             _uiHealthBar.SetHealth(_health / (float) maxHealth);
         }
 
@@ -34,6 +34,7 @@ namespace _App.Scripts.juandeyby
             {
                 _health = 0;
                 var worm = GetComponent<Worm>();
+                UIServiceLocator.Get<UIHealthCanvas>().ReturnHealthBar(_uiHealthBar);
                 ServiceLocator.Get<WormManager>().ReturnWorm(worm);
             }
             else
@@ -50,6 +51,9 @@ namespace _App.Scripts.juandeyby
             }
             _damageCoroutine = StartCoroutine(DamageCoroutine());
             TakeDamage(1);
+            
+            // Play sound effect
+            ServiceLocator.Get<MusicManager>().PlaySwordHit();
         }
 
         public void RangedDamage()
@@ -60,6 +64,9 @@ namespace _App.Scripts.juandeyby
             }
             _damageCoroutine = StartCoroutine(DamageCoroutine());
             TakeDamage(3);
+            
+            // Play sound effect
+            ServiceLocator.Get<MusicManager>().PlaySpellHit();
         }
 
         private IEnumerator DamageCoroutine()
@@ -77,11 +84,6 @@ namespace _App.Scripts.juandeyby
             {
                 renderer.SetPropertyBlock(oldBlock);
             }
-        }
-
-        private void OnDisable()
-        {
-            UIServiceLocator.Get<UIHealthCanvas>().ReturnHealthBar(_uiHealthBar);
         }
     }
 }

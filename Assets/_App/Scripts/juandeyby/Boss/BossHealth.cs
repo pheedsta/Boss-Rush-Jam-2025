@@ -34,6 +34,8 @@ namespace _App.Scripts.juandeyby.Boss
                 ServiceLocator.Get<MusicManager>().PlayEndingMusic();
             }
             CheckPhase();
+            
+            //  Update UI
             UIServiceLocator.Get<UIManager>().HubPanel.BossHealth.SetHealth(_currentHealth / (float) maxHealth);
         }
 
@@ -65,12 +67,15 @@ namespace _App.Scripts.juandeyby.Boss
         
         public void MeleeDamage()
         {
-            TakeDamage(4);
+            // Play sound effect
+            ServiceLocator.Get<MusicManager>().PlaySwordHit();
+            TakeDamage(2);
         }
 
         public void RangedDamage()
         {
-            throw new System.NotImplementedException();
+            ServiceLocator.Get<MusicManager>().PlaySpellHit();
+            TakeDamage(5);
         }
     }
 }

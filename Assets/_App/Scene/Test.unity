@@ -359,6 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 975d945e78af884479fcd448911533ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSpell: {fileID: 0}
   playerManager: {fileID: 425242476}
   playerAnimator: {fileID: 425242474}
   inputManager: {fileID: 425242477}
@@ -427,6 +428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCollection: {fileID: 425242479}
+  playerGround: {fileID: 0}
   spawnPoint: {fileID: 0}
   rb: {fileID: 425242482}
 --- !u!114 &425242479
@@ -471,6 +473,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19df3b17710ae24438d0f2bb1a3c35cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAnimator: {fileID: 0}
+  spawnPointPhase1: {fileID: 0}
+  spawnPointPhase2: {fileID: 0}
+  spawnPointPhase3: {fileID: 0}
+  playerSpell: {fileID: 0}
   maxHealth: 100
   health: 0
 --- !u!54 &425242482
@@ -1188,6 +1195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1402398918}
   - component: {fileID: 1402398917}
+  - component: {fileID: 1402398919}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -1235,6 +1243,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1402398919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402398916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed39f2b237e573f4f85990bb5d1440ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitBank: {fileID: 11400000, guid: 2a065d4f65ff1f949aa180a99715f03b, type: 2}
 --- !u!1 &1467743127
 GameObject:
   m_ObjectHideFlags: 0

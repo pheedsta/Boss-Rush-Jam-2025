@@ -15,5 +15,6 @@ MonoBehaviour:
   objectName: FireSpell_Burn_Stop
   id: 3367592642
   guid: FE1487E1-7884-449A-834F-AC8798416FE2
-  IsInUserDefinedSoundBank: 0
+  AutoBank: {fileID: 0}
+  IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

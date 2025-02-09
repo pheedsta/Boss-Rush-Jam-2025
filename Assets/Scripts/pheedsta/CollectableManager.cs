@@ -16,6 +16,7 @@ public class CollectableManager : MonoBehaviour
 
     [SerializeField] private CollectableHeart collectableHeartPrefab;
     [SerializeField] private CollectableShard collectableShardPrefab;
+    private int positionCount = 0; 
     
     //:::::::::::::::::::::::::::::://
     // Properties
@@ -155,15 +156,25 @@ public class CollectableManager : MonoBehaviour
                 break;
         }
 
-        var angle = Random.Range(0f, 360f);
+        // Número total de posiciones que deseas generar
+        var totalPositions = 12; // Puedes ajustar este valor según tus necesidades
+
+        // Calcula el ángulo en función del contador
+        var angle = (360f / totalPositions) * positionCount;
         var radians = angle * Mathf.Deg2Rad;
 
+        // Incrementa el contador para la próxima posición
+        positionCount = (positionCount + 1) % totalPositions;
+
+        // Calcula el radio (puedes mantenerlo aleatorio o fijo)
         var radius = Random.Range(innerRadius, outerRadius);
 
+        // Calcula las coordenadas x y z
         var x = Mathf.Cos(radians) * radius;
         var z = Mathf.Sin(radians) * radius;
 
-        var position = new Vector3(x, 0.5f, z);
+        // Crea y devuelve la posición
+        var position = new Vector3(x, 0.75f, z);
 
         return position;
     }

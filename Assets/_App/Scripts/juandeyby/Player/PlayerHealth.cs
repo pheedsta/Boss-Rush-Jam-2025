@@ -18,6 +18,7 @@ namespace _App.Scripts.juandeyby
         [SerializeField] private int health;
         public int Health => health;
         private bool _isDead;
+        public bool IsDead => _isDead;
         private Coroutine _respawnCoroutine;
         
         private void Start()

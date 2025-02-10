@@ -16,9 +16,9 @@ namespace _App.Scripts.juandeyby
         public void Update(Worm worm)
         {
             // Check Raycast if worm is on ground
-            if (Physics.Raycast(worm.transform.position, Vector3.down, out var hit, 1.5f))
+            Debug.DrawRay(worm.transform.position, Vector3.down * 0.3f, Color.red);
+            if (Physics.Raycast(worm.transform.position, Vector3.down, out var hit, 0.3f))
             {
-                Debug.DrawRay(worm.transform.position, Vector3.down * 1.5f, Color.red);
                 worm.WormAnimator.PlayStandUp();
                 worm.SetState(new WormChaseState());
             }
@@ -30,8 +30,8 @@ namespace _App.Scripts.juandeyby
 
         public void Exit(Worm worm)
         {
-            // worm.Rb.isKinematic = true;
             _navMeshAgent.enabled = true;
+            // worm.Rb.isKinematic = true;
         }
     }
 }

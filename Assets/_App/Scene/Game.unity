@@ -1882,6 +1882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 975d945e78af884479fcd448911533ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth: {fileID: 341650072}
   playerSpell: {fileID: 341650071}
   playerManager: {fileID: 341650062}
   playerAnimator: {fileID: 341650060}

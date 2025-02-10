@@ -72,15 +72,15 @@ namespace _App.Scripts.juandeyby
             var activeWorms = children.Count(c => c.Model.activeSelf);
             if (activeWorms == 0)
             {
-                Debug.Log("All worms are dead!");
-                boss.SetState(new Boss.BossPortalSummonState());
-                
-                // if (_spawnCoroutine != null)
-                // {
-                //     StopCoroutine(_spawnCoroutine);
-                // }
                 // Debug.Log("All worms are dead!");
-                // _spawnCoroutine = StartCoroutine(RespawnWorms());
+                // boss.SetState(new Boss.BossPortalSummonState());
+                
+                if (_spawnCoroutine != null)
+                {
+                    StopCoroutine(_spawnCoroutine);
+                }
+                Debug.Log("All worms are dead!");
+                _spawnCoroutine = StartCoroutine(RespawnWorms());
             }
         }
         
@@ -90,6 +90,7 @@ namespace _App.Scripts.juandeyby
             {
                 yield return new WaitForSeconds(6f);
                 boss.SetState(new Boss.BossPortalSummonState());
+                break;
             }
         }
     }

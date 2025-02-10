@@ -78,6 +78,7 @@ namespace _App.Scripts.juandeyby
             Debug.DrawRay(transform.position, targetRotation * Vector3.forward * 10f, Color.blue);
             // var playerRotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 20f);
             // Debug.DrawRay(transform.position, playerRotation * Vector3.forward * 10f, Color.green);
+            Debug.DrawRay(transform.position, rb.rotation * Vector3.forward * 10f, Color.red);
             rb.rotation = targetRotation;
         }
         

@@ -7,6 +7,7 @@ namespace _App.Scripts.juandeyby
 {
     public class PlayerLocomotion : MonoBehaviour
     {
+        [SerializeField] private PlayerHealth playerHealth;
         [SerializeField] private PlayerSpell playerSpell;
         [SerializeField] private PlayerManager playerManager;
         [SerializeField] private PlayerAnimator playerAnimator;
@@ -44,6 +45,7 @@ namespace _App.Scripts.juandeyby
         {
             HandleFallingAndLanding();
             if (playerManager.IsInteracting) return;
+            if (playerHealth.IsDead) return;
             HandleMovement();
             HandleRotation();
         }
@@ -118,7 +120,7 @@ namespace _App.Scripts.juandeyby
 
         public void HandleJumping()
         {
-            if (isGrounded)
+            if (isGrounded && playerHealth.IsDead == false)
             {
                 playerAnimator.Animator.SetBool("IsJumping", true);
                 playerAnimator.PlayTargetAnimation("Jump", false);
@@ -136,6 +138,7 @@ namespace _App.Scripts.juandeyby
         
         public void HandleAttack()
         {
+            if (playerHealth.IsDead) return;
             if (isJumping) return;
             if (isGrounded)
             {
@@ -160,6 +163,7 @@ namespace _App.Scripts.juandeyby
 
         public void HandleSpecial()
         {
+            if (playerHealth.IsDead) return;
             if (isJumping) return;
             if (isGrounded && playerSpell.CanCastSpell())
             {
@@ -169,12 +173,13 @@ namespace _App.Scripts.juandeyby
         
         public void Stroke(Vector3 direction, float force)
         {
-            Debug.Log("Stroke!");
+            if (playerHealth.IsDead) return;
             rb.AddForce(direction * force, ForceMode.Impulse);
         }
         
         public void Poison()
         {
+            if (playerHealth.IsDead) return;
             if (_poisonStrokeCoroutine != null)
             {
                 StopCoroutine(_poisonStrokeCoroutine);

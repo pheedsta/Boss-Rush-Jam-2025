@@ -50,13 +50,16 @@ namespace _App.Scripts.juandeyby
             }
 
             var wormToReturn = _worms.Dequeue();
-            wormToReturn.gameObject.SetActive(true);
+            wormToReturn.MeshAgent.enabled = true; // Enable the mesh agent
+            wormToReturn.Model.SetActive(true);
             return wormToReturn;
         }
         
         public void ReturnWorm(Worm worm)
         {
-            worm.gameObject.SetActive(false);
+            worm.MeshAgent.Warp(Vector3.up * 2f);
+            worm.MeshAgent.enabled = false; // Disable the mesh agent
+            worm.Model.SetActive(false);
             _worms.Enqueue(worm);
             
             Debug.Log("Worm returned!");
@@ -66,10 +69,10 @@ namespace _App.Scripts.juandeyby
         private void CheckWorms()
         {
             var children = transform.GetComponentsInChildren<Worm>(true);
-            var activeWorms = children.Count(c => c.gameObject.activeSelf);
+            var activeWorms = children.Count(c => c.Model.activeSelf);
             if (activeWorms == 0)
             {
-                
+                Debug.Log("All worms are dead!");
                 boss.SetState(new Boss.BossPortalSummonState());
                 
                 // if (_spawnCoroutine != null)

@@ -567,7 +567,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 31a2ef76e1a40e42aa196c39c75de723
     GuidInternal: 
-    m_lastTime: -8584629624032035293
+    m_lastTime: -8584624553135985933
     List:
     - name: Main
       guid: 178af0441e574b4685bea2ed4f72914e
@@ -723,7 +723,7 @@ MonoBehaviour:
     ParentPath: Events\SFX
     guid: cd8906f9ee8ee2468b6e6f9195ffba84
     GuidInternal: 
-    m_lastTime: -8584629624031875941
+    m_lastTime: -8584624553136447735
     List:
     - name: Acid_Hit
       guid: 21fd7ae3021e2244887c2cfde8f831ef
@@ -1047,6 +1047,29 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.1520833
       minDuration: 1.1162359
+    - name: Footstep_Player
+      guid: 34534be31ce7354385a7da5e17ba8880
+      id: 648916573
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: cd8906f9ee8ee2468b6e6f9195ffba84
+      - ElementName: Player
+        ObjectType: 4
+        guid: addc77495063be49a6407ac3715a843b
+      - ElementName: Movement
+        ObjectType: 4
+        guid: d3492cd80baf0c4cb5cd21eaa776fe13
+      - ElementName: Footstep_Player
+        ObjectType: 3
+        guid: 34534be31ce7354385a7da5e17ba8880
+      Path: Events\SFX\Player\Movement\Footstep_Player
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Health_Regenerate
       guid: 402b232c82f3694596266f0158b497e5
       id: 2890568120
@@ -1116,6 +1139,29 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.45620832
       minDuration: 0.37616503
+    - name: JumpLand_Player
+      guid: 8038563cabe84d4681849aff36a951bb
+      id: 936926862
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: cd8906f9ee8ee2468b6e6f9195ffba84
+      - ElementName: Player
+        ObjectType: 4
+        guid: addc77495063be49a6407ac3715a843b
+      - ElementName: Movement
+        ObjectType: 4
+        guid: d3492cd80baf0c4cb5cd21eaa776fe13
+      - ElementName: JumpLand_Player
+        ObjectType: 3
+        guid: 8038563cabe84d4681849aff36a951bb
+      Path: Events\SFX\Player\Movement\JumpLand_Player
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Misc
       guid: 1d3eb7d5cba3ca419faa3497e17b76aa
       id: 3062523257
@@ -1194,8 +1240,8 @@ MonoBehaviour:
         guid: a7adc92ba0c3894c96dd317c60e4a08d
       Path: Events\SFX\Dialogue\Play_Boss_Line_Phase3
       maxAttenuation: 0
-      maxDuration: 6.2681665
-      minDuration: 6.2681665
+      maxDuration: -1
+      minDuration: -1
     - name: Player
       guid: addc77495063be49a6407ac3715a843b
       id: 1069431850
@@ -1669,5 +1715,5 @@ MonoBehaviour:
   ExpandedWaapiItemIds: 010000000200000003000000050000000600000007000000080000000c0000000d0000000e0000000f00000012000000130000001600000018000000190000001d00000026000000350000003600000037000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: Release

@@ -89,7 +89,7 @@ namespace _App.Scripts.juandeyby.Boss
 
         // private void OnDestroy()
         // {
-        //     UIServiceLocator.Get<UIHealthCanvas>().ReturnHealthBar(_healthBar);
+        //     UIServiceLocator.Get<UIHealthManager>().ReturnHealthBar(_healthBar);
         // }
 
         /// <summary>

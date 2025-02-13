@@ -32,6 +32,13 @@ namespace _App.Scripts.juandeyby
             if (Camera.main != null) _cameraTransform = Camera.main.transform;
             _defaultPosition = cameraPivot.localPosition.z;
         }
+        
+        
+        public void SetValueSensitivity(Single value)
+        {
+            cameraLookSpeed = value;
+            cameraPivotSpeed = value;
+        }
 
         public void HandleAllCameraMovement()
         {

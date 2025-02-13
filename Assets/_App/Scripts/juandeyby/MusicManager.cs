@@ -12,6 +12,11 @@ namespace _App.Scripts.juandeyby
         [SerializeField] private GameObject WwiseGlobal;
         private int _currentFilesDownloaded = 0;
         
+        // Footstep
+        private bool _isFootstepPlaying;
+        private float _footstepMaxTime = 0.2f;
+        private float _currentFootstepTimer;
+        
         private void OnEnable()
         {
             ServiceLocator.Register<MusicManager>(this);
@@ -53,6 +58,10 @@ namespace _App.Scripts.juandeyby
                         AkUnitySoundEngine.SetRTPCValue("LayerControl", Mathf.Lerp(2, 3, time / maxTime));
                         yield return null;
                     }
+                    break;
+                case GamePhase.End:
+                    AkUnitySoundEngine.PostEvent("Stop_BossMusic", gameObject);
+                    AkUnitySoundEngine.PostEvent("Play_BossDeath_Music", gameObject); 
                     break;
             }
         }
@@ -169,15 +178,48 @@ namespace _App.Scripts.juandeyby
             AkUnitySoundEngine.PostEvent("Play_Boss_Line_Phase3", gameObject);
         }
         
+        public void PlayJumpLand()
+        {
+            AkUnitySoundEngine.PostEvent("JumpLand_Player", gameObject);
+        }
+
+        private void Update()
+        {
+            Footstep();
+        }
+
+        private void Footstep()
+        {
+            if (!_isFootstepPlaying) return;
+            if (_currentFootstepTimer > _footstepMaxTime)
+            {
+                _currentFootstepTimer = 0;
+                PlayFootstep();
+            }
+            else
+            {
+                _currentFootstepTimer += Time.deltaTime;
+            }
+        }
+
+        public void PlayFootstep()
+        {
+            AkUnitySoundEngine.PostEvent("Footstep_Player", gameObject);
+        }
+        
+        public void StartFootstep()
+        {
+            _isFootstepPlaying = true;
+        }
+        
+        public void StopFootstep()
+        {
+            _isFootstepPlaying = false;
+        }
+        
         public void Jump()
         {
             AkUnitySoundEngine.PostEvent("Jump_Player", gameObject);
-        }
-
-        public void PlayEndingMusic()
-        {
-            AkUnitySoundEngine.PostEvent("Stop_BossMusic", gameObject);
-            AkUnitySoundEngine.PostEvent("Play_BossDeath_Music", gameObject);
         }
     }
 }

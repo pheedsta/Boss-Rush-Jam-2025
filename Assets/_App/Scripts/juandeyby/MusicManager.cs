@@ -9,7 +9,6 @@ namespace _App.Scripts.juandeyby
     [DefaultExecutionOrder(-100)]
     public class MusicManager : MonoBehaviour
     {
-        [SerializeField] private GameObject WwiseGlobal;
         private int _currentFilesDownloaded = 0;
         
         // Footstep

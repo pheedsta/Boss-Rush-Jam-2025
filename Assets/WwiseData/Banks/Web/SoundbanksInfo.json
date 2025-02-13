@@ -654,7 +654,7 @@
     "Type": "User",
     "GUID": "{44F08A17-571E-464B-85BE-A2ED4F72914E}",
     "Language": "SFX",
-    "Hash": "{1D52BA1B-9221-098D-F224-F598F103F1CD}",
+    "Hash": "{B7134044-B907-FDDE-B915-39418C87EA2D}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -1020,6 +1020,14 @@
       "CachePath": "69/{69D7A6AB-D338-FB5E-1F12-AD7D47DDAD9C}.wem"
      },
      {
+      "Id": "911554346",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "JumpLand_01.wav",
+      "CachePath": "96/{9604C32D-9675-0323-24C8-E002C0C3AB12}.wem"
+     },
+     {
       "Id": "930363931",
       "Language": "SFX",
       "Streaming": "false",
@@ -1346,6 +1354,21 @@
       ]
      },
      {
+      "Id": "936926862",
+      "Name": "JumpLand_Player",
+      "ObjectPath": "\\Events\\SFX\\Player\\Movement\\JumpLand_Player",
+      "GUID": "{3C563880-E8AB-464D-8184-9AFF36A951BB}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "0.3076482",
+      "DurationMax": "0.32972917",
+      "MediaRefs": [
+       {
+        "Id": "911554346"
+       }
+      ]
+     },
+     {
       "Id": "2924361411",
       "Name": "Play_Boss_Line_Phase1",
       "ObjectPath": "\\Events\\SFX\\Dialogue\\Play_Boss_Line_Phase1",
@@ -1652,6 +1675,6 @@
     ]
    }
   ],
-  "FileHash": "{BD45B271-F695-DC9B-CFAE-51D8392E01F3}"
+  "FileHash": "{FA20587D-E8F9-8174-5108-2FBCC8E421C7}"
  }
 }

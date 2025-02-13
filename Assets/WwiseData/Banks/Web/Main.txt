@@ -4,6 +4,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	658623236	FireSpell_Fire			\SFX\Player\Attack\Spells\FireSpell_Fire	
 	696315660	Set_LayerControl			\Music\Set_LayerControl	
 	890527358	Stop_MainMenu			\Music\Stop_MainMenu	
+	936926862	JumpLand_Player			\SFX\Player\Movement\JumpLand_Player	
 	1054166863	FireSpell_Hit			\SFX\Player\Attack\Spells\FireSpell_Hit	
 	1114393929	Shards_Pickup			\SFX\Player\Misc\Shards_Pickup	
 	1631683011	FireSpell_FireBurn			\SFX\Player\Attack\Spells\FireSpell_FireBurn	
@@ -87,6 +88,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	891989968	SwordSlash_Hit_05	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\7A\{7A1FD0D4-EBE4-A05F-444D-9F2B14195C3F}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Hit\SwordSlash_Hit_05		7580
 	901910761	SwordSlash_Whoosh_03	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\4E\{4E4E71A2-0CB6-C899-30BE-6EBD1C2AC5B0}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Whoosh\SwordSlash_Whoosh_03		8832
 	910820392	HurtPlayer_02	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\69\{69D7A6AB-D338-FB5E-1F12-AD7D47DDAD9C}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Misc\Hurt\HurtPlayer_02		6943
+	911554346	JumpLand_01	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\96\{9604C32D-9675-0323-24C8-E002C0C3AB12}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Movement\Jump_Land\JumpLand_01		6050
 	930363931	You cannot defy	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\DD\{DDC2F733-68DE-68EE-A49D-0A631B388C8B}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Dialogue\Boss_Phase_1\You cannot defy		51408
 	967870706	DashPlayer_01	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\25\{2537C981-FB7F-7B32-6E3F-4F8270040F74}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Movement\Dash\DashPlayer_01		9967
 	990286089	FireSpell_Burn_01	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\47\{471272BA-DC54-DA23-220A-AC05CF869A98}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\Spells\FireSpell\FireSpell_Burn\FireSpell_Burn_01		99928

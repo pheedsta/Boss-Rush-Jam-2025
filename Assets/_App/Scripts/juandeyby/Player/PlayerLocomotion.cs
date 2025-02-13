@@ -40,6 +40,8 @@ namespace _App.Scripts.juandeyby
         {
             _camera = Camera.main;
         }
+        
+
 
         public void HandleAllMovement()
         {
@@ -61,8 +63,21 @@ namespace _App.Scripts.juandeyby
 
             var movementVelocity = _moveDirection;
             rb.linearVelocity = movementVelocity;
+            
         }
-        
+
+        private void Update()
+        {
+            if (rb.linearVelocity.x > 0.2f || rb.linearVelocity.z > 0.2f)
+            {
+                ServiceLocator.Get<MusicManager>().StartFootstep();
+            }
+            else
+            {
+                ServiceLocator.Get<MusicManager>().StopFootstep();
+            }
+        }
+
         private void HandleRotation()
         {
             if (isJumping) return;
@@ -77,11 +92,7 @@ namespace _App.Scripts.juandeyby
             }
             
             var targetRotation = Quaternion.LookRotation(lookDirection);
-            Debug.DrawRay(transform.position, targetRotation * Vector3.forward * 10f, Color.blue);
-            // var playerRotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 20f);
-            // Debug.DrawRay(transform.position, playerRotation * Vector3.forward * 10f, Color.green);
-            Debug.DrawRay(transform.position, rb.rotation * Vector3.forward * 10f, Color.red);
-            rb.rotation = targetRotation;
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
         }
         
         private void HandleFallingAndLanding()
@@ -109,7 +120,11 @@ namespace _App.Scripts.juandeyby
                     playerAnimator.PlayTargetAnimation("Land", true);
                 }
                 inAirTimer = 0;
-                if (isGrounded == false) transform.SetParent(hit.transform);
+                if (isGrounded == false)
+                {
+                    transform.SetParent(hit.transform);
+                    ServiceLocator.Get<MusicManager>().PlayJumpLand();
+                }
                 isGrounded = true;
             }
             else

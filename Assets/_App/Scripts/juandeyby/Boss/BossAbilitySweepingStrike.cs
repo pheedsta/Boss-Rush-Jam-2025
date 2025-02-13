@@ -42,23 +42,5 @@ namespace _App.Scripts.juandeyby.Boss
         {
             boss.StopSweepingStrikeEffect();
         }
-        
-        private void ApplySweepingStrike(Boss boss)
-        {
-            var startPosition = boss.transform.position;
-            var endPosition = boss.transform.forward;
-
-            var distance = radius;
-            
-            var results = new RaycastHit[10];
-            var size = Physics.SphereCastNonAlloc(startPosition, radius, endPosition, results, distance);
-            for (var i = 0; i < size; i++)
-            {
-                if (results[i].collider.CompareTag("Player"))
-                {
-                    
-                }
-            }
-        }
     }
 }

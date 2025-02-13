@@ -27,6 +27,7 @@ namespace AK
         static const AkUniqueID HEALTH_REGENERATE = 2890568120U;
         static const AkUniqueID HURT_PLAYER = 1719332078U;
         static const AkUniqueID JUMP_PLAYER = 2584346859U;
+        static const AkUniqueID JUMPLAND_PLAYER = 936926862U;
         static const AkUniqueID PLAY_BOSS_LINE_PHASE1 = 2924361411U;
         static const AkUniqueID PLAY_BOSSDEATH_MUSIC = 3604213277U;
         static const AkUniqueID PLAY_BOSSMUSIC = 3463024606U;

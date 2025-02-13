@@ -34,9 +34,9 @@ public class UIManager : MonoBehaviour
     {
         preStartPanel.Hide();
         startPanel.Show();
-        pausePanel.Hide();
-        hubPanel.Hide();
-        endingPanel.Hide();
+        // pausePanel.Hide();
+        // hubPanel.Hide();
+        // endingPanel.Hide();
     }
 
     /// <summary>
@@ -44,11 +44,11 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public void ShowPausePanel()
     {
-        preStartPanel.Hide();
-        startPanel.Hide();
+        // preStartPanel.Hide();
+        // startPanel.Hide();
         pausePanel.Show();
         hubPanel.Hide();
-        endingPanel.Hide();
+        // endingPanel.Hide();
     }
 
     /// <summary>
@@ -56,11 +56,11 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public void ShowHubPanel()
     {
-        preStartPanel.Hide();
+        // preStartPanel.Hide();
         startPanel.Hide();
         pausePanel.Hide();
         hubPanel.Show();
-        endingPanel.Hide();
+        // endingPanel.Hide();
     }
 
     /// <summary>
@@ -68,9 +68,9 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public void ShowEndingPanel()
     {
-        preStartPanel.Hide();
-        startPanel.Hide();
-        pausePanel.Hide();
+        // preStartPanel.Hide();
+        // startPanel.Hide();
+        // pausePanel.Hide();
         hubPanel.Hide();
         endingPanel.Show();
     }

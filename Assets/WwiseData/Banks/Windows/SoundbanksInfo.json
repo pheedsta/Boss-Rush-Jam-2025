@@ -654,7 +654,7 @@
     "Type": "User",
     "GUID": "{44F08A17-571E-464B-85BE-A2ED4F72914E}",
     "Language": "SFX",
-    "Hash": "{B7134044-B907-FDDE-B915-39418C87EA2D}",
+    "Hash": "{44EAB444-3895-0876-5D82-EFDEB4777FE2}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -732,6 +732,14 @@
       "CachePath": "62/{6275E1FC-B503-6EC2-26DE-DAA64C5CFB4C}.wem"
      },
      {
+      "Id": "328080220",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footstep_01.wav",
+      "CachePath": "7E/{7EB7D5F8-2F6C-F92D-2A8B-BBA322D22FB5}.wem"
+     },
+     {
       "Id": "347026546",
       "Language": "SFX",
       "Streaming": "false",
@@ -746,6 +754,14 @@
       "Location": "Memory",
       "ShortName": "Dead_Boss.wav",
       "CachePath": "ED/{ED50100C-6C40-2DB7-93FB-FFC2F8BDD506}.wem"
+     },
+     {
+      "Id": "398011208",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footstep_02.wav",
+      "CachePath": "DC/{DCDA6F8A-9887-2C33-EC4D-9347E2B61462}.wem"
      },
      {
       "Id": "401117487",
@@ -804,6 +820,14 @@
       "CachePath": "B3/{B3199102-5222-8A4F-08A9-AD25E86FDF9C}.wem"
      },
      {
+      "Id": "472926544",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footstep_04.wav",
+      "CachePath": "60/{60CBCC8E-EA5C-9680-9F88-81F7C417595F}.wem"
+     },
+     {
       "Id": "478594435",
       "Language": "SFX",
       "Streaming": "false",
@@ -828,6 +852,14 @@
       "CachePath": "DF/{DF200A74-3F72-07A7-A0FC-65EBCAE12E07}.wem"
      },
      {
+      "Id": "547848247",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footstep_03.wav",
+      "CachePath": "B4/{B47309A9-C585-1EB0-D73A-520942D95863}.wem"
+     },
+     {
       "Id": "548978409",
       "Language": "SFX",
       "Streaming": "false",
@@ -842,6 +874,14 @@
       "Location": "Memory",
       "ShortName": "SwordSlash_Hit_03.wav",
       "CachePath": "91/{91D6C8A8-9155-14DB-11F2-E85F02A84E63}.wem"
+     },
+     {
+      "Id": "600691759",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footstep_05.wav",
+      "CachePath": "0C/{0C17DF54-5B21-9466-556A-EA8CE0D9DBBB}.wem"
      },
      {
       "Id": "603019579",
@@ -914,6 +954,14 @@
       "Location": "Memory",
       "ShortName": "SwordSlash_Draw_04.wav",
       "CachePath": "CA/{CAC97E48-7920-43AE-036A-229AC6E37735}.wem"
+     },
+     {
+      "Id": "687586525",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "If I must fall....wav",
+      "CachePath": "59/{59C0576C-FD8A-FE92-0226-87A1E9ECF95B}.wem"
      },
      {
       "Id": "693424491",
@@ -1288,6 +1336,33 @@
       ]
      },
      {
+      "Id": "648916573",
+      "Name": "Footstep_Player",
+      "ObjectPath": "\\Events\\SFX\\Player\\Movement\\Footstep_Player",
+      "GUID": "{E34B5334-E71C-4335-85A7-DA5E17BA8880}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "0.11475523",
+      "DurationMax": "0.14295833",
+      "MediaRefs": [
+       {
+        "Id": "328080220"
+       },
+       {
+        "Id": "398011208"
+       },
+       {
+        "Id": "472926544"
+       },
+       {
+        "Id": "547848247"
+       },
+       {
+        "Id": "600691759"
+       }
+      ]
+     },
+     {
       "Id": "2890568120",
       "Name": "Health_Regenerate",
       "ObjectPath": "\\Events\\SFX\\Player\\Misc\\Health_Regenerate",
@@ -1386,6 +1461,21 @@
        },
        {
         "Id": "930363931"
+       }
+      ]
+     },
+     {
+      "Id": "2924361409",
+      "Name": "Play_Boss_Line_Phase3",
+      "ObjectPath": "\\Events\\SFX\\Dialogue\\Play_Boss_Line_Phase3",
+      "GUID": "{2BC9ADA7-C3A0-4C89-96DD-317C60E4A08D}",
+      "Color": "2",
+      "DurationType": "OneShot",
+      "DurationMin": "6.2681665",
+      "DurationMax": "6.2681665",
+      "MediaRefs": [
+       {
+        "Id": "687586525"
        }
       ]
      },
@@ -1675,6 +1765,6 @@
     ]
    }
   ],
-  "FileHash": "{A657A22A-6942-5377-6472-F3D1675BE1D7}"
+  "FileHash": "{6F751A04-5E51-DF27-DD85-AB402EF2A6B4}"
  }
 }

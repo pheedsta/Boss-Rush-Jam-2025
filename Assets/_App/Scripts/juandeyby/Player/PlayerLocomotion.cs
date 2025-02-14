@@ -36,6 +36,9 @@ namespace _App.Scripts.juandeyby
         [Header("Poison Stroke")]
         private Coroutine _poisonStrokeCoroutine;
         
+        [Header("Slow Down")]
+        private Coroutine _slowDownCoroutine;
+        
         private void Awake()
         {
             _camera = Camera.main;
@@ -68,7 +71,8 @@ namespace _App.Scripts.juandeyby
 
         private void Update()
         {
-            if (rb.linearVelocity.x > 0.2f || rb.linearVelocity.z > 0.2f)
+            var velocity = rb.linearVelocity;
+            if (Mathf.Abs(velocity.x) > 0.2f || Mathf.Abs(velocity.z) > 0.2f)
             {
                 ServiceLocator.Get<MusicManager>().StartFootstep();
             }
@@ -214,6 +218,23 @@ namespace _App.Scripts.juandeyby
                 yield return null;
             }
             ServiceLocator.Get<MusicManager>().StopSizzle();
+            movementSpeed = 7.5f;
+        }
+        
+        public void SlowDown(float duration)
+        {
+            if (playerHealth.IsDead) return;
+            if (_slowDownCoroutine != null)
+            {
+                StopCoroutine(_slowDownCoroutine);
+            }
+            _slowDownCoroutine = StartCoroutine(OnSlowDownCoroutine(duration));
+        }
+        
+        private IEnumerator OnSlowDownCoroutine(float duration)
+        {
+            movementSpeed = 3f;
+            yield return new WaitForSeconds(duration);
             movementSpeed = 7.5f;
         }
     }

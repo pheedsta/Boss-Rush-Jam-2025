@@ -22,7 +22,7 @@ namespace _App.Scripts.juandeyby.Boss
 
             var player = Player.Instance;
             var playerLocomotion = player.GetComponent<PlayerLocomotion>();
-            playerLocomotion.Poison();
+            playerLocomotion.SlowDown(3f);
         }
         
         public override void UpdateAbility(Boss boss, float deltaTime)

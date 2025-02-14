@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -16,13 +17,22 @@ namespace _App.Scripts.juandeyby
         [SerializeField] private PlayerSpell playerSpell;
         [SerializeField] private int maxHealth = 100;
         [SerializeField] private int health;
+        
+        [SerializeField] private List<Material> materials;
+        
         public int Health => health;
         private bool _isDead;
         public bool IsDead => _isDead;
         private Coroutine _respawnCoroutine;
         
+        private Coroutine _damageEffectCoroutine;
+        
         private void Start()
         {
+            foreach (var material in materials)
+            {
+                material.color = Color.white;
+            }
             health = maxHealth;
             UpdateUI();
         }
@@ -62,10 +72,33 @@ namespace _App.Scripts.juandeyby
                 playerAnimator.PlayTargetAnimation("Die", false);
                 _respawnCoroutine = StartCoroutine(Respawn());
             }
+            DamageEffect();
             ServiceLocator.Get<MusicManager>().PlayHurt();
             UpdateUI();
         }
         
+        private void DamageEffect()
+        {
+            if (_damageEffectCoroutine != null)
+            {
+                StopCoroutine(_damageEffectCoroutine);
+            }
+            _damageEffectCoroutine = StartCoroutine(DamageEffectCoroutine());
+        }
+
+        private IEnumerator DamageEffectCoroutine()
+        {
+            foreach (var material in materials)
+            {
+                material.color = Color.red;
+            }
+            yield return new WaitForSeconds(0.1f);
+            foreach (var material in materials)
+            {
+                material.color = Color.white;
+            }
+        }
+
         private IEnumerator Respawn()
         {
             yield return new WaitForSeconds(3);

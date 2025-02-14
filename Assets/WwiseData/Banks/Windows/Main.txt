@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	589300157	PortalSummon_Stop			\SFX\Enemy\Weapons\PortalSummon_Stop	
+	648916573	Footstep_Player			\SFX\Player\Movement\Footstep_Player	
 	656877296	Stop_BossMusic			\Music\Stop_BossMusic	
 	658623236	FireSpell_Fire			\SFX\Player\Attack\Spells\FireSpell_Fire	
 	696315660	Set_LayerControl			\Music\Set_LayerControl	
@@ -19,6 +20,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2733481739	VortexPull_Boss_Stop			\SFX\Enemy\Weapons\VortexPull_Boss_Stop	
 	2782789220	Acid_Hit			\SFX\Enemy\Weapons\Acid_Hit	
 	2890568120	Health_Regenerate			\SFX\Player\Misc\Health_Regenerate	
+	2924361409	Play_Boss_Line_Phase3			\SFX\Dialogue\Play_Boss_Line_Phase3	
 	2924361411	Play_Boss_Line_Phase1			\SFX\Dialogue\Play_Boss_Line_Phase1	
 	3181568868	SwordSlash_Whoosh			\SFX\Player\Attack\SwordSlash\SwordSlash_Whoosh	
 	3310374200	Acid_Sizzle			\SFX\Enemy\Weapons\Acid_Sizzle	
@@ -52,8 +54,10 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	235738653	Acid_Sizzle_01	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\84\{8409B3A3-F91D-6E2F-2644-745008DBDE28}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Enemy\Weapons\Acid\Acid_Sizzle\Acid_Sizzle_01		60504
 	244878740	Every soul	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\C0\{C0E7AB38-437E-18F3-EB33-FAC1F9F2B3F0}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Dialogue\Boss_Phase_1\Every soul		68178
 	298882402	FireSpell_Hit_01	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\62\{6275E1FC-B503-6EC2-26DE-DAA64C5CFB4C}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\Spells\FireSpell\FireSpell_Hit\FireSpell_Hit_01		15589
+	328080220	Footstep_01	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\7E\{7EB7D5F8-2F6C-F92D-2A8B-BBA322D22FB5}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Movement\Footsteps\Footstep_01		2339
 	347026546	VortexPull_Boss_01	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\D0\{D0809DCD-A568-7E87-4AE1-DA7484941ACA}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Enemy\Weapons\VortexPull_Boss\VortexPull_Boss_01		90878
 	378458012	Dead_Boss	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\ED\{ED50100C-6C40-2DB7-93FB-FFC2F8BDD506}.wem		\Interactive Music Hierarchy\Boss-Rush-MUSIC\Death_Boss\Dead_Boss		300834
+	398011208	Footstep_02	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\DC\{DCDA6F8A-9887-2C33-EC4D-9347E2B61462}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Movement\Footsteps\Footstep_02		2676
 	401117487	SwordSlash_Whoosh_01	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\C7\{C7233C97-86B9-7794-D642-E72E686FDAAB}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Whoosh\SwordSlash_Whoosh_01		9338
 	422536706	SwordSlash_Hit_01	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\7F\{7F5769D1-231B-F254-FD53-B5C06D30606C}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Hit\SwordSlash_Hit_01		11290
 	423370867	HurtPlayer_03	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\47\{47B12BC7-D415-F590-70D0-AFA7C43C30F9}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Misc\Hurt\HurtPlayer_03		6909
@@ -61,11 +65,14 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	436423167	FireSpell_Fire_01	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\48\{48001333-EB07-EDF5-E2FD-7518DC025B93}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\Spells\FireSpell\FireSpell_Fire\FireSpell_Fire_01		16694
 	466370189	Mortal	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\18\{18D7C4D5-58F3-B047-F0A5-4BC4920460F2}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Dialogue\Boss_Phase_1\Mortal		30397
 	472636486	HurtPlayer_04	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\B3\{B3199102-5222-8A4F-08A9-AD25E86FDF9C}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Misc\Hurt\HurtPlayer_04		6240
+	472926544	Footstep_04	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\60\{60CBCC8E-EA5C-9680-9F88-81F7C417595F}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Movement\Footsteps\Footstep_04		2398
 	478594435	TES_MainMenu_Gameplay	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\25\{257DA9AF-A4B0-E91F-1BD8-A4E887DCD567}.wem		\Interactive Music Hierarchy\Boss-Rush-MUSIC\MainMenu\TES_MainMenu_Gameplay\TES_MainMenu_Gameplay		279433
 	510844697	TES_Layer1	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\75\{75956046-FE54-146B-D239-F39F1956C239}.wem		\Interactive Music Hierarchy\Boss-Rush-MUSIC\New Music Playlist Container\New Music Segment\TES_Layer1		2232933
 	529920245	SwordSlash_Whoosh_02	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\DF\{DF200A74-3F72-07A7-A0FC-65EBCAE12E07}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Whoosh\SwordSlash_Whoosh_02		9870
+	547848247	Footstep_03	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\B4\{B47309A9-C585-1EB0-D73A-520942D95863}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Movement\Footsteps\Footstep_03		2912
 	548978409	PortalSummon_01	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\6B\{6B4A4061-ACE6-8A86-2D96-59A7AC7AEED1}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Enemy\Weapons\Portal Summon\PortalSummon_01		112649
 	563532479	SwordSlash_Hit_03	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\91\{91D6C8A8-9155-14DB-11F2-E85F02A84E63}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Hit\SwordSlash_Hit_03		9423
+	600691759	Footstep_05	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\0C\{0C17DF54-5B21-9466-556A-EA8CE0D9DBBB}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Movement\Footsteps\Footstep_05		2337
 	603019579	SwordSlash_Hit_02	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\9A\{9ADEA2C8-0AB0-1534-2A95-D47ACEBA3589}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Hit\SwordSlash_Hit_02		7278
 	609702374	TES_Layer3	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\34\{34857923-22AA-48FD-D0D7-885C6FCD7DC6}.wem		\Interactive Music Hierarchy\Boss-Rush-MUSIC\New Music Playlist Container\New Music Segment\TES_Layer3		1906572
 	611719745	SwordSlash_Whoosh_08	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\E6\{E6C102F5-9C92-A839-896F-28AE53330FBE}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Whoosh\SwordSlash_Whoosh_08		5519
@@ -75,6 +82,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	641056015	VortexPull_Boss_End	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\6E\{6E863518-4A96-B79E-04B5-7B407A5DA244}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Enemy\Weapons\VortexPull_Boss\VortexPull_Boss_End		16837
 	643520808	JumpPlayer_03	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\46\{46C44031-8FEA-A74A-F401-85CB9B0F93E2}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Movement\Jump\JumpPlayer_03		6526
 	677623532	SwordSlash_Draw_04	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\CA\{CAC97E48-7920-43AE-036A-229AC6E37735}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Draw\SwordSlash_Draw_04		15757
+	687586525	If I must fall	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\59\{59C0576C-FD8A-FE92-0226-87A1E9ECF95B}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Dialogue\Boss_Phase_3\If I must fall		87644
 	693424491	SwordSlash_Draw_05	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\D7\{D7C93876-A344-BDC4-586C-4D0D4708ADA2}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Attack\SwordSlash\SwordSlash_Draw\SwordSlash_Draw_05		15178
 	699933523	TES_Layer2	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\1D\{1D51DCF1-29F6-037D-5BFD-C3DE7776984E}.wem		\Interactive Music Hierarchy\Boss-Rush-MUSIC\New Music Playlist Container\New Music Segment\TES_Layer2		1447314
 	719844841	Health_Regenerate_01	E:\GitHub\Boss-Rush-Jam-2025_Wwise\.cache\C3\{C3C42CCA-AF12-0B33-D18A-7F9209E10768}.wem		\Actor-Mixer Hierarchy\Boss-Rush-SFX\Player\Misc\HealthRegenerate\Health_Regenerate_01		43493

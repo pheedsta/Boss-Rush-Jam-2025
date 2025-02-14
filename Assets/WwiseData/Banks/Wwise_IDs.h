@@ -24,11 +24,13 @@ namespace AK
         static const AkUniqueID FIRESPELL_FIRE = 658623236U;
         static const AkUniqueID FIRESPELL_FIREBURN = 1631683011U;
         static const AkUniqueID FIRESPELL_HIT = 1054166863U;
+        static const AkUniqueID FOOTSTEP_PLAYER = 648916573U;
         static const AkUniqueID HEALTH_REGENERATE = 2890568120U;
         static const AkUniqueID HURT_PLAYER = 1719332078U;
         static const AkUniqueID JUMP_PLAYER = 2584346859U;
         static const AkUniqueID JUMPLAND_PLAYER = 936926862U;
         static const AkUniqueID PLAY_BOSS_LINE_PHASE1 = 2924361411U;
+        static const AkUniqueID PLAY_BOSS_LINE_PHASE3 = 2924361409U;
         static const AkUniqueID PLAY_BOSSDEATH_MUSIC = 3604213277U;
         static const AkUniqueID PLAY_BOSSMUSIC = 3463024606U;
         static const AkUniqueID PLAY_MAINMENU = 3738780720U;

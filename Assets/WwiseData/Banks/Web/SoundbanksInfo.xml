@@ -175,7 +175,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" GUID="{44F08A17-571E-464B-85BE-A2ED4F72914E}" Language="SFX" Hash="{B7134044-B907-FDDE-B915-39418C87EA2D}">
+		<SoundBank Id="3161908922" Type="User" GUID="{44F08A17-571E-464B-85BE-A2ED4F72914E}" Language="SFX" Hash="{44EAB444-3895-0876-5D82-EFDEB4777FE2}">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -216,6 +216,10 @@
 					<ShortName>FireSpell_Hit_01.wav</ShortName>
 					<CachePath>62/{6275E1FC-B503-6EC2-26DE-DAA64C5CFB4C}.wem</CachePath>
 				</File>
+				<File Id="328080220" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footstep_01.wav</ShortName>
+					<CachePath>7E/{7EB7D5F8-2F6C-F92D-2A8B-BBA322D22FB5}.wem</CachePath>
+				</File>
 				<File Id="347026546" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>VortexPull_Boss_01.wav</ShortName>
 					<CachePath>D0/{D0809DCD-A568-7E87-4AE1-DA7484941ACA}.wem</CachePath>
@@ -223,6 +227,10 @@
 				<File Id="378458012" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dead_Boss.wav</ShortName>
 					<CachePath>ED/{ED50100C-6C40-2DB7-93FB-FFC2F8BDD506}.wem</CachePath>
+				</File>
+				<File Id="398011208" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footstep_02.wav</ShortName>
+					<CachePath>DC/{DCDA6F8A-9887-2C33-EC4D-9347E2B61462}.wem</CachePath>
 				</File>
 				<File Id="401117487" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SwordSlash_Whoosh_01.wav</ShortName>
@@ -252,6 +260,10 @@
 					<ShortName>HurtPlayer_04.wav</ShortName>
 					<CachePath>B3/{B3199102-5222-8A4F-08A9-AD25E86FDF9C}.wem</CachePath>
 				</File>
+				<File Id="472926544" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footstep_04.wav</ShortName>
+					<CachePath>60/{60CBCC8E-EA5C-9680-9F88-81F7C417595F}.wem</CachePath>
+				</File>
 				<File Id="478594435" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>TES_MainMenu_Gameplay.wav</ShortName>
 					<CachePath>25/{257DA9AF-A4B0-E91F-1BD8-A4E887DCD567}.wem</CachePath>
@@ -264,6 +276,10 @@
 					<ShortName>SwordSlash_Whoosh_02.wav</ShortName>
 					<CachePath>DF/{DF200A74-3F72-07A7-A0FC-65EBCAE12E07}.wem</CachePath>
 				</File>
+				<File Id="547848247" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footstep_03.wav</ShortName>
+					<CachePath>B4/{B47309A9-C585-1EB0-D73A-520942D95863}.wem</CachePath>
+				</File>
 				<File Id="548978409" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PortalSummon_01.wav</ShortName>
 					<CachePath>6B/{6B4A4061-ACE6-8A86-2D96-59A7AC7AEED1}.wem</CachePath>
@@ -271,6 +287,10 @@
 				<File Id="563532479" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SwordSlash_Hit_03.wav</ShortName>
 					<CachePath>91/{91D6C8A8-9155-14DB-11F2-E85F02A84E63}.wem</CachePath>
+				</File>
+				<File Id="600691759" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footstep_05.wav</ShortName>
+					<CachePath>0C/{0C17DF54-5B21-9466-556A-EA8CE0D9DBBB}.wem</CachePath>
 				</File>
 				<File Id="603019579" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SwordSlash_Hit_02.wav</ShortName>
@@ -307,6 +327,10 @@
 				<File Id="677623532" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SwordSlash_Draw_04.wav</ShortName>
 					<CachePath>CA/{CAC97E48-7920-43AE-036A-229AC6E37735}.wem</CachePath>
+				</File>
+				<File Id="687586525" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>If I must fall....wav</ShortName>
+					<CachePath>59/{59C0576C-FD8A-FE92-0226-87A1E9ECF95B}.wem</CachePath>
 				</File>
 				<File Id="693424491" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SwordSlash_Draw_05.wav</ShortName>
@@ -464,6 +488,15 @@
 						<MediaRef Id="619057983"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="648916573" Name="Footstep_Player" ObjectPath="\Events\SFX\Player\Movement\Footstep_Player" GUID="{E34B5334-E71C-4335-85A7-DA5E17BA8880}" Color="2" DurationType="OneShot" DurationMin="0.11475523" DurationMax="0.14295833">
+					<MediaRefs>
+						<MediaRef Id="328080220"/>
+						<MediaRef Id="398011208"/>
+						<MediaRef Id="472926544"/>
+						<MediaRef Id="547848247"/>
+						<MediaRef Id="600691759"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2890568120" Name="Health_Regenerate" ObjectPath="\Events\SFX\Player\Misc\Health_Regenerate" GUID="{2C232B40-F382-4569-9626-6F0158B497E5}" Color="2" DurationType="OneShot" DurationMin="2.6345375" DurationMax="2.6345375">
 					<MediaRefs>
 						<MediaRef Id="719844841"/>
@@ -496,6 +529,11 @@
 						<MediaRef Id="244878740"/>
 						<MediaRef Id="466370189"/>
 						<MediaRef Id="930363931"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2924361409" Name="Play_Boss_Line_Phase3" ObjectPath="\Events\SFX\Dialogue\Play_Boss_Line_Phase3" GUID="{2BC9ADA7-C3A0-4C89-96DD-317C60E4A08D}" Color="2" DurationType="OneShot" DurationMin="6.2681665" DurationMax="6.2681665">
+					<MediaRefs>
+						<MediaRef Id="687586525"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3604213277" Name="Play_BossDeath_Music" ObjectPath="\Events\Music\Play_BossDeath_Music" GUID="{4F0E6A87-9DA6-4DFA-9EA3-7CD7C1A06B0D}" Color="4" DurationType="OneShot" DurationMin="20.901625" DurationMax="20.901625">
@@ -586,5 +624,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{FC93491A-DD06-C2FC-C841-D6CF42BB9963}</FileHash>
+	<FileHash>{EE1316F9-4F7C-0976-CA20-32D02B249BA0}</FileHash>
 </SoundBanksInfo>

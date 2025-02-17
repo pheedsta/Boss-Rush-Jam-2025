@@ -100,9 +100,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84100e35c9b74f4fa46866db17b90a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  model: {fileID: 4462107758810518057}
   rb: {fileID: 0}
   wormAnimator: {fileID: 4049806257894969239}
   meshAgent: {fileID: 5308523866686481230}
+  wormHealth: {fileID: -130354208579366271}
 --- !u!114 &2381013614026699942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +125,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4961437074870156763}
-  m_Enabled: 0
+  m_Enabled: 1
   m_AgentTypeID: -1372625422
   m_Radius: 0.75
   m_Speed: 7

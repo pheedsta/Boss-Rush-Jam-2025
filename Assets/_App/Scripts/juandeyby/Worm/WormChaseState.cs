@@ -18,20 +18,22 @@ namespace _App.Scripts.juandeyby
 
         public void Update(Worm worm)
         {
+            if (_navMeshAgent == null) return;
             var distance = Vector3.Distance(worm.transform.position, Player.Instance.transform.position);
+            var targetPosition = Player.Instance.transform.position;
+            var path = new NavMeshPath(); 
             if (distance <= _detectRange)
             {
                 worm.SetState(new WormAttackState());
-            }
-            else
+            } else if (_navMeshAgent.CalculatePath(targetPosition, path) && path.status == NavMeshPathStatus.PathComplete)
             {
-                _navMeshAgent.SetDestination(Player.Instance.transform.position);
+                _navMeshAgent.SetDestination(targetPosition);
             }
         }
 
         public void Exit(Worm worm)
         {
-            _navMeshAgent.isStopped = true;
+            
         }
     }
 }

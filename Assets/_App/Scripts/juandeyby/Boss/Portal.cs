@@ -26,9 +26,12 @@ namespace _App.Scripts.juandeyby.Boss
             
             ServiceLocator.Get<MusicManager>().PlayPortalSummon();
             var worm = ServiceLocator.Get<WormManager>().GetWorm();
-            worm.transform.position = transform.position;
+            worm.WormHealth.ResetHealth();
+            worm.MeshAgent.Warp(transform.position);
             worm.SetState(new WormSpawnState());
+            
             yield return new WaitForSeconds(2.5f);
+            
             ServiceLocator.Get<MusicManager>().StopPortalSummon();
             ServiceLocator.Get<PortalManager>().ReturnPortal(this);
         }

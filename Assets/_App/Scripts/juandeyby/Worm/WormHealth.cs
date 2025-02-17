@@ -22,9 +22,15 @@ namespace _App.Scripts.juandeyby
                 StopCoroutine(_damageCoroutine);
             }
             _health = maxHealth;
-            _uiHealthBar = UIServiceLocator.Get<UIHealthCanvas>().GetHealthBar();
+            _uiHealthBar = UIServiceLocator.Get<UIHealthManager>().GetHealthBar();
             _uiHealthBar.SetUnit(transform, Vector3.up * 1f);
+        }
+
+        public void ResetHealth()
+        {
+            _health = maxHealth;
             _uiHealthBar.SetHealth(_health / (float) maxHealth);
+            _uiHealthBar.SetVisible(true);
         }
 
         private void TakeDamage(int damage)
@@ -33,8 +39,9 @@ namespace _App.Scripts.juandeyby
             if (_health <= 0)
             {
                 _health = 0;
+                _uiHealthBar.SetHealth(_health / (float) maxHealth);
                 var worm = GetComponent<Worm>();
-                UIServiceLocator.Get<UIHealthCanvas>().ReturnHealthBar(_uiHealthBar);
+                _uiHealthBar.SetVisible(false);
                 ServiceLocator.Get<WormManager>().ReturnWorm(worm);
             }
             else

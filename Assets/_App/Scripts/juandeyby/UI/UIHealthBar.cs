@@ -5,6 +5,7 @@ namespace _App.Scripts.juandeyby.UI
 {
     public class UIHealthBar : MonoBehaviour
     {
+        [SerializeField] private CanvasGroup canvasGroup;
         [SerializeField] private Image healthBar;
         private Transform _unit;
         private Camera _mainCamera;
@@ -46,6 +47,14 @@ namespace _App.Scripts.juandeyby.UI
 
             var unitViewportPosition = _mainCamera.WorldToViewportPoint(_unit.position + _offset);
 
+            // Evitar que la barra se refleje cuando el objeto está detrás de la cámara
+            if (unitViewportPosition.z < 0 || healthBar.fillAmount <= 0)
+            {
+                SetVisible(false);
+                return;
+            }
+            SetVisible(true);
+
             var canvasSize = _canvasRect.sizeDelta;
             var localPosition = new Vector2(
                 (unitViewportPosition.x - 0.5f) * canvasSize.x,
@@ -53,6 +62,11 @@ namespace _App.Scripts.juandeyby.UI
             );
 
             _rectTransform.localPosition = localPosition;
+        }
+        
+        public void SetVisible(bool visible)
+        {
+            canvasGroup.alpha = visible ? 1 : 0;
         }
     }
 }

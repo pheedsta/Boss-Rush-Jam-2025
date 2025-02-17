@@ -37,9 +37,9 @@ namespace _App.Scripts.juandeyby.Boss
         
         private IEnumerator GenerateSpiralProjectiles(Boss boss)
         {
-            var angleStep = 60f; 
+            var angleStep = 40f; 
             var currentAngle = Random.Range(0f, 360f);
-            var currentRange = 0.3f; 
+            var currentRange = 0.4f; 
 
             for (var i = 0; i < projectileCount; i++)
             {
@@ -57,9 +57,9 @@ namespace _App.Scripts.juandeyby.Boss
                 projectile.Config(origin);
 
                 currentAngle += angleStep;
-                currentRange += 0.1f;
+                currentRange += 0.05f;
 
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(0.25f);
             }
         }
     }

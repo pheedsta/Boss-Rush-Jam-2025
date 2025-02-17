@@ -39,8 +39,6 @@ namespace _App.Scripts.juandeyby
 
         public override void Deactivate(Worm worm)
         {
-            worm.MeshAgent.isStopped = false;
-            
             // worm.StopForsePushEffect();
         }
     }

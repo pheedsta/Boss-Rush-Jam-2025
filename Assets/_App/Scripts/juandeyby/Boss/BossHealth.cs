@@ -30,8 +30,8 @@ namespace _App.Scripts.juandeyby.Boss
                 _currentHealth = 0;
                 _isDead = true;
                 boss.SetState(new BossDeathState());
+                ServiceLocator.Get<GameManager>().SetGamePhase(GamePhase.End);
                 UIServiceLocator.Get<UIManager>().ShowEndingPanel();
-                ServiceLocator.Get<MusicManager>().PlayEndingMusic();
             }
             CheckPhase();
             

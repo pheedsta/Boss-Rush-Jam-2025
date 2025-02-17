@@ -14,10 +14,16 @@ namespace _App.Scripts.juandeyby.UI
             
             // Play Music
             ServiceLocator.Get<MusicManager>().Pause();
+            
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
 
         public void Hide()
         {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            
             leanWindow.TurnOff();
         }
 

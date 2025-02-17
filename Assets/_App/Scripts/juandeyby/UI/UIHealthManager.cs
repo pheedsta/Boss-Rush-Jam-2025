@@ -7,7 +7,7 @@ using UnityEngine.Serialization;
 namespace _App.Scripts.juandeyby.UI
 {
     [DefaultExecutionOrder(-100)]
-    public class UIHealthCanvas : MonoBehaviour
+    public class UIHealthManager : MonoBehaviour
     {
         [SerializeField] private UIHealthBar uiHealthBarPrefab;
         private readonly Queue<UIHealthBar> _healthBars = new Queue<UIHealthBar>();
@@ -15,12 +15,12 @@ namespace _App.Scripts.juandeyby.UI
 
         private void OnEnable()
         {
-            UIServiceLocator.Register<UIHealthCanvas>(this);
+            UIServiceLocator.Register<UIHealthManager>(this);
         }
         
         private void OnDisable()
         {
-            UIServiceLocator.Unregister<UIHealthCanvas>();
+            UIServiceLocator.Unregister<UIHealthManager>();
         }
 
         private void Awake()
@@ -28,7 +28,7 @@ namespace _App.Scripts.juandeyby.UI
             for (int i = 0; i < _maxHealthBars; i++)
             {
                 var healthBar = Instantiate(uiHealthBarPrefab, transform);
-                healthBar.gameObject.SetActive(false);
+                healthBar.SetVisible(false);
                 _healthBars.Enqueue(healthBar);
             }
         }
@@ -38,18 +38,18 @@ namespace _App.Scripts.juandeyby.UI
             if (_healthBars.Count == 0)
             {
                 var healthBar = Instantiate(uiHealthBarPrefab, transform);
-                healthBar.gameObject.SetActive(false);
+                healthBar.SetVisible(false);
                 _healthBars.Enqueue(healthBar);
             }
 
             var healthBarToReturn = _healthBars.Dequeue();
-            healthBarToReturn.gameObject.SetActive(true);
+            healthBarToReturn.SetVisible(true);
             return healthBarToReturn;
         }
         
         public void ReturnHealthBar(UIHealthBar healthBar)
         {
-            healthBar.gameObject.SetActive(false);
+            healthBar.SetVisible(false);
             _healthBars.Enqueue(healthBar);
         }
     }

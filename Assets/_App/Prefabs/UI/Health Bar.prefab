@@ -12,13 +12,14 @@ GameObject:
   - component: {fileID: 1401860919084525876}
   - component: {fileID: 331595986274067711}
   - component: {fileID: -701532089400853340}
+  - component: {fileID: 5110135242548323400}
   m_Layer: 5
   m_Name: Health Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3834101604827682617
 RectTransform:
   m_ObjectHideFlags: 0
@@ -99,7 +100,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a1d6b8175a3424fb3cba17364d2e81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 5110135242548323400}
   healthBar: {fileID: 2125086772252863010}
+--- !u!225 &5110135242548323400
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224476936867898984}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &497616257424280711
 GameObject:
   m_ObjectHideFlags: 0

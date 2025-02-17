@@ -7,6 +7,7 @@ namespace _App.Scripts.juandeyby
 {
     public class PlayerLocomotion : MonoBehaviour
     {
+        [SerializeField] private PlayerHealth playerHealth;
         [SerializeField] private PlayerSpell playerSpell;
         [SerializeField] private PlayerManager playerManager;
         [SerializeField] private PlayerAnimator playerAnimator;
@@ -35,15 +36,21 @@ namespace _App.Scripts.juandeyby
         [Header("Poison Stroke")]
         private Coroutine _poisonStrokeCoroutine;
         
+        [Header("Slow Down")]
+        private Coroutine _slowDownCoroutine;
+        
         private void Awake()
         {
             _camera = Camera.main;
         }
+        
+
 
         public void HandleAllMovement()
         {
             HandleFallingAndLanding();
             if (playerManager.IsInteracting) return;
+            if (playerHealth.IsDead) return;
             HandleMovement();
             HandleRotation();
         }
@@ -59,8 +66,22 @@ namespace _App.Scripts.juandeyby
 
             var movementVelocity = _moveDirection;
             rb.linearVelocity = movementVelocity;
+            
         }
-        
+
+        private void Update()
+        {
+            var velocity = rb.linearVelocity;
+            if (Mathf.Abs(velocity.x) > 0.2f || Mathf.Abs(velocity.z) > 0.2f)
+            {
+                ServiceLocator.Get<MusicManager>().StartFootstep();
+            }
+            else
+            {
+                ServiceLocator.Get<MusicManager>().StopFootstep();
+            }
+        }
+
         private void HandleRotation()
         {
             if (isJumping) return;
@@ -75,10 +96,7 @@ namespace _App.Scripts.juandeyby
             }
             
             var targetRotation = Quaternion.LookRotation(lookDirection);
-            Debug.DrawRay(transform.position, targetRotation * Vector3.forward * 10f, Color.blue);
-            // var playerRotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 20f);
-            // Debug.DrawRay(transform.position, playerRotation * Vector3.forward * 10f, Color.green);
-            rb.rotation = targetRotation;
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
         }
         
         private void HandleFallingAndLanding()
@@ -106,7 +124,11 @@ namespace _App.Scripts.juandeyby
                     playerAnimator.PlayTargetAnimation("Land", true);
                 }
                 inAirTimer = 0;
-                if (isGrounded == false) transform.SetParent(hit.transform);
+                if (isGrounded == false)
+                {
+                    transform.SetParent(hit.transform);
+                    ServiceLocator.Get<MusicManager>().PlayJumpLand();
+                }
                 isGrounded = true;
             }
             else
@@ -117,7 +139,7 @@ namespace _App.Scripts.juandeyby
 
         public void HandleJumping()
         {
-            if (isGrounded)
+            if (isGrounded && playerHealth.IsDead == false)
             {
                 playerAnimator.Animator.SetBool("IsJumping", true);
                 playerAnimator.PlayTargetAnimation("Jump", false);
@@ -135,6 +157,7 @@ namespace _App.Scripts.juandeyby
         
         public void HandleAttack()
         {
+            if (playerHealth.IsDead) return;
             if (isJumping) return;
             if (isGrounded)
             {
@@ -159,6 +182,7 @@ namespace _App.Scripts.juandeyby
 
         public void HandleSpecial()
         {
+            if (playerHealth.IsDead) return;
             if (isJumping) return;
             if (isGrounded && playerSpell.CanCastSpell())
             {
@@ -168,12 +192,13 @@ namespace _App.Scripts.juandeyby
         
         public void Stroke(Vector3 direction, float force)
         {
-            Debug.Log("Stroke!");
+            if (playerHealth.IsDead) return;
             rb.AddForce(direction * force, ForceMode.Impulse);
         }
         
         public void Poison()
         {
+            if (playerHealth.IsDead) return;
             if (_poisonStrokeCoroutine != null)
             {
                 StopCoroutine(_poisonStrokeCoroutine);
@@ -193,6 +218,23 @@ namespace _App.Scripts.juandeyby
                 yield return null;
             }
             ServiceLocator.Get<MusicManager>().StopSizzle();
+            movementSpeed = 7.5f;
+        }
+        
+        public void SlowDown(float duration)
+        {
+            if (playerHealth.IsDead) return;
+            if (_slowDownCoroutine != null)
+            {
+                StopCoroutine(_slowDownCoroutine);
+            }
+            _slowDownCoroutine = StartCoroutine(OnSlowDownCoroutine(duration));
+        }
+        
+        private IEnumerator OnSlowDownCoroutine(float duration)
+        {
+            movementSpeed = 3f;
+            yield return new WaitForSeconds(duration);
             movementSpeed = 7.5f;
         }
     }

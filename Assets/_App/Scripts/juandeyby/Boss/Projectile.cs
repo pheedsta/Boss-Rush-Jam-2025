@@ -19,7 +19,6 @@ namespace _App.Scripts.juandeyby.Boss
             _startPosition = transform.position;
 
             DrawTarget();
-            CheckLimit();
         }
 
         private void FixedUpdate()
@@ -29,6 +28,22 @@ namespace _App.Scripts.juandeyby.Boss
                 var downwardVelocity = rb.linearVelocity;
                 downwardVelocity.y -= gravityMultiplier * Time.fixedDeltaTime;
                 rb.linearVelocity = downwardVelocity;
+            }
+        }
+
+        private void Update()
+        {
+            CheckLimit();   
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Player"))
+            {
+                Debug.Log("Player hit");
+                var playerHealth = other.GetComponent<PlayerHealth>();
+                playerHealth.TakeDamage(10);
+                ServiceLocator.Get<ProjectileManager>().ReturnProjectile(this);
             }
         }
 

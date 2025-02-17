@@ -51,7 +51,8 @@ namespace _App.Scripts.juandeyby
     {
         Phase1, // The game starts in 3th ring
         Phase2, // The game starts in 2nd ring
-        Phase3 // The game starts in 1st ring
+        Phase3, // The game starts in 1st ring
+        End
     }
 }
 
